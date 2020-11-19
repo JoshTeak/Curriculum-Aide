@@ -1,9 +1,12 @@
 import React from 'react';
+import LessonList from './LessonList';
+import LessonListFilters from './LessonListFilters';
 
 const DashboardPage = () => (
-  <div>
-    Dashboard page content
-  </div>
+	<div>
+		<LessonListFilters />
+		<LessonList />
+	</div>
 );
 
 export default DashboardPage;

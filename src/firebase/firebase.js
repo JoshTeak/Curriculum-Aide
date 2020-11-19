@@ -1,4 +1,7 @@
-import * as firebase from 'firebase';
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/database";
 
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -10,6 +13,35 @@ const config = {
 };
 
 firebase.initializeApp(config);
+
+// firebase.database().ref('notes').push({
+// 	title: 'stuff',
+// 	body: 'do stuff'
+// });
+
+// firebase.database().ref().once('value').then((snapshot) => {
+// 	const lessons = [];
+
+// 	snapshot.forEach((childSnapshot) => {
+// 		lessons.push({
+// 			id: childSnapshot.key,
+// 			...childSnapshot.val()
+// 		});
+// 	});
+// });
+
+// firebase.database().ref().on('value', (snapshot) => {
+// 	const lessons = [];
+
+// 	snapshot.forEach((childSnapshot) => {
+// 		lessons.push({
+// 			id: childSnapshot.key,
+// 			...childSnapshot.val()
+// 		});
+// 	});
+	
+// 	console.log(snapshot.val());
+// });
 
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
