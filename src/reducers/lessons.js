@@ -21,6 +21,8 @@ export default (state = lessonsReducerDefaultState, action) => {
 			});
 		case 'REMOVE_LESSON':
 			return state.filter(({id}) => id !== action.id);
+		case 'SET_LESSONS':
+			return action.lessons;
 		default:
 			return state;
 	}

@@ -9,15 +9,9 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
-import {addLesson} from './actions/lessons';
-
-import uuid from 'uuid';
+import {startSetLessons} from './actions/lessons';
 
 const store = configureStore();
-
-store.dispatch(addLesson({id: uuid(), title: 'title', description: 'description', resource: 'resource', curriculumLinks: {VCPSCSE073: true, VCPSCSE074: false, VCPSCSE075: false}, rating: 4}));
-store.dispatch(addLesson({id: uuid(), title: 'dododo', description: 'momomo', resource: 'axaxax', curriculumLinks: {VCPSCSE073: false, VCPSCSE074: true, VCPSCSE075: false}, rating: 1}));
-store.dispatch(addLesson({id: uuid(), title: 'q', description: 'w', resource: 'e', curriculumLinks: {VCPSCSE073: false, VCPSCSE074: true, VCPSCSE075: true}, rating: 3}));
 
 const jsx = (
   <Provider store={store}>
@@ -28,7 +22,9 @@ const jsx = (
 let hasRendered = false;
 const renderApp = () => {
   if (!hasRendered) {
-    ReactDOM.render(jsx, document.getElementById('app'));
+    store.dispatch(startSetLessons()).then(() => {
+      ReactDOM.render(jsx, document.getElementById('app'));
+    });
     hasRendered = true;
   }
 };

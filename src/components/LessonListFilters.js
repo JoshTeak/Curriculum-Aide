@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {setTextFilter, setCurriculumLinksFilter} from '../actions/filters';
 import CheckboxList from './CheckboxList';
-import defaultLinks from '../components/CurriculumAddresses';
+import { defaultLinks } from '../components/CurriculumAddresses';
 
 class ExpenseListFilters extends React.Component {
 	constructor(props) {
@@ -14,26 +14,34 @@ class ExpenseListFilters extends React.Component {
 		this.props.setTextFilter(e.target.value);
 	}
 	onCurriculumLinkChange = (e) => {
-		Object.keys(this.state.curriculumLinks).forEach(key => {
-			if(key === e.target.value)
+		Object.keys(this.state.curriculumLinks).forEach(link => {
+			if(link === e.target.value)
 			{
-				this.state.curriculumLinks[key] = e.target.checked;
+				this.state.curriculumLinks[link].isSet = e.target.checked;
 			}
 		});
 		this.props.setCurriculumLinksFilter(this.state.curriculumLinks);
 	}
 	render() {
 		return (
-			<div>
-				<input 
-					type="text" 
-					defaultValue={this.props.filters.text}
-					onChange={this.onTextChange}
-				/>
-				<CheckboxList 
-					onChangeFunction={this.onCurriculumLinkChange}
-					curriculumLinks={this.state.curriculumLinks}
-				/>
+			<div className="content-container">
+				<div className="input-group">
+					<div className="input-group__item">
+						<input 
+							type="text"
+							className="text-input" 
+							placeholder="Search lessons"
+							defaultValue={this.props.filters.text}
+							onChange={this.onTextChange}
+						/>
+					</div>
+					<div className="input-group__item">
+						<CheckboxList 
+							onChangeFunction={this.onCurriculumLinkChange}
+							curriculumLinks={this.state.curriculumLinks}
+						/>
+					</div>
+				</div>
 			</div>
 		);
 	};	

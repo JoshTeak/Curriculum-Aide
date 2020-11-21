@@ -8,7 +8,7 @@ export default (lessons, { text, sortBy, curriculumLinks }) => {
 				Object.keys(curriculumLinks).forEach(Link => {
 					if(lessonLink === Link) 
 					{
-						if(lesson.curriculumLinks[lessonLink] === true && curriculumLinks[Link] === true)
+						if(lesson.curriculumLinks[lessonLink].isSet === true && curriculumLinks[Link].isSet === true)
 						{
 							match = true;
 						}

@@ -11,10 +11,16 @@ export class AddLessonPage extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Add Lesson</h1>
-				<LessonForm 
-					onSubmit={this.onSubmit}
-				/>
+				<div className="page-header">
+					<div className="content-container">
+						<h1 calssName="page-header__title">Add Lesson</h1>
+					</div>
+				</div>
+				<div className="content-container">
+					<LessonForm 
+						onSubmit={this.onSubmit}
+					/>
+				</div>
 			</div>
 		)
 	}

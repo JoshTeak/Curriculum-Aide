@@ -8,26 +8,27 @@ function onlyTrueLinks(links) {
 		let linksString = '';
 
 		Object.keys(links).forEach(link => {
-			if(links[link] === true)
+			if(links[link].isSet === true)
 			{
-				linksString = linksString + ' ' + link
+				linksString = linksString + ' ' + links[link].linkDescription
 			}
 		});
-		return <p>{linksString}</p>;
+		return <p>{'Links to the curriculum: ' + linksString}</p>;
 	}
 	return '';
 }
 
-const LessonListItem = ({id, title, description, resource, curriculumLinks, rating}) => (
-	<div>
-		<Link to={`/edit/${id}`}>
+const LessonListItem = ({id, title, learningOutcomes, resource, curriculumLinks, rating}) => (
+
+	<Link className="list-item" to={`/edit/${id}`}>
+		<div>
 			<h3>{title}</h3>
-		</Link>
-		<p>{description}</p>
-		<p>{resource}</p>
-		{onlyTrueLinks(curriculumLinks)}
-		<p>{rating}</p>
-	</div>
+			<p>{'Learning Outcomes: ' + learningOutcomes}</p>
+			<p>{'Resource: ' + resource}</p>
+			{onlyTrueLinks(curriculumLinks)}
+			<p>{'Rating: ' + rating}</p>
+		</div>
+	</Link>
 );
 
 export default LessonListItem;

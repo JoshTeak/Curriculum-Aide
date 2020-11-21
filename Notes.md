@@ -166,3 +166,68 @@ this is about setting up the test database
 Lecture 156:
 set up environment variables on env
 Heroku config example at 1:00
+
+Lecture 157:
+fetching data from database test cases		//TODO revisit
+Set expenses action
+
+Lecture 158:
+startSetLessons at 3:50
+test case 									//TODO revisit
+
+Lecture 159:
+startRemoveLesson and test case 			//TODO revisit
+
+Lecture 160:
+startEditLesson and test case 			//TODO revisit
+
+Lecture 162:
+Test case for startLogin 				//TODO revisit
+startLogin function
+
+Lecture 163:
+Test case for startLogout 				//TODO revisit
+startLogout function
+
+Lecture 164:
+using <Router/> allows us to use our on history variable which can then be used across other pages
+good example of using tools like history.push at 5:10
+
+Lecture 165:
+establishing the user ID
+Test cases								//TODO revisit
+
+Lecture 166:
+implementing PrivateRouter
+
+Lecture 167:
+implementing PublicRouter
+
+Lecture 168:
+setting up an auther identifier for each lesson
+example test cases									//TODO revisit
+authentication on the firebase side 12:30 restrictions on reading and writing data for security reasons	(firebase rules)		//TODO revisit
+simulation example at 15:55
+
+Lecture 169:
+invalidate anything that is not a lesson when writing to firebase on the firebase side
+
+Lecture 171:
+styling the Login Page
+
+Lecture 173:
+good example of using <span/> to bold particular values at 4:56
+good example of using <Link/> at 6:22
+modifier example at 10:50
+
+Lecture 174:
+styling LessonListFilter
+
+Lecture 175:
+@extend example at 7:04
+
+Lecture 176:
+styling all children example at 6:30
+
+Lecture 177:
+Altering LessonList for mobile at 1:55 (show for mobile/show for desktop)

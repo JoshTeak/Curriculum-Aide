@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckboxList from './CheckboxList';
-import defaultLinks from '../components/CurriculumAddresses';
+import { defaultLinks } from '../components/CurriculumAddresses';
 
 export default class LessonForm extends React.Component {
 	constructor(props) {
@@ -8,7 +8,7 @@ export default class LessonForm extends React.Component {
 
 		this.state = {
 			title: props.lesson ? props.lesson.title : '',
-			description: props.lesson ? props.lesson.description : '',
+			learningOutcomes: props.lesson ? props.lesson.learningOutcomes : '',
 			resource: props.lesson ? props.lesson.resource : '',
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			error: ''
@@ -20,9 +20,9 @@ export default class LessonForm extends React.Component {
 		this.setState(() => ({title}));
 	};
 
-	onDescriptionChange = (e) => {
-		const description = e.target.value;
-		this.setState(() => ({description}));
+	onLearningOutcomesChange = (e) => {
+		const learningOutcomes = e.target.value;
+		this.setState(() => ({learningOutcomes}));
 	};
 
 	onResourceChange = (e) => {
@@ -31,11 +31,10 @@ export default class LessonForm extends React.Component {
 	};
 
 	onCurriculumLinkChange = (e) => {
-
 		Object.keys(this.state.curriculumLinks).forEach(key => {
 			if(key === e.target.value)
 			{
-				this.state.curriculumLinks[key] = e.target.checked;
+				this.state.curriculumLinks[key].isSet = e.target.checked;
 				this.setState(() => (this.state.curriculumLinks));
 			}
 		});
@@ -44,9 +43,9 @@ export default class LessonForm extends React.Component {
 	onSubmit = (e) => {
 		e.preventDefault();
 
-		if(!this.state.title || !this.state.description || !this.state.resource) {
+		if(!this.state.title || !this.state.learningOutcomes || !this.state.resource) {
 			this.setState(() => ({
-				error: 'Please provde a title, description and resouce.'
+				error: 'Please provde a title, learningOutcomes and resouce.'
 			}));
 		} else {
 			this.setState(() => ({
@@ -54,7 +53,7 @@ export default class LessonForm extends React.Component {
 			}));
 			this.props.onSubmit({
 				title: this.state.title,
-				description: this.state.description,
+				learningOutcomes: this.state.learningOutcomes,
 				resource: this.state.resource,
 				curriculumLinks: this.state.curriculumLinks
 			});
@@ -63,35 +62,38 @@ export default class LessonForm extends React.Component {
 
 	render() {
 		return (
-			<div>
-				{this.state.error && <p>{this.state.error}</p>}
-				<form onSubmit={this.onSubmit}>
-					<input 
-						type="text"
-						placeholder="Title"
-						autoFocus
-						value={this.state.title}
-						onChange={this.onTitleChange}
-					/>
-					<input 
-						type="text"
-						placeholder="Description"
-						value={this.state.description}
-						onChange={this.onDescriptionChange}
-					/>
-					<input 
-						type="text"
-						placeholder="resource"
-						value={this.state.resource}
-						onChange={this.onResourceChange}
-					/>
-					<button>Add Lesson Plan</button>
-				</form>
-					<CheckboxList
-						 onChangeFunction={this.onCurriculumLinkChange}
-						 curriculumLinks={this.state.curriculumLinks}
-					/>
-			 </div>
+			<form className="form" onSubmit={this.onSubmit}>
+				{this.state.error && <p className="form__error">{this.state.error}</p>}
+				<input 
+					type="text"
+					placeholder="Title"
+					autoFocus
+					className="text-input"
+					value={this.state.title}
+					onChange={this.onTitleChange}
+				/>
+				<input 
+					type="text"
+					placeholder="Learning Outcomes"
+					className="text-input"
+					value={this.state.learningOutcomes}
+					onChange={this.onLearningOutcomesChange}
+				/>
+				<input 
+					type="text"
+					placeholder="resource"
+					className="text-input"
+					value={this.state.resource}
+					onChange={this.onResourceChange}
+				/>				
+				<CheckboxList
+					onChangeFunction={this.onCurriculumLinkChange}
+					curriculumLinks={this.state.curriculumLinks}
+				/>
+				<div>
+					<button className="button">Save Lesson Plan</button>
+				</div>
+			</form>
 		);
 	};
 };

@@ -1,6 +1,6 @@
 import uuid from 'uuid';								// uuid unique identifiers
 import database from '../firebase/firebase';
-import defaultLinks from '../components/CurriculumAddresses';
+import { defaultLinks } from '../components/CurriculumAddresses';
 
 export const addLesson = (lesson) => ({
 	type: 'ADD_LESSON',
@@ -8,15 +8,17 @@ export const addLesson = (lesson) => ({
 });
 
 export const startAddLesson = (lessonData = {}) => {
-	return (dispatch) => {
+	return (dispatch, getState) => {
+		const myId = getState().auth.uid;
 		const {
 			title = '', 
-			description = '', 
+			learningOutcomes = '', 
 			resource = '',
 			curriculumLinks = defaultLinks(), 
-			rating = 0
+			rating = 0,
+			uid = myId
 		} = lessonData;
-		const lesson = {title, description, resource, curriculumLinks, rating};
+		const lesson = {title, learningOutcomes, resource, curriculumLinks, rating, uid};
 
 		return database.ref('lessons').push(lesson).then((ref) => {
 			dispatch(addLesson({
@@ -32,6 +34,14 @@ export const removeLesson = ({ id } = {}) => ({
 	id
 });
 
+export const startRemoveLesson = ({ id } = {}) => {
+	return (dispatch) => {
+		return database.ref(`lessons/${id}`).remove().then(() => {
+			dispatch(removeExpense({id}));
+		});
+	};
+};
+
 export const editLesson = (id, updates) => ({
 	type: 'EDIT_LESSON',
 	id,
@@ -43,5 +53,26 @@ export const startEditLesson = (id, updates) => {
 		return database.ref(`lessons/${id}`).update(updates).then(() => {
 			dispatch(editLesson(id, updates))
 		});
+	};
+};
+
+export const setLessons = (lessons) => ({
+	type: 'SET_LESSONS',
+	lessons
+});
+
+export const startSetLessons = () => {
+	return (dispatch) => {
+		return database.ref('lessons').once('value').then((snapshot) => {
+			const lessons = [];
+
+			snapshot.forEach((childSnapshot) => {
+				lessons.push({
+					id: childSnapshot.key,
+					...childSnapshot.val()
+				});
+			});
+			dispatch(setLessons(lessons));
+		})
 	};
 };
