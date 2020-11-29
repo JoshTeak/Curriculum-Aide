@@ -1,0 +1,75 @@
+.lesson-header {
+  padding: $s-size $m-size;
+  margin: 0;
+  font-size: $font-size-xlarge;
+}
+
+.lesson-body {
+  width: 100%;
+}
+
+.lesson-item {
+  filter: drop-shadow(2px 2px 3px $grey);
+  margin-bottom: 1rem;
+  background-color: #fdfdfd;
+  border: 2px solid darken($off-white, 7%);
+  border-top: none;
+  color: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  padding: $s-size;
+  text-decoration: none;
+  transition: background .3s ease;
+  &:hover {
+    background: $off-white;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+  }
+}
+
+.lesson-item--message {
+  align-items: center;
+  color: $grey;
+  justify-content: center;
+  padding: $m-size;
+  &:hover {
+    background: none;
+  }
+}
+
+.lesson-item__part {
+}
+
+.lesson-item__part--pair {
+  display:flex;
+  align-items: center;
+}
+
+.lesson-item__grouped-part {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.lesson-item__title {
+  font-size: $font-size-xlarge;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  word-break: break-all;
+  padding-right: $s-size;
+}
+
+.lesson-item__sub-title {
+  font-size: $font-size-large;
+  margin: 0;
+  word-break: break-all;
+  padding-right: $s-size;
+}
+
+.lesson-item__data { 
+}

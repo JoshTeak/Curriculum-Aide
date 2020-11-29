@@ -8,7 +8,7 @@ const EditLessonPage = (props) => {
     <div>
       <div className="page-header">
         <div className="content-container">
-          <h1 calssName="page-header__title">Edit Lesson</h1>
+          <h1 className="page-header__title">Edit Lesson</h1>
         </div>
       </div>
       <div className="content-container">

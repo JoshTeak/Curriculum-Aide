@@ -6,11 +6,13 @@ const DashboardPage = () => (
 	<div>
 		<div className="page-header">
 			<div className="content-container">
-				<h1 calssName="page-header__title">Lesson plans</h1>
+				<h1 className="page-header__title">Lesson plans</h1>
 			</div>
 		</div>
-		<LessonListFilters />
-		<LessonList />
+		<div className="page-body">
+			<LessonListFilters />
+			<LessonList />
+		</div>
 	</div>
 );
 

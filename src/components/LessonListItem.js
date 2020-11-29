@@ -13,19 +13,48 @@ function onlyTrueLinks(links) {
 				linksString = linksString + ' ' + links[link].linkDescription
 			}
 		});
-		return <p>{'Links to the curriculum: ' + linksString}</p>;
+		return <p className="lesson-item__data">{linksString}</p>;
 	}
 	return '';
 }
 
-const LessonListItem = ({id, title, learningOutcomes, resource, curriculumLinks, rating}) => (
+const LessonListItem = ({id, title, level, duration, learningOutcomes, resource, lessonStructure, curriculumLinks, priorKnowledge, rating}) => (
 
-	<Link className="list-item" to={`/edit/${id}`}>
-		<div>
-			<h3>{title}</h3>
-			<p>{'Learning Outcomes: ' + learningOutcomes}</p>
-			<p>{'Resource: ' + resource}</p>
-			{onlyTrueLinks(curriculumLinks)}
+	<Link className="lesson-item" to={`/edit/${id}`}>
+		<div className="lesson-body">
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__title">{title}</h3>
+			</div>
+			<div className="lesson-item__grouped-part">
+				<div className="lesson-item__part--pair">
+					<h3 className="lesson-item__sub-title">Year: </h3>
+					<p>{level}</p>
+				</div>
+				<div className="lesson-item__part--pair">
+					<h3 className="lesson-item__sub-title">Lesson Duration: </h3>
+					<p>{duration}</p>
+				</div>
+			</div>
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__sub-title">Learning Outcomes: </h3>
+				<p className="lesson-item__data">{learningOutcomes}</p>
+			</div>
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__sub-title">Resource: </h3>
+				<p className="lesson-item__data">{resource}</p>
+			</div>
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__sub-title">lessonStructure: </h3>
+				<p className="lesson-item__data">{lessonStructure}</p>
+			</div>
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__sub-title">Curriculum Links: </h3>
+				{onlyTrueLinks(curriculumLinks)}
+			</div>
+			<div className="lesson-item__part">
+				<h3 className="lesson-item__sub-title">Prior Knowledge: </h3>
+				<p className="lesson-item__data">{priorKnowledge}</p>
+			</div>
 			<p>{'Rating: ' + rating}</p>
 		</div>
 	</Link>

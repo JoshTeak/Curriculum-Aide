@@ -4,11 +4,10 @@ import LessonListItem from './LessonListItem';
 import selectLessons from '../selectors/lessons';
 
 const LessonList = (props) => (
-	<div className="content-container">
-		<div className="list-header">
-			<div>Lessons</div>
+	<div className="content-container content-container--major">
+		<div className="lesson-header">
+			<div>Lesson List</div>
 		</div>
-		<h1>Lesson List</h1>
 		{			
 			props.lessons.length === 0 ? (
 				<p>No lessons</p>

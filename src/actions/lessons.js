@@ -12,13 +12,17 @@ export const startAddLesson = (lessonData = {}) => {
 		const myId = getState().auth.uid;
 		const {
 			title = '', 
+			level = '',
+			duration = '',
 			learningOutcomes = '', 
 			resource = '',
+			lessonStructure = '',
 			curriculumLinks = defaultLinks(), 
+			priorKnowledge = '',
 			rating = 0,
 			uid = myId
 		} = lessonData;
-		const lesson = {title, learningOutcomes, resource, curriculumLinks, rating, uid};
+		const lesson = {title, level, duration, learningOutcomes, resource, lessonStructure, curriculumLinks, priorKnowledge, rating, uid};
 
 		return database.ref('lessons').push(lesson).then((ref) => {
 			dispatch(addLesson({

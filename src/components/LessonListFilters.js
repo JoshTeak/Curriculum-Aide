@@ -24,7 +24,7 @@ class ExpenseListFilters extends React.Component {
 	}
 	render() {
 		return (
-			<div className="content-container">
+			<div className="content-container content-container--minor">
 				<div className="input-group">
 					<div className="input-group__item">
 						<input 
