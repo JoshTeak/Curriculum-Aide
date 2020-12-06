@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckboxList from './CheckboxList';
-import { defaultLinks } from '../components/CurriculumAddresses';
+import { defaultLinks } from './CurriculumAddresses';
 
 export default class LessonForm extends React.Component {
 	constructor(props) {

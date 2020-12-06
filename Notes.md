@@ -166,7 +166,12 @@ this is about setting up the test database
 Lecture 156:
 set up environment variables on env
 Heroku config example at 1:00
-git and heroku commit example at 4:00
+git and heroku commit example at 3:30
+git status
+git add .
+git commit -m ""
+git push
+git push heroku main
 
 Lecture 157:
 fetching data from database test cases		//TODO revisit

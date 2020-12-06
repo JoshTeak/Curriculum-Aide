@@ -3,10 +3,11 @@
 }
 
 .content-container--minor {
-	width: 30%;
 }
 
 .content-container--major {
-	width: 70%;
-	max-width: 90rem;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
 }

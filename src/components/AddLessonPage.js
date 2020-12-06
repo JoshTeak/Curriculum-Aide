@@ -16,7 +16,7 @@ export class AddLessonPage extends React.Component {
 						<h1 className="page-header__title">Add Lesson</h1>
 					</div>
 				</div>
-				<div className="content-container">
+				<div>
 					<LessonForm 
 						onSubmit={this.onSubmit}
 					/>

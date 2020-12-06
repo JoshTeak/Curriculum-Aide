@@ -9,6 +9,8 @@
 }
 
 .lesson-item {
+  width: 100%;
+  max-width: 90rem;
   filter: drop-shadow(2px 2px 3px $grey);
   margin-bottom: 1rem;
   background-color: #fdfdfd;
