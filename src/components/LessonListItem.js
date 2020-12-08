@@ -18,12 +18,15 @@ function onlyTrueLinks(links) {
 	return '';
 }
 
-const LessonListItem = ({id, title, level, duration, learningOutcomes, resource, lessonStructure, curriculumLinks, priorKnowledge, rating}) => (
+const LessonListItem = ({id, title, description, level, duration, learningOutcomes, resource, lessonStructure, curriculumLinks, priorKnowledge, rating}) => (
 
 	<Link className="lesson-item" to={`/edit/${id}`}>
 		<div className="lesson-body">
 			<div className="lesson-item__part">
 				<h3 className="lesson-item__title">{title}</h3>
+			</div>
+			<div className="lesson-item__part">
+				<p className="lesson-item__data">{description}</p>
 			</div>
 			<div className="lesson-item__grouped-part">
 				<div className="lesson-item__part--pair">

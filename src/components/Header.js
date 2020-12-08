@@ -12,10 +12,12 @@ export const Header = ({ startLogout }) => (
         </Link>
         <button className="button button--link" onClick={startLogout}>Logout</button>
       </div>
+      <div className="header__links">
+          <NavLink className="button button--link" to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
+          <NavLink className="button button--link" to="/create" activeClassName="is-active">Create Lesson</NavLink>
+          <NavLink className="button button--link" to="/help" activeClassName="is-active">Help</NavLink>
+        </div>
     </div>
-  <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-  <NavLink to="/create" activeClassName="is-active">Create Lesson</NavLink>
-  <NavLink to="/help" activeClassName="is-active">Help</NavLink>
   </header>
 );
 

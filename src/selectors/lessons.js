@@ -3,6 +3,7 @@ export default (lessons, { text, sortBy, curriculumLinks }) => {
 		const textMatch = lesson.title.toLowerCase().includes(text.toLowerCase());
 		
 		const findLinkMatches = () => {
+			console.log(lesson.curriculumLinks);
 			let match = false;
 			Object.keys(lesson.curriculumLinks).forEach(lessonLink => {
 				Object.keys(curriculumLinks).forEach(Link => {

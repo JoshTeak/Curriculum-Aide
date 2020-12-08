@@ -6,8 +6,11 @@ export default class LessonForm extends React.Component {
 	constructor(props) {
 		super(props);
 
+		this.maxDescriptionChar = 50;
+
 		this.state = {
 			title: props.lesson ? props.lesson.title : '',
+			description: props.lesson ? props.lesson.description : '',
 			level: props.lesson ? props.lesson.level : '',
 			duration: props.lesson ? props.lesson.duration: '',
 			learningOutcomes: props.lesson ? props.lesson.learningOutcomes : '',
@@ -15,6 +18,7 @@ export default class LessonForm extends React.Component {
 			lessonStructure: props.lesson ? props.lesson.lessonStructure : '',
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
+			descriptionRemainingChar: props.lesson ? this.maxDescriptionChar - props.lesson.description.length : this.maxDescriptionChar,
 			error: ''
 		};
 	};
@@ -22,6 +26,15 @@ export default class LessonForm extends React.Component {
 	onTitleChange = (e) => {
 		const title = e.target.value;
 		this.setState(() => ({title}));
+	};
+
+	onDescriptionChange = (e) => {
+		const description = e.target.value;
+		const descriptionRemainingChar = this.maxDescriptionChar - description.length;
+		if(descriptionRemainingChar >= 0)
+		{
+			this.setState(() => ({description, descriptionRemainingChar}));
+		}
 	};
 
 	onLearningOutcomesChange = (e) => {
@@ -67,7 +80,7 @@ export default class LessonForm extends React.Component {
 	onSubmit = (e) => {
 		e.preventDefault();
 
-		if(!this.state.title || !this.state.learningOutcomes || !this.state.resource || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
+		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.resource || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
 			this.setState(() => ({
 				error: 'Please provde a title, learningOutcomes and resouce.'
 			}));
@@ -77,6 +90,7 @@ export default class LessonForm extends React.Component {
 			}));
 			this.props.onSubmit({
 				title: this.state.title,
+				description: this.state.description,
 				level: this.state.level,
 				duration: this.state.duration,
 				learningOutcomes: this.state.learningOutcomes,
@@ -106,7 +120,7 @@ export default class LessonForm extends React.Component {
 					<div className="content-container content-container--major">
 						<div className="input-group">
 							<div className="input-group__item">
-							<h3 className="list-item__title">Title:</h3>
+								<h3 className="list-item__title">Title:</h3>
 								<input 
 									type="text"
 									placeholder="Title"
@@ -115,6 +129,16 @@ export default class LessonForm extends React.Component {
 									value={this.state.title}
 									onChange={this.onTitleChange}
 								/>
+							</div>
+							<div className="input-group__item">
+								<h3 className="list-item__title">Description:</h3>
+								<textarea 
+									placeholder="Description"
+									className="textarea"
+									value={this.state.description}
+									onChange={this.onDescriptionChange}
+								/>
+								<p>Characters remaining: {this.state.descriptionRemainingChar}</p>
 							</div>
 							<div className="input-group__item">
 								<h3 className="list-item__title">Year Level:</h3>
