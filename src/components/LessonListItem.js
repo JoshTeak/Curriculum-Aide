@@ -1,66 +1,57 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LessonPopup from './LessonPopup';
+import { defaultLinks } from '../components/CurriculumAddresses';
 
-function onlyTrueLinks(links) {
+export default class LessonListItem extends React.Component {
+	constructor(props) {
+		super(props);
 
-	if(links)
-	{
-		let linksString = '';
-
-		Object.keys(links).forEach(link => {
-			if(links[link].isSet === true)
-			{
-				linksString = linksString + ' ' + links[link].linkDescription
-			}
-		});
-		return <p className="lesson-item__data">{linksString}</p>;
+		this.state = props.lesson;
+		this.isDisplayed = "none";
 	}
-	return '';
-}
 
-const LessonListItem = ({id, title, description, level, duration, learningOutcomes, resource, lessonStructure, curriculumLinks, priorKnowledge, rating}) => (
+	lessonClicked = () => {
+	  	if(this.isDisplayed === "none")
+	  	{
+	  		this.isDisplayed = "block";
+	  	} else if(this.isDisplayed === "block")
+	  	{
+	  		this.isDisplayed = "none";
+	  	}
+	  	this.forceUpdate();
+	}
 
-	<Link className="lesson-item" to={`/edit/${id}`}>
-		<div className="lesson-body">
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__title">{title}</h3>
-			</div>
-			<div className="lesson-item__part">
-				<p className="lesson-item__data">{description}</p>
-			</div>
-			<div className="lesson-item__grouped-part">
-				<div className="lesson-item__part--pair">
-					<h3 className="lesson-item__sub-title">Year: </h3>
-					<p>{level}</p>
+	render() {
+		return (
+			<div className="lesson-selector">
+				<div className="lesson-item" onClick={this.lessonClicked}>
+					<div className="lesson-body" id="popup">
+						<div className="lesson-item__part">
+							<h3 className="lesson-item__title">{this.state.title}</h3>
+						</div>
+						<div className="lesson-item__part">
+							<p className="lesson-item__data">{this.state.description}</p>
+						</div>
+						<div className="lesson-item__grouped-part">
+							<div className="lesson-item__part--pair">
+								<h3 className="lesson-item__sub-title">Year: </h3>
+								<p>{this.state.level}</p>
+							</div>
+							<div className="lesson-item__part--pair">
+								<h3 className="lesson-item__sub-title">Lesson Duration: </h3>
+								<p>{this.state.duration}</p>
+							</div>
+						</div>
+						<div className="lesson-item__part">
+							<h3 className="lesson-item__sub-title">Resource: </h3>
+							<p className="lesson-item__data">{this.state.resource}</p>
+						</div>
+						<p>{'Rating: ' + this.state.rating}</p>
+					</div>
 				</div>
-				<div className="lesson-item__part--pair">
-					<h3 className="lesson-item__sub-title">Lesson Duration: </h3>
-					<p>{duration}</p>
-				</div>
+				<LessonPopup lesson={this.state} display={this.isDisplayed} backgroundClick={this.lessonClicked}/>
 			</div>
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__sub-title">Learning Outcomes: </h3>
-				<p className="lesson-item__data">{learningOutcomes}</p>
-			</div>
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__sub-title">Resource: </h3>
-				<p className="lesson-item__data">{resource}</p>
-			</div>
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__sub-title">lessonStructure: </h3>
-				<p className="lesson-item__data">{lessonStructure}</p>
-			</div>
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__sub-title">Curriculum Links: </h3>
-				{onlyTrueLinks(curriculumLinks)}
-			</div>
-			<div className="lesson-item__part">
-				<h3 className="lesson-item__sub-title">Prior Knowledge: </h3>
-				<p className="lesson-item__data">{priorKnowledge}</p>
-			</div>
-			<p>{'Rating: ' + rating}</p>
-		</div>
-	</Link>
-);
-
-export default LessonListItem;
+		);
+	};
+};

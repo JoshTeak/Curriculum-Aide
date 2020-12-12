@@ -1,18 +1,18 @@
+.lesson-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .lesson-header {
   padding: $s-size $m-size;
   margin: 0;
   font-size: $font-size-xlarge;
 }
 
-.lesson-body {
-  width: 100%;
-}
-
 .lesson-item {
   width: 100%;
   max-width: 90rem;
   filter: drop-shadow(2px 2px 3px $grey);
-  margin-bottom: 1rem;
   background-color: #fdfdfd;
   border: 2px solid darken($off-white, 7%);
   border-top: none;
@@ -33,6 +33,14 @@
   }
 }
 
+.lesson-selector {
+  margin: $m-size;
+}
+
+.lesson-body {
+  width: 100%;
+}
+
 .lesson-item--message {
   align-items: center;
   color: $grey;
@@ -41,9 +49,6 @@
   &:hover {
     background: none;
   }
-}
-
-.lesson-item__part {
 }
 
 .lesson-item__part--pair {

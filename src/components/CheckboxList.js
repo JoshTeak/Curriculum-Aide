@@ -86,15 +86,15 @@ export default class CheckboxList extends React.Component {
 		return (
 			<div>
 				<h1 className="curriculum-header">Curriculum Links</h1>
+				<div className="curriculum-navigation">
+					<button className="button button--secondary" onClick={() => {
+						this.DisplayedLevels("decrease");
+			        }}>Previous</button>
+					<button className="button button--secondary" onClick={() => {
+						this.DisplayedLevels("increase");
+			        }}>Next</button>
+				</div>
 				<div className="curriculum-body">
-					<div>
-						<button className="button button--secondary" onClick={() => {
-							this.DisplayedLevels("decrease");
-				        }}>Previous</button>
-						<button className="button button--secondary" onClick={() => {
-							this.DisplayedLevels("increase");
-				        }}>Next</button>
-					</div>
 					{
 						Object.keys(linkStructure(this.state.curriculumLinks).pascCurriculum).map((level) => {
 							if(this.CheckDisplayedLevel(this.firstLevelDisplayed).indexOf(level) !== -1)

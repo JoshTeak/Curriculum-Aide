@@ -5,12 +5,18 @@
   justify-content: space-between;
 }
 
+.curriculum-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-right: $s-size;
+}
+
 .curriculum-body {
   display: flex;
 }
 
 .curriculum-level {
-  margin-right: 1rem;
+  margin-right: $s-size;
   width: 25rem;
   margin-bottom: $m-size;
   @media (min-width: $desktop-breakpoint) {
