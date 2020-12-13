@@ -22,17 +22,30 @@ class ExpenseListFilters extends React.Component {
 		});
 		this.props.setCurriculumLinksFilter(this.state.curriculumLinks);
 	}
+	collapsibleSidebar = () => {
+		const sidebar = document.getElementById("sidebar");
+
+		if(sidebar.style.transform === "translateX(0px)")
+		{
+			sidebar.style.transform = "translateX(calc(1.6rem - 100%))";
+			sidebar.style.position = "absolute";
+		} else {
+			sidebar.style.transform = "translateX(0px)";
+			sidebar.style.position = "unset";
+		}
+	}
 	render() {
 		return (
-			<div className="content-container content-container--minor">
-				<div className="input-group">
-					<div className="input-group__item">
-						<input 
-							type="text"
-							className="text-input" 
-							placeholder="Search lessons"
-							defaultValue={this.props.filters.text}
-							onChange={this.onTextChange}
+			<div className="collapsibleSidebar" id="sidebar">
+				<div className="filter">
+					<div className="input-group">
+						<div className="input-group__item">
+							<input 
+									type="text"
+										className="text-input" 
+									placeholder="Search lessons"
+								defaultValue={this.props.filters.text}
+								onChange={this.onTextChange}
 						/>
 					</div>
 					<div className="input-group__item">
@@ -41,7 +54,10 @@ class ExpenseListFilters extends React.Component {
 							curriculumLinks={this.state.curriculumLinks}
 						/>
 					</div>
+				</div>		
 				</div>
+				<button className="collapsibleSidebar__button" onClick={this.collapsibleSidebar}>
+				</button>
 			</div>
 		);
 	};	

@@ -8,7 +8,7 @@ const LessonPopup = (props) => (
 					<div className="popup-background" onClick={props.backgroundClick}>
 					</div>
 					<div className="popup">
-						<div className="lesson-item">
+						<div className="lesson-page">
 							<div className="lesson-body">
 								<div className="lesson-item__part">
 									<h3 className="lesson-item__title">{props.lesson.title}</h3>

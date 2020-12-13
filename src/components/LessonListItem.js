@@ -43,10 +43,6 @@ export default class LessonListItem extends React.Component {
 								<p>{this.state.duration}</p>
 							</div>
 						</div>
-						<div className="lesson-item__part">
-							<h3 className="lesson-item__sub-title">Resource: </h3>
-							<p className="lesson-item__data">{this.state.resource}</p>
-						</div>
 						<p>{'Rating: ' + this.state.rating}</p>
 					</div>
 				</div>

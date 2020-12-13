@@ -1,0 +1,20 @@
+.collapsibleSidebar {
+	transition: all 1s ease;
+    transform: translateX(calc(1.6rem - 100%));
+	display: flex;
+	filter: drop-shadow(2px 2px 3px $grey);
+	border: 2px solid darken($off-white, 7%);
+    border-left: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.collapsibleSidebar__button {
+	background-color: khaki;
+	border: none;
+	width: $m-size;
+}
+
+.collapsibleSidebar__button:focus {
+	outline:none
+}

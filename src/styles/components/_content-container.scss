@@ -1,11 +1,8 @@
 .content-container {
-  padding: 0 $m-size;
-}
-
-.content-container--minor {
 }
 
 .content-container--major {
-	display: flex;
-    flex-direction: row;
+	background-color: $off-white;
+	width: 100%;
+	padding-left: $m-size;
 }

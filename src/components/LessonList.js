@@ -4,7 +4,7 @@ import LessonListItem from './LessonListItem';
 import selectLessons from '../selectors/lessons';
 
 const LessonList = (props) => (
-	<div className="content-container">
+	<div className="content-container content-container--major">
 		<div className="lesson-header">
 			<div>Lesson List</div>
 		</div>
