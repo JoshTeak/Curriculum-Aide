@@ -1,7 +1,9 @@
-.popup {
+.popup-container {
+	width: 100%;
+    max-width: 100rem;
 	z-index: 2;
 	position: absolute;
-	top: 60%;
+	top: 70%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }

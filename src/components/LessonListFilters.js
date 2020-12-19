@@ -41,20 +41,35 @@ class ExpenseListFilters extends React.Component {
 					<div className="input-group">
 						<div className="input-group__item">
 							<input 
-									type="text"
-										className="text-input" 
-									placeholder="Search lessons"
+								type="text"
+								className="text-input" 
+								placeholder="Search lessons"
 								defaultValue={this.props.filters.text}
 								onChange={this.onTextChange}
-						/>
+							/>
+						</div>
+						<div className="input-group__item">
+							<select className="dropdown"> 
+								<option value="">All Levels</option>
+								<option value="levelA">level A</option>
+								<option value="levelB">level B</option>
+								<option value="levelC">level C</option>
+								<option value="levelD">level D</option>
+								<option value="FoundationLevel">Foundation Level</option>
+								<option value="Levels1and2">Levels 1 and 2</option>
+								<option value="Levels3and4">Levels 3 and 4</option>
+								<option value="Levels5and6">Levels 5 and 6</option>
+							</select>
+						</div>
 					</div>
-					<div className="input-group__item">
-						<CheckboxList 
-							onChangeFunction={this.onCurriculumLinkChange}
-							curriculumLinks={this.state.curriculumLinks}
-						/>
-					</div>
-				</div>		
+					<div className="input-group">
+						<div className="input-group__item">
+							<CheckboxList 
+								onChangeFunction={this.onCurriculumLinkChange}
+								curriculumLinks={this.state.curriculumLinks}
+							/>
+						</div>
+					</div>	
 				</div>
 				<button className="collapsibleSidebar__button" onClick={this.collapsibleSidebar}>
 				</button>

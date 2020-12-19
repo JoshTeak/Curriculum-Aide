@@ -4,10 +4,10 @@ const LessonPopup = (props) => (
 	<div> 
 		{
 			props.display === "none" ? "" : (
-				<div>
+				<div className="popup">
 					<div className="popup-background" onClick={props.backgroundClick}>
 					</div>
-					<div className="popup">
+					<div className="popup-container">
 						<div className="lesson-page">
 							<div className="lesson-body">
 								<div className="lesson-item__part">
