@@ -24,34 +24,34 @@ export default class LessonListItem extends React.Component {
 
 	render() {
 		return (
-			<div className="lesson-selector">
-				<div className="lesson-item" onClick={this.lessonClicked}>
-					<div className="lesson-body" id="popup">
-						<div className="lesson-item__grouped-part">
-							<div className="lesson-item__part--pair">
-								<p>{this.state.level}</p>
+			<div className="lesson">
+				<div className="lesson-selector">
+					<div className="list-body" onClick={this.lessonClicked}>
+						<div className="list-item list-item--multiple">
+							<div className="list-item__pair">
+								<p className="list-item__text">{this.state.level}</p>
 							</div>
-							<div className="lesson-item__part--pair">
-								<p>{this.state.duration}</p>
+							<div className="list-item__pair">
+								<p className="list-item__text">{this.state.duration}</p>
 							</div>
 						</div>
-						<div className="lesson-item__part">
-							<h3 className="lesson-item__title">{this.state.title}</h3>
+						<div className="list-item">
+							<h3 className="list-item__title">{this.state.title}</h3>
 						</div>
-						<div className="lesson-item__part">
-							<p className="lesson-item__data">{this.state.description}</p>
+						<div className="list-item">
+							<p className="list-item__text">{this.state.description}</p>
 						</div>						
-						<div className="lesson-item__grouped-part">
-							<div className="lesson-item__part--pair">
-								<p>{'Rating: ' + this.state.rating}</p>
+						<div className="list-item list-item--multiple">
+							<div className="list-item__pair">
+								<p className="list-item__text">{'Rating: ' + this.state.rating}</p>
 							</div>
-							<div className="lesson-item__part--pair">
+							<div className="list-item__pair">
 								<input
 									type="checkbox" 
 								/>
 							</div>
 						</div>
-					</div>
+					</div>					
 				</div>
 				<LessonPopup lesson={this.state} display={this.isDisplayed} backgroundClick={this.lessonClicked}/>
 			</div>

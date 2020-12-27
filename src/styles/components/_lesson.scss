@@ -10,7 +10,10 @@
   font-size: $font-size-xlarge;
 }
 
-.lesson-item {
+.lesson-selector {
+  margin: $m-size;
+  transition: all 0.5s ease;
+  cursor: pointer;
   transition: all 0.5s ease;
   filter: drop-shadow(2px 2px 3px $grey);
   background-color: #fdfdfd;
@@ -31,69 +34,8 @@
   }
 }
 
-.lesson-page {
-  filter: drop-shadow(2px 2px 3px $grey);
-  background-color: #fdfdfd;
-  border: 2px solid darken($off-white, 7%);
-  border-top: none;
-  color: $dark-grey;
-  padding: $s-size;
-  text-decoration: none;
-  @media (min-width: $desktop-breakpoint) {
-    padding: $m-size;
-  }
-}
-
-.lesson-selector {
-  margin: $m-size;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
 .lesson-body {
-  width: 100%;
   height: 100rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.lesson-item--message {
-  align-items: center;
-  color: $grey;
-  justify-content: center;
-  padding: $m-size;
-  &:hover {
-    background: none;
-  }
-}
-
-.lesson-item__part--pair {
-  display:flex;
-  align-items: center;
-}
-
-.lesson-item__grouped-part {
-  display: flex;  
-  justify-content: space-between;
-}
-
-.lesson-item__title {
-  font-size: $font-size-xlarge;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin: 0;
-  word-break: break-all;
-}
-
-.lesson-item__sub-title {
-  font-size: $font-size-large;
-  margin: 0;
-  word-break: break-all;
-  padding-right: $s-size;
-}
-
-.lesson-item__data { 
-  margin: 0;
+  max-width: 100rem;
+  width: 92vw;
 }

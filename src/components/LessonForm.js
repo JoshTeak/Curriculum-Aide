@@ -2,6 +2,7 @@ import React from 'react';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from './CurriculumAddresses';
 import AddResourcePopup from './AddResourcePopup';
+import { Link } from 'react-router-dom';
 
 export default class LessonForm extends React.Component {
 	constructor(props) {
@@ -16,7 +17,7 @@ export default class LessonForm extends React.Component {
 			level: props.lesson ? props.lesson.level : '',
 			duration: props.lesson ? props.lesson.duration: '',
 			learningOutcomes: props.lesson ? props.lesson.learningOutcomes : '',
-			resource: props.lesson ? props.lesson.resource : '',
+			resources: props.lesson ? props.lesson.resources : [],
 			lessonStructure: props.lesson ? props.lesson.lessonStructure : '',
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
@@ -44,9 +45,23 @@ export default class LessonForm extends React.Component {
 		this.setState(() => ({learningOutcomes}));
 	};
 
-	onResourceChange = (e) => {
-		const resource = e.target.value;
-		this.setState(() => ({resource}));
+	onResourcesChange = (resourceObject, order) => {
+		const resources = this.state.resources;
+		switch (order) {
+			case 'ADD_RESOURCE':
+			{
+				resources.push(resourceObject)
+				this.setState(() => ({resources}));
+				break;
+			};
+			case 'REMOVE_RESOURCE':
+			{
+				const index = resources.indexOf(resourceObject);
+				resources.splice(index, 1);
+				this.setState(() => ({resources}));
+				break;
+			};
+		}
 	};
 
 	onCurriculumLinkChange = (e) => {
@@ -79,31 +94,6 @@ export default class LessonForm extends React.Component {
 		this.setState(() => ({priorKnowledge}))
 	}
 
-	onSubmit = (e) => {
-		e.preventDefault();
-
-		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.resource || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
-			this.setState(() => ({
-				error: 'Please provde a title, learningOutcomes and resouce.'
-			}));
-		} else {
-			this.setState(() => ({
-				error: ''
-			}));
-			this.props.onSubmit({
-				title: this.state.title,
-				description: this.state.description,
-				level: this.state.level,
-				duration: this.state.duration,
-				learningOutcomes: this.state.learningOutcomes,
-				resource: this.state.resource,
-				lessonStructure: this.state.lessonStructure,
-				priorKnowledge: this.state.priorKnowledge,
-				curriculumLinks: this.state.curriculumLinks
-			});
-		}
-	};
-
 	collapsibleSidebar = (e) => {
 		e.preventDefault();
 
@@ -119,6 +109,12 @@ export default class LessonForm extends React.Component {
 		}
 	}
 
+	deleteResource = (e) => {
+		e.preventDefault();
+		const resourceToDelete = e.target.getAttribute('resourcename');
+		this.onResourcesChange(resourceToDelete, "REMOVE_RESOURCE");	
+	}
+
 	addResourceClicked = (e) => {
 		e.preventDefault();
 		
@@ -131,6 +127,31 @@ export default class LessonForm extends React.Component {
 	  	}
 	  	this.forceUpdate();
 	}
+
+	onSubmit = (e) => {
+		e.preventDefault();
+		
+		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.resources || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
+			this.setState(() => ({
+				error: 'Please provde a title, learningOutcomes and resouce.'
+			}));
+		} else {
+			this.setState(() => ({
+				error: ''
+			}));
+			this.props.onSubmit({
+				title: this.state.title,
+				description: this.state.description,
+				level: this.state.level,
+				duration: this.state.duration,
+				learningOutcomes: this.state.learningOutcomes,
+				resources: this.state.resources,
+				lessonStructure: this.state.lessonStructure,
+				priorKnowledge: this.state.priorKnowledge,
+				curriculumLinks: this.state.curriculumLinks
+			});
+		}
+	};
 
 	render() {
 		return (
@@ -154,9 +175,9 @@ export default class LessonForm extends React.Component {
 						</div>
 					</div>
 					<div className="content-container content-container--major">
-						<div className="pageLayout">
-							<div className="input-group">
-								<div className="input-group__item">
+						<div className="formLayout">
+							<div className="list-body">
+								<div className="list-item">
 									<h3 className="list-item__title">Title:</h3>
 									<input 
 										type="text"
@@ -167,10 +188,8 @@ export default class LessonForm extends React.Component {
 										onChange={this.onTitleChange}
 									/>
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Description:</h3>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Description:</h3>
 									<textarea 
 										placeholder="Description"
 										className="textarea"
@@ -179,46 +198,44 @@ export default class LessonForm extends React.Component {
 									/>
 									<p>Characters remaining: {this.state.descriptionRemainingChar}</p>
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Year Level:</h3>
-									<select className="dropdown" value={this.state.level} onChange={this.onLevelChange}>
-										<option value="" disabled hidden>Select Year Level</option>
-									  	<option value="Foundation Year">Foundation Year</option>
-									  	<option value="Year 1">Year 1</option>
-									  	<option value="Year 2">Year 2</option>
-									  	<option value="Year 3">Year 3</option>
-									  	<option value="Year 4">Year 4</option>
-									  	<option value="Year 5">Year 5</option>
-									  	<option value="Year 6">Year 6</option>
-									  	<option value="Year 7">Year 7</option>
-									  	<option value="Year 8">Year 8</option>
-									  	<option value="Year 9">Year 9</option>
-									  	<option value="Year 10">Year 10</option>
-									</select>
+								<div className="list-item list-item--multiple">
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title">Year Level:</h3>
+										<select className="dropdown" value={this.state.level} onChange={this.onLevelChange}>
+											<option value="" disabled hidden>Select Year Level</option>
+										  	<option value="Foundation Year">Foundation Year</option>
+										  	<option value="Year 1">Year 1</option>
+										  	<option value="Year 2">Year 2</option>
+										  	<option value="Year 3">Year 3</option>
+										  	<option value="Year 4">Year 4</option>
+										  	<option value="Year 5">Year 5</option>
+										  	<option value="Year 6">Year 6</option>
+										  	<option value="Year 7">Year 7</option>
+										  	<option value="Year 8">Year 8</option>
+										  	<option value="Year 9">Year 9</option>
+										  	<option value="Year 10">Year 10</option>
+										</select>
+									</div>
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title">Lesson Duration:</h3>
+										<select className="dropdown" value={this.state.duration} onChange={this.onDurationChange}>
+											<option value="" disabled hidden>Select Lesson Duration</option>
+										  	<option value="15 minutes">15 minutes</option>
+										  	<option value="20 minutes">20 minutes</option>
+										  	<option value="25 minutes">25 minutes</option>
+										  	<option value="30 minutes">30 minutes</option>
+										  	<option value="40 minutes">40 minutes</option>
+										  	<option value="50 minutes">50 minutes</option>
+										  	<option value="1 hour">1 hour</option>
+										  	<option value="1 hour, 15 minutes">1 hour, 15 minutes</option>
+										  	<option value="1 hour, 30 minutes">1 hour, 30 minutes</option>
+										  	<option value="1 hour, 45 minutes">1 hour, 45 minutes</option>
+										  	<option value="2 hours">2 hours</option>
+										</select>
+									</div>
 								</div>
-								<div className="input-group__item">
-									<h3 className="list-item__title">Lesson Duration:</h3>
-									<select className="dropdown" value={this.state.duration} onChange={this.onDurationChange}>
-										<option value="" disabled hidden>Select Lesson Duration</option>
-									  	<option value="15 minutes">15 minutes</option>
-									  	<option value="20 minutes">20 minutes</option>
-									  	<option value="25 minutes">25 minutes</option>
-									  	<option value="30 minutes">30 minutes</option>
-									  	<option value="40 minutes">40 minutes</option>
-									  	<option value="50 minutes">50 minutes</option>
-									  	<option value="1 hour">1 hour</option>
-									  	<option value="1 hour, 15 minutes">1 hour, 15 minutes</option>
-									  	<option value="1 hour, 30 minutes">1 hour, 30 minutes</option>
-									  	<option value="1 hour, 45 minutes">1 hour, 45 minutes</option>
-									  	<option value="2 hours">2 hours</option>
-									</select>
-								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Learning Outcomes:</h3>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Learning Outcomes:</h3>
 									<textarea 
 										placeholder="Learning Outcomes"
 										className="textarea"
@@ -226,26 +243,22 @@ export default class LessonForm extends React.Component {
 										onChange={this.onLearningOutcomesChange}
 									/>
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Resources:</h3>
-									<div>
-										<button className="button" onClick={this.addResourceClicked}>Add Resource</button>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Resources:</h3>
+									<button className="button" onClick={this.addResourceClicked}>Add Resource</button>
+									<div className="list-item__table">
+									{
+										this.state.resources.map(resource => 
+											<div className="list-item__table-segment">
+												<a href={resource.value}>{resource.value}</a>
+												<button className="button" onClick={this.deleteResource} resourcename={resource.value}>Delete</button>
+											</div>
+										)
+									}
 									</div>
-									<input 
-										type="text"
-										placeholder="resource"
-										className="text-input"
-										value={this.state.resource}
-										onChange={this.onResourceChange}
-									/>	
-									<AddResourcePopup display={this.isDisplayed} backgroundClick={this.addResourceClicked}/>
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Lesson Structure:</h3>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Lesson Structure:</h3>
 									<textarea 
 										placeholder="Lesson Structure"
 										className="textarea"
@@ -253,20 +266,16 @@ export default class LessonForm extends React.Component {
 										onChange={this.onLessonStructureChange}
 									/>	
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
-									<h3 className="list-item__title">Prior Knowledge:</h3>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Prior Knowledge:</h3>
 									<textarea 
 										placeholder="Prior Knowledge"
 										className="textarea"
 										value={this.state.priorKnowledge}
 										onChange={this.onPriorKnowledgeChange}
-									/>	
+									/>
 								</div>
-							</div>
-							<div className="input-group">
-								<div className="input-group__item">
+								<div className="list-item">
 									<div>
 										<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
 									</div>
@@ -274,6 +283,11 @@ export default class LessonForm extends React.Component {
 							</div>
 						</div>
 					</div>
+					<AddResourcePopup 
+						display={this.isDisplayed} 
+						backgroundClick={this.addResourceClicked} 
+						changeResources={this.onResourcesChange}
+					/>
 				</div>
 			</form>
 		);

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from "react-player"
 
 const LessonPopup = (props) => (
 	<div> 
@@ -8,43 +9,69 @@ const LessonPopup = (props) => (
 					<div className="popup-background" onClick={props.backgroundClick}>
 					</div>
 					<div className="popup-container">
-						<div className="lesson-page">
-							<div className="lesson-body">
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__title">{props.lesson.title}</h3>
+						<div className="lesson-body">
+							<div className="list-body">
+								<div className="list-item">
+									<h3 className="list-item__title">{props.lesson.title}</h3>
 								</div>
-								<div className="lesson-item__part">
-									<p className="lesson-item__data">{props.lesson.description}</p>
+								<div className="list-item">
+									<p className="list-item__text">{props.lesson.description}</p>
 								</div>
-								<div className="lesson-item__grouped-part">
-									<div className="lesson-item__part--pair">
-										<h3 className="lesson-item__sub-title">Year: </h3>
+								<div className="list-item list-item--multiple">
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title">Year: </h3>
 										<p>{props.lesson.level}</p>
 									</div>
-									<div className="lesson-item__part--pair">
-										<h3 className="lesson-item__sub-title">Lesson Duration: </h3>
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title">Lesson Duration: </h3>
 										<p>{props.lesson.duration}</p>
 									</div>
 								</div>
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__sub-title">Learning Outcomes: </h3>
-									<p className="lesson-item__data">{props.lesson.learningOutcomes}</p>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Learning Outcomes: </h3>
+									<p className="list-item__text">{props.lesson.learningOutcomes}</p>
 								</div>
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__sub-title">Resource: </h3>
-									<p className="lesson-item__data">{props.lesson.resource}</p>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Resource: </h3>
+									{props.lesson.resources.map(resource => 
+										{
+											switch(resource.type) {
+												case "webLink":
+													return (
+														<div><a className="list-item__text" href={resource.value}>{resource.value}</a></div>
+													)
+													break;
+												case "embeddedVideo":
+													return (
+														<div>
+														    <ReactPlayer
+														        url={resource.value}
+														    />
+													    </div>
+													)
+													break;
+												case "PDF":
+													return (
+														<div><a className="list-item__text">A PDF with a value of {resource.value}</a></div>
+													)
+													break;
+												default:
+													return "";
+											}
+										}
+								    )}
 								</div>
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__sub-title">lessonStructure: </h3>
-									<p className="lesson-item__data">{props.lesson.lessonStructure}</p>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">lessonStructure: </h3>
+									<p className="list-item__text">{props.lesson.lessonStructure}</p>
 								</div>
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__sub-title">Curriculum Links: </h3>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Curriculum Links: </h3>
 									{onlyTrueLinks(props.lesson.curriculumLinks)}
 								</div>
-								<div className="lesson-item__part">
-									<h3 className="lesson-item__sub-title">Prior Knowledge: </h3>
-									<p className="lesson-item__data">{props.lesson.priorKnowledge}</p>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Prior Knowledge: </h3>
+									<p className="list-item__text">{props.lesson.priorKnowledge}</p>
 								</div>
 								<p>{'Rating: ' + props.lesson.rating}</p>
 							</div>
@@ -67,7 +94,7 @@ const onlyTrueLinks = (links) => {
 				linksString = linksString + ' ' + links[link].linkDescription
 			}
 		});
-		return <p className="lesson-item__data">{linksString}</p>;
+		return <p className="list-item__text">{linksString}</p>;
 	}
 	return '';
 }

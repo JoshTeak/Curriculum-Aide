@@ -8,30 +8,38 @@
 }
 
 .list-body {
-  margin-bottom: $m-size;
-  @media (min-width: $desktop-breakpoint) {
-    margin-bottom: $l-size;
-  }
-}
-
-.list-item {
-  border: 1px solid darken($off-white, 7%);
-  border-top: none;
   color: $dark-grey;
   display: flex;
   flex-direction: column;
-  padding: $s-size;
-  text-decoration: none;
-  transition: background .3s ease;
-  &:hover {
-    background: $off-white;
-  }
-  @media (min-width: $desktop-breakpoint) {
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: $m-size;
-  }
+  justify-content: space-evenly;
+  height: inherit;
+}
+
+.list-item {
+  margin-bottom: $s-size;
+}
+
+.list-item--multiple {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.list-item__pair {
+  display:flex;
+  align-items: center;
+}
+
+.list-item__table {
+  margin: $s-size 0;
+}
+
+.list-item__table-segment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background-color: #e1e7ff;
+  border: 2px solid #9ea9d6;
 }
 
 .list-item--message {
@@ -45,13 +53,23 @@
 }
 
 .list-item__title {
+  font-size: $font-size-xlarge;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 0;
   word-break: break-all;
 }
 
 .list-item__sub-title {
-  color: $grey;
-  font-size: $font-size-small;
+  font-size: $font-size-large;
+  margin: 0;
+  word-break: break-all;
+  padding-right: $s-size;
+}
+
+.list-item__text {
+  margin: 0;
 }
 
 .list-item__data {
