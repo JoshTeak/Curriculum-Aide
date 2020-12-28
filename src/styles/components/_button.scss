@@ -14,6 +14,11 @@
   background: #888;
 }
 
+.button--dropdown {
+  position: absolute;
+  margin: calc(#{$s-size} + 2px);
+}
+
 .button--link {
   background: none;
 }

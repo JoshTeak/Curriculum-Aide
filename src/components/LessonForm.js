@@ -276,18 +276,19 @@ export default class LessonForm extends React.Component {
 									/>
 								</div>
 								<div className="list-item">
-									<div>
-										<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
-									</div>
+									<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<AddResourcePopup 
-						display={this.isDisplayed} 
-						backgroundClick={this.addResourceClicked} 
-						changeResources={this.onResourcesChange}
-					/>
+					{
+						this.isDisplayed === "none" ? "" : (
+							<AddResourcePopup 
+								backgroundClick={this.addResourceClicked} 
+								changeResources={this.onResourcesChange}
+							/>
+						)
+					}
 				</div>
 			</form>
 		);

@@ -11,7 +11,7 @@
   color: $dark-grey;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: inherit;
 }
 
@@ -22,6 +22,11 @@
 .list-item--multiple {
   display: flex;  
   justify-content: space-between;
+}
+
+.list-item--row-end {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .list-item__pair {

@@ -53,7 +53,11 @@ export default class LessonListItem extends React.Component {
 						</div>
 					</div>					
 				</div>
-				<LessonPopup lesson={this.state} display={this.isDisplayed} backgroundClick={this.lessonClicked}/>
+				{
+					this.isDisplayed === "none" ? "" : (
+						<LessonPopup lesson={this.state} backgroundClick={this.lessonClicked}/>
+					)
+				}
 			</div>
 		);
 	};
