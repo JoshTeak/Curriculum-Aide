@@ -34,7 +34,7 @@ class LessonPopup extends React.Component {
 					linksString = linksString + ' ' + links[link].linkDescription
 				}
 			});
-			return <p className="list-item__text">{linksString}</p>;
+			return <p className="list-item__text-with-border">{linksString}</p>;
 		}
 		return '';
 	}
@@ -54,16 +54,16 @@ class LessonPopup extends React.Component {
 										<div className="dropdown-list">
 											<button className="button" onClick={this.optionsMenu}>Options</button>
 											<div className="dropdown-list-body">
-												<div className="dropdown-list-item ">
+												<div className="dropdown-list-item">
 													<h3 className="dropdown-list-item__option">Print</h3>
 												</div>
-												<div className="dropdown-list-item ">
+												<div className="dropdown-list-item">
 													<h3 className="dropdown-list-item__option">Favourite</h3>
 												</div>
-												<div className="dropdown-list-item ">
+												<div className="dropdown-list-item">
 													<h3 className="dropdown-list-item__option">Rate</h3>
 												</div>
-												<div className="dropdown-list-item ">
+												<div className="dropdown-list-item">
 													<h3 className="dropdown-list-item__option">Report</h3>
 												</div>
 												{
@@ -88,17 +88,17 @@ class LessonPopup extends React.Component {
 							</div>
 							<div className="list-item list-item--multiple">
 								<div className="list-item__pair">
-									<h3 className="list-item__sub-title">Year: </h3>
-									<p>{this.props.lesson.level}</p>
+									<h3 className="list-item__sub-title list-item__sub-title--left">Year: </h3>
+									<p className="list-item__text-with-border">{this.props.lesson.level}</p>
 								</div>
 								<div className="list-item__pair">
-									<h3 className="list-item__sub-title">Lesson Duration: </h3>
-									<p>{this.props.lesson.duration}</p>
+									<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration: </h3>
+									<p className="list-item__text-with-border">{this.props.lesson.duration}</p>
 								</div>
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Learning Outcomes: </h3>
-								<p className="list-item__text">{this.props.lesson.learningOutcomes}</p>
+								<p className="list-item__text-with-border">{this.props.lesson.learningOutcomes}</p>
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Resource: </h3>
@@ -107,7 +107,7 @@ class LessonPopup extends React.Component {
 										switch(resource.type) {
 											case "webLink":
 												return (
-													<div><a className="list-item__text" href={resource.value}>{resource.value}</a></div>
+													<div><a className="list-item__text-with-border" href={resource.value}>{resource.value}</a></div>
 												)
 												break;
 											case "embeddedVideo":
@@ -121,7 +121,7 @@ class LessonPopup extends React.Component {
 												break;
 											case "PDF":
 												return (
-													<div><a className="list-item__text">A PDF with a value of {resource.value}</a></div>
+													<div><a className="list-item__text-with-border">A PDF with a value of {resource.value}</a></div>
 												)
 												break;
 											default:
@@ -132,7 +132,7 @@ class LessonPopup extends React.Component {
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">lessonStructure: </h3>
-								<p className="list-item__text">{this.props.lesson.lessonStructure}</p>
+								<p className="list-item__text-with-border">{this.props.lesson.lessonStructure}</p>
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Curriculum Links: </h3>
@@ -140,10 +140,10 @@ class LessonPopup extends React.Component {
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Prior Knowledge: </h3>
-								<p className="list-item__text">{this.props.lesson.priorKnowledge}</p>
+								<p className="list-item__text-with-border">{this.props.lesson.priorKnowledge}</p>
 							</div>
 							<div className="list-item">
-								<p>{'Rating: ' + this.props.lesson.rating}</p>
+								<p className="list-item__text">{'Rating: ' + this.props.lesson.rating}</p>
 							</div>
 						</div>
 					</div>

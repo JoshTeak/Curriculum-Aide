@@ -200,7 +200,7 @@ export default class LessonForm extends React.Component {
 								</div>
 								<div className="list-item list-item--multiple">
 									<div className="list-item__pair">
-										<h3 className="list-item__sub-title">Year Level:</h3>
+										<h3 className="list-item__sub-title list-item__sub-title--left">Year Level:</h3>
 										<select className="dropdown" value={this.state.level} onChange={this.onLevelChange}>
 											<option value="" disabled hidden>Select Year Level</option>
 										  	<option value="Foundation Year">Foundation Year</option>
@@ -217,7 +217,7 @@ export default class LessonForm extends React.Component {
 										</select>
 									</div>
 									<div className="list-item__pair">
-										<h3 className="list-item__sub-title">Lesson Duration:</h3>
+										<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration:</h3>
 										<select className="dropdown" value={this.state.duration} onChange={this.onDurationChange}>
 											<option value="" disabled hidden>Select Lesson Duration</option>
 										  	<option value="15 minutes">15 minutes</option>

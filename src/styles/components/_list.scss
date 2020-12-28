@@ -67,14 +67,26 @@
 }
 
 .list-item__sub-title {
+  background-color: $light-blue;
+  padding: $xs-size;
   font-size: $font-size-large;
   margin: 0;
   word-break: break-all;
-  padding-right: $s-size;
+  border-radius: $xs-size $xs-size 0 0;
+}
+
+.list-item__sub-title--left {
+  border-radius: $xs-size 0 0 $xs-size;
 }
 
 .list-item__text {
   margin: 0;
+}
+
+.list-item__text-with-border {
+  margin: 0;
+  border: 1px solid #d6d6d6;
+  padding: 0.8rem;
 }
 
 .list-item__data {
