@@ -1,7 +1,7 @@
 const filterReducerDefaultState = {
 	text: '',
-	sortBy: 'rating',
-	curriculumLinks: {link1: false, link2: false, link3: false}
+	sortBy: 'title',
+	curriculumLinks: {}
 }
 
 export default (state = filterReducerDefaultState, action) => {
@@ -20,6 +20,21 @@ export default (state = filterReducerDefaultState, action) => {
 			return {
 				...state,
 				sortBy: 'rating'
+			};
+		case 'SORT_BY_TITLE':
+			return {
+				...state,
+				sortBy: 'title'
+			};
+		case 'SORT_BY_LEVEL':
+			return {
+				...state,
+				sortBy: 'level'
+			};
+		case 'SORT_BY_DURATION':
+			return {
+				...state,
+				sortBy: 'duration'
 			};
 		default:
 			return state;

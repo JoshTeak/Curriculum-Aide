@@ -1,0 +1,11 @@
+.info-bubble {
+	transition: all 0.2s ease;
+	opacity: 0;
+	position: absolute;
+    right: -38rem;
+}
+.info-bubble-information {
+	background: white;
+	padding: 1.2rem;
+    width: 18vw;
+}

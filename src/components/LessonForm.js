@@ -2,6 +2,8 @@ import React from 'react';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from './CurriculumAddresses';
 import AddResourcePopup from './AddResourcePopup';
+import AddStructureSegmentPopup from './AddStructureSegmentPopup';
+import AddCurriculumLinkPopup from './AddCurriculumLinkPopup';
 import { Link } from 'react-router-dom';
 
 export default class LessonForm extends React.Component {
@@ -9,21 +11,25 @@ export default class LessonForm extends React.Component {
 		super(props);
 
 		this.maxDescriptionChar = 50;
-		this.isDisplayed = "none";
+		this.displayedResourcePopup = "none";
+		this.displayedStructurePopup = "none";
+		this.displayedLinkPopup = "none";
 
 		this.state = {
 			title: props.lesson ? props.lesson.title : '',
 			description: props.lesson ? props.lesson.description : '',
-			level: props.lesson ? props.lesson.level : '',
-			duration: props.lesson ? props.lesson.duration: '',
+			level: props.lesson ? props.lesson.level : 0,
+			duration: props.lesson ? props.lesson.duration: 0,
 			learningOutcomes: props.lesson ? props.lesson.learningOutcomes : '',
 			resources: props.lesson ? props.lesson.resources : [],
-			lessonStructure: props.lesson ? props.lesson.lessonStructure : '',
+			lessonStructure: props.lesson ? props.lesson.lessonStructure : [],
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
 			descriptionRemainingChar: props.lesson ? this.maxDescriptionChar - props.lesson.description.length : this.maxDescriptionChar,
-			error: ''
+			error: false
 		};
+
+		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
 	};
 
 	onTitleChange = (e) => {
@@ -64,14 +70,27 @@ export default class LessonForm extends React.Component {
 		}
 	};
 
-	onCurriculumLinkChange = (e) => {
-		Object.keys(this.state.curriculumLinks).forEach(key => {
-			if(key === e.target.value)
+	onStructureChange = (structureObject, order) => {
+		const lessonStructure = this.state.lessonStructure;
+		switch (order) {
+			case 'ADD_STRUCTURE_SEGMENT':
 			{
-				this.state.curriculumLinks[key].isSet = e.target.checked;
-				this.setState(() => (this.state.curriculumLinks));
-			}
-		});
+				lessonStructure.push(structureObject)
+				this.setState(() => ({lessonStructure}));
+				break;
+			};
+			case 'REMOVE_STRUCTURE_SEGMENT':
+			{
+				const index = lessonStructure.indexOf(structureObject);
+				lessonStructure.splice(index, 1);
+				this.setState(() => ({lessonStructure}));
+				break;
+			};
+		}
+	};
+
+	onCurriculumLinkChange = (curriculumLinks) => {
+		this.setState(() => ({curriculumLinks}))
 	}
 
 	onLevelChange = (e) => {
@@ -80,13 +99,8 @@ export default class LessonForm extends React.Component {
 	}
 
 	onDurationChange = (e) => {
-		const duration = e.target.value;
+		const duration = parseInt(e.target.value);
 		this.setState(() => ({duration}))
-	}
-
-	onLessonStructureChange = (e) => {
-		const lessonStructure = e.target.value;
-		this.setState(() => ({lessonStructure}))
 	}
 
 	onPriorKnowledgeChange = (e) => {
@@ -94,18 +108,26 @@ export default class LessonForm extends React.Component {
 		this.setState(() => ({priorKnowledge}))
 	}
 
-	collapsibleSidebar = (e) => {
-		e.preventDefault();
+	onInputFocus = (e) => {
+		this.resetInfoBubbles();
 
-		const sidebar = document.getElementById("sidebar");
+		switch(e.target.placeholder) {
+			case "Description":
+				document.getElementById("description-bubble").style.opacity = 1;
+				break;
+			case "Learning Outcomes":
+				document.getElementById("learning-outcomes-bubble").style.opacity = 1;
+				break;
+			case "Prior Knowledge":
+				document.getElementById("prior-knowledge-bubble").style.opacity = 1;
+				break;		
+		}
+	}
 
-		if(sidebar.style.transform === "translateX(0px)")
-		{
-			sidebar.style.transform = "translateX(calc(1.6rem - 100%))";
-			sidebar.style.position = "absolute";
-		} else {
-			sidebar.style.transform = "translateX(0px)";
-			sidebar.style.position = "unset";
+	resetInfoBubbles = () => {
+		const displayInfoBubble = document.getElementsByClassName("info-bubble");
+		for (let i = 0; i < displayInfoBubble.length; i++) {
+			displayInfoBubble[i].style.opacity = 0;
 		}
 	}
 
@@ -118,26 +140,79 @@ export default class LessonForm extends React.Component {
 	addResourceClicked = (e) => {
 		e.preventDefault();
 		
-	  	if(this.isDisplayed === "none")
+	  	if(this.displayedResourcePopup === "none")
 	  	{
-	  		this.isDisplayed = "block";
-	  	} else if(this.isDisplayed === "block")
+	  		this.displayedResourcePopup = "block";
+	  	} else if(this.displayedResourcePopup === "block")
 	  	{
-	  		this.isDisplayed = "none";
+	  		this.displayedResourcePopup = "none";
 	  	}
 	  	this.forceUpdate();
+	}
+
+	addSegmentClicked = (e) => {
+		e.preventDefault();
+
+		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
+
+	  	if(this.displayedStructurePopup === "none")
+	  	{
+	  		this.displayedStructurePopup = "block";
+	  	} else if(this.displayedStructurePopup === "block")
+	  	{
+	  		this.displayedStructurePopup = "none";
+	  	}
+	  	this.forceUpdate();
+	}
+
+	addLinkClicked = (e) => {
+		e.preventDefault();
+
+	  	if(this.displayedLinkPopup === "none")
+	  	{
+	  		this.displayedLinkPopup = "block";
+	  	} else if(this.displayedLinkPopup === "block")
+	  	{
+	  		this.displayedLinkPopup = "none";
+	  	}
+	  	this.forceUpdate();
+	}
+
+	calculateLessonDuration = (structure) => {
+		let totalLessonDuration = 0;
+		structure.forEach(segment => {
+				totalLessonDuration += segment.duration
+			}
+		)
+		return totalLessonDuration;
+	}
+
+	onlyTrueLinks = (links) => {
+		if(links)
+		{
+			let linksArray = [];
+
+			Object.keys(links).forEach(link => {
+				if(links[link].isSet === true)
+				{
+					linksArray.push(links[link]);
+				}
+			});
+			return linksArray;
+		}
+		return '';
 	}
 
 	onSubmit = (e) => {
 		e.preventDefault();
 		
-		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.resources || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
+		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
 			this.setState(() => ({
-				error: 'Please provde a title, learningOutcomes and resouce.'
+				error: true
 			}));
 		} else {
 			this.setState(() => ({
-				error: ''
+				error: false
 			}));
 			this.props.onSubmit({
 				title: this.state.title,
@@ -156,24 +231,7 @@ export default class LessonForm extends React.Component {
 	render() {
 		return (
 			<form className="form">
-				{this.state.error && <p className="form__error">{this.state.error}</p>}
 				<div className="page-body">
-					<div className="content-container content-container--minor">
-						<div className="collapsibleSidebar" id="sidebar">
-							<div className="filter">
-								<div className="input-group">
-									<div className="input-group__item">
-										<CheckboxList
-											onChangeFunction={this.onCurriculumLinkChange}
-											curriculumLinks={this.state.curriculumLinks}
-										/>
-									</div>
-								</div>	
-							</div>
-							<button className="collapsibleSidebar__button" onClick={this.collapsibleSidebar}>
-							</button>
-						</div>
-					</div>
 					<div className="content-container content-container--major">
 						<div className="formLayout">
 							<div className="list-body">
@@ -186,22 +244,32 @@ export default class LessonForm extends React.Component {
 										className="text-input"
 										value={this.state.title}
 										onChange={this.onTitleChange}
+										onFocus={this.resetInfoBubbles}
 									/>
+									{this.state.error && !this.state.title ? <p className="form__error">*Please provde a title.</p> : ""}
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Description:</h3>
+									<div className="info-bubble" id="description-bubble">
+										<div className="info-bubble-information">
+											<p>This is an information bubble about how to fill in the title</p>	
+										</div>
+									</div>
 									<textarea 
 										placeholder="Description"
 										className="textarea"
 										value={this.state.description}
 										onChange={this.onDescriptionChange}
+										onFocus={this.onInputFocus}
+										onBlur={this.resetInfoBubbles}
 									/>
+									{this.state.error && !this.state.description ? <p className="form__error">*Please provde a brief description.</p> : ""}
 									<p>Characters remaining: {this.state.descriptionRemainingChar}</p>
 								</div>
 								<div className="list-item list-item--multiple">
 									<div className="list-item__pair">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Year Level:</h3>
-										<select className="dropdown" value={this.state.level} onChange={this.onLevelChange}>
+										<select className="dropdown dropdown--right" value={this.state.level} onChange={this.onLevelChange}>
 											<option value="" disabled hidden>Select Year Level</option>
 										  	<option value="Foundation Year">Foundation Year</option>
 										  	<option value="Year 1">Year 1</option>
@@ -218,62 +286,112 @@ export default class LessonForm extends React.Component {
 									</div>
 									<div className="list-item__pair">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration:</h3>
-										<select className="dropdown" value={this.state.duration} onChange={this.onDurationChange}>
-											<option value="" disabled hidden>Select Lesson Duration</option>
-										  	<option value="15 minutes">15 minutes</option>
-										  	<option value="20 minutes">20 minutes</option>
-										  	<option value="25 minutes">25 minutes</option>
-										  	<option value="30 minutes">30 minutes</option>
-										  	<option value="40 minutes">40 minutes</option>
-										  	<option value="50 minutes">50 minutes</option>
-										  	<option value="1 hour">1 hour</option>
-										  	<option value="1 hour, 15 minutes">1 hour, 15 minutes</option>
-										  	<option value="1 hour, 30 minutes">1 hour, 30 minutes</option>
-										  	<option value="1 hour, 45 minutes">1 hour, 45 minutes</option>
-										  	<option value="2 hours">2 hours</option>
-										</select>
+										<div className="list-item__text-with-border">
+											<p onChange={this.onDurationChange}>{this.lessonDuration + " minutes"}</p>
+										</div>
 									</div>
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Learning Outcomes:</h3>
+									<div className="info-bubble" id="learning-outcomes-bubble">
+										<div className="info-bubble-information">
+											<p>This is an information bubble about how to fill in the title</p>	
+										</div>
+									</div>
 									<textarea 
 										placeholder="Learning Outcomes"
 										className="textarea"
 										value={this.state.learningOutcomes}
 										onChange={this.onLearningOutcomesChange}
+										onFocus={this.onInputFocus}
+										onBlur={this.resetInfoBubbles}
 									/>
+									{this.state.error && !this.state.learningOutcomes ? <p className="form__error">*Please provde a learning outcome.</p> : ""}
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Resources:</h3>
-									<button className="button" onClick={this.addResourceClicked}>Add Resource</button>
 									<div className="list-item__table">
-									{
-										this.state.resources.map(resource => 
-											<div className="list-item__table-segment">
-												<a href={resource.value}>{resource.value}</a>
-												<button className="button" onClick={this.deleteResource} resourcename={resource.value}>Delete</button>
-											</div>
-										)
-									}
+										{
+											this.state.resources.map(resource => 
+												<div className="list-item__table-segment-coloured">
+													<a href={resource.value}>{resource.value}</a>
+													<button className="button" onClick={this.deleteResource} resourcename={resource.value}>Delete</button>
+												</div>
+											)
+										}
 									</div>
+									<button className="button" onClick={this.addResourceClicked}>Add Resource</button>
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Lesson Structure:</h3>
-									<textarea 
-										placeholder="Lesson Structure"
-										className="textarea"
-										value={this.state.lessonStructure}
-										onChange={this.onLessonStructureChange}
-									/>	
+										<div className="list-item__table  no-background">
+											{
+												Object.keys(this.state.lessonStructure).length !== 0 ?
+												<div className="list-item__table-row">
+													<div className="list-item__table-segment flex-ratio-one">
+														<p>Duration:</p>
+													</div>
+													<div className="list-item__table-segment flex-ratio-four">
+														<p>Content:</p>
+													</div>
+													<div className="list-item__table-segment flex-ratio-three">
+														<p>Pedagogy:</p>
+													</div>
+													<div className="list-item__table-segment flex-ratio-two">
+														<p>Materials:</p>
+													</div>
+												</div> : ""
+											}
+											{
+												this.state.lessonStructure.map(segment => 
+													<div className="list-item__table-row">
+														<div className="list-item__table-segment flex-ratio-one">
+															<p>{segment.duration + " minutes"}</p>
+														</div>
+														<div className="list-item__table-segment flex-ratio-four">
+															<p>{segment.title + ': '}</p>
+															<p>{segment.content}</p>
+														</div>
+														<div className="list-item__table-segment flex-ratio-three">
+															<p>{segment.pedagogy}</p>
+														</div>
+														<div className="list-item__table-segment flex-ratio-two">
+															<p>{segment.materials}</p>
+														</div>
+													</div>
+												)
+											}
+									</div>
+									<button className="button" onClick={this.addSegmentClicked}>Add Structure Segment</button>
+									{this.state.error && this.state.lessonStructure.length === 0 ? <p className="form__error">*Please provde a lesson structure.</p> : ""}
+								</div>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Curriculum Links:</h3>
+									{
+										Object.keys(this.onlyTrueLinks(this.state.curriculumLinks)).length !== 0 ?
+										<div className="list-item__text-with-border">
+											{this.onlyTrueLinks(this.state.curriculumLinks).map(link => <p>- {link.linkDescription}</p>)}
+										</div> : ""
+									}
+									<button className="button" onClick={this.addLinkClicked}>Edit Curriculum Link</button>
+									{this.state.error && Object.keys(this.onlyTrueLinks(this.state.curriculumLinks)).length === 0 ? <p className="form__error">*Please provde a curriculum link.</p> : ""}
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Prior Knowledge:</h3>
+									<div className="info-bubble" id="prior-knowledge-bubble">
+										<div className="info-bubble-information">
+											<p>This is an information bubble about how to fill in the title</p>	
+										</div>
+									</div>
 									<textarea 
 										placeholder="Prior Knowledge"
 										className="textarea"
 										value={this.state.priorKnowledge}
 										onChange={this.onPriorKnowledgeChange}
+										onFocus={this.onInputFocus}
+										onBlur={this.resetInfoBubbles}
 									/>
+									{this.state.error && !this.state.priorKnowledge ? <p className="form__error">*Please provde prior knowledge.</p> : ""}
 								</div>
 								<div className="list-item">
 									<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
@@ -282,10 +400,27 @@ export default class LessonForm extends React.Component {
 						</div>
 					</div>
 					{
-						this.isDisplayed === "none" ? "" : (
+						this.displayedResourcePopup === "none" ? "" : (
 							<AddResourcePopup 
 								backgroundClick={this.addResourceClicked} 
 								changeResources={this.onResourcesChange}
+							/>
+						)
+					}
+					{
+						this.displayedStructurePopup === "none" ? "" : (
+							<AddStructureSegmentPopup 
+								backgroundClick={this.addSegmentClicked} 
+								changeResources={this.onStructureChange}
+							/>
+						)
+					}
+					{
+						this.displayedLinkPopup === "none" ? "" : (
+							<AddCurriculumLinkPopup 
+								backgroundClick={this.addLinkClicked} 
+								changeResources={this.onCurriculumLinkChange}
+								curriculumLinks={this.state.curriculumLinks}
 							/>
 						)
 					}

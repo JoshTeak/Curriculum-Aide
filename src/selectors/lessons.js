@@ -21,8 +21,16 @@ export default (lessons, { text, sortBy, curriculumLinks }) => {
 
 		return (textMatch && linkMatch);
 	}).sort((a, b) => {
-		if(sortBy === 'rating') {
-			return a.rating < b.rating ? 1 : -1;				// sort function needs to return -1 if a is selected and 1 if b is selected
+		switch (sortBy) {
+			case 'rating':
+				return a.rating < b.rating ? 1 : -1;				// sort function needs to return -1 if a is selected and 1 if b is selected
+			case 'title':
+				return a.title < b.title ? -1 : 1;				// sort function needs to return -1 if a is selected and 1 if b is selected
+			case 'level':
+				return a.level < b.level ? -1 : 1;				// sort function needs to return -1 if a is selected and 1 if b is selected
+			case 'duration':
+				return a.duration < b.duration ? -1 : 1;				// sort function needs to return -1 if a is selected and 1 if b is selected
+			default:
 		}
 	});
 };

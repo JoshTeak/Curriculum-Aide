@@ -30,7 +30,7 @@ const EditLessonPage = (props) => {
 
 const mapStateToProps = (state, props) => {
   return {
-    lesson: state.lessons.find((lesson) => lesson.id === props.match.params.id)
+    lesson: state.lessons.find((lesson) => ":" + lesson.id === props.match.params.id)
   };
 };
 

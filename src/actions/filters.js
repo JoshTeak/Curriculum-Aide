@@ -13,3 +13,15 @@ export const setCurriculumLinksFilter = (curriculumLinks = defaultLinks()) => ({
 export const sortByRating = () => ({
 	type: 'SORT_BY_RATING'
 });
+
+export const sortByTitle = () => ({
+	type: 'SORT_BY_TITLE'
+});
+
+export const sortByLevel = () => ({
+	type: 'SORT_BY_LEVEL'
+});
+
+export const sortByDuration = () => ({
+	type: 'SORT_BY_DURATION'
+});

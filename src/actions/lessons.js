@@ -17,7 +17,7 @@ export const startAddLesson = (lessonData = {}) => {
 			duration = '',
 			learningOutcomes = '', 
 			resources = [],
-			lessonStructure = '',
+			lessonStructure = [],
 			curriculumLinks = defaultLinks(), 
 			priorKnowledge = '',
 			rating = 0,
@@ -42,7 +42,7 @@ export const removeLesson = ({ id } = {}) => ({
 export const startRemoveLesson = ({ id } = {}) => {
 	return (dispatch) => {
 		return database.ref(`lessons/${id}`).remove().then(() => {
-			dispatch(removeExpense({id}));
+			dispatch(removeLesson({id}));
 		});
 	};
 };

@@ -29,5 +29,13 @@ button:disabled {
 .dropdown { 
   padding: 1.2rem;
   border-radius: 1.2rem;
-  margin: auto;
+  cursor: pointer;
+}
+
+.dropdown--right {
+  border-radius: 0 $xs-size $xs-size 0;
+}
+
+p {
+  margin: 0;
 }

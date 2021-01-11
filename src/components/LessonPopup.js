@@ -8,6 +8,7 @@ class LessonPopup extends React.Component {
 		super(props);
 
 		this.isDisplayed = "none";
+		this.lessonDuration = this.calculateLessonDuration(this.props.lesson.lessonStructure);
 	};
 
 	optionsMenu = (e) => {
@@ -26,17 +27,26 @@ class LessonPopup extends React.Component {
 	onlyTrueLinks = (links) => {
 		if(links)
 		{
-			let linksString = '';
+			let linksArray = [];
 
 			Object.keys(links).forEach(link => {
 				if(links[link].isSet === true)
 				{
-					linksString = linksString + ' ' + links[link].linkDescription
+					linksArray.push(links[link]);
 				}
 			});
-			return <p className="list-item__text-with-border">{linksString}</p>;
+			return linksArray;
 		}
 		return '';
+	}
+
+	calculateLessonDuration = (structure) => {
+		let totalLessonDuration = 0;
+		structure.forEach(segment => {
+				totalLessonDuration += segment.duration
+			}
+		)
+		return totalLessonDuration;
 	}
 
 	render() {
@@ -80,7 +90,7 @@ class LessonPopup extends React.Component {
 									)
 								}
 							</div>
-							<div className="list-item ">
+							<div className="list-item">
 								<h3 className="list-item__title">{this.props.lesson.title}</h3>
 							</div>
 							<div className="list-item">
@@ -93,7 +103,7 @@ class LessonPopup extends React.Component {
 								</div>
 								<div className="list-item__pair">
 									<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration: </h3>
-									<p className="list-item__text-with-border">{this.props.lesson.duration}</p>
+									<p className="list-item__text-with-border">{this.lessonDuration + " minutes"}</p>
 								</div>
 							</div>
 							<div className="list-item">
@@ -107,7 +117,9 @@ class LessonPopup extends React.Component {
 										switch(resource.type) {
 											case "webLink":
 												return (
-													<div><a className="list-item__text-with-border" href={resource.value}>{resource.value}</a></div>
+													<div className="list-item__text-with-border">
+														<a href={resource.value}>{resource.value}</a>
+													</div>
 												)
 												break;
 											case "embeddedVideo":
@@ -131,12 +143,48 @@ class LessonPopup extends React.Component {
 							    )}
 							</div>
 							<div className="list-item">
-								<h3 className="list-item__sub-title">lessonStructure: </h3>
-								<p className="list-item__text-with-border">{this.props.lesson.lessonStructure}</p>
+								<h3 className="list-item__sub-title">Lesson Structure:</h3>
+								<div className="list-item__table  no-background">
+									<div className="list-item__table-row">
+										<div className="list-item__table-segment flex-ratio-one">
+											<p>Duration: </p>
+										</div>
+										<div className="list-item__table-segment flex-ratio-four">
+											<p>Content:</p>
+										</div>
+										<div className="list-item__table-segment flex-ratio-three">
+											<p>Pedagogy:</p>
+										</div>
+										<div className="list-item__table-segment flex-ratio-two">
+											<p>Materials:</p>
+										</div>
+									</div>
+									{
+										this.props.lesson.lessonStructure.map(segment => 
+											<div className="list-item__table-row">
+												<div className="list-item__table-segment flex-ratio-one">
+													<p>{segment.duration  + " minutes"}</p>
+												</div>
+												<div className="list-item__table-segment flex-ratio-four">
+													<p>{segment.title + ': '}</p>
+													<p>{segment.content}</p>
+												</div>
+												<div className="list-item__table-segment flex-ratio-three">
+													<p>{segment.pedagogy}</p>
+												</div>
+												<div className="list-item__table-segment flex-ratio-two">
+													<p>{segment.materials}</p>
+												</div>
+											</div>
+										)
+									}
+								</div>
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Curriculum Links: </h3>
-								{this.onlyTrueLinks(this.props.lesson.curriculumLinks)}
+								<div className="list-item__text-with-border">
+									{this.onlyTrueLinks(this.props.lesson.curriculumLinks).map(link => <p>- {link.linkDescription}</p>)}
+								</div>
 							</div>
 							<div className="list-item">
 								<h3 className="list-item__sub-title">Prior Knowledge: </h3>

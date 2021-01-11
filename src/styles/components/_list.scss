@@ -35,16 +35,52 @@
 }
 
 .list-item__table {
-  margin: $s-size 0;
+  background-color: #e1e7ff;
 }
 
-.list-item__table-segment {
+.list-item__table-row{
+  display: flex;
+}
+
+.list-item__table-row > * {
+  flex: 1 1 0;
+}
+
+.list-item__table-segment-coloured {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem;
-  background-color: #e1e7ff;
-  border: 2px solid #9ea9d6;
+  border: 1px solid #9ea9d6;
+}
+
+.list-item__table-segment {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 1.2rem;
+  border: 1px solid $light-grey;
+}
+
+.no-background {
+  background-color: #ffffff00;
+  border: 1px solid $light-grey;
+}
+
+.flex-ratio-one {
+  flex: 1 1 0
+}
+
+.flex-ratio-two {
+  flex: 2 1 0
+}
+
+.flex-ratio-three {
+  flex: 3 1 0
+}
+
+.flex-ratio-four {
+  flex: 4 1 0
 }
 
 .list-item--message {
@@ -85,7 +121,7 @@
 
 .list-item__text-with-border {
   margin: 0;
-  border: 1px solid #d6d6d6;
+  border: 1px solid $light-grey;
   padding: 0.8rem;
 }
 

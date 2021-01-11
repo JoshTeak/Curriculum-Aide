@@ -87,10 +87,12 @@ export default class CheckboxList extends React.Component {
 			<div>
 				<h1 className="curriculum-header">Curriculum Links</h1>
 				<div className="curriculum-navigation">
-					<button className="button button--secondary" onClick={() => {
+					<button className="button button--secondary" onClick={(e) => {
+						e.preventDefault();
 						this.DisplayedLevels("decrease");
 			        }}>Previous</button>
-					<button className="button button--secondary" onClick={() => {
+					<button className="button button--secondary" onClick={(e) => {
+						e.preventDefault();
 						this.DisplayedLevels("increase");
 			        }}>Next</button>
 				</div>

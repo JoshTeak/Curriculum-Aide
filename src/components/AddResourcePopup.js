@@ -4,7 +4,7 @@ export default class AddResourcePopup extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {resource: {value: "", type: ""}};
+		this.state = {resource: {value: "", type: "webLink"}, error: false};
 	};
 	onResourceValueChange = (e) => {
 		const resourceValue = e.target.value;
@@ -16,8 +16,18 @@ export default class AddResourcePopup extends React.Component {
 	};
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.changeResources(this.state.resource, "ADD_RESOURCE");
-		this.props.backgroundClick(e);
+		
+		if(!this.state.resource.value || !this.state.resource.type) {
+			this.setState(() => ({
+				error: true
+			}));
+		} else {
+			this.setState(() => ({
+				error: false
+			}));
+			this.props.changeResources(this.state.resource, "ADD_RESOURCE");
+			this.props.backgroundClick(e);
+		}
 	};
 	render() {
 		return (
@@ -36,6 +46,7 @@ export default class AddResourcePopup extends React.Component {
 								  	<option value="embeddedVideo">YouTube Video</option>
 								  	<option value="PDF">PDF</option>
 								</select>
+								{this.state.error && !this.state.resource.type ? <p className="form__error">*Please select the type of resource you want to provide.</p> : ""}
 							</div>
 							<div className="list-item">
 								<input 
@@ -45,6 +56,7 @@ export default class AddResourcePopup extends React.Component {
 									value={this.state.resource.value}
 									onChange={this.onResourceValueChange}
 								/>	
+								{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a weblink to the resource.</p> : ""}
 							</div>
 							<div className="list-item list-item--multiple">
 								<div className="list-item__pairr">

@@ -1,10 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter, setCurriculumLinksFilter} from '../actions/filters';
+import {setTextFilter, setCurriculumLinksFilter, sortByRating, sortByTitle, sortByLevel ,sortByDuration} from '../actions/filters';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from '../components/CurriculumAddresses';
 
-class ExpenseListFilters extends React.Component {
+class LessonListFilters extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -13,6 +13,24 @@ class ExpenseListFilters extends React.Component {
 	onTextChange = (e) => {
 		this.props.setTextFilter(e.target.value);
 	}
+	onSortChange = (e) => {
+	    switch (e.target.value) {
+			case 'rating':
+				this.props.sortByRating();
+				break;
+			case 'title':
+				this.props.sortByTitle();	
+				break;
+			case 'level':
+				this.props.sortByLevel();
+				break;
+			case 'duration':
+				this.props.sortByDuration();
+				break;
+			default:
+				console.log('default');
+		}
+	};
 	onCurriculumLinkChange = (e) => {
 		Object.keys(this.state.curriculumLinks).forEach(link => {
 			if(link === e.target.value)
@@ -44,7 +62,7 @@ class ExpenseListFilters extends React.Component {
 								type="text"
 								className="text-input" 
 								placeholder="Search lessons"
-								defaultValue={this.props.filters.text}
+								value={this.props.filters.text}
 								onChange={this.onTextChange}
 							/>
 						</div>
@@ -59,6 +77,15 @@ class ExpenseListFilters extends React.Component {
 								<option value="Levels1and2">Levels 1 and 2</option>
 								<option value="Levels3and4">Levels 3 and 4</option>
 								<option value="Levels5and6">Levels 5 and 6</option>
+							</select>
+						</div>
+						<div className="input-group__item">
+							<select className="dropdown" value={this.props.filters.sortBy} onChange={this.onSortChange}> 
+								<option value="">Sort By</option>
+								<option value="title">Alphabetical Order</option>
+								<option value="duration">Lesson Duration</option>
+								<option value="level">Level</option>
+								<option value="rating">Rating</option>
 							</select>
 						</div>
 					</div>
@@ -86,8 +113,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
 	setTextFilter: (text) => dispatch(setTextFilter(text)),
-	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks))
+	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks)),
+	sortByRating: () => dispatch(sortByRating()),
+	sortByTitle: () => dispatch(sortByTitle()),
+	sortByLevel: () => dispatch(sortByLevel()),
+	sortByDuration: () => dispatch(sortByDuration())
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters);
+export default connect(mapStateToProps, mapDispatchToProps)(LessonListFilters);
