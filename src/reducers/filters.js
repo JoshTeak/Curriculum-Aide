@@ -1,7 +1,11 @@
+import { defaultLinks } from '../components/CurriculumAddresses';
+
 const filterReducerDefaultState = {
 	text: '',
 	sortBy: 'title',
-	curriculumLinks: {}
+	favourites: {},
+	curriculumLinks: defaultLinks(),
+	sortAll: false
 }
 
 export default (state = filterReducerDefaultState, action) => {
@@ -14,7 +18,8 @@ export default (state = filterReducerDefaultState, action) => {
 		case 'SET_CURRICULUM_LINK_FILTER':
 			return {
 				...state,
-				curriculumLinks: action.curriculumLinks
+				curriculumLinks: action.curriculumLinks,
+				sortAll: false
 			};		
 		case 'SORT_BY_RATING':
 			return {
@@ -36,6 +41,16 @@ export default (state = filterReducerDefaultState, action) => {
 				...state,
 				sortBy: 'duration'
 			};
+		case 'SORT_BY_FAVOURITE':
+			return {
+				...state,
+				favourites: action.favourites
+			}
+		case 'SORT_ALL':
+			return {
+				...state,
+				sortAll: true
+			}
 		default:
 			return state;
 	}

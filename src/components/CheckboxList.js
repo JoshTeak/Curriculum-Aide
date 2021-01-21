@@ -1,14 +1,15 @@
 import React from 'react';
-import { linkStructure } from './CurriculumAddresses';
+import { linkArray } from './CurriculumAddresses';
 
 export default class CheckboxList extends React.Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {curriculumLinks: props.curriculumLinks, onChangeFunction: props.onChangeFunction}
-
-		this.levels = ["levelA", "levelB", "levelC", "levelD", "FoundationLevel", "Levels1and2", "Levels3and4", "Levels5and6"];
+		this.levels = ["Level A", "Level B", "Level C", "Level D", "Foundation Level", "Levels 1 and 2", "Levels 3 and 4", "Levels 5 and 6"];
 		this.firstLevelDisplayed = 0;
+		this.levelToLinksArray = [];
+		this.levelsToLinksObject = {};
 
 		let previousWindowWidth = window.innerWidth;
 
@@ -29,7 +30,6 @@ export default class CheckboxList extends React.Component {
 			}
 		});
 	}
-
 	CheckDisplayedLevel = (currentLevel) => {
 		if(window.innerWidth >= 1800) {
 			return this.levels.slice(currentLevel, currentLevel + 3);
@@ -39,7 +39,6 @@ export default class CheckboxList extends React.Component {
 			return this.levels.slice(currentLevel, currentLevel + 1);
 		}
 	}
-
 	DisplayedLevels = (type) => {
 		switch (type) {
 			case 'increase':
@@ -59,29 +58,20 @@ export default class CheckboxList extends React.Component {
 			default:
 		};	
 	};
-
-	SingleCheckbox = (onChangeFunction, curriculumStructureSegment) => (
-		<div>
-			{
-				Object.keys(curriculumStructureSegment).map((link) => {
-					return <div className="curriculum-item__link">
-								<h3 className="curriculum-item__descriptor">{curriculumStructureSegment[link].linkDescription}</h3>
-								<div className="curriculum-item__pair">
-									<h3 className="curriculum-item__code">{'(' + link + ')'}</h3>
-									<input
-										key={link}
-										type="checkbox" 
-										value={link}
-										onChange={onChangeFunction}
-										checked={curriculumStructureSegment[link].isSet}
-									/>
-								</div>
-							</div>
-				})
-			}
-		</div>
-	);
-
+	addToLinkArray = (link) => {
+		this.levelToLinksArray.push([link.linkCode])
+	}
+	createLevelsToLinks = (level) => {
+		if(this.levelToLinksArray !== [])
+		{
+			this.levelsToLinksObject = {...this.levelsToLinksObject, [level.levelName]: this.levelToLinksArray}
+		}
+		this.levelToLinksArray = [];
+	}
+	onLevelClick = (e) => {
+		const level = e.target.getAttribute('levelname');
+		this.props.onYearChange(this.levelsToLinksObject[level]);
+	}
 	render() {
 		return (
 			<div>
@@ -98,43 +88,55 @@ export default class CheckboxList extends React.Component {
 				</div>
 				<div className="curriculum-body">
 					{
-						Object.keys(linkStructure(this.state.curriculumLinks).pascCurriculum).map((level) => {
-							if(this.CheckDisplayedLevel(this.firstLevelDisplayed).indexOf(level) !== -1)
-							{
-								return <div className="curriculum-level">
-										<h3 className="curriculum-level__title">{level}</h3>	
-										<div className="curriculum-item__half">
-											<h3 className="curriculum-item__title">Self-Awareness and Management</h3>
-											<div className="curriculum-item__section">
-												<h3 className="curriculum-item__sub-title">Recognition and expression of emotion</h3>
-												<div className="curriculum-item__sub-section">
-													{this.SingleCheckbox(this.state.onChangeFunction, (linkStructure(this.state.curriculumLinks).pascCurriculum)[level].seaam.raeoe)}
-												</div>
-											</div>
-											<div>
-												<h3 className="curriculum-item__sub-title">Development of resilience</h3>
-												<div className="curriculum-item__sub-section">
-													{this.SingleCheckbox(this.state.onChangeFunction, (linkStructure(this.state.curriculumLinks).pascCurriculum)[level].seaam.dor)}
-												</div>
-											</div>
-										</div>
-										<div className="curriculum-item__half">
-											<h3 className="curriculum-item__title">Social Awareness and Management</h3>
-											<div className="curriculum-item__section">
-												<h3 className="curriculum-item__sub-title">Relationships and diversity</h3>
-												<div className="curriculum-item__sub-section">
-													{this.SingleCheckbox(this.state.onChangeFunction, (linkStructure(this.state.curriculumLinks).pascCurriculum)[level].soaam.rad)}
-												</div>
-											</div>
-											<div>
-												<h3 className="curriculum-item__sub-title">Collaboration</h3>	
-												<div className="curriculum-item__sub-section">
-													{this.SingleCheckbox(this.state.onChangeFunction, (linkStructure(this.state.curriculumLinks).pascCurriculum)[level].soaam.col)}
-												</div>
-											</div>
-										</div>	
-									</div>
-							}
+						linkArray().map((level) => {
+							return (
+								<div>
+									{this.CheckDisplayedLevel(this.firstLevelDisplayed).indexOf(level.levelName) !== -1 ?
+										<div className="curriculum-level">
+											<h3 className="curriculum-level__title" levelname={level.levelName} onClick={this.onLevelClick}>{level.levelName}</h3>	
+											{
+												level.primaryTitles.map((primary) => {
+													return (
+														<div className="curriculum-item__half">
+															<h3 className="curriculum-item__title">{primary.primaryName}</h3>
+															{
+																primary.secondaryTitles.map((secondary) => {
+																	return (
+																		<div className="curriculum-item__section">
+																			<h3 className="curriculum-item__sub-title">{secondary.secondaryName}</h3>
+																			{
+																				secondary.linksToSecondary.map((link) => {
+																					return (
+																						<div className="curriculum-item__link">
+																							<h3 className="curriculum-item__descriptor">{link.linkDescription}</h3>
+																							<div className="curriculum-item__pair">
+																								<h3 className="curriculum-item__code">{'(' + link.linkCode + ')'}</h3>
+																								<input
+																									key={link.linkCode}
+																									type="checkbox" 
+																									value={link.linkCode}
+																									onChange={this.state.onChangeFunction}
+																									checked={this.state.curriculumLinks[link.linkCode].isSet}
+																								/>
+																							</div>
+																							{this.addToLinkArray(link)}
+																						</div>
+																					)
+																				})
+																			}
+																		</div>
+																	)
+																})
+															}
+														</div>
+													)
+												})
+											}
+										</div> : ''
+									}
+									{this.createLevelsToLinks(level)}
+								</div>
+							)
 						})	
 					}
 				</div>

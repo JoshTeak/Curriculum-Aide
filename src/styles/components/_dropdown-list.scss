@@ -4,3 +4,14 @@
 	border: 2px solid darken($off-white, 7%);
 	padding: $s-size;
 }
+
+.dropdown-list-item {
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: $xs-size 0;
+}
+
+.dropdown-list-item__option {
+	margin: 0;
+}

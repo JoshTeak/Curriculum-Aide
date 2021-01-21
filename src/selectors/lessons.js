@@ -1,4 +1,4 @@
-export default (lessons, { text, sortBy, curriculumLinks }) => {
+export default (lessons, { text, sortBy, favourites, curriculumLinks, sortAll}) => {
 	return lessons.filter((lesson) => {
 		const textMatch = lesson.title.toLowerCase().includes(text.toLowerCase());
 		
@@ -6,11 +6,21 @@ export default (lessons, { text, sortBy, curriculumLinks }) => {
 			let match = false;
 			Object.keys(lesson.curriculumLinks).forEach(lessonLink => {
 				Object.keys(curriculumLinks).forEach(Link => {
-					if(lessonLink === Link) 
+					if(lessonLink === Link || sortAll) 
 					{
-						if(lesson.curriculumLinks[lessonLink].isSet === true && curriculumLinks[Link].isSet === true)
+						if((lesson.curriculumLinks[lessonLink].isSet === true && curriculumLinks[Link].isSet === true) || sortAll)
 						{
-							match = true;
+							if(Object.keys(favourites).length === 0) 	// if no favourite object has been passed in it will show all lessons
+							{
+								match = true;
+							} else {
+								Object.keys(favourites).forEach(favoritedLesson => {
+									if(favoritedLesson === lesson.id) 
+									{
+										match = true;
+									}
+								})
+							}
 						}
 					}
 				});

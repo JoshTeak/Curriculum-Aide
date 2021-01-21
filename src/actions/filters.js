@@ -25,3 +25,12 @@ export const sortByLevel = () => ({
 export const sortByDuration = () => ({
 	type: 'SORT_BY_DURATION'
 });
+
+export const sortByFavourite = (favourites = {}) => ({
+	type: 'SORT_BY_FAVOURITE',
+	favourites
+});
+
+export const sortAll = () => ({
+	type: 'SORT_ALL'
+});

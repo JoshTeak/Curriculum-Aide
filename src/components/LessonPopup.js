@@ -2,28 +2,54 @@ import React from 'react';
 import ReactPlayer from "react-player";
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import RatingPopup from './RatingPopup';
+import ReportPopup from './ReportPopup';
 
 class LessonPopup extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.isDisplayed = "none";
+		this.displayMenuPopup = "none";
+		this.displayedRatingPopup = "none";
+		this.displayedReportPopup = "none";
 		this.lessonDuration = this.calculateLessonDuration(this.props.lesson.lessonStructure);
 	};
-
 	optionsMenu = (e) => {
 		e.preventDefault();
 		
-	  	if(this.isDisplayed === "none")
+	  	if(this.displayMenuPopup === "none")
 	  	{
-	  		this.isDisplayed = "block";
-	  	} else if(this.isDisplayed === "block")
+	  		this.displayMenuPopup = "block";
+	  	} else if(this.displayMenuPopup === "block")
 	  	{
-	  		this.isDisplayed = "none";
+	  		this.displayMenuPopup = "none";
 	  	}
 	  	this.forceUpdate();
 	}
+	addRatingClicked = (e) => {
+		e.preventDefault();
 
+	  	if(this.displayedRatingPopup === "none")
+	  	{
+	  		this.displayedRatingPopup = "block";
+	  	} else if(this.displayedRatingPopup === "block")
+	  	{
+	  		this.displayedRatingPopup = "none";
+	  	}
+	  	this.forceUpdate();
+	}
+	addReportClicked = (e) => {
+		e.preventDefault();
+
+	  	if(this.displayedReportPopup === "none")
+	  	{
+	  		this.displayedReportPopup = "block";
+	  	} else if(this.displayedReportPopup === "block")
+	  	{
+	  		this.displayedReportPopup = "none";
+	  	}
+	  	this.forceUpdate();
+	}
 	onlyTrueLinks = (links) => {
 		if(links)
 		{
@@ -39,7 +65,6 @@ class LessonPopup extends React.Component {
 		}
 		return '';
 	}
-
 	calculateLessonDuration = (structure) => {
 		let totalLessonDuration = 0;
 		structure.forEach(segment => {
@@ -48,10 +73,46 @@ class LessonPopup extends React.Component {
 		)
 		return totalLessonDuration;
 	}
+	calculateLessonRating = (lessonObject) => {
+		if(lessonObject.ratingsList)
+		{
+			const ratingsObject = lessonObject.ratingsList;
+			let totalRating;
+			let rating;
+			if(ratingsObject)
+			{
+				Object.values(ratingsObject).forEach(val => {
+					rating = parseInt(val.rating, 10);
+					totalRating =+ rating;
+				})
+			}	
 
+			const averageRating = totalRating / Object.values(ratingsObject).length;
+
+			return averageRating;
+		} else {
+			return 0;
+		}
+	}
+	printLesson = () => {
+	    const el = document.getElementById('printable');
+	    const iframe = document.createElement('IFRAME');
+	    let iframeWindow = null;
+	    iframe.setAttribute('style', 'textAlign:center; visibility: hidden');
+	    document.body.appendChild(iframe);
+	    iframeWindow = iframe.contentWindow;
+	    iframeWindow.document.write('<LINK rel="stylesheet/css" type="text/css" href="../styles/styles.css">'); //todo find out how to use scss to style this document
+	    iframeWindow.document.write('<div>' + el.innerHTML + '</div>');
+	    iframeWindow.document.close();
+	    iframeWindow.focus();
+	    iframeWindow.print();
+	    setTimeout(() => {
+	      document.body.removeChild(iframe);
+	    }, 500);
+	}
 	render() {
 		return (
-			<div className="popup">
+			<div className="popup" id="printable">
 				<div className="popup-background" onClick={this.props.backgroundClick}>
 				</div>
 				<div className="popup-container">
@@ -60,21 +121,26 @@ class LessonPopup extends React.Component {
 							<div className="list-item list-item--row-end">
 								<button className="button button--dropdown" onClick={this.optionsMenu}>Options</button>
 								{
-									this.isDisplayed === "none" ? "" : (
+									this.displayMenuPopup === "none" ? "" : (
 										<div className="dropdown-list">
 											<button className="button" onClick={this.optionsMenu}>Options</button>
 											<div className="dropdown-list-body">
 												<div className="dropdown-list-item">
-													<h3 className="dropdown-list-item__option">Print</h3>
+													<h3 className="dropdown-list-item__option" onClick={this.printLesson}>Print</h3>
 												</div>
 												<div className="dropdown-list-item">
 													<h3 className="dropdown-list-item__option">Favourite</h3>
+													<input
+														type="checkbox" 
+														onChange={this.props.favorated}
+														checked={this.props.checked}
+													/>
 												</div>
-												<div className="dropdown-list-item">
+												<div className="dropdown-list-item" onClick={this.addRatingClicked}>
 													<h3 className="dropdown-list-item__option">Rate</h3>
 												</div>
 												<div className="dropdown-list-item">
-													<h3 className="dropdown-list-item__option">Report</h3>
+													<h3 className="dropdown-list-item__option" onClick={this.addReportClicked}>Report</h3>
 												</div>
 												{
 													this.props.myUid != this.props.lesson.uid ? "" : (
@@ -191,10 +257,28 @@ class LessonPopup extends React.Component {
 								<p className="list-item__text-with-border">{this.props.lesson.priorKnowledge}</p>
 							</div>
 							<div className="list-item">
-								<p className="list-item__text">{'Rating: ' + this.props.lesson.rating}</p>
+								<p className="list-item__text">{'Rating: ' + this.calculateLessonRating(this.props.lesson)}</p>
 							</div>
 						</div>
 					</div>
+					{
+						this.displayedRatingPopup === "none" ? "" : (
+							<RatingPopup 
+								backgroundClick={this.addRatingClicked} 
+								lesson={this.props.lesson}
+								myId={this.props.myUid}
+							/>
+						)
+					}
+					{
+						this.displayedReportPopup === "none" ? "" : (
+							<ReportPopup 
+								backgroundClick={this.addReportClicked} 
+								lesson={this.props.lesson}
+								myId={this.props.myUid}
+							/>
+						)
+					}
 				</div>
 			</div>
 		)
