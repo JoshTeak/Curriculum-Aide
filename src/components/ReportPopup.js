@@ -49,42 +49,44 @@ export class ReportPopup extends React.Component {
 			<div className="popup">
 				<div className="popup-background" onClick={this.props.backgroundClick}>
 				</div>
-				<div className="popup-container">
-					<div className="input-popup">
-						<div className="list-body">
-							<div className="list-item">
-								<h3 className="list-item__title">Report Lesson</h3>
-							</div>
-							<div className="list-item">
-								<div className="list-item__pair">
-									<h3 className="list-item__sub-title list-item__sub-title--left">Offence Type:</h3>
-									<select className="dropdown dropdown--right" onChange={this.onOffenceValueChange}>
-										<option selected hidden >Select Offence</option>
-										<option value="Inappropriate Content">Inappropriate Content</option>
-									  	<option value="Incorrect Curriculum Links">Incorrect Curriculum Links</option>
-									  	<option value="Insufficient Information Provided">Insufficient Information Provided</option>
-									  	<option value="Spelling Errors">Spelling Errors</option>
-									  	<option value="Other">Other</option>
-									</select>
+				<div className="popup-group">
+					<div className="popup-container">
+						<div className="input-popup">
+							<div className="list-body">
+								<div className="list-item">
+									<h3 className="list-item__title">Report Lesson</h3>
 								</div>
-								{this.state.error && this.state.offence === '' ? <p className="form__error">*Please select an offence.</p> : ""}
-							</div>
-							<div className="list-item">
-								<h3 className="list-item__sub-title">Additional Report Information:</h3>
-								<textarea 
-									placeholder="Report Information"
-									className="textarea"
-									value={this.state.report}
-									onChange={this.onReportValueChange}
-								/>
-								{this.state.error && this.state.report === '' ? <p className="form__error">*Please provide additional report information.</p> : ""}
-							</div>
-							<div className="list-item list-item--multiple">
-								<div className="list-item__pairr">
-									<button className="button" onClick={this.onSubmit}>Add</button>
+								<div className="list-item">
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title list-item__sub-title--left">Offence Type:</h3>
+										<select className="dropdown dropdown--right" onChange={this.onOffenceValueChange}>
+											<option selected hidden >Select Offence</option>
+											<option value="Inappropriate Content">Inappropriate Content</option>
+										  	<option value="Incorrect Curriculum Links">Incorrect Curriculum Links</option>
+										  	<option value="Insufficient Information Provided">Insufficient Information Provided</option>
+										  	<option value="Spelling Errors">Spelling Errors</option>
+										  	<option value="Other">Other</option>
+										</select>
+									</div>
+									{this.state.error && this.state.offence === '' ? <p className="form__error">*Please select an offence.</p> : ""}
 								</div>
-								<div className="list-item__pair">
-									<button className="button" onClick={this.props.backgroundClick}>Cancel</button>
+								<div className="list-item">
+									<h3 className="list-item__sub-title">Additional Report Information:</h3>
+									<textarea 
+										placeholder="Report Information"
+										className="textarea"
+										value={this.state.report}
+										onChange={this.onReportValueChange}
+									/>
+									{this.state.error && this.state.report === '' ? <p className="form__error">*Please provide additional report information.</p> : ""}
+								</div>
+								<div className="list-item list-item--multiple">
+									<div className="list-item__pairr">
+										<button className="button" onClick={this.onSubmit}>Add</button>
+									</div>
+									<div className="list-item__pair">
+										<button className="button" onClick={this.props.backgroundClick}>Cancel</button>
+									</div>
 								</div>
 							</div>
 						</div>

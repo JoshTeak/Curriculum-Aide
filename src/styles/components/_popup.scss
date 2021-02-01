@@ -6,19 +6,48 @@
     top: 0%;
 }
 
-.popup-container {
+.popup-group {
 	z-index: 2;
 	position: absolute;
-	top: 70%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, 0);
 	filter: drop-shadow(2px 2px 3px $grey);
-  	background-color: #fdfdfd;
-  	border: 2px solid darken($off-white, 7%);
+  	background-color: #ffffff00;
 	padding: $s-size;
 	@media (min-width: $desktop-breakpoint) {
 		padding: $m-size;
 	}
+}
+
+.popup-container {
+	filter: drop-shadow(2px 2px 3px $grey);
+  	background-color: #fdfdfd;
+	padding: $s-size;
+	@media (min-width: $desktop-breakpoint) {
+		padding: $m-size;
+	}
+}
+
+.pdf-popup {
+	padding: 0;
+	background-color: #ffffff00;
+	border:none;
+}
+
+.lesson-popup {
+	top: 20%;
+}
+
+.add-resource-popup {
+	top: 64%;
+}
+
+.add-structure-popup {
+	top: 36%;
+}
+
+.edit-curriculum-link-popup {
+    top: 61%;
 }
 
 .popup-background {

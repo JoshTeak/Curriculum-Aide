@@ -5,7 +5,7 @@ import { startEditLesson, startRemoveLesson } from '../actions/lessons';
 
 const EditLessonPage = (props) => {
   return (
-    <div>
+    <div className="main">
       <div className="page-header">
         <div className="content-container">
           <h1 className="page-header__title">Edit Lesson</h1>

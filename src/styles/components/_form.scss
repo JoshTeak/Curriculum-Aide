@@ -6,6 +6,14 @@
   }
 }
 
+.formLayout {
+	width: 100%;
+	filter: drop-shadow(2px 2px 3px $grey);
+    background-color: #fdfdfd;
+    max-width: 100rem;
+    padding: $s-size;
+}
+
 .form__error {
   	margin: 0 0 $m-size 0;
  	font-style: italic;

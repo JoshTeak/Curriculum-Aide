@@ -1,0 +1,32 @@
+
+.react-pdf__Page {
+  margin-top: 10px;
+}
+
+.react-pdf__Page__textContent {
+  border: none;
+}
+
+.react-pdf__Page__annotations.annotationLayer {
+  padding: 20px;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 103.2rem;
+  width: 92vw !important;
+  height: calc(92vw * 1.41) !important;
+  max-height: calc(103.2rem * 1.41);
+}
+
+.react-pdf__Page__annotations.annotationLayer {
+  padding: 0;
+}
+
+/* For all pages */
+.all-page-container {
+  height: 100%;
+  max-height: 500px;
+  overflow: auto;
+}
+
+

@@ -18,7 +18,8 @@ export default class LessonForm extends React.Component {
 		this.state = {
 			title: props.lesson ? props.lesson.title : '',
 			description: props.lesson ? props.lesson.description : '',
-			level: props.lesson ? props.lesson.level : 0,
+			level: props.lesson ? props.lesson.level : 'No levels provided',
+			subjects: props.lesson ? props.lesson.subjects : 'No subjects provided',
 			duration: props.lesson ? props.lesson.duration: 0,
 			learningOutcomes: props.lesson ? props.lesson.learningOutcomes : '',
 			resources: props.lesson ? props.lesson.resources : [],
@@ -87,20 +88,25 @@ export default class LessonForm extends React.Component {
 				break;
 			};
 		}
+		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
 	};
 
 	onCurriculumLinkChange = (curriculumLinks) => {
 		this.setState(() => ({curriculumLinks}))
+		this.selectedLevels();
+		this.selectedSubjects();
 	}
 
-	onLevelChange = (e) => {
-		const level = e.target.value;
+	onDurationChange = (duration) => {
+		this.setState(() => ({duration}))
+	}
+
+	onLevelChange = (level) => {
 		this.setState(() => ({level}))
 	}
 
-	onDurationChange = (e) => {
-		const duration = parseInt(e.target.value);
-		this.setState(() => ({duration}))
+	onSubjectChange = (subjects) => {
+		this.setState(() => ({subjects}))
 	}
 
 	onPriorKnowledgeChange = (e) => {
@@ -153,8 +159,6 @@ export default class LessonForm extends React.Component {
 	addSegmentClicked = (e) => {
 		e.preventDefault();
 
-		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
-
 	  	if(this.displayedStructurePopup === "none")
 	  	{
 	  		this.displayedStructurePopup = "block";
@@ -184,6 +188,7 @@ export default class LessonForm extends React.Component {
 				totalLessonDuration += segment.duration
 			}
 		)
+		this.onDurationChange(totalLessonDuration);
 		return totalLessonDuration;
 	}
 
@@ -191,10 +196,10 @@ export default class LessonForm extends React.Component {
 		if(links)
 		{
 			let linksArray = [];
-
 			Object.keys(links).forEach(link => {
 				if(links[link].isSet === true)
 				{
+					links[link].code = link;
 					linksArray.push(links[link]);
 				}
 			});
@@ -202,11 +207,62 @@ export default class LessonForm extends React.Component {
 		}
 		return '';
 	}
+	selectedLevels = () => {
+		let levelsString = '';
+		const levelsArray = this.onlyTrueLinks(this.state.curriculumLinks).map(link => `${link.level}`);
+		
+		const unique = (value, index, self) => {
+		  return self.indexOf(value) === index
+		}
 
+		const uniqueLevels = levelsArray.filter(unique);
+
+		if(uniqueLevels.length === 0)
+		{
+			levelsString = 'No levels provided';
+		} else {
+			for(let i = 0; i < uniqueLevels.length; i++)
+			{
+				if(i === 0)
+				{
+					levelsString = `${uniqueLevels[i]} `
+				} else {
+					levelsString = levelsString.concat(`,${uniqueLevels[i]} `)
+				}
+			}
+		}
+		this.onLevelChange(levelsString);
+	}
+	selectedSubjects = () => {
+		let subjectsString = '';
+		const subjectsArray = this.onlyTrueLinks(this.state.curriculumLinks).map(link => `${link.curriculum}`);
+		
+		const unique = (value, index, self) => {
+		  return self.indexOf(value) === index
+		}
+
+		const uniqueSubjects = subjectsArray.filter(unique);
+
+		if(uniqueSubjects.length === 0)
+		{
+			subjectsString = 'No lsubjects provided';
+		} else {
+			for(let i = 0; i < uniqueSubjects.length; i++)
+			{
+				if(i === 0)
+				{
+					subjectsString = `${uniqueSubjects[i]} `
+				} else {
+					subjectsString = subjectsString.concat(`, ${uniqueSubjects[i]}`)
+				}
+			}
+		}
+		this.onSubjectChange(subjectsString);
+	}
 	onSubmit = (e) => {
 		e.preventDefault();
 		
-		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.level || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
+		if(!this.state.title || !this.state.description || !this.state.learningOutcomes || !this.state.level || !this.state.subjects || !this.state.duration || !this.state.lessonStructure || !this.state.priorKnowledge) {
 			this.setState(() => ({
 				error: true
 			}));
@@ -218,6 +274,7 @@ export default class LessonForm extends React.Component {
 				title: this.state.title,
 				description: this.state.description,
 				level: this.state.level,
+				subjects: this.state.subjects,
 				duration: this.state.duration,
 				learningOutcomes: this.state.learningOutcomes,
 				resources: this.state.resources,
@@ -268,25 +325,24 @@ export default class LessonForm extends React.Component {
 								</div>
 								<div className="list-item list-item--multiple">
 									<div className="list-item__pair">
-										<h3 className="list-item__sub-title list-item__sub-title--left">Year Level:</h3>
-										<select className="dropdown dropdown--right" value={this.state.level} onChange={this.onLevelChange}>
-											<option value="" disabled hidden>Select Year Level</option>
-										  	<option value="Foundation Year">Foundation Year</option>
-										  	<option value="Year 1">Year 1</option>
-										  	<option value="Year 2">Year 2</option>
-										  	<option value="Year 3">Year 3</option>
-										  	<option value="Year 4">Year 4</option>
-										  	<option value="Year 5">Year 5</option>
-										  	<option value="Year 6">Year 6</option>
-										  	<option value="Year 7">Year 7</option>
-										  	<option value="Year 8">Year 8</option>
-										  	<option value="Year 9">Year 9</option>
-										  	<option value="Year 10">Year 10</option>
-										</select>
+										<h3 className="list-item__sub-title list-item__sub-title--left">Subject:</h3>
+										<div className="list-item__text-with-border text-border--right">
+											<p>
+											{this.state.subjects}
+											</p>
+										</div>
+									</div>
+									<div className="list-item__pair">
+										<h3 className="list-item__sub-title list-item__sub-title--left">Level:</h3>
+										<div className="list-item__text-with-border text-border--right">
+											<p>
+											{this.state.level}
+											</p>
+										</div>
 									</div>
 									<div className="list-item__pair">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration:</h3>
-										<div className="list-item__text-with-border">
+										<div className="list-item__text-with-border text-border--right">
 											<p onChange={this.onDurationChange}>{this.lessonDuration + " minutes"}</p>
 										</div>
 									</div>
@@ -370,7 +426,7 @@ export default class LessonForm extends React.Component {
 									{
 										Object.keys(this.onlyTrueLinks(this.state.curriculumLinks)).length !== 0 ?
 										<div className="list-item__text-with-border">
-											{this.onlyTrueLinks(this.state.curriculumLinks).map(link => <p>- {link.linkDescription}</p>)}
+											{this.onlyTrueLinks(this.state.curriculumLinks).map(link => <p>- {link.linkDescription} <b>{' (' + link.code + ')'}</b></p>)}
 										</div> : ""
 									}
 									<button className="button" onClick={this.addLinkClicked}>Edit Curriculum Link</button>

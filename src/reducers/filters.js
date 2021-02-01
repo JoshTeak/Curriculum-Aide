@@ -4,6 +4,7 @@ const filterReducerDefaultState = {
 	text: '',
 	sortBy: 'title',
 	favourites: {},
+	subject: '',
 	curriculumLinks: defaultLinks(),
 	sortAll: false
 }
@@ -20,7 +21,12 @@ export default (state = filterReducerDefaultState, action) => {
 				...state,
 				curriculumLinks: action.curriculumLinks,
 				sortAll: false
-			};		
+			};	
+		case 'SELECT_SUBJECT':
+			return {
+				...state,
+				subject: action.subject
+			};	
 		case 'SORT_BY_RATING':
 			return {
 				...state,

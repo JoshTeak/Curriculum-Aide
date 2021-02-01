@@ -26,21 +26,16 @@ button:disabled {
   font-weight: bold;
 }
 
-.dropdown { 
-  padding: $s-size;
-  border-radius: $s-size;
-  cursor: pointer;
-}
-
-.dropdown--right {
-  border-radius: 0 $xs-size $xs-size 0;
-}
-
 p {
   margin: 0;
 }
 
 input[type="checkbox"] {
   margin: $xs-size;
+  cursor: pointer;
+}
+
+.selectable:hover{
+  filter: contrast(0.8);
   cursor: pointer;
 }

@@ -125,6 +125,10 @@
   padding: 0.8rem;
 }
 
+.text-border--right {
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
 .list-item__data {
   margin: $s-size 0 0 0;
   @media (min-width: $desktop-breakpoint) {

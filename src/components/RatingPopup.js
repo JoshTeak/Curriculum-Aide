@@ -64,28 +64,30 @@ export class RatingPopup extends React.Component {
 			<div className="popup">
 				<div className="popup-background" onClick={this.props.backgroundClick}>
 				</div>
-				<div className="popup-container">
-					<div className="input-popup">
-						<div className="list-body">
-							<div className="list-item">
-								<h3 className="list-item__title">Rate Lesson</h3>
-							</div>
-							<div className="list-item">
-								<select className="dropdown" onChange={this.onRatingValueChange}>
-									<option value="1">1</option>
-								  	<option value="2">2</option>
-								  	<option value="3">3</option>
-								  	<option value="4">4</option>
-								  	<option value="5">5</option>
-								</select>
-								{this.state.error ? <p className="form__error">*Please select the number of stars you want to rate this lesson.</p> : ""}
-							</div>
-							<div className="list-item list-item--multiple">
-								<div className="list-item__pairr">
-									<button className="button" onClick={this.onSubmit}>Add</button>
+				<div className="popup-group">
+					<div className="popup-container">
+						<div className="input-popup">
+							<div className="list-body">
+								<div className="list-item">
+									<h3 className="list-item__title">Rate Lesson</h3>
 								</div>
-								<div className="list-item__pair">
-									<button className="button" onClick={this.props.backgroundClick}>Cancel</button>
+								<div className="list-item">
+									<select className="dropdown" onChange={this.onRatingValueChange}>
+										<option value="1">1</option>
+									  	<option value="2">2</option>
+									  	<option value="3">3</option>
+									  	<option value="4">4</option>
+									  	<option value="5">5</option>
+									</select>
+									{this.state.error ? <p className="form__error">*Please select the number of stars you want to rate this lesson.</p> : ""}
+								</div>
+								<div className="list-item list-item--multiple">
+									<div className="list-item__pairr">
+										<button className="button" onClick={this.onSubmit}>Add</button>
+									</div>
+									<div className="list-item__pair">
+										<button className="button" onClick={this.props.backgroundClick}>Cancel</button>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -14,6 +14,7 @@ export const startAddLesson = (lessonData = {}) => {
 			title = '', 
 			description = '',
 			level = '',
+			subjects = '',
 			duration = '',
 			learningOutcomes = '', 
 			resources = [],
@@ -24,7 +25,7 @@ export const startAddLesson = (lessonData = {}) => {
 			ratingsList = {},
 			uid = myId
 		} = lessonData;
-		const lesson = {title, description, level, duration, learningOutcomes, resources, lessonStructure, curriculumLinks, priorKnowledge, rating, ratingsList, uid};
+		const lesson = {title, description, level, subjects, duration, learningOutcomes, resources, lessonStructure, curriculumLinks, priorKnowledge, rating, ratingsList, uid};
 
 		return database.ref('lessons').push(lesson).then((ref) => {
 			dispatch(addLesson({

@@ -13,6 +13,16 @@
 
 .curriculum-body {
   display: flex;
+  width: 78rem;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  @media (max-width: $desktop-first-breakpoint) {
+    width: 51rem;
+  }
+  @media (max-width: $desktop-second-breakpoint) {
+    width: 27rem;
+  }
 }
 
 .curriculum-level {
@@ -52,9 +62,10 @@
 }
 
 .curriculum-item__title {
+  background: white;
   border-bottom-style: ridge;
   padding: 0.5rem;
-  margin: 0;
+  margin: $xs-size 0;
   word-break: break-all;
   font-size: $font-size-small;
 }
@@ -64,7 +75,6 @@
 }
 
 .curriculum-item__half {
-  min-height: 58rem;
 }
 
 .curriculum-item__sub-title {

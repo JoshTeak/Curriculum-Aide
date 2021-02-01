@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter, setCurriculumLinksFilter, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll} from '../actions/filters';
+import {setTextFilter, setCurriculumLinksFilter, selectCurriculum, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll} from '../actions/filters';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from '../components/CurriculumAddresses';
 
@@ -55,7 +55,7 @@ class LessonListFilters extends React.Component {
 				break;
 			default:
 		}
-	};
+	}
 	onCurriculumLinkChange = (e) => {
 		this.state.curriculumLinks[e.target.value].isSet = e.target.checked;
 		this.props.setCurriculumLinksFilter(this.state.curriculumLinks);
@@ -86,6 +86,9 @@ class LessonListFilters extends React.Component {
 			})
 		}
 	}
+	selectSubject = (subject) => {
+		this.props.selectCurriculum(subject);
+	}
 	collapsibleSidebar = () => {
 		const sidebar = document.getElementById("sidebar");
 
@@ -114,6 +117,16 @@ class LessonListFilters extends React.Component {
 						</div>
 						<div className="list-item list-item--multiple">
 							<div className="list-item__pair">
+								<h3 className="list-item__sub-title list-item__sub-title--left">Search Favourites:</h3>
+								<div className="list-item__text-with-border text-border--right">
+									<input
+										type="checkbox" 
+										onChange={this.onFavouriteChecked}
+										checked={this.state.isFavouritesChecked}
+									/>
+								</div>
+							</div>
+							<div className="list-item__pair">
 								<h3 className="list-item__sub-title list-item__sub-title--left">Filter By:</h3>
 								<select className="dropdown dropdown--right" value={this.props.filters.sortBy} onChange={this.onSortChange}>
 									<option value="title">Alphabetical Order</option>
@@ -122,22 +135,14 @@ class LessonListFilters extends React.Component {
 									<option value="rating">Rating</option>
 								</select>
 							</div>
-							<div className="list-item__pair">
-								<h3 className="list-item__sub-title list-item__sub-title--left">Search Favourites:</h3>
-								<div className="dropdown dropdown--right">
-									<input
-										type="checkbox" 
-										onChange={this.onFavouriteChecked}
-										checked={this.state.isFavouritesChecked}
-									/>
-								</div>
-							</div>
 						</div>
 						<div className="list-item">
 							<CheckboxList 
+								selectSubject={this.selectSubject}
 								onChangeFunction={this.onCurriculumLinkChange}
 								onYearChange={this.onCurriculumYearSelected}
 								curriculumLinks={this.state.curriculumLinks}
+								subject={this.state.subject}
 							/>
 						</div>	
 					</div>
@@ -159,6 +164,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
 	setTextFilter: (text) => dispatch(setTextFilter(text)),
 	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks)),
+	selectCurriculum: (subject) => dispatch(selectCurriculum(subject)),
 	sortByRating: () => dispatch(sortByRating()),
 	sortByTitle: () => dispatch(sortByTitle()),
 	sortByLevel: () => dispatch(sortByLevel()),

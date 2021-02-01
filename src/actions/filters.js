@@ -10,6 +10,11 @@ export const setCurriculumLinksFilter = (curriculumLinks = defaultLinks()) => ({
 	curriculumLinks
 });
 
+export const selectCurriculum = (subject = '') => ({
+	type: 'SELECT_SUBJECT',
+	subject
+});
+
 export const sortByRating = () => ({
 	type: 'SORT_BY_RATING'
 });

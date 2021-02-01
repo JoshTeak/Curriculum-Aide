@@ -1,0 +1,10 @@
+.footer {
+	background-color: gray;
+	height: 24rem;
+}
+
+.footer__links {
+	display: flex;
+    justify-content: center;
+    padding: $l-size;
+}

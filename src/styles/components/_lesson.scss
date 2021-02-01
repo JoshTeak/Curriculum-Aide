@@ -12,22 +12,17 @@
 
 .lesson-selector {
   margin: $m-size;
-  transition: all 0.5s ease;
   cursor: pointer;
   transition: all 0.5s ease;
   filter: drop-shadow(2px 2px 3px $grey);
   background-color: #fdfdfd;
-  border: 2px solid darken($off-white, 7%);
-  border-top: none;
   width: 30rem;
   height: 30rem;
   overflow-wrap: anywhere;
   max-width: 90rem;
-  color: $dark-grey;
   display: flex;
   flex-direction: column;
   padding: $s-size;
-  text-decoration: none;
   &:hover {
     background-color: $off-white;
     transform: scale(1.1);

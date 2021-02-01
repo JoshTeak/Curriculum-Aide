@@ -3,7 +3,7 @@ import LessonList from './LessonList';
 import LessonListFilters from './LessonListFilters';
 
 const DashboardPage = () => (
-	<div>
+	<div className="main">
 		<div className="page-header">
 			<div className="content-container">
 				<h1 className="page-header__title">Lesson plans</h1>
