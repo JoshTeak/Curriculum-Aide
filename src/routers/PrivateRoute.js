@@ -9,17 +9,13 @@ export const PrivateRoute = ({
   component: Component,
   ...rest                                                 // ...rest allows us to send the rest of the props through to the components 
 }) => (
-    <Route {...rest} component={(props) => (
-      isAuthenticated ? (
-        <div>
-          <Header />
-          <Component {...props} />
-          <Footer />
-        </div>
+    <div className="page">
+      {isAuthenticated ? (
+        <Route {...rest} children={(props) => (<Component {...props} />)}/>
       ) : (
           <Redirect to="/" />
-        )
-    )} />
+        )}
+    </div>
   );
 
 const mapStateToProps = (state) => ({

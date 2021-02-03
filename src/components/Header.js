@@ -2,20 +2,52 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
+import { history } from '../routers/AppRouter'; //todo consider importing from a different file.
+
 
 export const Header = ({ startLogout }) => (
   <header className="header">
     <div className="content-container">
       <div className="header__content">
-        <Link className="header__title" to="/dashboard">
-          <h1>Curriculum Aide</h1>
-        </Link>
+        <h1 className="header__title selectable" onClick={() => {
+          if(history.location.pathname !== "/dashboard")
+          {
+            history.push({
+              pathname: "/dashboard",
+              state: { previousPath: history.location}
+            });
+          }
+        }}>Curriculum Aide</h1>
         <button className="button button--link" onClick={startLogout}>Logout</button>
       </div>
       <div className="header__links">
-        <NavLink className="button button--link" to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-        <NavLink className="button button--link" to="/create" activeClassName="is-active">Create Lesson</NavLink>
-        <NavLink className="button button--link" to="/about-us" activeClassName="is-active">About Us</NavLink>
+        <button className="button button--link" onClick={() => {
+          if(history.location.pathname !== "/dashboard")
+          {
+            history.push({
+              pathname: "/dashboard",
+              state: { previousPath: history.location}
+            });
+          }
+        }}>Dashboard</button>
+        <button className="button button--link" onClick={() => {
+          if(history.location.pathname !== "/create")
+          {
+            history.push({
+              pathname: "/create",
+              state: { previousPath: history.location}
+            });
+          }
+        }}>Create Lesson</button>
+        <button className="button button--link" onClick={() => {
+          if(history.location.pathname !== "/about-us")
+          {
+            history.push({
+              pathname: "/about-us",
+              state: { previousPath: history.location}
+            });
+          }
+        }}>About Us</button>
       </div>
     </div>
   </header>

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import RatingPopup from './RatingPopup';
 import ReportPopup from './ReportPopup';
+import { history } from '../routers/AppRouter';
 
 import MultiplePagePDFViewer from "../pdf/all-pages";
 
@@ -148,9 +149,12 @@ class LessonPopup extends React.Component {
 													{
 														this.props.myUid != this.props.lesson.uid ? "" : (
 															<div className="dropdown-list-item ">
-																<Link to={`/edit/:${this.props.lesson.id}`}>
-																	<h3 className="dropdown-list-item__option">Edit</h3>
-																</Link>
+																<button className="dropdown-list-item__option" onClick={() => {
+														          history.push({
+														            pathname: `/edit/:${this.props.lesson.id}`,
+														            state: { previousPath: history.location, duration: 1000 }
+														          });
+														        }}>Edit</button>																
 															</div>
 														)
 													}
