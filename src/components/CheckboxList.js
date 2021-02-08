@@ -73,7 +73,6 @@ export default class CheckboxList extends React.Component {
 				})
 			}
 		})
-		
 		this.props.onYearChange(curriculumCodesArray);
 	}
 	onSubjectChange = (e) => {
