@@ -13,10 +13,6 @@
 	transform: translate(-50%, 0);
 	filter: drop-shadow(2px 2px 3px $grey);
   	background-color: #ffffff00;
-	padding: $s-size;
-	@media (min-width: $desktop-breakpoint) {
-		padding: $m-size;
-	}
 }
 
 .popup-container {

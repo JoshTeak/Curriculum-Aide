@@ -17,9 +17,7 @@ class LessonPopup extends React.Component {
 		this.displayedReportPopup = "none";
 		this.lessonDuration = this.calculateLessonDuration(this.props.lesson.lessonStructure);
 	};
-	optionsMenu = (e) => {
-		e.preventDefault();
-		
+	optionsMenu = () => {		
 	  	if(this.displayMenuPopup === "none")
 	  	{
 	  		this.displayMenuPopup = "block";
@@ -98,27 +96,27 @@ class LessonPopup extends React.Component {
 		}
 	}
 	printLesson = () => {
+		this.optionsMenu();
+	    let iframe = document.createElement('IFRAME');
+		document.body.appendChild(iframe);
 	    const el = document.getElementById('printable');
-	    const iframe = document.createElement('IFRAME');
-	    let iframeWindow = null;
-	    iframe.setAttribute('style', 'textAlign:center; visibility: hidden');
-	    document.body.appendChild(iframe);
-	    iframeWindow = iframe.contentWindow;
-	    iframeWindow.document.write('<LINK rel="stylesheet/css" type="text/css" href="../styles/styles.css">'); //todo find out how to use scss to style this document
-	    iframeWindow.document.write('<div>' + el.innerHTML + '</div>');
-	    iframeWindow.document.close();
-	    iframeWindow.focus();
-	    iframeWindow.print();
-	    setTimeout(() => {
-	      document.body.removeChild(iframe);
-	    }, 500);
+	    iframe.style.display = "none";
+	    iframe.contentWindow.document.open();
+	    iframe.contentWindow.document.write('<link rel="stylesheet" type="text/css" href="/dist/styles.css" />'); 
+	    iframe.contentWindow.document.write('<div>' + el.innerHTML + '</div>');
+	    iframe.contentWindow.document.close();
+	    iframe.onload = () => {
+			iframe.focus();
+			iframe.contentWindow.print();
+		}
 	}
+
 	render() {
 		return (
-			<div className="popup" id="printable">
+			<div className="popup">
 				<div className="popup-background" onClick={this.props.backgroundClick}>
 				</div>
-				<div className="popup-group lesson-popup">
+				<div className="popup-group lesson-popup" id="printable">
 					<div className="popup-container">
 						<div className="lesson-body">
 							<div className="list-body">

@@ -12,10 +12,8 @@
 }
 
 .curriculum-body {
-  display: flex;
   width: 78rem;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  overflow: hidden;
 
   @media (max-width: $desktop-first-breakpoint) {
     width: 51rem;
@@ -23,6 +21,15 @@
   @media (max-width: $desktop-second-breakpoint) {
     width: 27rem;
   }
+}
+
+.curriculum-level-scroll {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: fit-content;
+  position: relative;
+  transition: transform 300ms;
 }
 
 .curriculum-level {

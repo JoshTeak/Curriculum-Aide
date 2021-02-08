@@ -63,7 +63,6 @@ export const defaultLinks = () => {
 		VCPSCSE031: {isSet: false, curriculum: 'Personal and Social Capability', level: '5, 6', linkDescription: 'Describe the characteristics of respectful relationships and suggest ways that respectful relationships can be achieved.'},
 		VCPSCSE032: {isSet: false, curriculum: 'Personal and Social Capability', level: '5, 6', linkDescription: 'Identify the characteristics of an effective team and develop descriptions for particular roles including leadership, and describe both their own and their team’s performance when undertaking various roles.'},
 		VCPSCSE033: {isSet: false, curriculum: 'Personal and Social Capability', level: '5, 6', linkDescription: 'Describe the various causes of conflict and evaluate possible strategies to address conflict.'},
-
 		ACMNA001: {isSet: false, curriculum: 'Mathematics', level: 'F', linkDescription: 'Connect number names, numerals and quantities, including zero, initially up to 10 and then beyond.'},
 		ACMNA002: {isSet: false, curriculum: 'Mathematics', level: 'F', linkDescription: 'Subitise small collections of objects.'},
 		ACMNA003: {isSet: false, curriculum: 'Mathematics', level: 'F', linkDescription: 'Compare, order and make correspondences between collections, initially to 20, and explain reasoning.'},
@@ -340,7 +339,172 @@ export const defaultLinks = () => {
 		ACMMG276: {isSet: false, curriculum: 'Mathematics', level: '10A', linkDescription: 'Apply Pythagoras’ Theorem and trigonometry to solving three-dimensional problems in right-angled triangles.'},
 		ACMSP277: {isSet: false, curriculum: 'Mathematics', level: '10A', linkDescription: 'Investigate reports of studies in digital media and elsewhere for information on their planning and implementation.'},
 		ACMSP278: {isSet: false, curriculum: 'Mathematics', level: '10A', linkDescription: 'Calculate and interpret the mean and standard deviation of data and use these to compare data sets.'},
-		ACMSP279: {isSet: false, curriculum: 'Mathematics', level: '10A', linkDescription: 'Use information technologies to investigate bivariate numerical data sets. Where appropriate use a straight line to describe the relationship allowing for variation.'}
+		ACMSP279: {isSet: false, curriculum: 'Mathematics', level: '10A', linkDescription: 'Use information technologies to investigate bivariate numerical data sets. Where appropriate use a straight line to describe the relationship allowing for variation.'},
+	
+		ACSSU002: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Living things have basic needs, including food and water'}, 
+		ACSSU003: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Objects are made of materials that have observable properties'}, 
+		ACSSU004: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Daily and seasonal changes in our environment affect everyday life'}, 
+		ACSSU005: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'The way objects move depends on a variety of factors, including their size and shape'}, 
+		ACSHE013: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: ''}, 
+		ACSIS014: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Pose and respond to questions about familiar objects and events'}, 
+		ACSIS011: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Participate in guided investigations and make observations using the senses'}, 
+		ACSIS233: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Engage in discussions about observations and represent ideas'}, 
+		ACSIS012: {isSet: false, curriculum: 'Science', level: 'F', linkDescription: 'Share observations and ideas'}, 
+		ACSSU017: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Living things have a variety of external features'}, 
+		ACSSU211: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Living things live in different places where their needs are met'}, 
+		ACSSU018: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Everyday materials can be physically changed in a variety of ways'}, 
+		ACSSU019: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Observable changes occur in the sky and landscape'}, 
+		ACSSU020: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Light and sound are produced by a range of sources and can be sensed'}, 
+		ACSHE021: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Science involves observing, asking questions about, and describing changes in, objects and events'}, 
+		ACSHE022: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'People use science in their daily lives, including when caring for their environment and living things'}, 
+		ACSIS024: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Pose and respond to questions, and make predictions about familiar objects and events'}, 
+		ACSIS025: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Participate in guided investigations to explore and answer questions'}, 
+		ACSIS026: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Use informal measurements to collect and record observations, using digital technologies as appropriate'}, 
+		ACSIS027: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Use a range of methods to sort information, including drawings and provided tables and through discussion, compare observations with predictions'}, 
+		ACSIS213: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Compare observations with those of others'}, 
+		ACSIS029: {isSet: false, curriculum: 'Science', level: '1', linkDescription: 'Represent and communicate observations and ideas in a variety of ways'}, 
+		ACSSU030: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Living things grow, change and have offspring similar to themselves'}, 
+		ACSSU031: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Different materials can be combined for a particular purpose'}, 
+		ACSSU032: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Earth’s resources are used in a variety of ways'}, 
+		ACSSU033: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'A push or a pull affects how an object moves or changes shape'}, 
+		ACSHE034: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Science involves observing, asking questions about, and describing changes in, objects and events'}, 
+		ACSHE035: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'People use science in their daily lives, including when caring for their environment and living things'}, 
+		ACSIS037: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Pose and respond to questions, and make predictions about familiar objects and events'}, 
+		ACSIS038: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Participate in guided investigations to explore and answer questions'}, 
+		ACSIS039: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Use informal measurements to collect and record observations, using digital technologies as appropriate'}, 
+		ACSIS040: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Use a range of methods to sort information, including drawings and provided tables and through discussion, compare observations with predictions'}, 
+		ACSIS041: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Compare observations with those of others'}, 
+		ACSIS042: {isSet: false, curriculum: 'Science', level: '2', linkDescription: 'Represent and communicate observations and ideas in a variety of ways'}, 
+		ACSSU044: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Living things can be grouped on the basis of observable features and can be distinguished from non-living things'}, 
+		ACSSU046: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'A change of state between solid and liquid can be caused by adding or removing heat'}, 
+		ACSSU048: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Earth’s rotation on its axis causes regular changes, including night and day'}, 
+		ACSSU049: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Heat can be produced in many ways and can move from one object to another'}, 
+		ACSHE050: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Science involves making predictions and describing patterns and relationships'}, 
+		ACSHE051: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Science knowledge helps people to understand the effect of their actions'}, 
+		ACSIS053: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'With guidance, identify questions in familiar contexts that can be investigated scientifically and make predictions based on prior knowledge'}, 
+		ACSIS054: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'With guidance, plan and conduct scientific investigations to find answers to questions, considering the safe use of appropriate materials and equipment'}, 
+		ACSIS055: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Consider the elements of fair tests and use formal measurements and digital technologies as appropriate, to make and record observations accurately'}, 
+		ACSIS057: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Use a range of methods including tables and simple column graphs to represent data and to identify patterns and trends'}, 
+		ACSIS215: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Compare results with predictions, suggesting possible reasons for findings'}, 
+		ACSIS058: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Reflect on investigations, including whether a test was fair or not'}, 
+		ACSIS060: {isSet: false, curriculum: 'Science', level: '3', linkDescription: 'Represent and communicate observations, ideas and findings using formal and informal representations'}, 
+		ACSSU072: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Living things have life cycles'}, 
+		ACSSU073: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Living things depend on each other and the environment to survive'}, 
+		ACSSU074: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Natural and processed materials have a range of physical properties that can influence their use'}, 
+		ACSSU075: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Earth’s surface changes over time as a result of natural processes and human activity'}, 
+		ACSSU076: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Forces can be exerted by one object on another through direct contact or from a distance'}, 
+		ACSHE061: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Science involves making predictions and describing patterns and relationships'}, 
+		ACSHE062: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Science knowledge helps people to understand the effect of their actions'}, 
+		ACSIS064: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'With guidance, identify questions in familiar contexts that can be investigated scientifically and make predictions based on prior knowledge'}, 
+		ACSIS065: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'With guidance, plan and conduct scientific investigations to find answers to questions, considering the safe use of appropriate materials and equipment'}, 
+		ACSIS066: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Consider the elements of fair tests and use formal measurements and digital technologies as appropriate, to make and record observations accurately'}, 
+		ACSIS068: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Use a range of methods including tables and simple column graphs to represent data and to identify patterns and trends'}, 
+		ACSIS216: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Compare results with predictions, suggesting possible reasons for findings'}, 
+		ACSIS069: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Reflect on investigations, including whether a test was fair or not'}, 
+		ACSIS071: {isSet: false, curriculum: 'Science', level: '4', linkDescription: 'Represent and communicate observations, ideas and findings using formal and informal representations'}, 
+		ACSSU043: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Living things have structural features and adaptations that help them to survive in their environment'}, 
+		ACSSU077: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Solids, liquids and gases have different observable properties and behave in different ways'}, 
+		ACSSU078: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'The Earth is part of a system of planets orbiting around a star (the sun)'}, 
+		ACSSU080: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Light from a source forms shadows and can be absorbed, reflected and refracted'}, 
+		ACSHE081: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Science involves testing predictions by gathering data and using evidence to develop explanations of events and phenomena and reflects historical and cultural contributions'}, 
+		ACSHE083: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Scientific knowledge is used to solve problems and inform personal and community decisions'}, 
+		ACSIS231: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'With guidance, pose clarifying questions and make predictions about scientific investigations'}, 
+		ACSIS086: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Identify, plan and apply the elements of scientific investigations to answer questions and solve problems using equipment and materials safely and identifying potential risks'}, 
+		ACSIS087: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Decide variables to be changed and measured in fair tests, and observe measure and record data with accuracy using digital technologies as appropriate'}, 
+		ACSIS090: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Construct and use a range of representations, including tables and graphs, to represent and describe observations, patterns or relationships in data using digital technologies as appropriate'}, 
+		ACSIS218: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Compare data with predictions and use as evidence in developing explanations'}, 
+		ACSIS091: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Reflect on and suggest improvements to scientific investigations'}, 
+		ACSIS093: {isSet: false, curriculum: 'Science', level: '5', linkDescription: 'Communicate ideas, explanations and processes using scientific representations in a variety of ways, including multi-modal texts'}, 
+		ACSSU094: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'The growth and survival of living things are affected by physical conditions of their environment'}, 
+		ACSSU095: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Changes to materials can be reversible or irreversible'}, 
+		ACSSU096: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Sudden geological changes and extreme weather events can affect Earth’s surface'}, 
+		ACSSU097: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Electrical energy can be transferred and transformed in electrical circuits and can be generated from a range of sources'}, 
+		ACSHE098: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Science involves testing predictions by gathering data and using evidence to develop explanations of events and phenomena and reflects historical and cultural contributions'}, 
+		ACSHE100: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Scientific knowledge is used to solve problems and inform personal and community decisions'}, 
+		ACSIS232: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'With guidance, pose clarifying questions and make predictions about scientific investigations'}, 
+		ACSIS103: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Identify, plan and apply the elements of scientific investigations to answer questions and solve problems using equipment and materials safely and identifying potential risks'}, 
+		ACSIS104: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Decide variables to be changed and measured in fair tests, and observe measure and record data with accuracy using digital technologies as appropriate'}, 
+		ACSIS107: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Construct and use a range of representations, including tables and graphs, to represent and describe observations, patterns or relationships in data using digital technologies as appropriate'}, 
+		ACSIS221: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Compare data with predictions and use as evidence in developing explanations'}, 
+		ACSIS108: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Reflect on and suggest improvements to scientific investigations'}, 
+		ACSIS110: {isSet: false, curriculum: 'Science', level: '6', linkDescription: 'Communicate ideas, explanations and processes using scientific representations in a variety of ways, including multi-modal texts'}, 
+		ACSSU111: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Classification helps organise the diverse group of organisms'}, 
+		ACSSU112: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Interactions between organisms, including the effects of human activities can be represented by food chains and food webs'}, 
+		ACSSU113: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Mixtures, including solutions, contain a combination of pure substances that can be separated using a range of techniques'}, 
+		ACSSU115: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Predictable phenomena on Earth, including seasons and eclipses, are caused by the relative positions of the sun, Earth and the moon'}, 
+		ACSSU116: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Some of Earth’s resources are renewable, including water that cycles through the environment, but others are non-renewable'}, 
+		ACSSU117: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Change to an object’s motion is caused by unbalanced forces, including Earth’s gravitational attraction, acting on the object'}, 
+		ACSHE119: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Scientific knowledge has changed peoples’ understanding of the world and is refined as new evidence becomes available'}, 
+		ACSHE223: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Science knowledge can develop through collaboration across the disciplines of science and the contributions of people from a range of cultures'}, 
+		ACSHE120: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Solutions to contemporary issues that are found using science and technology, may impact on other areas of society and may involve ethical considerations'}, 
+		ACSHE121: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'People use science understanding and skills in their occupations and these have influenced the development of practices in areas of human activity'}, 
+		ACSIS124: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Identify questions and problems that can be investigated scientifically and make predictions based on scientific knowledge'}, 
+		ACSIS125: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Collaboratively and individually plan and conduct a range of investigation types, including fieldwork and experiments, ensuring safety and ethical guidelines are followed'}, 
+		ACSIS126: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Measure and control variables, select equipment appropriate to the task and collect data with accuracy'}, 
+		ACSIS129: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Construct and use a range of representations, including graphs, keys and models to represent and analyse patterns or relationships in data using digital technologies as appropriate'}, 
+		ACSIS130: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Summarise data, from students’ own investigations and secondary sources, and use scientific understanding to identify relationships and draw conclusions based on evidence'}, 
+		ACSIS131: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Reflect on scientific investigations including evaluating the quality of the data collected, and identifying improvements'}, 
+		ACSIS132: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Use scientific knowledge and findings from investigations to evaluate claims based on evidence'}, 
+		ACSIS133: {isSet: false, curriculum: 'Science', level: '7', linkDescription: 'Communicate ideas, findings and evidence based solutions to problems using scientific language, and representations, using digital technologies as appropriate'}, 
+		ACSSU149: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Cells are the basic units of living things; they have specialised structures and functions'}, 
+		ACSSU150: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Multi-cellular organisms contain systems of organs carrying out specialised functions that enable them to survive and reproduce'}, 
+		ACSSU151: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Properties of the different states of matter can be explained in terms of the motion and arrangement of particles'}, 
+		ACSSU152: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Differences between elements, compounds and mixtures can be described at a particle level'}, 
+		ACSSU225: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Chemical change involves substances reacting to form new substances'}, 
+		ACSSU153: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Sedimentary, igneous and metamorphic rocks contain minerals and are formed by processes that occur within Earth over a variety of timescales'}, 
+		ACSSU155: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Energy appears in different forms, including movement (kinetic energy), heat and potential energy, and energy transformations and transfers cause change within systems'}, 
+		ACSHE134: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Scientific knowledge has changed peoples’ understanding of the world and is refined as new evidence becomes available'}, 
+		ACSHE226: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Science knowledge can develop through collaboration across the disciplines of science and the contributions of people from a range of cultures'}, 
+		ACSHE135: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Solutions to contemporary issues that are found using science and technology, may impact on other areas of society and may involve ethical considerations'}, 
+		ACSHE136: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'People use science understanding and skills in their occupations and these have influenced the development of practices in areas of human activity'}, 
+		ACSIS139: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Identify questions and problems that can be investigated scientifically and make predictions based on scientific knowledge'}, 
+		ACSIS140: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Collaboratively and individually plan and conduct a range of investigation types, including fieldwork and experiments, ensuring safety and ethical guidelines are followed'}, 
+		ACSIS141: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Measure and control variables, select equipment appropriate to the task and collect data with accuracy'}, 
+		ACSIS144: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Construct and use a range of representations, including graphs, keys and models to represent and analyse patterns or relationships in data using digital technologies as appropriate'}, 
+		ACSIS145: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Summarise data, from students’ own investigations and secondary sources, and use scientific understanding to identify relationships and draw conclusions based on evidence'}, 
+		ACSIS146: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Reflect on scientific investigations including evaluating the quality of the data collected, and identifying improvements'}, 
+		ACSIS234: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Use scientific knowledge and findings from investigations to evaluate claims based on evidence'}, 
+		ACSIS148: {isSet: false, curriculum: 'Science', level: '8', linkDescription: 'Communicate ideas, findings and evidence based solutions to problems using scientific language, and representations, using digital technologies as appropriate'}, 
+		ACSSU175: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Multi-cellular organisms rely on coordinated and interdependent internal systems to respond to changes to their environment'}, 
+		ACSSU176: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Ecosystems consist of communities of interdependent organisms and abiotic components of the environment; matter and energy flow through these systems'}, 
+		ACSSU177: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'All matter is made of atoms that are composed of protons, neutrons and electrons; natural radioactivity arises from the decay of nuclei in atoms'}, 
+		ACSSU178: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Chemical reactions involve rearranging atoms to form new substances; during a chemical reaction mass is not created or destroyed'}, 
+		ACSSU179: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Chemical reactions, including combustion and the reactions of acids, are important in both non-living and living systems and involve energy transfer'}, 
+		ACSSU180: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'The theory of plate tectonics explains global patterns of geological activity and continental movement'}, 
+		ACSSU182: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Energy transfer through different mediums can be explained using wave and particle models'}, 
+		ACSHE157: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Scientific understanding, including models and theories, is contestable and is refined over time through a process of review by the scientific community'}, 
+		ACSHE158: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Advances in scientific understanding often rely on technological advances and are often linked to scientific discoveries'}, 
+		ACSHE160: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'People use scientific knowledge to evaluate whether they accept claims, explanations or predictions, and advances in science can affect people’s lives, including generating new career opportunities'}, 
+		ACSHE228: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Values and needs of contemporary society can influence the focus of scientific research'}, 
+		ACSIS164: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Formulate questions or hypotheses that can be investigated scientifically'}, 
+		ACSIS165: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Plan, select and use appropriate investigation types, including field work and laboratory experimentation, to collect reliable data; assess risk and address ethical issues associated with these methods'}, 
+		ACSIS166: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Select and use appropriate equipment, including digital technologies, to collect and record data systematically and accurately'}, 
+		ACSIS169: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Analyse patterns and trends in data, including describing relationships between variables and identifying inconsistencies'}, 
+		ACSIS170: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Use knowledge of scientific concepts to draw conclusions that are consistent with evidence'}, 
+		ACSIS171: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Evaluate conclusions, including identifying sources of uncertainty and possible alternative explanations, and describe specific ways to improve the quality of the data'}, 
+		ACSIS172: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Critically analyse the validity of information in primary and secondary sources and evaluate the approaches used to solve problems'}, 
+		ACSIS174: {isSet: false, curriculum: 'Science', level: '9', linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations'}, 
+		ACSSU184: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Transmission of heritable characteristics from one generation to the next involves DNA and genes'}, 
+		ACSSU185: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'The theory of evolution by natural selection explains the diversity of living things and is supported by a range of scientific evidence'}, 
+		ACSSU186: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'The atomic structure and properties of elements are used to organise them in the Periodic Table'}, 
+		ACSSU187: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Different types of chemical reactions are used to produce a range of products and can occur at different rates'}, 
+		ACSSU188: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'The universe contains features including galaxies, stars and solar systems, and the Big Bang theory can be used to explain the origin of the universe'}, 
+		ACSSU189: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Global systems, including the carbon cycle, rely on interactions involving the biosphere, lithosphere, hydrosphere and atmosphere'}, 
+		ACSSU190: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Energy conservation in a system can be explained by describing energy transfers and transformations'}, 
+		ACSSU229: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'The motion of objects can be described and predicted using the laws of physics'}, 
+		ACSHE191: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Scientific understanding, including models and theories, is contestable and is refined over time through a process of review by the scientific community'}, 
+		ACSHE192: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Advances in scientific understanding often rely on technological advances and are often linked to scientific discoveries'}, 
+		ACSHE194: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'People use scientific knowledge to evaluate whether they accept claims, explanations or predictions, and advances in science can affect people’s lives, including generating new career opportunities'}, 
+		ACSHE230: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Values and needs of contemporary society can influence the focus of scientific research'}, 
+		ACSIS198: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Formulate questions or hypotheses that can be investigated scientifically'}, 
+		ACSIS199: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Plan, select and use appropriate investigation types, including field work and laboratory experimentation, to collect reliable data; assess risk and address ethical issues associated with these methods'}, 
+		ACSIS200: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Select and use appropriate equipment, including digital technologies, to collect and record data systematically and accurately'}, 
+		ACSIS203: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Analyse patterns and trends in data, including describing relationships between variables and identifying inconsistencies'}, 
+		ACSIS204: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Use knowledge of scientific concepts to draw conclusions that are consistent with evidence'}, 
+		ACSIS205: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Evaluate conclusions, including identifying sources of uncertainty and possible alternative explanations, and describe specific ways to improve the quality of the data'}, 
+		ACSIS206: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Critically analyse the validity of information in primary and secondary sources and evaluate the approaches used to solve problems'}, 
+		ACSIS208: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations'}, 
+
 	};
 
 	return curriculumLinks;
@@ -2653,7 +2817,7 @@ export const MathimaticsCurriculumArray = () => [
 		]
 	},
 	{
-		levelName: 'Year 10',
+		levelName: 'Year 10A',
 		primaryTitles: [
 			{
 				primaryName: 'Number and Algebra',
@@ -2769,6 +2933,1479 @@ export const MathimaticsCurriculumArray = () => [
 							{
 								linkCode: 'ACMSP279',
 								linkDescription: 'Use information technologies to investigate bivariate numerical data sets. Where appropriate use a straight line to describe the relationship allowing for variation.',
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
+
+
+export const ScienceCurriculumArray = () => [
+	{
+		levelName: 'Foundation Year',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU002',
+								linkDescription: 'Living things have basic needs, including food and water',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU003',
+								linkDescription: 'Objects are made of materials that have observable properties',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU004',
+								linkDescription: 'Daily and seasonal changes in our environment affect everyday life',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU005',
+								linkDescription: 'The way objects move depends on a variety of factors, including their size and shape',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE013',
+								linkDescription: '',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS014',
+								linkDescription: 'Pose and respond to questions about familiar objects and events',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS011',
+								linkDescription: 'Participate in guided investigations and make observations using the senses',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS233',
+								linkDescription: 'Engage in discussions about observations and represent ideas',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS012',
+								linkDescription: 'Share observations and ideas',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 1',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU017',
+								linkDescription: 'Living things have a variety of external features',
+							},
+							{
+								linkCode: 'ACSSU211',
+								linkDescription: 'Living things live in different places where their needs are met',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU018',
+								linkDescription: 'Everyday materials can be physically changed in a variety of ways',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU019',
+								linkDescription: 'Observable changes occur in the sky and landscape',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU020',
+								linkDescription: 'Light and sound are produced by a range of sources and can be sensed',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE021',
+								linkDescription: 'Science involves observing, asking questions about, and describing changes in, objects and events',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE022',
+								linkDescription: 'People use science in their daily lives, including when caring for their environment and living things',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS024',
+								linkDescription: 'Pose and respond to questions, and make predictions about familiar objects and events',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS025',
+								linkDescription: 'Participate in guided investigations to explore and answer questions',
+							},
+							{
+								linkCode: 'ACSIS026',
+								linkDescription: 'Use informal measurements to collect and record observations, using digital technologies as appropriate',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS027',
+								linkDescription: 'Use a range of methods to sort information, including drawings and provided tables and through discussion, compare observations with predictions',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS213',
+								linkDescription: 'Compare observations with those of others',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS029',
+								linkDescription: 'Represent and communicate observations and ideas in a variety of ways',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 2',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU030',
+								linkDescription: 'Living things grow, change and have offspring similar to themselves',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU031',
+								linkDescription: 'Different materials can be combined for a particular purpose',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU032',
+								linkDescription: 'Earth’s resources are used in a variety of ways',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU033',
+								linkDescription: 'A push or a pull affects how an object moves or changes shape',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE034',
+								linkDescription: 'Science involves observing, asking questions about, and describing changes in, objects and events',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE035',
+								linkDescription: 'People use science in their daily lives, including when caring for their environment and living things',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS037',
+								linkDescription: 'Pose and respond to questions, and make predictions about familiar objects and events',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS038',
+								linkDescription: 'Participate in guided investigations to explore and answer questions',
+							},
+							{
+								linkCode: 'ACSIS039',
+								linkDescription: 'Use informal measurements to collect and record observations, using digital technologies as appropriate',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS040',
+								linkDescription: 'Use a range of methods to sort information, including drawings and provided tables and through discussion, compare observations with predictions',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS041',
+								linkDescription: 'Compare observations with those of others',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS042',
+								linkDescription: 'Represent and communicate observations and ideas in a variety of ways',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 3',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU044',
+								linkDescription: 'Living things can be grouped on the basis of observable features and can be distinguished from non-living things',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU046',
+								linkDescription: 'A change of state between solid and liquid can be caused by adding or removing heat',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU048',
+								linkDescription: 'Earth’s rotation on its axis causes regular changes, including night and day',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU049',
+								linkDescription: 'Heat can be produced in many ways and can move from one object to another',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE050',
+								linkDescription: 'Science involves making predictions and describing patterns and relationships',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE051',
+								linkDescription: 'Science knowledge helps people to understand the effect of their actions',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS053',
+								linkDescription: 'With guidance, identify questions in familiar contexts that can be investigated scientifically and make predictions based on prior knowledge',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS054',
+								linkDescription: 'With guidance, plan and conduct scientific investigations to find answers to questions, considering the safe use of appropriate materials and equipment',
+							},
+							{
+								linkCode: 'ACSIS055',
+								linkDescription: 'Consider the elements of fair tests and use formal measurements and digital technologies as appropriate, to make and record observations accurately',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS057',
+								linkDescription: 'Use a range of methods including tables and simple column graphs to represent data and to identify patterns and trends',
+							},
+							{
+								linkCode: 'ACSIS215',
+								linkDescription: 'Compare results with predictions, suggesting possible reasons for findings',
+							}
+
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS058',
+								linkDescription: 'Reflect on investigations, including whether a test was fair or not',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS060',
+								linkDescription: 'Represent and communicate observations, ideas and findings using formal and informal representations',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 4',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU072',
+								linkDescription: 'Living things have life cycles',
+							},
+							{
+								linkCode: 'ACSSU073',
+								linkDescription: 'Living things depend on each other and the environment to survive',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU074',
+								linkDescription: 'Natural and processed materials have a range of physical properties that can influence their use',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU075',
+								linkDescription: 'Earth’s surface changes over time as a result of natural processes and human activity',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU076',
+								linkDescription: 'Forces can be exerted by one object on another through direct contact or from a distance',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE061',
+								linkDescription: 'Science involves making predictions and describing patterns and relationships',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE062',
+								linkDescription: 'Science knowledge helps people to understand the effect of their actions',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS064',
+								linkDescription: 'With guidance, identify questions in familiar contexts that can be investigated scientifically and make predictions based on prior knowledge',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS065',
+								linkDescription: 'With guidance, plan and conduct scientific investigations to find answers to questions, considering the safe use of appropriate materials and equipment',
+							},
+							{
+								linkCode: 'ACSIS066',
+								linkDescription: 'Consider the elements of fair tests and use formal measurements and digital technologies as appropriate, to make and record observations accurately',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS068',
+								linkDescription: 'Use a range of methods including tables and simple column graphs to represent data and to identify patterns and trends',
+							},
+							{
+								linkCode: 'ACSIS216',
+								linkDescription: 'Compare results with predictions, suggesting possible reasons for findings',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS069',
+								linkDescription: 'Reflect on investigations, including whether a test was fair or not',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS071',
+								linkDescription: 'Represent and communicate observations, ideas and findings using formal and informal representations',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 5',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU043',
+								linkDescription: 'Living things have structural features and adaptations that help them to survive in their environment',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU077',
+								linkDescription: 'Solids, liquids and gases have different observable properties and behave in different ways',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU078',
+								linkDescription: 'The Earth is part of a system of planets orbiting around a star (the sun)',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU080',
+								linkDescription: 'Light from a source forms shadows and can be absorbed, reflected and refracted',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE081',
+								linkDescription: 'Science involves testing predictions by gathering data and using evidence to develop explanations of events and phenomena and reflects historical and cultural contributions',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE083',
+								linkDescription: 'Scientific knowledge is used to solve problems and inform personal and community decisions',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS231',
+								linkDescription: 'With guidance, pose clarifying questions and make predictions about scientific investigations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS086',
+								linkDescription: 'Identify, plan and apply the elements of scientific investigations to answer questions and solve problems using equipment and materials safely and identifying potential risks',
+							},
+							{
+								linkCode: 'ACSIS087',
+								linkDescription: 'Decide variables to be changed and measured in fair tests, and observe measure and record data with accuracy using digital technologies as appropriate',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS090',
+								linkDescription: 'Construct and use a range of representations, including tables and graphs, to represent and describe observations, patterns or relationships in data using digital technologies as appropriate',
+							},
+							{
+								linkCode: 'ACSIS218',
+								linkDescription: 'Compare data with predictions and use as evidence in developing explanations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS091',
+								linkDescription: 'Reflect on and suggest improvements to scientific investigations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS093',
+								linkDescription: 'Communicate ideas, explanations and processes using scientific representations in a variety of ways, including multi-modal texts',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 6',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU094',
+								linkDescription: 'The growth and survival of living things are affected by physical conditions of their environment',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU095',
+								linkDescription: 'Changes to materials can be reversible or irreversible',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU096',
+								linkDescription: 'Sudden geological changes and extreme weather events can affect Earth’s surface',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU097',
+								linkDescription: 'Electrical energy can be transferred and transformed in electrical circuits and can be generated from a range of sources',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE098',
+								linkDescription: 'Science involves testing predictions by gathering data and using evidence to develop explanations of events and phenomena and reflects historical and cultural contributions',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE100',
+								linkDescription: 'Scientific knowledge is used to solve problems and inform personal and community decisions',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS232',
+								linkDescription: 'With guidance, pose clarifying questions and make predictions about scientific investigations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS103',
+								linkDescription: 'Identify, plan and apply the elements of scientific investigations to answer questions and solve problems using equipment and materials safely and identifying potential risks',
+							},
+							{
+								linkCode: 'ACSIS104',
+								linkDescription: 'Decide variables to be changed and measured in fair tests, and observe measure and record data with accuracy using digital technologies as appropriate',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS107',
+								linkDescription: 'Construct and use a range of representations, including tables and graphs, to represent and describe observations, patterns or relationships in data using digital technologies as appropriate',
+							},
+							{
+								linkCode: 'ACSIS221',
+								linkDescription: 'Compare data with predictions and use as evidence in developing explanations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS108',
+								linkDescription: 'Reflect on and suggest improvements to scientific investigations',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS110',
+								linkDescription: 'Communicate ideas, explanations and processes using scientific representations in a variety of ways, including multi-modal texts',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 7',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU111',
+								linkDescription: 'Classification helps organise the diverse group of organisms',
+							},
+							{
+								linkCode: 'ACSSU112',
+								linkDescription: 'Interactions between organisms, including the effects of human activities can be represented by food chains and food webs',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU113',
+								linkDescription: 'Mixtures, including solutions, contain a combination of pure substances that can be separated using a range of techniques',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU115',
+								linkDescription: 'Predictable phenomena on Earth, including seasons and eclipses, are caused by the relative positions of the sun, Earth and the moon',
+							},
+							{
+								linkCode: 'ACSSU116',
+								linkDescription: 'Some of Earth’s resources are renewable, including water that cycles through the environment, but others are non-renewable',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU117',
+								linkDescription: 'Change to an object’s motion is caused by unbalanced forces, including Earth’s gravitational attraction, acting on the object',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE119',
+								linkDescription: 'Scientific knowledge has changed peoples’ understanding of the world and is refined as new evidence becomes available',
+							},
+							{
+								linkCode: 'ACSHE223',
+								linkDescription: 'Science knowledge can develop through collaboration across the disciplines of science and the contributions of people from a range of cultures',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE120',
+								linkDescription: 'Solutions to contemporary issues that are found using science and technology, may impact on other areas of society and may involve ethical considerations',
+							},
+							{
+								linkCode: 'ACSHE121',
+								linkDescription: 'People use science understanding and skills in their occupations and these have influenced the development of practices in areas of human activity',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS124',
+								linkDescription: 'Identify questions and problems that can be investigated scientifically and make predictions based on scientific knowledge',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS125',
+								linkDescription: 'Collaboratively and individually plan and conduct a range of investigation types, including fieldwork and experiments, ensuring safety and ethical guidelines are followed',
+							},
+							{
+								linkCode: 'ACSIS126',
+								linkDescription: 'Measure and control variables, select equipment appropriate to the task and collect data with accuracy',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS129',
+								linkDescription: 'Construct and use a range of representations, including graphs, keys and models to represent and analyse patterns or relationships in data using digital technologies as appropriate',
+							},
+							{
+								linkCode: 'ACSIS130',
+								linkDescription: 'Summarise data, from students’ own investigations and secondary sources, and use scientific understanding to identify relationships and draw conclusions based on evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS131',
+								linkDescription: 'Reflect on scientific investigations including evaluating the quality of the data collected, and identifying improvements',
+							},
+							{
+								linkCode: 'ACSIS132',
+								linkDescription: 'Use scientific knowledge and findings from investigations to evaluate claims based on evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS133',
+								linkDescription: 'Communicate ideas, findings and evidence based solutions to problems using scientific language, and representations, using digital technologies as appropriate',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 8',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU149',
+								linkDescription: 'Cells are the basic units of living things; they have specialised structures and functions',
+							},
+							{
+								linkCode: 'ACSSU150',
+								linkDescription: 'Multi-cellular organisms contain systems of organs carrying out specialised functions that enable them to survive and reproduce',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU151',
+								linkDescription: 'Properties of the different states of matter can be explained in terms of the motion and arrangement of particles',
+							},
+							{
+								linkCode: 'ACSSU152',
+								linkDescription: 'Differences between elements, compounds and mixtures can be described at a particle level',
+							},
+							{
+								linkCode: 'ACSSU225',
+								linkDescription: 'Chemical change involves substances reacting to form new substances',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU153',
+								linkDescription: 'Sedimentary, igneous and metamorphic rocks contain minerals and are formed by processes that occur within Earth over a variety of timescales',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU155',
+								linkDescription: 'Energy appears in different forms, including movement (kinetic energy), heat and potential energy, and energy transformations and transfers cause change within systems',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE134',
+								linkDescription: 'Scientific knowledge has changed peoples’ understanding of the world and is refined as new evidence becomes available',
+							},
+							{
+								linkCode: 'ACSHE226',
+								linkDescription: 'Science knowledge can develop through collaboration across the disciplines of science and the contributions of people from a range of cultures',
+							}
+
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE135',
+								linkDescription: 'Solutions to contemporary issues that are found using science and technology, may impact on other areas of society and may involve ethical considerations',
+							},
+							{
+								linkCode: 'ACSHE136',
+								linkDescription: 'People use science understanding and skills in their occupations and these have influenced the development of practices in areas of human activity',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS139',
+								linkDescription: 'Identify questions and problems that can be investigated scientifically and make predictions based on scientific knowledge',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS140',
+								linkDescription: 'Collaboratively and individually plan and conduct a range of investigation types, including fieldwork and experiments, ensuring safety and ethical guidelines are followed',
+							},
+							{
+								linkCode: 'ACSIS141',
+								linkDescription: 'Measure and control variables, select equipment appropriate to the task and collect data with accuracy',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS144',
+								linkDescription: 'Construct and use a range of representations, including graphs, keys and models to represent and analyse patterns or relationships in data using digital technologies as appropriate',
+							},
+							{
+								linkCode: 'ACSIS145',
+								linkDescription: 'Summarise data, from students’ own investigations and secondary sources, and use scientific understanding to identify relationships and draw conclusions based on evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS146',
+								linkDescription: 'Reflect on scientific investigations including evaluating the quality of the data collected, and identifying improvements',
+							},
+							{
+								linkCode: 'ACSIS234',
+								linkDescription: 'Use scientific knowledge and findings from investigations to evaluate claims based on evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS148',
+								linkDescription: 'Communicate ideas, findings and evidence based solutions to problems using scientific language, and representations, using digital technologies as appropriate',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 9',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU175',
+								linkDescription: 'Multi-cellular organisms rely on coordinated and interdependent internal systems to respond to changes to their environment',
+							},
+							{
+								linkCode: 'ACSSU176',
+								linkDescription: 'Ecosystems consist of communities of interdependent organisms and abiotic components of the environment; matter and energy flow through these systems',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU177',
+								linkDescription: 'All matter is made of atoms that are composed of protons, neutrons and electrons; natural radioactivity arises from the decay of nuclei in atoms',
+							},
+							{
+								linkCode: 'ACSSU178',
+								linkDescription: 'Chemical reactions involve rearranging atoms to form new substances; during a chemical reaction mass is not created or destroyed',
+							},
+							{
+								linkCode: 'ACSSU179',
+								linkDescription: 'Chemical reactions, including combustion and the reactions of acids, are important in both non-living and living systems and involve energy transfer',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU180',
+								linkDescription: 'The theory of plate tectonics explains global patterns of geological activity and continental movement',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU182',
+								linkDescription: 'Energy transfer through different mediums can be explained using wave and particle models',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE157',
+								linkDescription: 'Scientific understanding, including models and theories, is contestable and is refined over time through a process of review by the scientific community',
+							},
+							{
+								linkCode: 'ACSHE158',
+								linkDescription: 'Advances in scientific understanding often rely on technological advances and are often linked to scientific discoveries',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE160',
+								linkDescription: 'People use scientific knowledge to evaluate whether they accept claims, explanations or predictions, and advances in science can affect people’s lives, including generating new career opportunities',
+							},
+							{
+								linkCode: 'ACSHE228',
+								linkDescription: 'Values and needs of contemporary society can influence the focus of scientific research',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS164',
+								linkDescription: 'Formulate questions or hypotheses that can be investigated scientifically',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS165',
+								linkDescription: 'Plan, select and use appropriate investigation types, including field work and laboratory experimentation, to collect reliable data; assess risk and address ethical issues associated with these methods',
+							},
+							{
+								linkCode: 'ACSIS166',
+								linkDescription: 'Select and use appropriate equipment, including digital technologies, to collect and record data systematically and accurately',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS169',
+								linkDescription: 'Analyse patterns and trends in data, including describing relationships between variables and identifying inconsistencies',
+							},
+							{
+								linkCode: 'ACSIS170',
+								linkDescription: 'Use knowledge of scientific concepts to draw conclusions that are consistent with evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS171',
+								linkDescription: 'Evaluate conclusions, including identifying sources of uncertainty and possible alternative explanations, and describe specific ways to improve the quality of the data',
+							},
+							{
+								linkCode: 'ACSIS172',
+								linkDescription: 'Critically analyse the validity of information in primary and secondary sources and evaluate the approaches used to solve problems',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS174',
+								linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 10',
+		primaryTitles: [
+			{
+				primaryName: 'Science Understanding',
+				secondaryTitles: [
+					{
+						secondaryName: 'Biological sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU184',
+								linkDescription: 'Transmission of heritable characteristics from one generation to the next involves DNA and genes',
+							},
+							{
+								linkCode: 'ACSSU185',
+								linkDescription: 'The theory of evolution by natural selection explains the diversity of living things and is supported by a range of scientific evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Chemical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU186',
+								linkDescription: 'The atomic structure and properties of elements are used to organise them in the Periodic Table',
+							},
+							{
+								linkCode: 'ACSSU187',
+								linkDescription: 'Different types of chemical reactions are used to produce a range of products and can occur at different rates',
+							}
+						]
+					},
+					{
+						secondaryName: 'Earth and space sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU188',
+								linkDescription: 'The universe contains features including galaxies, stars and solar systems, and the Big Bang theory can be used to explain the origin of the universe',
+							},
+							{
+								linkCode: 'ACSSU189',
+								linkDescription: 'Global systems, including the carbon cycle, rely on interactions involving the biosphere, lithosphere, hydrosphere and atmosphere',
+							}
+						]
+					},
+					{
+						secondaryName: 'Physical sciences',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSSU190',
+								linkDescription: 'Energy conservation in a system can be explained by describing energy transfers and transformations',
+							},
+							{
+								linkCode: 'ACSSU229',
+								linkDescription: 'The motion of objects can be described and predicted using the laws of physics',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science as a Human Endeavour',
+				secondaryTitles: [
+					{
+						secondaryName: 'Nature and development of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE191',
+								linkDescription: 'Scientific understanding, including models and theories, is contestable and is refined over time through a process of review by the scientific community',
+							},
+							{
+								linkCode: 'ACSHE192',
+								linkDescription: 'Advances in scientific understanding often rely on technological advances and are often linked to scientific discoveries',
+							}
+						]
+					},
+					{
+						secondaryName: 'Use and influence of science',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSHE194',
+								linkDescription: 'People use scientific knowledge to evaluate whether they accept claims, explanations or predictions, and advances in science can affect people’s lives, including generating new career opportunities',
+							},
+							{
+								linkCode: 'ACSHE230',
+								linkDescription: 'Values and needs of contemporary society can influence the focus of scientific research',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Science Inquiry Skills',
+				secondaryTitles: [
+					{
+						secondaryName: 'Questioning and predicting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS198',
+								linkDescription: 'Formulate questions or hypotheses that can be investigated scientifically',
+							}
+						]
+					},
+					{
+						secondaryName: 'Planning and conducting',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS199',
+								linkDescription: 'Plan, select and use appropriate investigation types, including field work and laboratory experimentation, to collect reliable data; assess risk and address ethical issues associated with these methods',
+							},
+							{
+								linkCode: 'ACSIS200',
+								linkDescription: 'Select and use appropriate equipment, including digital technologies, to collect and record data systematically and accurately',
+							}
+						]
+					},
+					{
+						secondaryName: 'Processing and analysing data and information',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS203',
+								linkDescription: 'Analyse patterns and trends in data, including describing relationships between variables and identifying inconsistencies',
+							},
+							{
+								linkCode: 'ACSIS204',
+								linkDescription: 'Use knowledge of scientific concepts to draw conclusions that are consistent with evidence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS205',
+								linkDescription: 'Evaluate conclusions, including identifying sources of uncertainty and possible alternative explanations, and describe specific ways to improve the quality of the data',
+							},
+							{
+								linkCode: 'ACSIS206',
+								linkDescription: 'Critically analyse the validity of information in primary and secondary sources and evaluate the approaches used to solve problems',
+							}
+						]
+					},
+					{
+						secondaryName: 'Communicating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACSIS208',
+								linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations',
 							}
 						]
 					}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { linkArray, MathimaticsCurriculumArray } from './CurriculumAddresses';
+import { linkArray, MathimaticsCurriculumArray, ScienceCurriculumArray} from './CurriculumAddresses';
 import CheckboxListPrimary from './CheckboxListPrimary';
 
 export default class CheckboxList extends React.Component {
@@ -39,23 +39,25 @@ export default class CheckboxList extends React.Component {
 		}
 	}
 	DisplayedLevels = (type) => {
+		let scroll = document.getElementsByClassName('curriculum-level-scroll')[0];
+		let transitionAmount;
 		switch (type) {
 			case 'increase':
 				if(this.firstLevelDisplayed < this.state.levels.length - this.CheckDisplayedLevel(this.firstLevelDisplayed).length)
 				{
 					this.firstLevelDisplayed++;
-					this.forceUpdate();
 				}
 				break;
 			case 'decrease':
 				if(this.firstLevelDisplayed > 0)
 				{
 					this.firstLevelDisplayed--;
-					this.forceUpdate();
 				}
 				break;
 			default:
 		};	
+		transitionAmount = this.firstLevelDisplayed * 100 / this.state.levels.length;
+		scroll.style.transform = `translate(-${transitionAmount}%)`;
 	};
 	onLevelClick = (e) => {
 		const levelName = e.target.getAttribute('levelname');
@@ -75,6 +77,9 @@ export default class CheckboxList extends React.Component {
 		this.props.onYearChange(curriculumCodesArray);
 	}
 	onSubjectChange = (e) => {
+		this.firstLevelDisplayed = 0;
+		this.DisplayedLevels();						// resets the level scroll back to start position
+
 		const subject = e.target.value;
 		if(this.props.selectSubject)
 		{
@@ -95,7 +100,25 @@ export default class CheckboxList extends React.Component {
 				this.state.levels = ["Foundation Year", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10", "Year 10A"];
 				return MathimaticsCurriculumArray()
 			}
+			case 'Science':
+			{
+				this.state.levels = ["Foundation Year", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10"];
+				return ScienceCurriculumArray()
+			}
 		}
+	}
+	printCurriculumList = () => {			//todo remove when finished all curriculums
+		let myString = '';
+		this.getSubjectStructure().map((level) => {
+			level.primaryTitles.map((primary) => {
+				primary.secondaryTitles.map((secondary) => {
+					secondary.linksToSecondary.map((link) => {
+						let newString = `${link.linkCode}: {isSet: false, curriculum: 'Science', level: '${level.levelName}', linkDescription: '${link.linkDescription}'}, \n`
+						myString = myString.concat(newString)
+					})
+				})										
+			})		
+		})
 	}
 	render() {
 		return (
@@ -106,6 +129,7 @@ export default class CheckboxList extends React.Component {
 						<option value="">All Subject</option>
 						<option value="Personal and Social Capability">Personal and Social Capability</option>
 						<option value="Mathematics">Mathematics</option>
+						<option value="Science">Science</option>
 					</select>
 				</div>
 				<h1 className="curriculum-header">Curriculum Links</h1>
@@ -120,11 +144,11 @@ export default class CheckboxList extends React.Component {
 			        }}>Next</button>
 				</div>
 				<div className="curriculum-body">
-					{
-						this.state.subject === '' ? '' : this.getSubjectStructure().map((level) => {
-							return (
-								<div>
-									{this.CheckDisplayedLevel(this.firstLevelDisplayed).indexOf(level.levelName) !== -1 ?
+					<div className="curriculum-level-scroll">
+						{
+							this.state.subject === '' ? '' : this.getSubjectStructure().map((level) => {
+								return (
+									<div>
 										<div className="curriculum-level">
 											<h3 className="curriculum-level__title selectable" levelname={level.levelName} onClick={this.onLevelClick}>{level.levelName}</h3>	
 											{
@@ -138,12 +162,12 @@ export default class CheckboxList extends React.Component {
 													)
 												})
 											}
-										</div> : ''
-									}
-								</div>
-							)
-						})	
-					}
+										</div>
+									</div>
+								)
+							})	
+						}
+					</div>
 				</div>
 			</div>
 		);
