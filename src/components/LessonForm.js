@@ -181,7 +181,26 @@ export default class LessonForm extends React.Component {
 	  	}
 	  	this.forceUpdate();
 	}
+	downloadFileClicked = (e) => {
+		e.preventDefault();
+		const selectedFileName = e.target.getAttribute('filename');					// cant pass whole file through attributes so reference the name from resources
 
+		this.state.resources.map(resource => {
+			if(resource.value.fileName === selectedFileName)
+			{
+				const selectedFile = resource.value.file;
+				var blob = new Blob([selectedFile]);
+				var objectURL = window.URL.createObjectURL(blob);
+		        
+		        var link = document.createElement('a');
+		        link.href = objectURL;
+		        link.download = selectedFile.name;
+		        document.body.appendChild(link);
+		        link.click();
+		        link.remove();
+			}
+		})
+	}
 	calculateLessonDuration = (structure) => {
 		let totalLessonDuration = 0;
 		structure.forEach(segment => {
@@ -370,7 +389,10 @@ export default class LessonForm extends React.Component {
 										{
 											this.state.resources.map(resource => 
 												<div className="list-item__table-segment-coloured">
+													{ resource.type === 'file' ? 
+													<p onClick={this.downloadFileClicked} filename={resource.value.file.name}>{resource.value.file.name}</p> :
 													<a href={resource.value}>{resource.value}</a>
+													}
 													<button className="button" onClick={this.deleteResource} resourcename={resource.value}>Delete</button>
 												</div>
 											)

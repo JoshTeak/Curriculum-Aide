@@ -5,8 +5,7 @@ import {Link} from 'react-router-dom';
 import RatingPopup from './RatingPopup';
 import ReportPopup from './ReportPopup';
 import { history } from '../routers/AppRouter';
-
-import MultiplePagePDFViewer from "../pdf/all-pages";
+import { findResourceFile } from '../actions/lessons';
 
 class LessonPopup extends React.Component {
 	constructor(props) {
@@ -50,6 +49,11 @@ class LessonPopup extends React.Component {
 	  		this.displayedReportPopup = "none";
 	  	}
 	  	this.forceUpdate();
+	}
+	downloadFileClicked = (e) => {
+		e.preventDefault();
+		const selectedFileName = e.target.getAttribute('filename');					// cant pass whole file through attributes so reference the name from resources
+		this.props.findResourceFile(selectedFileName, this.props.lesson.id);
 	}
 	onlyTrueLinks = (links) => {
 		if(links)
@@ -195,16 +199,18 @@ class LessonPopup extends React.Component {
 													break;
 												case "embeddedVideo":
 													return (
-														<div>
+														<div className="list-item__text-with-border">
 														    <ReactPlayer
 														        url={resource.value}
 														    />
 													    </div>
 													)
 													break;
-												case "PDF":
+												case "file":
 													return (
-														<p>PDFs below</p>
+														<div className="list-item__text-with-border">
+															<p onClick={this.downloadFileClicked} filename={resource.value.fileName}>{resource.value.fileName}</p>
+														</div>
 													)
 													break;
 												default:
@@ -285,21 +291,6 @@ class LessonPopup extends React.Component {
 							)
 						}
 					</div>
-					<div className="popup-container pdf-popup">
-						{this.props.lesson.resources.map(resource => 
-							{
-								switch(resource.type) {
-									case "PDF":
-										return (
-											<MultiplePagePDFViewer pdf={resource.value} />
-										)
-										break;
-									default:
-										return "";
-								}
-							}
-					    )}
-					</div>
 				</div>
 			</div>
 		)
@@ -310,4 +301,8 @@ const mapStateToProps = (state) => ({
   myUid: state.auth.uid
 });
 
-export default connect(mapStateToProps)(LessonPopup);
+const mapDispatchToProps = (dispatch) => ({
+	findResourceFile: (resourceName, lessonId) => dispatch(findResourceFile(resourceName, lessonId))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(LessonPopup);

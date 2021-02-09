@@ -1,7 +1,5 @@
 import React from 'react';
 
-import SinglePagePDFViewer from "../pdf/single-page";
-
 export default class AddResourcePopup extends React.Component {
 	constructor(props) {
 		super(props);
@@ -16,17 +14,13 @@ export default class AddResourcePopup extends React.Component {
 		const resourceType = e.target.value;
 		this.setState((prevState) => ({resource: {...prevState.resource, type: resourceType}}));
 	};
-	onFileChange = (e) => {
-		const file = e.target.files[0];
-		const reader = new FileReader();
-		reader.onload = (event) => {
-			this.setState((prevState) => ({resource: {...prevState.resource, value: event.target.result}}));
-		}
-		reader.readAsDataURL(file);
+	onResourceFileChange = (e) => {
+		const selectedFile = document.getElementById('file-selector').files[0];;
+		this.setState((prevState) => ({resource: {...prevState.resource, value: {file: selectedFile, fileName: selectedFile.name}}}));
 	};
 	determineResourceInput = () => {
 		switch (this.state.resource.type) {
-			case 'weblink':
+			case 'webLink':
 				return (
 						<div className="list-item">
 							<input 
@@ -52,25 +46,22 @@ export default class AddResourcePopup extends React.Component {
 							{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a link to the video.</p> : ""}
 						</div>
 						);
-			case 'PDF':
+			case 'file':
 				return (
 						<div className="list-item">
-							<input type="file"
+							<input 
+								type="file"
 								id="file-selector"
 							    name="myFile"
-							    accept=".pdf"
-							    onChange={this.onFileChange}
+							    onChange={this.onResourceFileChange}
+							    multiple
 							/>
-						    {this.state.resource.value !== '' ?
-								<div className="list-item">
-							      <SinglePagePDFViewer pdf={this.state.resource.value} />
-							    </div> : ''
-							}
 							{this.state.error && !this.state.resource.value ? <p className="form__error">*Please select a file to upload.</p> : ""}
 						</div>
 						);
 		}
 	};
+
 	onSubmit = (e) => {
 		e.preventDefault();
 		
@@ -102,7 +93,7 @@ export default class AddResourcePopup extends React.Component {
 									<select className="dropdown" onChange={this.onResourceTypeChange}>
 										<option value="webLink">Web Link</option>
 									  	<option value="embeddedVideo">YouTube Video</option>
-									  	<option value="PDF">PDF</option>
+									  	<option value="file">File</option>
 									</select>
 									{this.state.error && !this.state.resource.type ? <p className="form__error">*Please select the type of resource you want to provide.</p> : ""}
 								</div>
