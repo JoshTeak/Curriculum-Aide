@@ -23,9 +23,7 @@ const jsx = (
 let hasRendered = false;
 const renderApp = () => {
   if (!hasRendered) {
-    store.dispatch(startSetLessons()).then(() => {
-      ReactDOM.render(jsx, document.getElementById('app'));
-    });
+    ReactDOM.render(jsx, document.getElementById('app'));
     hasRendered = true;
   }
 };
@@ -35,7 +33,6 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
-    store.dispatch(startSetUser(user.uid));
     renderApp();
     if (history.location.pathname === '/') {
       history.push('/dashboard');

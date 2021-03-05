@@ -81,14 +81,14 @@ export default class AddStructureSegmentPopup extends React.Component {
 									<h3 className="list-item__sub-title">Segment Title:</h3>
 									<div className="info-bubble" id="segment-title-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>The name of this segment of the lesson E.g. Introduction, body, conclusion.</p>	
 										</div>
 									</div>
 									<input 
 										type="text"
 										placeholder="Segment Title"
 										autoFocus
-										className="textarea"
+										className="text-input"
 										value={this.state.segment.title}
 										onChange={this.onResourceTitleChange}
 										onFocus={this.onInputFocus}
@@ -120,7 +120,7 @@ export default class AddStructureSegmentPopup extends React.Component {
 									<h3 className="list-item__sub-title">Content:</h3>
 									<div className="info-bubble" id="content-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>Content section is where instructions are provided about how to use resources, materials, and teach the lesson. This is the bulk of the lesson plan.</p>	
 										</div>
 									</div>
 									<textarea 
@@ -154,7 +154,7 @@ export default class AddStructureSegmentPopup extends React.Component {
 									<h3 className="list-item__sub-title">Required Materials:</h3>
 									<div className="info-bubble" id="required-materials-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>Please include any materials required for this section.</p>	
 										</div>
 									</div>
 									<textarea 

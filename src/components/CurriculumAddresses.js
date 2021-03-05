@@ -123,7 +123,7 @@ export const defaultLinks = () => {
 		ACMNA057: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Represent and solve problems involving multiplication using efficient mental and written strategies and appropriate digital technologies.'},
 		ACMNA058: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Model and represent unit fractions including 1/2, 1/4, 1/3, 1/5 and their multiples to a complete whole.'},
 		ACMNA059: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Represent money values in multiple ways and count the change required for simple transactions to the nearest five cents.'},
-		ACMMG060: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Describe, continue, and create number patterns resulting from performing addition or subtraction.'},
+		ACMNA060: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Describe, continue, and create number patterns resulting from performing addition or subtraction.'},
 		ACMMG061: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Measure, order and compare objects using familiar metric units of length, mass and capacity.'},
 		ACMMG062: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Tell time to the minute and investigate the relationship between units of time.'},
 		ACMMG063: {isSet: false, curriculum: 'Mathematics', level: '3', linkDescription: 'Make models of three-dimensional objects and describe key features.'},

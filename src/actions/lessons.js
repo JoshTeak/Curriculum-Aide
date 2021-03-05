@@ -68,11 +68,10 @@ export const startAddLesson = (lessonData = {}) => {
 			curriculumLinks = defaultLinks(), 
 			priorKnowledge = '',
 			rating = 0,
-			ratingsList = {},
+			ratingsList = {[myId]: {rating: '0'}},
 			uid = myId
 		} = lessonData;
 		const lesson = {title, description, level, subjects, duration, learningOutcomes, resources, lessonStructure, curriculumLinks, priorKnowledge, rating, ratingsList, uid};
-
 		
 		return database.ref('lessons').push(lesson).then((ref) => {
 			pullFilesFromResources(resources, ref.key);
@@ -104,6 +103,7 @@ export const editLesson = (id, updates) => ({
 });
 
 export const startEditLesson = (id, updates) => {
+	delete updates["id"]; 
 	return (dispatch) => {
 		return database.ref(`lessons/${id}`).update(updates).then(() => {
 			dispatch(editLesson(id, updates))

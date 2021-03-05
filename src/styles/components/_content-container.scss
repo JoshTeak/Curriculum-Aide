@@ -8,5 +8,50 @@
 	align-items: center;
 	background-color: $off-white;
 	width: 100%;
-	padding-left: $m-size;
+}
+
+.content-array-column {
+	margin: auto;
+}
+
+.content-box {
+	filter: drop-shadow(2px 2px 3px $grey);
+	max-width: 100rem;
+	margin: 1.2rem;
+}
+
+.content-box-info {
+	width: 58%;
+	min-width: 24rem;
+	background-color: $off-white;
+	padding-bottom: 1.2rem;
+}
+
+.content-box-info-right {
+	margin-left: auto;
+}
+
+.content-box-info p {
+	padding: 1.2rem;
+}
+
+.content-box-info h2 {
+	padding: 1.2rem;
+	margin: 0;
+}
+
+.block-one {
+	background-color: aliceblue;
+}
+
+.block-two {
+	background-color: antiquewhite;
+}
+
+.block-three {
+	background-color: beige;
+}
+
+.block-four {
+	background-color: #fff2f2;
 }

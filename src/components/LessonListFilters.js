@@ -11,6 +11,7 @@ class LessonListFilters extends React.Component {
 		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true};
 		this.checkForNoFiltering();
 	}
+
 	checkForNoFiltering = () => {
 		const links = this.state.curriculumLinks
 		let viewAllLatch = true;

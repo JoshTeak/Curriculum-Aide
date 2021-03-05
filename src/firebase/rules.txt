@@ -1,0 +1,118 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "lessons": {
+      "$lesson_id": {
+        ".validate": "newData.hasChildren(['curriculumLinks', 'description', 'duration', 'learningOutcomes', 'lessonStructure', 'level', 'priorKnowledge', 'rating', 'resources', 'subjects', 'title', 'uid'])",
+        "curriculumLinks": {
+          "$link_id": {
+            ".validate": "newData.hasChildren(['curriculum', 'isSet', 'level', 'linkDescription'])",
+            "curriculum":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "isSet":  {
+              ".validate": "newData.isBoolean()"
+            },
+            "level":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "linkDescription":  {
+              ".validate": "newData.isString()"
+            },
+            "$other": {
+              ".validate" : false
+            }
+          }
+        },            
+        "description": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },            
+        "duration": {
+          ".validate": "newData.isNumber()"
+        },           
+        "learningOutcomes": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },            
+        "lessonStructure": {
+          "$segment_id": {
+            ".validate": "newData.hasChildren(['content', 'duration', 'materials', 'pedagogy', 'title'])",
+            "content":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "duration":  {
+              ".validate": "newData.isNumber()"
+            },
+            "materials":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "pedagogy":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "title":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "$other": {
+              ".validate" : false
+            }
+          }
+        },
+        "level": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "priorKnowledge": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "rating": {
+          ".validate": "newData.isNumber()"
+        },
+        "ratingsList": {
+          "$rating_id": {
+            ".validate": "newData.hasChildren(['rating'])",
+            "rating":  {
+              ".validate": "newData.isString()"
+            },
+            "$other": {
+              ".validate" : false
+            }
+          }
+        },
+        "resources": {
+          "$resource_id": {
+            ".validate": "newData.hasChildren(['type', 'value'])",
+            "type":  {
+              ".validate": "newData.isString() && newData.val().length > 0"
+            },
+            "value":  {
+              ".validate": true
+            },
+            "$other": {
+              ".validate" : false
+            }
+          }
+        },
+        "subjects": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "title": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "uid": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "$other": {
+          ".validate" : false
+        }
+      }
+    }
+  }
+}
+            
+            
+
+
+
+
+
+
+

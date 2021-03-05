@@ -9,17 +9,18 @@
 }
 
 .dropdown-list {
-	position: absolute;
-	background-color: aliceblue;
-	border: 2px solid darken($off-white, 7%);
-	padding: $s-size;
+  position: absolute;
+  background-color: $almost-white;
+  padding: $xl-size 0 $m-size 0;
+  filter: drop-shadow(1px 1px 2px gray);
 }
 
 .dropdown-list-item {
 	display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: $xs-size 0;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  background-color: $almost-white;
 }
 
 .dropdown-list-item__option {

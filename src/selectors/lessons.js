@@ -4,11 +4,9 @@ export default (lessons, { text, sortBy, favourites, curriculumLinks, subject, s
 		
 		const findLinkMatches = () => {
 			let match = false;
-
 			Object.keys(lesson.curriculumLinks).forEach(lessonLink => {
-				if((lesson.curriculumLinks[lessonLink].isSet === true && curriculumLinks[lessonLink].isSet === true) || sortAll)
-				{
-					if(subject === '' || subject === curriculumLinks[lessonLink].curriculum)
+				if(lesson.curriculumLinks[lessonLink].isSet === true) {
+					if((sortAll && subject === curriculumLinks[lessonLink].curriculum)  || curriculumLinks[lessonLink].isSet === true || (sortAll && subject === '')) 
 					{
 						if(Object.keys(favourites).length === 0) 	// if no favourite object has been passed in it will show all lessons
 						{
@@ -21,8 +19,8 @@ export default (lessons, { text, sortBy, favourites, curriculumLinks, subject, s
 								}
 							})
 						}
-					}
-				}
+					} 
+				} 
 			});
 			return match;
 		}

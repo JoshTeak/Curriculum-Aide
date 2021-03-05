@@ -19,6 +19,32 @@
   margin: calc(#{$s-size} + 2px);
 }
 
+.button--options {
+  position: absolute;
+  margin: calc(#{$s-size} + 2px);
+  border-radius: 100%;
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: $almost-white;
+  color: gray;
+  z-index: 1;
+}
+
+.button--options:focus {
+  outline: none;
+}
+
 .button--link {
   background: none;
+  color: black;
+}
+
+.button-option-icon { 
+  position: relative;
+  top: -13px;
+  left: 1px;
+}
+.button-option-dot {
+  line-height: 0.2;
+  font-size: $l-size;
 }

@@ -9,9 +9,9 @@
 .formLayout {
 	width: 100%;
 	filter: drop-shadow(2px 2px 3px $grey);
-    background-color: #fdfdfd;
-    max-width: 100rem;
-    padding: $s-size;
+  background-color: $almost-white;
+  max-width: 100rem;
+  padding: $s-size;
 }
 
 .form__error {

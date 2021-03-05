@@ -98,6 +98,11 @@ Filtering by Date
 
 
 
+Lecture 132:
+git remote set-url origin https://github.com/JoshTeak/portfolio-site.git 	 this line allows you to set the repository in git
+git remote -v   															 this allows you to check which repository you are pushing to
+
+
 
 Lecture 136:
 heroku login and create example at 3:24

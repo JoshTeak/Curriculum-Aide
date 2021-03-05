@@ -80,7 +80,7 @@ class ContactUsPage extends React.Component {
 										{this.state.error && !this.state.email ? <p className="form__error">*Please provde an email for us to contact you with.</p> : ""}
 									</div>
 									<div className="list-item">
-										<h3 className="list-item__sub-title">Full Name:</h3>
+										<h3 className="list-item__sub-title">Name:</h3>
 										<input 
 											type="text"
 											placeholder="Full Name"

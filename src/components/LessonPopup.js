@@ -125,38 +125,43 @@ class LessonPopup extends React.Component {
 						<div className="lesson-body">
 							<div className="list-body">
 								<div className="list-item list-item--row-end">
-									<button className="button button--dropdown" onClick={this.optionsMenu}>Options</button>
+									<button className="button button--options selectable" onClick={this.optionsMenu}>
+										<div className="button-option-icon">
+											<div className="button-option-dot">.</div>
+											<div className="button-option-dot">.</div>
+											<div className="button-option-dot">.</div>
+										</div>
+									</button>
 									{
 										this.displayMenuPopup === "none" ? "" : (
 											<div className="dropdown-list">
-												<button className="button" onClick={this.optionsMenu}>Options</button>
 												<div className="dropdown-list-body">
-													<div className="dropdown-list-item">
-														<h3 className="dropdown-list-item__option" onClick={this.printLesson}>Print</h3>
+													<div className="dropdown-list-item selectable"  onClick={this.printLesson}>
+														<h3 className="dropdown-list-item__option">Print</h3>
 													</div>
-													<div className="dropdown-list-item">
+													<div className="dropdown-list-item selectable">
 														<h3 className="dropdown-list-item__option">Favourite</h3>
 														<input
 															type="checkbox" 
 															onChange={this.props.favorated}
-															checked={this.props.checked}
+															checked={this.props.isChecked}
 														/>
 													</div>
-													<div className="dropdown-list-item" onClick={this.addRatingClicked}>
+													<div className="dropdown-list-item selectable" onClick={this.addRatingClicked}>
 														<h3 className="dropdown-list-item__option">Rate</h3>
 													</div>
-													<div className="dropdown-list-item">
-														<h3 className="dropdown-list-item__option" onClick={this.addReportClicked}>Report</h3>
+													<div className="dropdown-list-item selectable" onClick={this.addReportClicked}>
+														<h3 className="dropdown-list-item__option">Report</h3>
 													</div>
 													{
 														this.props.myUid != this.props.lesson.uid ? "" : (
-															<div className="dropdown-list-item ">
-																<button className="dropdown-list-item__option" onClick={() => {
+															<div className="dropdown-list-item selectable"onClick={() => {
 														          history.push({
 														            pathname: `/edit/:${this.props.lesson.id}`,
 														            state: { previousPath: history.location, duration: 1000 }
 														          });
-														        }}>Edit</button>																
+														        }}>
+																<h3 className="dropdown-list-item__option">Edit</h3>																
 															</div>
 														)
 													}

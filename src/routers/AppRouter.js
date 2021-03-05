@@ -34,33 +34,35 @@ export const Page = () => {
   let location = useLocation();
 
   return (
-    <TransitionGroup class="transition">
-      <CSSTransition
-        key={location.key}
-        classNames="page-change"
-        timeout={500}
-        onEnter={(e) => {
-          let enteringDirection = Direction('ENTER');
-          e.style.transform = `translate(${enteringDirection}%)`
-        }}
-        onEntering={(e) => {
-          e.style.transform = "translate(0%)"
-        }}
-        onExiting={(e) => {
-          let exitingDirection = Direction('EXIT');
-          e.style.transform = `translate(${exitingDirection}%)`
-        }}
-      >
-        <Switch location={location}>
-          <PrivateRoute path="/dashboard" component={DashboardPage} />
-          <PrivateRoute path="/create" component={AddLessonPage} />
-          <PrivateRoute path="/edit/:id" component={EditLessonPage} />
-          <PrivateRoute path="/about-us" component={AboutUsPage} />
-          <PrivateRoute path="/contact-us" component={ContactUsPage} />
-          <Route component={NotFoundPage} />
-        </Switch>
-      </CSSTransition>
-    </TransitionGroup>
+    <div className="transition-box">
+      <TransitionGroup class="transition">
+        <CSSTransition
+          key={location.key}
+          classNames="page-change"
+          timeout={500}
+          onEnter={(e) => {
+            let enteringDirection = Direction('ENTER');
+            e.style.transform = `translate(${enteringDirection}%)`
+          }}
+          onEntering={(e) => {
+            e.style.transform = "translate(0%)"
+          }}
+          onExiting={(e) => {
+            let exitingDirection = Direction('EXIT');
+            e.style.transform = `translate(${exitingDirection}%)`
+          }}
+        >
+          <Switch location={location}>
+            <PrivateRoute path="/dashboard" component={DashboardPage} />
+            <PrivateRoute path="/create" component={AddLessonPage} />
+            <PrivateRoute path="/edit/:id" component={EditLessonPage} />
+            <PrivateRoute path="/about-us" component={AboutUsPage} />
+            <PrivateRoute path="/contact-us" component={ContactUsPage} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>
   )
 }
 

@@ -10,7 +10,8 @@ export default class LessonForm extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.maxDescriptionChar = 50;
+		this.maxDescriptionChar = 120;
+		this.maxTitleChar = 60;
 		this.displayedResourcePopup = "none";
 		this.displayedStructurePopup = "none";
 		this.displayedLinkPopup = "none";
@@ -27,6 +28,7 @@ export default class LessonForm extends React.Component {
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
 			descriptionRemainingChar: props.lesson ? this.maxDescriptionChar - props.lesson.description.length : this.maxDescriptionChar,
+			titleRemainingChar: props.lesson ? this.maxTitleChar - props.lesson.title.length : this.maxTitleChar,
 			error: false
 		};
 
@@ -35,7 +37,11 @@ export default class LessonForm extends React.Component {
 
 	onTitleChange = (e) => {
 		const title = e.target.value;
-		this.setState(() => ({title}));
+		const titleRemainingChar = this.maxTitleChar - title.length;
+		if(titleRemainingChar >= 0)
+		{
+			this.setState(() => ({title, titleRemainingChar}));
+		}
 	};
 
 	onDescriptionChange = (e) => {
@@ -323,12 +329,13 @@ export default class LessonForm extends React.Component {
 										onFocus={this.resetInfoBubbles}
 									/>
 									{this.state.error && !this.state.title ? <p className="form__error">*Please provde a title.</p> : ""}
+									<p>Characters remaining: {this.state.titleRemainingChar}</p>
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Description:</h3>
 									<div className="info-bubble" id="description-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>Please provide a brief description about your lesson using 120 characters or less. This description will be the first thing people see when searching for lessons.</p>	
 										</div>
 									</div>
 									<textarea 
@@ -370,7 +377,7 @@ export default class LessonForm extends React.Component {
 									<h3 className="list-item__sub-title">Learning Outcomes:</h3>
 									<div className="info-bubble" id="learning-outcomes-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>Learning outcomes are statements that describe the knowledge or skills students should acquire by the end of the lesson.</p>	
 										</div>
 									</div>
 									<textarea 
@@ -458,7 +465,7 @@ export default class LessonForm extends React.Component {
 									<h3 className="list-item__sub-title">Prior Knowledge:</h3>
 									<div className="info-bubble" id="prior-knowledge-bubble">
 										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
+											<p>Prior knowledge are the prerequisite skills or understanding required before beginning this lesson.</p>	
 										</div>
 									</div>
 									<textarea 

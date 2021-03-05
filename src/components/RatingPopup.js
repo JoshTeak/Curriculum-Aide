@@ -43,8 +43,9 @@ export class RatingPopup extends React.Component {
 			this.setState(() => ({
 				error: false
 			}));
-			let myRatings = {};
-			this.props.user.ratingsList ? myRatings = this.props.user.ratingsList : myRatings = {};
+
+
+			let myRatings = this.props.user.ratingsList;
 			myRatings[this.props.lesson.id] = {rating: this.state.rating}
 			const newUser = {...this.props.user, ratingsList: myRatings}
 			this.props.startEditUser(this.props.myId, newUser);
