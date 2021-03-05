@@ -4,7 +4,7 @@ export default class AddStructureSegmentPopup extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {segment: {title: "", duration: 0, content: "", pedagogy: "", materials: ""}, error: false};
+		this.state = {segment: {title: "", duration: 0, content: "", materials: ""}, error: false};
 	};
 	onResourceTitleChange = (e) => {
 		const segmentTitle = e.target.value;
@@ -17,10 +17,6 @@ export default class AddStructureSegmentPopup extends React.Component {
 	onResourceContentChange = (e) => {
 		const segmentContent = e.target.value;
 		this.setState((prevState) => ({segment: {...prevState.segment, content: segmentContent}}));
-	};
-	onResourcePedagogyChange = (e) => {
-		const segmentPedagogy= e.target.value;
-		this.setState((prevState) => ({segment: {...prevState.segment, pedagogy: segmentPedagogy}}));
 	};
 	onResourceMaterialChange = (e) => {
 		const segmentMaterials = e.target.value;
@@ -53,7 +49,7 @@ export default class AddStructureSegmentPopup extends React.Component {
 	onSubmit = (e) => {
 		e.preventDefault();
 
-		if(!this.state.segment.title || this.state.segment.duration === 0 || !this.state.segment.content || !this.state.segment.pedagogy || !this.state.segment.materials) {
+		if(!this.state.segment.title || this.state.segment.duration === 0 || !this.state.segment.content || !this.state.segment.materials) {
 			this.setState(() => ({
 				error: true
 			}));
@@ -132,23 +128,6 @@ export default class AddStructureSegmentPopup extends React.Component {
 										onBlur={this.resetInfoBubbles}
 									/>
 									{this.state.error && !this.state.segment.content ? <p className="form__error">*Please provde a segment content.</p> : ""}
-								</div>
-								<div className="list-item">
-									<h3 className="list-item__sub-title">Pedagogy:</h3>
-									<div className="info-bubble" id="pedagogy-bubble">
-										<div className="info-bubble-information">
-											<p>This is an information bubble about how to fill in the title</p>	
-										</div>
-									</div>
-									<textarea 
-										placeholder="Pedagogy"
-										className="textarea"
-										value={this.state.segment.pedagogy}
-										onChange={this.onResourcePedagogyChange}	
-										onFocus={this.onInputFocus}
-										onBlur={this.resetInfoBubbles}	
-									/>
-									{this.state.error && !this.state.segment.pedagogy ? <p className="form__error">*Please provde a segment pedagogy.</p> : ""}
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Required Materials:</h3>

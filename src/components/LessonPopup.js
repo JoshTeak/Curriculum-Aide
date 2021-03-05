@@ -234,9 +234,6 @@ class LessonPopup extends React.Component {
 											<div className="list-item__table-segment flex-ratio-four">
 												<p>Content:</p>
 											</div>
-											<div className="list-item__table-segment flex-ratio-three">
-												<p>Pedagogy:</p>
-											</div>
 											<div className="list-item__table-segment flex-ratio-two">
 												<p>Materials:</p>
 											</div>
@@ -250,9 +247,6 @@ class LessonPopup extends React.Component {
 													<div className="list-item__table-segment flex-ratio-four">
 														<p>{segment.title + ': '}</p>
 														<p>{segment.content}</p>
-													</div>
-													<div className="list-item__table-segment flex-ratio-three">
-														<p>{segment.pedagogy}</p>
 													</div>
 													<div className="list-item__table-segment flex-ratio-two">
 														<p>{segment.materials}</p>
