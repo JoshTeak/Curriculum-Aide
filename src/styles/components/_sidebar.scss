@@ -3,8 +3,6 @@
     transform: translateX(calc(1.6rem - 100%));
 	display: flex;
 	filter: drop-shadow(2px 2px 3px $grey);
-	border: 2px solid darken($off-white, 7%);
-    border-left: none;
     position: absolute;
     z-index: 1;
     min-height: 100rem;
@@ -14,8 +12,25 @@
 	background-color: $light-blue;
 	border: none;
 	width: $m-size;
+	display: flex;
 }
 
 .collapsibleSidebar__button:focus {
+	outline:none
+}
+
+.collapsibleSidebar__button-icon {
+	border: none;
+    background-color: $light-blue;
+    width: $xl-size;
+    position: absolute;
+    height: $xl-size;
+    font-size: $font-size-xxlarge;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+}
+
+.collapsibleSidebar__button-icon:focus {
 	outline:none
 }

@@ -8,7 +8,7 @@ class LessonListFilters extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true};
+		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true, sidebarExpanded: false};
 		this.checkForNoFiltering();
 	}
 
@@ -93,13 +93,15 @@ class LessonListFilters extends React.Component {
 	collapsibleSidebar = () => {
 		const sidebar = document.getElementById("sidebar");
 
-		if(sidebar.style.transform === "translateX(0px)")
+		if(sidebar.style.transform === "translateX(1.5rem)")
 		{
 			sidebar.style.transform = "translateX(calc(1.6rem - 100%))";
 			sidebar.style.position = "absolute";
+			this.setState({sidebarExpanded: false})
 		} else {
-			sidebar.style.transform = "translateX(0px)";
+			sidebar.style.transform = "translateX(1.5rem)";
 			sidebar.style.position = "unset";
+			this.setState({sidebarExpanded: true})
 		}
 	}
 	render() {
@@ -148,7 +150,12 @@ class LessonListFilters extends React.Component {
 						</div>	
 					</div>
 				</div>
-				<button className="collapsibleSidebar__button" onClick={this.collapsibleSidebar}>
+				<button className="collapsibleSidebar__button selectable" onClick={this.collapsibleSidebar}>
+					{ 
+						this.state.sidebarExpanded ?
+						<div className="collapsibleSidebar__button-icon">&lt;&lt;</div> :
+						<div className="collapsibleSidebar__button-icon">&gt;&gt;</div>
+					}
 				</button>
 			</div>
 		);

@@ -13,9 +13,6 @@ class LessonList extends React.Component {
 	render() {
 		return (
 			<div className="content-container content-container--major">
-				<div className="lesson-header">
-					<div>Lesson List</div>
-				</div>
 				<div className="lesson-list">
 					{			
 						this.props.lessons.length === 0 ? (
