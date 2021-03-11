@@ -1,11 +1,17 @@
 .dropdown { 
-  padding: $s-size;
+  padding: $xs-size;
   border-radius: $s-size;
   cursor: pointer;
+  font-size: $font-size-large;
+  height: 4.4rem;
 }
 
 .dropdown--right {
-  border-radius: 0 $xs-size $xs-size 0;
+  border-radius: 0 $s-corner $s-corner 0;
+}
+
+.dropdown--bottom {
+  border-radius: 0 0 $s-corner $s-corner;
 }
 
 .dropdown-list {
@@ -13,16 +19,21 @@
   background-color: $almost-white;
   padding: $xl-size 0 $m-size 0;
   filter: drop-shadow(1px 1px 2px gray);
+  right: 4rem;
 }
 
 .dropdown-list-item {
 	display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0.8rem 1.6rem;
+  padding: $xs-size $m-size;
   background-color: $almost-white;
 }
 
 .dropdown-list-item__option {
 	margin: 0;
+}
+
+.dropdown:hover{
+  filter: contrast(0.8);
 }

@@ -18,10 +18,10 @@ export const Header = ({ startLogout }) => (
             });
           }
         }}>Curriculum Aide</h1>
-        <button className="button button--link" onClick={startLogout}>Logout</button>
+        <button className="button button--link-header" onClick={startLogout}>Logout</button>
       </div>
       <div className="header__links">
-        <button className="button button--link" onClick={() => {
+        <button className="button button--link-header" onClick={() => {
           if(history.location.pathname !== "/dashboard")
           {
             history.push({
@@ -30,7 +30,7 @@ export const Header = ({ startLogout }) => (
             });
           }
         }}>Dashboard</button>
-        <button className="button button--link" onClick={() => {
+        <button className="button button--link-header" onClick={() => {
           if(history.location.pathname !== "/create")
           {
             history.push({
@@ -39,7 +39,7 @@ export const Header = ({ startLogout }) => (
             });
           }
         }}>Create Lesson</button>
-        <button className="button button--link" onClick={() => {
+        <button className="button button--link-header" onClick={() => {
           if(history.location.pathname !== "/about-us")
           {
             history.push({

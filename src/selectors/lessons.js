@@ -1,7 +1,8 @@
 export default (lessons, { text, sortBy, favourites, curriculumLinks, subject, sortAll}) => {
 	return lessons.filter((lesson) => {
-		const textMatch = lesson.title.toLowerCase().includes(text.toLowerCase());
-		
+		const textMatchTitle = lesson.title.toLowerCase().includes(text.toLowerCase());
+		const textMatchDescription = lesson.description.toLowerCase().includes(text.toLowerCase());
+
 		const findLinkMatches = () => {
 			let match = false;
 			Object.keys(lesson.curriculumLinks).forEach(lessonLink => {
@@ -26,7 +27,7 @@ export default (lessons, { text, sortBy, favourites, curriculumLinks, subject, s
 		}
 		const linkMatch = findLinkMatches();
 
-		return (textMatch && linkMatch);
+		return ((textMatchTitle || textMatchDescription) && linkMatch);
 	}).sort((a, b) => {
 		switch (sortBy) {
 			case 'rating':

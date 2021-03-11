@@ -1,17 +1,17 @@
 .button {
-  background: $blue;
+  background: $secondary-color;
   border: none;
-  color: white;
   display: inline-block;
   font-size: $font-size-large;
   font-weight: 300;
   line-height: 1;
   padding: $s-size;
   text-decoration: none;
+  border-radius: $s-corner;
 }
 
 .button--secondary {
-  background: #888;
+  background: $secondary-color;
 }
 
 .button--dropdown {
@@ -20,31 +20,89 @@
 }
 
 .button--options {
-  position: absolute;
-  margin: calc(#{$s-size} + 2px);
   border-radius: 100%;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: $l-size;
+  height: $l-size;
   background-color: $almost-white;
   color: gray;
   z-index: 1;
+  padding: 0;
+}
+
+.button--close {
+  border-radius: 100%;
+  width: $l-size;
+  height: $l-size;
+  background-color: $almost-white;
+  color: gray;
+  padding: 0;
+}
+
+.button-group {
+  margin-top: $xs-size;
+  position: absolute;
+  display: flex;
+  align-items: center;
 }
 
 .button--options:focus {
   outline: none;
 }
 
-.button--link {
-  background: none;
+.button--close:focus {
+  outline: none;
+}
+
+.button--link-header {
+  background: $almost-white;
+  color: black;
+}
+
+.button--link-footer {
+  background: gray;
   color: black;
 }
 
 .button-option-icon { 
   position: relative;
-  top: -13px;
+  top: -10px;
   left: 1px;
 }
+
+.button-close-icon {
+  position: relative;
+  top: -2px;
+  left: 1px;
+}
+
 .button-option-dot {
   line-height: 0.2;
   font-size: $l-size;
+}
+
+.button-close-x {
+  font-size: $font-size-xlarge;
+}
+
+.button:hover{
+  filter: contrast(0.8);
+}
+
+.button-bottom {
+  border-radius: 0 0 $s-corner $s-corner;
+}
+
+.button-array {
+  border-top: solid 1px;
+  border-bottom: solid 1px;
+  border-left: solid 1px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.button-array-option {
+  background-color: $almost-white;
+  padding: $xs-size $m-l-size;
+  border-right: solid 1px;
 }

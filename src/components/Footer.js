@@ -6,7 +6,7 @@ const Footer = () => (
   <footer className="footer">
     <div className="content-container">
       <div className="footer__links">
-      	<button className="button button--link" onClick={() => {
+      	<button className="button button--link-footer" onClick={() => {
           if(history.location.pathname !== "/about-us")
           {
             history.push({
@@ -15,7 +15,7 @@ const Footer = () => (
             });
           }
         }}>About Us</button>
-        <button className="button button--link" onClick={() => {
+        <button className="button button--link-footer" onClick={() => {
           if(history.location.pathname !== "/contact-us")
           {
             history.push({

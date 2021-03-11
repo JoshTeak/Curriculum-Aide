@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { linkArray, MathimaticsCurriculumArray } from './CurriculumAddresses';
 
-export default class CheckboxListPrimary extends React.Component {
+class CheckboxListPrimary extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -37,7 +38,7 @@ export default class CheckboxListPrimary extends React.Component {
 														type="checkbox" 
 														value={link.linkCode}
 														onChange={this.props.onChangeFunction}
-														checked={this.props.curriculumLinks[link.linkCode] ? this.props.curriculumLinks[link.linkCode].isSet : false}
+														checked={this.props.filters.curriculumLinks[link.linkCode] ? this.props.filters.curriculumLinks[link.linkCode].isSet : false}
 													/>
 												</div>
 											</div>
@@ -52,3 +53,11 @@ export default class CheckboxListPrimary extends React.Component {
 		)
 	};
 };
+
+const mapStateToProps = (state) => {
+	return {
+		filters: state.filters
+	};
+};
+
+export default connect(mapStateToProps)(CheckboxListPrimary);

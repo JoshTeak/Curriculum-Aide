@@ -405,7 +405,7 @@ export default class LessonForm extends React.Component {
 											)
 										}
 									</div>
-									<button className="button" onClick={this.addResourceClicked}>Add Resource</button>
+									<button className="button button-bottom" onClick={this.addResourceClicked}>Add Resource</button>
 								</div>
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Lesson Structure:</h3>
@@ -441,7 +441,7 @@ export default class LessonForm extends React.Component {
 												)
 											}
 									</div>
-									<button className="button" onClick={this.addSegmentClicked}>Add Structure Segment</button>
+									<button className="button button-bottom" onClick={this.addSegmentClicked}>Add Structure Segment</button>
 									{this.state.error && this.state.lessonStructure.length === 0 ? <p className="form__error">*Please provde a lesson structure.</p> : ""}
 								</div>
 								<div className="list-item">
@@ -452,7 +452,7 @@ export default class LessonForm extends React.Component {
 											{this.onlyTrueLinks(this.state.curriculumLinks).map(link => <p>- {link.linkDescription} <b>{' (' + link.code + ')'}</b></p>)}
 										</div> : ""
 									}
-									<button className="button" onClick={this.addLinkClicked}>Edit Curriculum Link</button>
+									<button className="button button-bottom" onClick={this.addLinkClicked}>Edit Curriculum Link</button>
 									{this.state.error && Object.keys(this.onlyTrueLinks(this.state.curriculumLinks)).length === 0 ? <p className="form__error">*Please provde a curriculum link.</p> : ""}
 								</div>
 								<div className="list-item">

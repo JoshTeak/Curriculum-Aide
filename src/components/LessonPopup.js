@@ -125,13 +125,20 @@ class LessonPopup extends React.Component {
 						<div className="lesson-body">
 							<div className="list-body">
 								<div className="list-item list-item--row-end">
-									<button className="button button--options selectable" onClick={this.optionsMenu}>
-										<div className="button-option-icon">
-											<div className="button-option-dot">.</div>
-											<div className="button-option-dot">.</div>
-											<div className="button-option-dot">.</div>
-										</div>
-									</button>
+									<div className="button-group">
+										<button className="button button--options selectable" onClick={this.optionsMenu}>
+											<div className="button-option-icon">
+												<div className="button-option-dot">.</div>
+												<div className="button-option-dot">.</div>
+												<div className="button-option-dot">.</div>
+											</div>
+										</button>
+										<button className="button button--close selectable" onClick={this.props.backgroundClick}>
+											<div className="button-close-icon">
+												<div className="button-close-x">x</div>
+											</div>
+										</button>
+									</div>
 									{
 										this.displayMenuPopup === "none" ? "" : (
 											<div className="dropdown-list">
@@ -174,7 +181,7 @@ class LessonPopup extends React.Component {
 									<h3 className="list-item__title">{this.props.lesson.title}</h3>
 								</div>
 								<div className="list-item">
-									<p className="list-item__text">{this.props.lesson.description}</p>
+									<p className="list-item__text-without-border">{this.props.lesson.description}</p>
 								</div>
 								<div className="list-item list-item--multiple">
 									<div className="list-item__pair">

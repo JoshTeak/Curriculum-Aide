@@ -50,12 +50,23 @@ h5 {
   font-size: $font-size-xsmall;
 }
 
+img {
+  width: 100%;
+  display: block;
+  filter: grayscale(100%);
+}
+
 input[type="checkbox"] {
-  margin: $xs-size;
+  margin: 0.6rem;
   cursor: pointer;
 }
 
 .selectable:hover{
   filter: contrast(0.8);
+  cursor: pointer;
+}
+
+.selected {
+  filter: contrast(0.6);
   cursor: pointer;
 }

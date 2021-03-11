@@ -57,6 +57,16 @@ export default (state = filterReducerDefaultState, action) => {
 				...state,
 				sortAll: true
 			}
+		case 'RESET':
+			return {
+				...state,
+				text: '',
+				sortBy: 'title',
+				favourites: {},
+				subject: '',
+				curriculumLinks: defaultLinks(),
+				sortAll: true
+			}
 		default:
 			return state;
 	}

@@ -24,9 +24,27 @@
   justify-content: space-between;
 }
 
+.list-item--multiple-breakable {
+  display: flex;  
+  justify-content: space-between;
+  @media (max-width: $desktop-second-breakpoint) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
+.list-item__pair-breakable {
+  display:flex;
+  align-items: center;
+  @media (max-width: $desktop-second-breakpoint) {
+    margin-bottom: $s-size;
+  }
+}
+
 .list-item--row-end {
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 0;
 }
 
 .list-item__pair {
@@ -62,6 +80,10 @@
   border: 1px solid $light-grey;
 }
 
+.list-checkbox {
+  height: 4.4rem;
+}
+
 .no-background {
   background-color: #ffffff00;
   border: 1px solid $light-grey;
@@ -94,6 +116,8 @@
 }
 
 .list-item__title {
+  max-height: 6.5rem;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -102,15 +126,15 @@
 }
 
 .list-item__sub-title {
-  background-color: $light-blue;
+  background-color: $primary-color;
   padding: $xs-size;
   margin: 0;
   word-break: break-all;
-  border-radius: $xs-size $xs-size 0 0;
+  border-radius: $s-corner $s-corner 0 0;
 }
 
 .list-item__sub-title--left {
-  border-radius: $xs-size 0 0 $xs-size;
+  border-radius: $s-corner 0 0 $s-corner;
 }
 
 .list-item__text {
@@ -124,8 +148,13 @@
   padding: 0.8rem;
 }
 
+.list-item__text-without-border {
+  margin: 0;
+  padding: 0.8rem;
+}
+
 .text-border--right {
-  border-radius: 0 0.8rem 0.8rem 0;
+  border-radius: 0 $s-corner $s-corner 0;
 }
 
 .list-item__data {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter, setCurriculumLinksFilter, selectCurriculum, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll} from '../actions/filters';
+import {setTextFilter, setCurriculumLinksFilter, selectCurriculum, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll, resetFilter} from '../actions/filters';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from '../components/CurriculumAddresses';
 
@@ -93,35 +93,59 @@ class LessonListFilters extends React.Component {
 	collapsibleSidebar = () => {
 		const sidebar = document.getElementById("sidebar");
 
-		if(sidebar.style.transform === "translateX(1.5rem)")
+		if(sidebar.style.transform === "translateX(0px)")
 		{
-			sidebar.style.transform = "translateX(calc(1.6rem - 100%))";
-			sidebar.style.position = "absolute";
+			sidebar.style.transform = "translateX(-100%)";
 			this.setState({sidebarExpanded: false})
 		} else {
-			sidebar.style.transform = "translateX(1.5rem)";
-			sidebar.style.position = "unset";
+			sidebar.style.transform = "translateX(0px)";
 			this.setState({sidebarExpanded: true})
 		}
+	}
+	clearFilter = () => {
+		this.setState(() => ({
+			isFavouritesChecked: false
+		}));
+		this.props.setTextFilter('');
+		this.props.sortByFavourite({});
+		this.props.setCurriculumLinksFilter(defaultLinks());
+		this.props.resetFilter();
 	}
 	render() {
 		return (
 			<div className="collapsibleSidebar" id="sidebar">
+				<div className="collapsibleSidebar__header-options">
+					<div className="button-group">
+						<button className="button button--close selectable" onClick={this.collapsibleSidebar}>
+							<div className="button-close-icon">
+								<div className="button-close-x">x</div>
+							</div>
+						</button>
+					</div>
+				</div>
 				<div className="filter">
+					<div className="list-item__title">
+						<h2 className="filter-title">Filter</h2>
+					</div>
 					<div className="list-body">
-						<div className="list-item">
-							<input 
-								type="text"
-								className="text-input" 
-								placeholder="Search lessons"
-								value={this.props.filters.text}
-								onChange={this.onTextChange}
-							/>
-						</div>
 						<div className="list-item list-item--multiple">
 							<div className="list-item__pair">
+								<input 
+									type="text"
+									className="text-input" 
+									placeholder="Search lessons"
+									value={this.props.filters.text}
+									onChange={this.onTextChange}
+								/>
+							</div>
+							<div className="list-item__pair">
+								<button className="button" onClick={this.clearFilter}>Clear Filter</button>
+							</div>
+						</div>
+						<div className="list-item list-item--multiple-breakable">
+							<div className="list-item__pair-breakable">
 								<h3 className="list-item__sub-title list-item__sub-title--left">Search Favourites:</h3>
-								<div className="list-item__text-with-border text-border--right">
+								<div className="list-item__text-with-border text-border--right list-checkbox">
 									<input
 										type="checkbox" 
 										onChange={this.onFavouriteChecked}
@@ -129,7 +153,7 @@ class LessonListFilters extends React.Component {
 									/>
 								</div>
 							</div>
-							<div className="list-item__pair">
+							<div className="list-item__pair-breakable">
 								<h3 className="list-item__sub-title list-item__sub-title--left">Filter By:</h3>
 								<select className="dropdown dropdown--right" value={this.props.filters.sortBy} onChange={this.onSortChange}>
 									<option value="title">Alphabetical Order</option>
@@ -145,18 +169,17 @@ class LessonListFilters extends React.Component {
 								onChangeFunction={this.onCurriculumLinkChange}
 								onYearChange={this.onCurriculumYearSelected}
 								curriculumLinks={this.state.curriculumLinks}
-								subject={this.state.subject}
 							/>
 						</div>	
 					</div>
 				</div>
-				<button className="collapsibleSidebar__button selectable" onClick={this.collapsibleSidebar}>
+				<div className="collapsibleSidebar__button selectable">
 					{ 
 						this.state.sidebarExpanded ?
-						<div className="collapsibleSidebar__button-icon">&lt;&lt;</div> :
-						<div className="collapsibleSidebar__button-icon">&gt;&gt;</div>
+						'' :
+						<button className="collapsibleSidebar__button-icon" onClick={this.collapsibleSidebar}>Filter</button>
 					}
-				</button>
+				</div>
 			</div>
 		);
 	};	
@@ -178,7 +201,8 @@ const mapDispatchToProps = (dispatch) => ({
 	sortByLevel: () => dispatch(sortByLevel()),
 	sortByDuration: () => dispatch(sortByDuration()),
 	sortByFavourite: (favourites) => dispatch(sortByFavourite(favourites)),
-	sortAll: () => dispatch(sortAll())
+	sortAll: () => dispatch(sortAll()),
+	resetFilter: () => dispatch(resetFilter())
 });
 
 

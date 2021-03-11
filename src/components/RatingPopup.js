@@ -10,6 +10,15 @@ export class RatingPopup extends React.Component {
 		this.state = {rating: '', error: false};
 	};
 	onRatingValueChange = (e) => {
+		const optionsArray = document.getElementsByClassName("button-array-option");
+		let i;
+		for (i = 0; i < optionsArray.length; i++)
+		{
+			optionsArray[i].classList.add("selectable");
+			optionsArray[i].classList.remove("selected");
+		}
+		e.target.classList.add("selected");
+		e.target.classList.remove("selectable");
 		const ratingValue = e.target.value;
 		this.setState(() => ({rating: ratingValue}));
 	};
@@ -73,13 +82,13 @@ export class RatingPopup extends React.Component {
 									<h3 className="list-item__title">Rate Lesson</h3>
 								</div>
 								<div className="list-item">
-									<select className="dropdown" onChange={this.onRatingValueChange}>
-										<option value="1">1</option>
-									  	<option value="2">2</option>
-									  	<option value="3">3</option>
-									  	<option value="4">4</option>
-									  	<option value="5">5</option>
-									</select>
+									<div className="button-array">
+										<option className="button-array-option selectable" value="1" onClick={this.onRatingValueChange}>1</option>
+										<option className="button-array-option selectable" value="2" onClick={this.onRatingValueChange}>2</option>
+										<option className="button-array-option selectable" value="3" onClick={this.onRatingValueChange}>3</option>
+										<option className="button-array-option selectable" value="4" onClick={this.onRatingValueChange}>4</option>
+										<option className="button-array-option selectable" value="5" onClick={this.onRatingValueChange}>5</option>
+									</div>
 									{this.state.error ? <p className="form__error">*Please select the number of stars you want to rate this lesson.</p> : ""}
 								</div>
 								<div className="list-item list-item--multiple">

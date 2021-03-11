@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { linkArray, MathimaticsCurriculumArray, ScienceCurriculumArray} from './CurriculumAddresses';
 import CheckboxListPrimary from './CheckboxListPrimary';
 
-export default class CheckboxList extends React.Component {
+class CheckboxList extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {curriculumLinks: props.curriculumLinks, onChangeFunction: props.onChangeFunction, subject: '', levels: []}
+		this.state = {curriculumLinks: props.curriculumLinks, onChangeFunction: props.onChangeFunction, subject: this.props.filters.subject, levels: []}
 
 		this.firstLevelDisplayed = 0;
 
@@ -123,29 +124,34 @@ export default class CheckboxList extends React.Component {
 		return (
 			<div>
 				<div className="list-item">
-					<h3 className="list-item__sub-title list-item__sub-title--left">Subject:</h3>
-					<select className="dropdown dropdown--right" onChange={this.onSubjectChange}>
+					<h3 className="list-item__sub-title">Subject:</h3>
+					<select className="dropdown dropdown--bottom" onChange={this.onSubjectChange} value={this.props.filters.subject}>
 						<option value="">All Subject</option>
 						<option value="Personal and Social Capability">Personal and Social Capability</option>
 						<option value="Mathematics">Mathematics</option>
 						<option value="Science">Science</option>
 					</select>
 				</div>
-				<h1 className="curriculum-header">Curriculum Links</h1>
-				<div className="curriculum-navigation">
-					<button className="button button--secondary" onClick={(e) => {
-						e.preventDefault();
-						this.DisplayedLevels("decrease");
-			        }}>Previous</button>
-					<button className="button button--secondary" onClick={(e) => {
-						e.preventDefault();
-						this.DisplayedLevels("increase");
-			        }}>Next</button>
-				</div>
 				<div className="curriculum-body">
+					{
+						this.props.filters.subject === '' ? '' :
+						<div>
+							<h1 className="curriculum-header">Curriculum Links</h1>
+							<div className="curriculum-navigation">
+								<button className="button button--secondary" onClick={(e) => {
+									e.preventDefault();
+									this.DisplayedLevels("decrease");
+						        }}>&lt;&lt;</button>
+								<button className="button button--secondary" onClick={(e) => {
+									e.preventDefault();
+									this.DisplayedLevels("increase");
+						        }}>&gt;&gt;</button>
+							</div>
+						</div>
+					}
 					<div className="curriculum-level-scroll">
 						{
-							this.state.subject === '' ? '' : this.getSubjectStructure().map((level) => {
+							this.props.filters.subject === '' ? '' : this.getSubjectStructure().map((level) => {
 								return (
 									<div>
 										<div className="curriculum-level">
@@ -155,7 +161,6 @@ export default class CheckboxList extends React.Component {
 													return(
 														<CheckboxListPrimary
 															primary={primary}
-															curriculumLinks={this.state.curriculumLinks}
 															onChangeFunction={this.state.onChangeFunction}
 														/>
 													)
@@ -172,3 +177,12 @@ export default class CheckboxList extends React.Component {
 		);
 	};
 };
+
+
+const mapStateToProps = (state) => {
+	return {
+		filters: state.filters
+	};
+};
+
+export default connect(mapStateToProps)(CheckboxList);

@@ -39,3 +39,7 @@ export const sortByFavourite = (favourites = {}) => ({
 export const sortAll = () => ({
 	type: 'SORT_ALL'
 });
+
+export const resetFilter = () => ({
+	type: 'RESET'
+});
