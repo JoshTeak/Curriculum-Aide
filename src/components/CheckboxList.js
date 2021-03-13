@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { selectCurriculum } from '../actions/filters';
 import { linkArray, MathimaticsCurriculumArray, ScienceCurriculumArray} from './CurriculumAddresses';
 import CheckboxListPrimary from './CheckboxListPrimary';
 
@@ -79,11 +80,10 @@ class CheckboxList extends React.Component {
 	onSubjectChange = (e) => {
 		this.firstLevelDisplayed = 0;
 		this.DisplayedLevels();						// resets the level scroll back to start position
-
 		const subject = e.target.value;
-		if(this.props.selectSubject)
+		if(this.selectSubject)
 		{
-			this.props.selectSubject(subject)
+			this.selectSubject(subject)
 		}
 		this.state.subject = subject;
 		this.forceUpdate();
@@ -107,6 +107,9 @@ class CheckboxList extends React.Component {
 			}
 		}
 	}
+	selectSubject = (subject) => {
+		this.props.selectCurriculum(subject);
+	}
 	printCurriculumList = () => {			//todo remove when finished all curriculums
 		let myString = '';
 		this.getSubjectStructure().map((level) => {
@@ -123,7 +126,7 @@ class CheckboxList extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="list-item">
+				<div className="list-item list-item-left-align">
 					<h3 className="list-item__sub-title">Subject:</h3>
 					<select className="dropdown dropdown--bottom" onChange={this.onSubjectChange} value={this.props.filters.subject}>
 						<option value="">All Subject</option>
@@ -178,6 +181,9 @@ class CheckboxList extends React.Component {
 	};
 };
 
+const mapDispatchToProps = (dispatch) => ({
+	selectCurriculum: (subject) => dispatch(selectCurriculum(subject))
+});
 
 const mapStateToProps = (state) => {
 	return {
@@ -185,4 +191,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default connect(mapStateToProps)(CheckboxList);
+export default connect(mapStateToProps, mapDispatchToProps)(CheckboxList);

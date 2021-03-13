@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setTextFilter, setCurriculumLinksFilter, selectCurriculum, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll, resetFilter} from '../actions/filters';
+import {setTextFilter, setCurriculumLinksFilter, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll, resetFilter} from '../actions/filters';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from '../components/CurriculumAddresses';
 
@@ -87,9 +87,6 @@ class LessonListFilters extends React.Component {
 			})
 		}
 	}
-	selectSubject = (subject) => {
-		this.props.selectCurriculum(subject);
-	}
 	collapsibleSidebar = () => {
 		const sidebar = document.getElementById("sidebar");
 
@@ -128,8 +125,8 @@ class LessonListFilters extends React.Component {
 						<h2 className="filter-title">Filter</h2>
 					</div>
 					<div className="list-body">
-						<div className="list-item list-item--multiple">
-							<div className="list-item__pair">
+						<div className="list-item list-item--multiple-left-align">
+							<div className="list-item__pair list-item-left-align">
 								<input 
 									type="text"
 									className="text-input" 
@@ -143,7 +140,7 @@ class LessonListFilters extends React.Component {
 							</div>
 						</div>
 						<div className="list-item list-item--multiple-breakable">
-							<div className="list-item__pair-breakable">
+							<div className="list-item__pair-breakable list-item-left-align">
 								<h3 className="list-item__sub-title list-item__sub-title--left">Search Favourites:</h3>
 								<div className="list-item__text-with-border text-border--right list-checkbox">
 									<input
@@ -195,7 +192,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
 	setTextFilter: (text) => dispatch(setTextFilter(text)),
 	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks)),
-	selectCurriculum: (subject) => dispatch(selectCurriculum(subject)),
 	sortByRating: () => dispatch(sortByRating()),
 	sortByTitle: () => dispatch(sortByTitle()),
 	sortByLevel: () => dispatch(sortByLevel()),
