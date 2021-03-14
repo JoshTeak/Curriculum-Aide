@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from './CurriculumAddresses';
 import AddResourcePopup from './AddResourcePopup';
@@ -6,7 +7,9 @@ import AddStructureSegmentPopup from './AddStructureSegmentPopup';
 import AddCurriculumLinkPopup from './AddCurriculumLinkPopup';
 import { Link } from 'react-router-dom';
 
-export default class LessonForm extends React.Component {
+import { setCurriculumLinksFilter } from '../actions/filters';
+
+class LessonForm extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -101,6 +104,7 @@ export default class LessonForm extends React.Component {
 		this.setState(() => ({curriculumLinks}))
 		this.selectedLevels();
 		this.selectedSubjects();
+		this.props.setCurriculumLinksFilter(curriculumLinks);
 	}
 
 	onDurationChange = (duration) => {
@@ -508,3 +512,9 @@ export default class LessonForm extends React.Component {
 		);
 	};
 };
+
+const mapDispatchToProps = (dispatch) => ({
+	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks)),
+});
+
+export default connect(undefined, mapDispatchToProps)(LessonForm);

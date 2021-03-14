@@ -162,9 +162,7 @@ class LessonListFilters extends React.Component {
 						</div>
 						<div className="list-item">
 							<CheckboxList 
-								selectSubject={this.selectSubject}
 								onChangeFunction={this.onCurriculumLinkChange}
-								onYearChange={this.onCurriculumYearSelected}
 								curriculumLinks={this.state.curriculumLinks}
 							/>
 						</div>	
