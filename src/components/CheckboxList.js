@@ -137,7 +137,15 @@ class CheckboxList extends React.Component {
 				</div>
 				<div className="curriculum-body">
 					{
-						this.props.filters.subject === '' ? '' :
+						this.props.filters.subject === '' ? 
+						<div className="filter-request">
+							<div className="filter-instruction">
+								<p>Narrow your search by selecting a subject.</p>
+							</div>
+							<div className="content-image-box">
+								<img src="/images/Education.jpg" alt="Education" />
+							</div>
+						</div> :
 						<div>
 							<h1 className="curriculum-header">Curriculum Links</h1>
 							<div className="curriculum-navigation">

@@ -1,22 +1,34 @@
-.box-layout {
-  align-items: center;
-  background: url('/images/bg.jpg');
-  background-size: cover;
-  display: flex;
+.Login-layout {
+  background-color: white;
+  width: 100vw; 
   height: 100vh;
-  justify-content: center;
-  width: 100vw;
 }
 
-.box-layout__box {
-  background: fade-out(white, .15);
-  border-radius: 3px;
-  padding: $l-size $m-size;
-  text-align: center;
-  width: 25rem;
+.Login-layout-box {
+  position: absolute;
+  z-index: 1;
+  padding: $m-l-size;
+  margin: $s-size;
 }
 
-.box-layout__title {
-  margin: 0 0 $m-size 0;
-  line-height: 1;
+.Login-layout-box p {
+  width: 25vw;
+  background-color: white;
+  margin-bottom: $m-size;
+  min-width: 27rem;
+  border-radius: $s-corner;
+}
+
+.Login-layout-box button {
+  font-size: $font-size-xlarge;
+  font-weight: bold;
+  padding: $m-l-size;
+  color: #5f5f5f;
+}
+
+
+.Login-layout-image-box img{
+  width: inherit;
+  height: 100vh;
+  margin: auto;
 }

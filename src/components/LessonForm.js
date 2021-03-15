@@ -353,8 +353,8 @@ class LessonForm extends React.Component {
 									{this.state.error && !this.state.description ? <p className="form__error">*Please provde a brief description.</p> : ""}
 									<p>Characters remaining: {this.state.descriptionRemainingChar}</p>
 								</div>
-								<div className="list-item list-item--multiple">
-									<div className="list-item__pair">
+								<div className="list-item list-item--multiple-breakable--space-between">
+									<div className="list-item__pair-breakable">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Subject:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p>
@@ -362,7 +362,7 @@ class LessonForm extends React.Component {
 											</p>
 										</div>
 									</div>
-									<div className="list-item__pair">
+									<div className="list-item__pair-breakable">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Level:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p>
@@ -370,7 +370,7 @@ class LessonForm extends React.Component {
 											</p>
 										</div>
 									</div>
-									<div className="list-item__pair">
+									<div className="list-item__pair-breakable">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p onChange={this.onDurationChange}>{this.lessonDuration + " minutes"}</p>

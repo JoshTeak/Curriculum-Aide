@@ -19,7 +19,26 @@
 	filter: drop-shadow(2px 2px 3px $grey);
 	max-width: 100rem;
 	margin: 1.2rem;
-	display: flex;}
+	display: flex;
+	@media (max-width: $desktop-third-breakpoint) {
+	    flex-direction: column;
+	    max-width: 52rem;
+	}
+}
+
+.odd-content-box {
+	@media (max-width: $desktop-third-breakpoint) {
+	    flex-direction: column;
+	    max-width: 52rem;
+	}
+}
+
+.even-content-box {
+	@media (max-width: $desktop-third-breakpoint) {
+	    flex-direction: column-reverse;
+	    max-width: 52rem;
+	}
+}
 
 .content-image-box {
 	flex: 3 1 0;

@@ -24,6 +24,15 @@
   justify-content: space-between;
 }
 
+.list-item--multiple-breakable--space-between {
+  display: flex;  
+  justify-content: space-between;
+  @media (max-width: $desktop-second-breakpoint) {
+    flex-direction: column;
+    margin: 0;
+  }
+}
+
 .list-item--multiple-left-align {
   display: flex;  
 }
@@ -44,7 +53,7 @@
 
 .list-item-left-align {
   margin-right: $s-size;
-  width: fit-content;
+  width: max-content;
 }
 
 .list-item__pair {
