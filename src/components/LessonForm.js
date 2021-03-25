@@ -32,7 +32,8 @@ class LessonForm extends React.Component {
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
 			descriptionRemainingChar: props.lesson ? this.maxDescriptionChar - props.lesson.description.length : this.maxDescriptionChar,
 			titleRemainingChar: props.lesson ? this.maxTitleChar - props.lesson.title.length : this.maxTitleChar,
-			error: false
+			error: false,
+			segmentToEdit: null
 		};
 
 		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
@@ -72,8 +73,14 @@ class LessonForm extends React.Component {
 			};
 			case 'REMOVE_RESOURCE':
 			{
-				const index = resources.indexOf(resourceObject);
-				resources.splice(index, 1);
+				let resourceIndex;
+				resources.forEach((resource, index) => {
+					if(resource.value === resourceObject)
+					{
+						resourceIndex = index;
+					}
+				})
+				resources.splice(resourceIndex, 1);
 				this.setState(() => ({resources}));
 				break;
 			};
@@ -85,14 +92,33 @@ class LessonForm extends React.Component {
 		switch (order) {
 			case 'ADD_STRUCTURE_SEGMENT':
 			{
+				let segmentIndex;
+				lessonStructure.forEach((segment, index) => {
+					if(!!this.state.segmentToEdit && segment.content === this.state.segmentToEdit.content)
+					{
+						segmentIndex = index;
+					}
+				})
+				if(this.state.segmentToEdit !== null)
+				{
+					lessonStructure.splice(segmentIndex, 1);
+				}
+
 				lessonStructure.push(structureObject)
-				this.setState(() => ({lessonStructure}));
+				this.setState(() => ({lessonStructure, segmentToEdit: null}));
 				break;
 			};
 			case 'REMOVE_STRUCTURE_SEGMENT':
 			{
-				const index = lessonStructure.indexOf(structureObject);
-				lessonStructure.splice(index, 1);
+				let segmentIndex;
+				lessonStructure.forEach((segment, index) => {
+					if(segment.content === structureObject)
+					{
+						segmentIndex = index;
+					}
+				})
+				lessonStructure.splice(segmentIndex, 1);
+
 				this.setState(() => ({lessonStructure}));
 				break;
 			};
@@ -153,6 +179,12 @@ class LessonForm extends React.Component {
 		this.onResourcesChange(resourceToDelete, "REMOVE_RESOURCE");	
 	}
 
+	deleteSegment = (e) => {
+		e.preventDefault();
+		const segmentToDelete = e.target.getAttribute('segmentname');
+		this.onStructureChange(segmentToDelete, "REMOVE_STRUCTURE_SEGMENT");	
+	}
+
 	addResourceClicked = (e) => {
 		e.preventDefault();
 		
@@ -168,7 +200,6 @@ class LessonForm extends React.Component {
 
 	addSegmentClicked = (e) => {
 		e.preventDefault();
-
 	  	if(this.displayedStructurePopup === "none")
 	  	{
 	  		this.displayedStructurePopup = "block";
@@ -177,6 +208,41 @@ class LessonForm extends React.Component {
 	  		this.displayedStructurePopup = "none";
 	  	}
 	  	this.forceUpdate();
+	}
+
+	cancelSegment = (e) => {
+		e.preventDefault();
+	  	if(this.displayedStructurePopup === "none")
+	  	{
+	  		this.displayedStructurePopup = "block";
+	  	} else if(this.displayedStructurePopup === "block")
+	  	{
+	  		this.setState({segmentToEdit: null})
+	  		this.displayedStructurePopup = "none";
+	  	}
+	  	this.forceUpdate();
+	}
+
+	editSegmentClicked = (e) => {
+		e.preventDefault();
+		const segmentEdit = e.target.getAttribute('segmentname');
+		const lessonStructure = this.state.lessonStructure;
+		let segmentIndex;
+		lessonStructure.forEach((segment, index) => {
+			if(segment.content === segmentEdit)
+			{
+				segmentIndex = index;
+			}
+		})
+
+		if(this.displayedStructurePopup === "none")
+	  	{
+	  		this.displayedStructurePopup = "block";
+	  	} else if(this.displayedStructurePopup === "block")
+	  	{
+	  		this.displayedStructurePopup = "none";
+	  	}
+		this.setState(() => ({segmentToEdit: lessonStructure[segmentIndex]}));
 	}
 
 	addLinkClicked = (e) => {
@@ -417,13 +483,13 @@ class LessonForm extends React.Component {
 											{
 												Object.keys(this.state.lessonStructure).length !== 0 ?
 												<div className="list-item__table-row">
-													<div className="list-item__table-segment flex-ratio-one">
+													<div className="list-item__table-segment table-segment-one">
 														<p>Duration:</p>
 													</div>
-													<div className="list-item__table-segment flex-ratio-four">
+													<div className="list-item__table-segment table-segment-two">
 														<p>Content:</p>
 													</div>
-													<div className="list-item__table-segment flex-ratio-two">
+													<div className="list-item__table-segment table-segment-three">
 														<p>Materials:</p>
 													</div>
 												</div> : ""
@@ -431,15 +497,27 @@ class LessonForm extends React.Component {
 											{
 												this.state.lessonStructure.map(segment => 
 													<div className="list-item__table-row">
-														<div className="list-item__table-segment flex-ratio-one">
+														<div className="list-item__table-segment table-segment-one">
 															<p>{segment.duration + " minutes"}</p>
 														</div>
-														<div className="list-item__table-segment flex-ratio-four">
+														<div className="list-item__table-segment table-segment-two">
 															<p>{segment.title + ': '}</p>
 															<p>{segment.content}</p>
 														</div>
-														<div className="list-item__table-segment flex-ratio-two">
+														<div className="list-item__table-segment table-segment-three">
 															<p>{segment.materials}</p>
+															<div className="button-panel">
+													            <button className="button button-tool" onClick={this.deleteSegment} segmentname={segment.content}>
+															        <div className="icon-container" segmentname={segment.content}>
+														                <img className="icon" src="/images/Cancel Close Circle.png" alt="Cancel Close Circle" segmentname={segment.content}/>
+														            </div>
+													            </button>
+													            <button className="button button-tool" onClick={this.editSegmentClicked} segmentname={segment.content}>
+															        <div className="icon-container" segmentname={segment.content}>
+														                <img className="icon" src="/images/Pencil 2.png" alt="Pencil 2" segmentname={segment.content}/>
+														            </div>
+													            </button>
+													        </div>
 														</div>
 													</div>
 												)
@@ -494,7 +572,9 @@ class LessonForm extends React.Component {
 						this.displayedStructurePopup === "none" ? "" : (
 							<AddStructureSegmentPopup 
 								backgroundClick={this.addSegmentClicked} 
-								changeResources={this.onStructureChange}
+								cancel={this.cancelSegment}
+								changeSegments={this.onStructureChange}
+								segment={this.state.segmentToEdit}
 							/>
 						)
 					}

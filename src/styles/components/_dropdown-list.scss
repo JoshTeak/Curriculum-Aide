@@ -23,17 +23,21 @@
 }
 
 .dropdown-list-item {
-	display: flex;
+  width: 18rem;
+  display: flex;
   flex-direction: row;
   align-items: center;
-  padding: $xs-size $m-size;
+  margin: 0 $xs-size;
+  padding: $xs-size;
   background-color: $almost-white;
+  border-radius: $s-corner;
 }
 
 .dropdown-list-item__option {
 	margin: 0;
+  margin-left: $m-size;
 }
 
-.dropdown:hover{
+.dropdown:hover {
   filter: contrast(0.8);
 }

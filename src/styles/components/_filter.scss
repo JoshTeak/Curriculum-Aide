@@ -9,6 +9,9 @@
 
 .filter-request {
 	padding: $xl-size;
+	@media (max-width: $desktop-second-breakpoint) {
+	    padding: $xs-size;
+	}
 }
 
 .filter-instruction {

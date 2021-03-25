@@ -22,43 +22,43 @@ export default class AddResourcePopup extends React.Component {
 		switch (this.state.resource.type) {
 			case 'webLink':
 				return (
-						<div className="list-item">
-							<input 
-								type="text"
-								placeholder="resource"
-								className="text-input"
-								value={this.state.resource.value}
-								onChange={this.onResourceValueChange}
-							/>	
-							{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a weblink to the resource.</p> : ""}
-						</div>
-						);
+					<div className="list-item">
+						<input 
+							type="text"
+							placeholder="resource"
+							className="text-input"
+							value={this.state.resource.value}
+							onChange={this.onResourceValueChange}
+						/>	
+						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a weblink to the resource.</p> : ""}
+					</div>
+				);
 			case 'embeddedVideo':
 				return (
-						<div className="list-item">
-							<input 
-								type="text"
-								placeholder="resource"
-								className="text-input"
-								value={this.state.resource.value}
-								onChange={this.onResourceValueChange}
-							/>	
-							{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a link to the video.</p> : ""}
-						</div>
-						);
+					<div className="list-item">
+						<input 
+							type="text"
+							placeholder="resource"
+							className="text-input"
+							value={this.state.resource.value}
+							onChange={this.onResourceValueChange}
+						/>	
+						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a link to the video.</p> : ""}
+					</div>
+				);
 			case 'file':
 				return (
-						<div className="list-item">
-							<input 
-								type="file"
-								id="file-selector"
-							    name="myFile"
-							    onChange={this.onResourceFileChange}
-							    multiple
-							/>
-							{this.state.error && !this.state.resource.value ? <p className="form__error">*Please select a file to upload.</p> : ""}
-						</div>
-						);
+					<div className="list-item">
+						<input 
+							type="file"
+							id="file-selector"
+						    name="myFile"
+						    onChange={this.onResourceFileChange}
+						    multiple
+						/>
+						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please select a file to upload.</p> : ""}
+					</div>
+				);
 		}
 	};
 

@@ -33,9 +33,3 @@ $desktop-breakpoint: 45rem;
 $desktop-first-breakpoint: 1800px;
 $desktop-second-breakpoint: 1500px;
 $desktop-third-breakpoint: 1024px;
-
-@-moz-document url-prefix() {
-  h1 {
-    color: red;
-  }
-}

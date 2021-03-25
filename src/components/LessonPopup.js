@@ -144,20 +144,37 @@ class LessonPopup extends React.Component {
 											<div className="dropdown-list">
 												<div className="dropdown-list-body">
 													<div className="dropdown-list-item selectable"  onClick={this.printLesson}>
+														<div className="icon-container">
+								                            <img className="icon" src="/images/Printer.png" alt="Printer" />
+								                        </div>
 														<h3 className="dropdown-list-item__option">Print</h3>
 													</div>
-													<div className="dropdown-list-item selectable">
+													<div className="dropdown-list-item selectable" onClick={this.props.favorated}>
+														<div className="icon-container">
+															<div class="round-checkbox">
+															    <input
+																	type="checkbox" 
+																	checked={this.props.isChecked}
+																/>
+																{
+																	this.props.isChecked ? 
+															    	<img className="icon" src="/images/Checkmark Circle.png" alt="Checkmark Circle" /> :
+															    	<img className="icon" src="/images/Circle.png" alt="Circle" />
+															    }
+															</div>
+														</div>
 														<h3 className="dropdown-list-item__option">Favourite</h3>
-														<input
-															type="checkbox" 
-															onChange={this.props.favorated}
-															checked={this.props.isChecked}
-														/>
 													</div>
 													<div className="dropdown-list-item selectable" onClick={this.addRatingClicked}>
+														<div className="icon-container">
+								                            <img className="icon" src="/images/Flag 1.png" alt="Flag 1" />
+								                        </div>
 														<h3 className="dropdown-list-item__option">Rate</h3>
 													</div>
 													<div className="dropdown-list-item selectable" onClick={this.addReportClicked}>
+														<div className="icon-container">
+								                            <img className="icon" src="/images/Alert Sign Circle.png" alt="Alert Sign Circle" />
+								                        </div>
 														<h3 className="dropdown-list-item__option">Report</h3>
 													</div>
 													{
@@ -168,6 +185,9 @@ class LessonPopup extends React.Component {
 														            state: { previousPath: history.location, duration: 1000 }
 														          });
 														        }}>
+														        <div className="icon-container">
+										                            <img className="icon" src="/images/Pencil 2.png" alt="Pencil 2" />
+										                        </div>
 																<h3 className="dropdown-list-item__option">Edit</h3>																
 															</div>
 														)
@@ -235,27 +255,27 @@ class LessonPopup extends React.Component {
 									<h3 className="list-item__sub-title">Lesson Structure:</h3>
 									<div className="list-item__table  no-background">
 										<div className="list-item__table-row">
-											<div className="list-item__table-segment flex-ratio-one">
+											<div className="list-item__table-segment table-segment-one">
 												<p>Duration: </p>
 											</div>
-											<div className="list-item__table-segment flex-ratio-four">
+											<div className="list-item__table-segment table-segment-two">
 												<p>Content:</p>
 											</div>
-											<div className="list-item__table-segment flex-ratio-two">
+											<div className="list-item__table-segment table-segment-three">
 												<p>Materials:</p>
 											</div>
 										</div>
 										{
 											this.props.lesson.lessonStructure.map(segment => 
 												<div className="list-item__table-row">
-													<div className="list-item__table-segment flex-ratio-one">
+													<div className="list-item__table-segment table-segment-one">
 														<p>{segment.duration  + " minutes"}</p>
 													</div>
-													<div className="list-item__table-segment flex-ratio-four">
+													<div className="list-item__table-segment table-segment-two">
 														<p>{segment.title + ': '}</p>
 														<p>{segment.content}</p>
 													</div>
-													<div className="list-item__table-segment flex-ratio-two">
+													<div className="list-item__table-segment table-segment-three">
 														<p>{segment.materials}</p>
 													</div>
 												</div>

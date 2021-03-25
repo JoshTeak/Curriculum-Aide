@@ -28,7 +28,7 @@ export class LessonListItem extends React.Component {
 	}
 
 	lessonClicked = (e) => {
-		if(e.target.type !== "checkbox")
+		if(e.target.className !== "icon")
 		{
 			if(this.isDisplayed === "none")
 		  	{
@@ -82,11 +82,19 @@ export class LessonListItem extends React.Component {
 								<p className="list-item__text">{'Rating: ' + this.props.lesson.rating}</p>
 							</div>
 							<div className="list-item__pair">
-								<input
-									type="checkbox" 
-									onChange={this.favorateClicked}
-									checked={this.state.boxChecked}
-								/>
+								<div className="list-item-icon-container">
+									<div class="round-checkbox" onClick={this.favorateClicked}>
+									    <input
+											type="checkbox" 
+											checked={this.state.boxChecked}
+										/>
+										{
+											this.state.boxChecked ? 
+									    	<img className="icon" src="/images/Checkmark Circle.png" alt="Checkmark Circle" /> :
+									    	<img className="icon" src="/images/Circle.png" alt="Circle" />
+									    }
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>					
