@@ -70,3 +70,8 @@ input[type="checkbox"] {
   filter: contrast(0.6);
   cursor: pointer;
 }
+
+#app {
+  display: flex;
+  flex-direction: column;
+}

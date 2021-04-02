@@ -6,8 +6,7 @@ import AddResourcePopup from './AddResourcePopup';
 import AddStructureSegmentPopup from './AddStructureSegmentPopup';
 import AddCurriculumLinkPopup from './AddCurriculumLinkPopup';
 import { Link } from 'react-router-dom';
-
-import { setCurriculumLinksFilter } from '../actions/filters';
+import {setCurriculumLinksFilter, resetFilter} from '../actions/filters';
 
 class LessonForm extends React.Component {
 	constructor(props) {
@@ -30,15 +29,18 @@ class LessonForm extends React.Component {
 			lessonStructure: props.lesson ? props.lesson.lessonStructure : [],
 			curriculumLinks: props.lesson ? props.lesson.curriculumLinks : defaultLinks(),
 			priorKnowledge: props.lesson ? props.lesson.priorKnowledge : '',
-			descriptionRemainingChar: props.lesson ? this.maxDescriptionChar - props.lesson.description.length : this.maxDescriptionChar,
 			titleRemainingChar: props.lesson ? this.maxTitleChar - props.lesson.title.length : this.maxTitleChar,
 			error: false,
+			misclick: false,
 			segmentToEdit: null
 		};
-
+		
 		this.lessonDuration = this.calculateLessonDuration(this.state.lessonStructure);
+		document.documentElement.style.overflow = "auto";
 	};
-
+	componentDidMount() {
+		this.clearFilter();
+	}
 	onTitleChange = (e) => {
 		const title = e.target.value;
 		const titleRemainingChar = this.maxTitleChar - title.length;
@@ -50,11 +52,7 @@ class LessonForm extends React.Component {
 
 	onDescriptionChange = (e) => {
 		const description = e.target.value;
-		const descriptionRemainingChar = this.maxDescriptionChar - description.length;
-		if(descriptionRemainingChar >= 0)
-		{
-			this.setState(() => ({description, descriptionRemainingChar}));
-		}
+		this.setState(() => ({description}));
 	};
 
 	onLearningOutcomesChange = (e) => {
@@ -191,9 +189,12 @@ class LessonForm extends React.Component {
 	  	if(this.displayedResourcePopup === "none")
 	  	{
 	  		this.displayedResourcePopup = "block";
+	  		document.documentElement.scrollTop = 317;
+			document.documentElement.style.overflow = "hidden";
 	  	} else if(this.displayedResourcePopup === "block")
 	  	{
 	  		this.displayedResourcePopup = "none";
+	  		document.documentElement.style.overflow = "auto";
 	  	}
 	  	this.forceUpdate();
 	}
@@ -203,9 +204,12 @@ class LessonForm extends React.Component {
 	  	if(this.displayedStructurePopup === "none")
 	  	{
 	  		this.displayedStructurePopup = "block";
+	  		document.documentElement.scrollTop = 317;
+			document.documentElement.style.overflow = "hidden";
 	  	} else if(this.displayedStructurePopup === "block")
 	  	{
 	  		this.displayedStructurePopup = "none";
+	  		document.documentElement.style.overflow = "auto";
 	  	}
 	  	this.forceUpdate();
 	}
@@ -215,10 +219,13 @@ class LessonForm extends React.Component {
 	  	if(this.displayedStructurePopup === "none")
 	  	{
 	  		this.displayedStructurePopup = "block";
+	  		document.documentElement.scrollTop = 317;
+			document.documentElement.style.overflow = "hidden";
 	  	} else if(this.displayedStructurePopup === "block")
 	  	{
 	  		this.setState({segmentToEdit: null})
 	  		this.displayedStructurePopup = "none";
+	  		document.documentElement.style.overflow = "auto";
 	  	}
 	  	this.forceUpdate();
 	}
@@ -238,9 +245,12 @@ class LessonForm extends React.Component {
 		if(this.displayedStructurePopup === "none")
 	  	{
 	  		this.displayedStructurePopup = "block";
+	  		document.documentElement.scrollTop = 317;
+			document.documentElement.style.overflow = "hidden";
 	  	} else if(this.displayedStructurePopup === "block")
 	  	{
 	  		this.displayedStructurePopup = "none";
+	  		document.documentElement.style.overflow = "auto";
 	  	}
 		this.setState(() => ({segmentToEdit: lessonStructure[segmentIndex]}));
 	}
@@ -251,9 +261,12 @@ class LessonForm extends React.Component {
 	  	if(this.displayedLinkPopup === "none")
 	  	{
 	  		this.displayedLinkPopup = "block";
+	  		document.documentElement.scrollTop = 317;
+			document.documentElement.style.overflow = "hidden";
 	  	} else if(this.displayedLinkPopup === "block")
 	  	{
 	  		this.displayedLinkPopup = "none";
+	  		document.documentElement.style.overflow = "auto";
 	  	}
 	  	this.forceUpdate();
 	}
@@ -354,6 +367,14 @@ class LessonForm extends React.Component {
 		}
 		this.onSubjectChange(subjectsString);
 	}
+	misclick = () => {
+
+		this.setState({misclick: true})
+	}
+	clearFilter = () => {
+		this.props.resetFilter();
+		this.props.setCurriculumLinksFilter(this.state.curriculumLinks);
+	}
 	onSubmit = (e) => {
 		e.preventDefault();
 		
@@ -379,6 +400,10 @@ class LessonForm extends React.Component {
 			});
 		}
 	};
+	onDelete = (e) => {
+		e.preventDefault();
+		this.props.onDelete(this.props.lesson.id)
+	}
 
 	render() {
 		return (
@@ -405,7 +430,7 @@ class LessonForm extends React.Component {
 									<h3 className="list-item__sub-title">Description:</h3>
 									<div className="info-bubble" id="description-bubble">
 										<div className="info-bubble-information">
-											<p>Please provide a brief description about your lesson using 120 characters or less. This description will be the first thing people see when searching for lessons.</p>	
+											<p>Please provide a brief description about your lesson. This description will be the first thing people see when searching for lessons.</p>	
 										</div>
 									</div>
 									<textarea 
@@ -417,10 +442,9 @@ class LessonForm extends React.Component {
 										onBlur={this.resetInfoBubbles}
 									/>
 									{this.state.error && !this.state.description ? <p className="form__error">*Please provde a brief description.</p> : ""}
-									<p>Characters remaining: {this.state.descriptionRemainingChar}</p>
 								</div>
 								<div className="list-item list-item--multiple-breakable--space-between">
-									<div className="list-item__pair-breakable">
+									<div className="list-item__pair-breakable" onClick={this.misclick}>
 										<h3 className="list-item__sub-title list-item__sub-title--left">Subject:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p>
@@ -428,7 +452,7 @@ class LessonForm extends React.Component {
 											</p>
 										</div>
 									</div>
-									<div className="list-item__pair-breakable">
+									<div className="list-item__pair-breakable" onClick={this.misclick}>
 										<h3 className="list-item__sub-title list-item__sub-title--left">Level:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p>
@@ -436,13 +460,14 @@ class LessonForm extends React.Component {
 											</p>
 										</div>
 									</div>
-									<div className="list-item__pair-breakable">
+									<div className="list-item__pair-breakable" onClick={this.misclick}>
 										<h3 className="list-item__sub-title list-item__sub-title--left">Lesson Duration:</h3>
 										<div className="list-item__text-with-border text-border--right">
 											<p onChange={this.onDurationChange}>{this.lessonDuration + " minutes"}</p>
 										</div>
 									</div>
 								</div>
+								{this.state.misclick ? <p className="form__warning">*Subject, Level and Lesson Duration will be filled in automatically.</p> : ""}
 								<div className="list-item">
 									<h3 className="list-item__sub-title">Learning Outcomes:</h3>
 									<div className="info-bubble" id="learning-outcomes-bubble">
@@ -465,12 +490,18 @@ class LessonForm extends React.Component {
 									<div className="list-item__table">
 										{
 											this.state.resources.map(resource => 
-												<div className="list-item__table-segment-coloured">
+												<div className="list-item__table-row-single">
 													{ resource.type === 'file' ? 
 													<p onClick={this.downloadFileClicked} filename={resource.value.file.name}>{resource.value.file.name}</p> :
 													<a href={resource.value}>{resource.value}</a>
 													}
-													<button className="button" onClick={this.deleteResource} resourcename={resource.value}>Delete</button>
+													<div className="button-panel">
+											            <button className="button button-tool" onClick={this.deleteResource}>
+													        <div className="icon-container">
+												                <img className="icon" src="/images/Cancel Close Circle.png" alt="Cancel Close Circle"/>
+												            </div>
+											            </button>
+													</div>
 												</div>
 											)
 										}
@@ -554,8 +585,16 @@ class LessonForm extends React.Component {
 									/>
 									{this.state.error && !this.state.priorKnowledge ? <p className="form__error">*Please provde prior knowledge.</p> : ""}
 								</div>
-								<div className="list-item">
-									<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
+								<div className="list-item list-item--multiple">
+									<div className="list-item">
+										<button className="button" onClick={this.onSubmit}>Save Lesson Plan</button>
+									</div>
+									{
+										!!this.props.onDelete ? 
+										<div className="list-item">
+											<button className="button" onClick={this.onDelete}>Delete Lesson Plan</button>
+										</div> : ''
+									}
 								</div>
 							</div>
 						</div>
@@ -595,6 +634,7 @@ class LessonForm extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
 	setCurriculumLinksFilter: (curriculumLinks) => dispatch(setCurriculumLinksFilter(curriculumLinks)),
+	resetFilter: () => dispatch(resetFilter())
 });
 
 export default connect(undefined, mapDispatchToProps)(LessonForm);

@@ -14,7 +14,7 @@ export default () => {
     	user: userReducer,
   		auth: authReducer,
   		lessons: lessonsReducer,
-  		filters: filtersReducer 	
+  		filters: filtersReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
   );

@@ -1,16 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { selectCurriculum } from '../actions/filters';
-import { linkArray, MathimaticsCurriculumArray, ScienceCurriculumArray} from './CurriculumAddresses';
+import { linkArray, MathimaticsCurriculumArray, ScienceCurriculumArray, EnglishCurriculumArray} from './CurriculumAddresses';
 import CheckboxListPrimary from './CheckboxListPrimary';
 
 class CheckboxList extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {curriculumLinks: props.curriculumLinks, onChangeFunction: props.onChangeFunction, subject: this.props.filters.subject, levels: []}
+		this.state = {
+			curriculumLinks: props.curriculumLinks, 
+			onChangeFunction: props.onChangeFunction, 
+			subject: this.props.filters.subject, 
+			levels: [], 
+			lessons: this.props.lessons
+		}
 
+		this.numberOfEnglish = 0;
+		this.numberOfScience = 0;
+		this.numberOfMath = 0; 
+		this.numberOfPaSC = 0;
 		this.firstLevelDisplayed = 0;
+
+		this.numberOfLessonsInSubject();
 
 		let previousWindowWidth = window.innerWidth;
 
@@ -30,6 +42,35 @@ class CheckboxList extends React.Component {
 				this.forceUpdate();
 			}
 		});
+	}
+	numberOfLessonsInSubject = () => {
+		let science = 0;
+		let math = 0;
+		let english = 0;
+		let PaSC = 0;
+
+		this.state.lessons.forEach((lesson) => {
+			switch (lesson.subjects) {
+				case 'Science ':
+					science++;
+					break;
+				case 'Mathematics ':
+					math++;
+					break;
+				case 'English ':
+					english++;
+					break;
+				case 'Personal and Social Capability ':
+					PaSC++
+					break;
+				default:
+			}
+		})
+
+		this.numberOfEnglish = english;
+		this.numberOfScience = science;
+		this.numberOfMath = math;
+		this.numberOfPaSC = PaSC;
 	}
 	CheckDisplayedLevel = (currentLevel) => {
 		if(window.innerWidth >= 1800) {
@@ -105,6 +146,11 @@ class CheckboxList extends React.Component {
 				this.state.levels = ["Foundation Year", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10"];
 				return ScienceCurriculumArray()
 			}
+			case 'English':
+			{
+				this.state.levels = ["Foundation Year", "Year 1", "Year 2", "Year 3", "Year 4", "Year 5", "Year 6", "Year 7", "Year 8", "Year 9", "Year 10"];
+				return EnglishCurriculumArray()
+			}
 		}
 	}
 	selectSubject = (subject) => {
@@ -116,7 +162,7 @@ class CheckboxList extends React.Component {
 			level.primaryTitles.map((primary) => {
 				primary.secondaryTitles.map((secondary) => {
 					secondary.linksToSecondary.map((link) => {
-						let newString = `${link.linkCode}: {isSet: false, curriculum: 'Science', level: '${level.levelName}', linkDescription: '${link.linkDescription}'}, \n`
+						let newString = `${link.linkCode}: {isSet: false, curriculum: 'English', level: '${level.levelName}', linkDescription: '${link.linkDescription}'}, \n`
 						myString = myString.concat(newString)
 					})
 				})										
@@ -130,9 +176,10 @@ class CheckboxList extends React.Component {
 					<h3 className="list-item__sub-title">Subject:</h3>
 					<select className="dropdown dropdown--bottom" onChange={this.onSubjectChange} value={this.props.filters.subject}>
 						<option value="">All Subject</option>
-						<option value="Personal and Social Capability">Personal and Social Capability</option>
-						<option value="Mathematics">Mathematics</option>
-						<option value="Science">Science</option>
+						<option value="Personal and Social Capability">Personal and Social Capability: {this.numberOfPaSC}</option>
+						<option value="Mathematics">Mathematics: {this.numberOfMath}</option>
+						<option value="Science">Science: {this.numberOfScience}</option>
+						<option value="English">English: {this.numberOfEnglish}</option>
 					</select>
 				</div>
 				<div className="curriculum-body">
@@ -142,7 +189,7 @@ class CheckboxList extends React.Component {
 							<div className="filter-instruction">
 								<p>Narrow your search by selecting a subject.</p>
 							</div>
-							<div className="content-image-box">
+							<div className="filter-image-box">
 								<img src="/images/Education.jpg" alt="Education" />
 							</div>
 						</div> :
@@ -152,11 +199,19 @@ class CheckboxList extends React.Component {
 								<button className="button button--secondary" onClick={(e) => {
 									e.preventDefault();
 									this.DisplayedLevels("decrease");
-						        }}>&lt;&lt;</button>
+						        }}>
+									<div className="icon-container">
+			                            <img className="icon" src="/images/Arrow Left.png" alt="Arrow Left" />
+			                        </div>
+								</button>
 								<button className="button button--secondary" onClick={(e) => {
 									e.preventDefault();
 									this.DisplayedLevels("increase");
-						        }}>&gt;&gt;</button>
+						        }}>
+									<div className="icon-container">
+			                            <img className="icon" src="/images/Arrow Right.png" alt="Arrow Right" />
+			                        </div>
+								</button>
 							</div>
 						</div>
 					}
@@ -195,7 +250,8 @@ const mapDispatchToProps = (dispatch) => ({
 
 const mapStateToProps = (state) => {
 	return {
-		filters: state.filters
+		filters: state.filters,
+		lessons: state.lessons
 	};
 };
 

@@ -45,6 +45,11 @@
   align-items: center;
 }
 
+.button-group-filter {
+  z-index: 1;
+  margin-right: $m-size;
+}
+
 .button--options:focus {
   outline: none;
 }
@@ -93,6 +98,9 @@
 }
 
 .button-array {
+  max-width: 70rem;
+  margin-left: auto;
+  margin-right: auto;
   border-top: solid 1px;
   border-bottom: solid 1px;
   border-left: solid 1px;
@@ -105,10 +113,14 @@
   background-color: $almost-white;
   padding: $xs-size $m-l-size;
   border-right: solid 1px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .button-panel {
-  max-width: 10rem;
+  max-width: min-content;
   width: 100%;
   height: 100%;
   display: flex;
@@ -118,6 +130,53 @@
 }
 
 .button-tool {
+  margin-left: $s-size;
   padding: 0;
   border-radius: 50%;
+}
+
+.button-navigation-sideways {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-navigation-sideways:focus {
+  outline: none;
+}
+
+.button-navigation-sideways-hidden {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff00;
+}
+
+.button-navigation {
+  margin: 0 $xs-size;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f7f7;
+}
+
+.button-navigation-selected {
+  background-color: #fdfdfd;
+  filter: drop-shadow(2px 2px 3px #ababab);
+}
+
+.button-navigation:focus {
+  outline: none;
 }

@@ -1,6 +1,11 @@
 .transition {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	pointer-events: none;
+	overflow: hidden;
 }
 
 .page {
@@ -23,5 +28,4 @@
 }
 
 .transition-box {
-	padding-top: 2rem;
 }

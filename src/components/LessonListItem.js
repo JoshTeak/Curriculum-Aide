@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import LessonPopup from './LessonPopup';
-import { defaultLinks } from '../components/CurriculumAddresses';
+import { defaultLinks } from './CurriculumAddresses';
 import { startEditUser } from '../actions/user';
 import LoadingPage from './LoadingPage';
 
@@ -33,9 +33,12 @@ export class LessonListItem extends React.Component {
 			if(this.isDisplayed === "none")
 		  	{
 		  		this.isDisplayed = "block";
+				document.documentElement.scrollTop = 0;
+				document.documentElement.style.overflow = "hidden"
 		  	} else if(this.isDisplayed === "block")
 		  	{
 		  		this.isDisplayed = "none";
+		  		document.documentElement.style.overflow = "auto"
 		  	}
 		  	this.forceUpdate();
 		}
@@ -74,8 +77,8 @@ export class LessonListItem extends React.Component {
 						<div className="list-item">
 							<h4 className="list-item__title">{this.props.lesson.title}</h4>
 						</div>
-						<div className="list-item">
-							<p className="list-item__text">{this.props.lesson.description}</p>
+						<div className="list-item list-item-description">
+							<span className="list-item__text">{this.props.lesson.description}</span>
 						</div>						
 						<div className="list-item list-item--multiple">
 							<div className="list-item__pair">

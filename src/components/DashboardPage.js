@@ -4,15 +4,24 @@ import LessonListFilters from './LessonListFilters';
 import LoadingPage from './LoadingPage';
 import { startSetUser } from '../actions/user';
 import { startSetLessons } from '../actions/lessons';
+import { resetFilter } from '../actions/filters'
 import { connect } from 'react-redux';
+import Footer from '../components/Footer';
 
 class DashboardPage extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {initialization: false};
+		document.documentElement.style.overflow = "auto";
 	};
 	componentDidMount() {
 		this.initializePage();
+	}
+	clearFilter = () => {
+		this.setState(() => ({
+			isFavouritesChecked: false
+		}));
+		this.props.resetFilter();
 	}
 
 	initializePage = () => {
@@ -30,10 +39,13 @@ class DashboardPage extends React.Component {
 				initialization: true
 			}));
 		}
+		this.clearFilter();
 	}
 	render() {
 		return (
 			<div className="main">
+				<div className="header-veil">
+				</div>
 				<div className="page-header">
 					<div className="content-container">
 						<h1 className="page-header__title">Lesson plans</h1>
@@ -47,6 +59,7 @@ class DashboardPage extends React.Component {
 					</div>
 					: <LoadingPage />
 				}
+        		<Footer />
 			</div>
 		);
 	};
@@ -62,7 +75,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
 	startSetUser: (id) => dispatch(startSetUser(id)),
-	startSetLessons: () => dispatch(startSetLessons())
+	startSetLessons: () => dispatch(startSetLessons()),
+	resetFilter: () => dispatch(resetFilter())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardPage);

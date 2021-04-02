@@ -6,7 +6,7 @@ class CheckboxListPrimary extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.displayPrimary = false;
+		this.displayPrimary = true;
 
 		let previousWindowWidth = window.innerWidth;
 	}

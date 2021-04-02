@@ -1,4 +1,6 @@
 .popup {
+	display: flex;
+    justify-content: center;
 	position: absolute;
     width: 100%;
     height: 100%;
@@ -8,11 +10,10 @@
 
 .popup-group {
 	z-index: 2;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
 	filter: drop-shadow(2px 2px 3px $grey);
-  	background-color: #ffffff00;
+	margin-top: 20rem;
+    min-width: 84rem;
+	max-width: 100rem;
 }
 
 .popup-container {
@@ -31,19 +32,24 @@
 }
 
 .lesson-popup {
-	top: 20%;
+	height: min-content;
+	overflow-y: scroll;
+	max-height: 94vh;
+	margin-top: 3rem;
 }
 
 .add-resource-popup {
-	top: 64%;
+    margin-top: 42rem;
 }
 
 .add-structure-popup {
-	top: 36%;
+	margin-top: 42rem;
 }
 
 .edit-curriculum-link-popup {
-    top: 61%;
+	height: min-content;
+    margin-top: 42rem;
+	max-height: 92rem;
 }
 
 .popup-background {

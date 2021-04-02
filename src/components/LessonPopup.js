@@ -205,6 +205,10 @@ class LessonPopup extends React.Component {
 								</div>
 								<div className="list-item list-item--multiple">
 									<div className="list-item__pair">
+										<h3 className="list-item__sub-title list-item__sub-title--left">Subject: </h3>
+										<p className="list-item__text-with-border">{this.props.lesson.subjects}</p>
+									</div>
+									<div className="list-item__pair">
 										<h3 className="list-item__sub-title list-item__sub-title--left">Level: </h3>
 										<p className="list-item__text-with-border">{this.props.lesson.level}</p>
 									</div>
@@ -232,9 +236,11 @@ class LessonPopup extends React.Component {
 												case "embeddedVideo":
 													return (
 														<div className="list-item__text-with-border">
-														    <ReactPlayer
-														        url={resource.value}
-														    />
+															<div className="list-item__video">
+															    <ReactPlayer
+															        url={resource.value}
+															    />
+														    </div>
 													    </div>
 													)
 													break;

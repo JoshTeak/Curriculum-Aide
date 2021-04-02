@@ -5,6 +5,7 @@ export default class AddResourcePopup extends React.Component {
 		super(props);
 
 		this.state = {resource: {value: "", type: "webLink"}, error: false};
+		this.fileSizeError = false;
 	};
 	onResourceValueChange = (e) => {
 		const resourceValue = e.target.value;
@@ -13,22 +14,56 @@ export default class AddResourcePopup extends React.Component {
 	onResourceTypeChange = (e) => {
 		const resourceType = e.target.value;
 		this.setState((prevState) => ({resource: {...prevState.resource, type: resourceType}}));
+		this.fileSizeError = false;
 	};
 	onResourceFileChange = (e) => {
 		const selectedFile = document.getElementById('file-selector').files[0];;
-		this.setState((prevState) => ({resource: {...prevState.resource, value: {file: selectedFile, fileName: selectedFile.name}}}));
+		if(selectedFile.size <= 2097152)
+		{
+			this.setState((prevState) => ({resource: {...prevState.resource, value: {file: selectedFile, fileName: selectedFile.name}}}));
+			this.fileSizeError = false;
+		} else 
+		{
+			this.fileSizeError = true;
+			this.forceUpdate();
+		}
 	};
+	onInputFocus = (e) => {
+		this.resetInfoBubbles();
+
+		switch(e.target.placeholder) {
+			case "Website link":
+				document.getElementById("website-bubble").style.opacity = 1;
+				break;
+			case "YouTube Video link":
+				document.getElementById("youtube-bubble").style.opacity = 1;
+				break;		
+		}
+	}
+	resetInfoBubbles = () => {
+		const displayInfoBubble = document.getElementsByClassName("info-bubble");
+		for (let i = 0; i < displayInfoBubble.length; i++) {
+			displayInfoBubble[i].style.opacity = 0;
+		}
+	}
 	determineResourceInput = () => {
 		switch (this.state.resource.type) {
 			case 'webLink':
 				return (
 					<div className="list-item">
+						<div className="info-bubble" id="website-bubble">
+							<div className="info-bubble-information">
+								<p>Copy and paste a weblink in the provided text field</p>	
+							</div>
+						</div>
 						<input 
 							type="text"
-							placeholder="resource"
+							placeholder="Website link"
 							className="text-input"
 							value={this.state.resource.value}
 							onChange={this.onResourceValueChange}
+							onFocus={this.onInputFocus}
+							onBlur={this.resetInfoBubbles}
 						/>	
 						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a weblink to the resource.</p> : ""}
 					</div>
@@ -36,12 +71,19 @@ export default class AddResourcePopup extends React.Component {
 			case 'embeddedVideo':
 				return (
 					<div className="list-item">
+						<div className="info-bubble" id="youtube-bubble">
+							<div className="info-bubble-information">
+								<p>Copy and paste a link to a YouTube video in the provided text field</p>	
+							</div>
+						</div>
 						<input 
 							type="text"
-							placeholder="resource"
+							placeholder="YouTube Video link"
 							className="text-input"
 							value={this.state.resource.value}
 							onChange={this.onResourceValueChange}
+							onFocus={this.onInputFocus}
+							onBlur={this.resetInfoBubbles}
 						/>	
 						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please provde a link to the video.</p> : ""}
 					</div>
@@ -57,6 +99,7 @@ export default class AddResourcePopup extends React.Component {
 						    multiple
 						/>
 						{this.state.error && !this.state.resource.value ? <p className="form__error">*Please select a file to upload.</p> : ""}
+						{this.fileSizeError ? <p className="form__error">*File must be under 2MB.</p> : ""}
 					</div>
 				);
 		}

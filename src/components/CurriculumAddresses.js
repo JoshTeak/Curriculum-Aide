@@ -505,6 +505,372 @@ export const defaultLinks = () => {
 		ACSIS206: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Critically analyse the validity of information in primary and secondary sources and evaluate the approaches used to solve problems'}, 
 		ACSIS208: {isSet: false, curriculum: 'Science', level: '10', linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations'}, 
 
+
+		ACELA1426: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that English is one of many languages spoken in Australia and that different languages may be spoken by family, classmates and community'}, 
+		ACELA1428: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Explore how language is used differently at home and school depending on the relationships between people'}, 
+		ACELA1429: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that language can be used to explore ways of expressing needs, likes and dislikes'}, 
+		ACELA1430: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that texts can take many forms, can be very short (for example an exit sign) or quite long (for example an information book or a film) and that stories and informative texts have different purposes'}, 
+		ACELA1431: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that some language in written texts is unlike everyday spoken language'}, 
+		ACELA1432: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that punctuation is a feature of written text different from letters; recognise how capital letters are used for names, and that capital letters and full stops signal the beginning and end of sentences'}, 
+		ACELA1433: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand concepts about print and screen, including how books, film and simple digital texts work, and know some features of print, for example directionality'}, 
+		ACELA1435: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise that sentences are key units for expressing ideas'}, 
+		ACELA1434: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise that texts are made up of words and groups of words that make meaning'}, 
+		ACELA1786: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Explore the different contribution of words and images to meaning in stories and informative texts'}, 
+		ACELA1437: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand the use of vocabulary in familiar contexts related to everyday experiences, personal interests and topics taught at school'}, 
+		ACELA1439: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise and generate rhyming words, alliteration patterns, syllables and sounds (phonemes) in spoken words'}, 
+		ACELA1440: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise and name all upper and lower case letters (graphemes) and know the most common sound that each letter represents'}, 
+		ACELA1438: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand how to use knowledge of letters and sounds including onset and rime to spell words'}, 
+		ACELA1817: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Know how to read and write some high-frequency words and other familiar words'}, 
+		ACELA1818: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Understand that words are units of meaning and can be made of more than one meaningful part'}, 
+		ACELA1819: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Segment sentences into individual words and orally blend and segment onset and rime in single syllable spoken words, and isolate, blend and manipulate phonemes in single syllable words'}, 
+		ACELA1820: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Write consonant-vowel-consonant (CVC) words by representing some sounds with the appropriate letters, and blend sounds associated with letters when reading CVC words'}, 
+		ACELT1575: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise that texts are created by authors who tell stories and share experiences that may be similar or different to students’ own experiences'}, 
+		ACELT1577: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Respond to texts, identifying favourite stories, authors and illustrators'}, 
+		ACELT1783: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Share feelings and thoughts about the events and characters in texts'}, 
+		ACELT1578: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Identify some features of texts including events and characters and retell events from a text'}, 
+		ACELT1785: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Recognise some different types of literary texts and identify some characteristic features of literary texts, for example beginnings and endings of traditional texts and rhyme in poetry'}, 
+		ACELT1579: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Replicate the rhythms and sound patterns in stories, rhymes, songs and poems from a range of cultures'}, 
+		ACELT1580: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Retell familiar literary texts through performance, use of illustrations and images'}, 
+		ACELT1831: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Innovate on familiar texts through play'}, 
+		ACELY1645: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Identify some familiar texts and the contexts in which they are used'}, 
+		ACELY1646: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Listen to and respond orally to texts and to the communication of others in informal and structured classroom situations'}, 
+		ACELY1784: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Use interaction skills including listening while others speak, using appropriate voice levels, articulation and body language, gestures and eye contact'}, 
+		ACELY1647: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Deliver short oral presentations to peers'}, 
+		ACELY1648: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Identify some differences between imaginative and informative texts'}, 
+		ACELY1649: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'fluency, and monitor meaning using concepts about print and emerging contextual, semantic, grammatical and phonic knowledge'}, 
+		ACELY1650: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Use comprehension strategies to understand and discuss texts listened to, viewed or read independently'}, 
+		ACELY1651: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Create short texts to explore, record and report ideas and events using familiar words and beginning writing knowledge'}, 
+		ACELY1652: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Participate in shared editing of students’ own texts for meaning, spelling, capital letters and full stops'}, 
+		ACELY1654: {isSet: false, curriculum: 'English', level: 'Foundation Year', linkDescription: 'Construct texts using software including word processing programs'}, 
+		ACELA1443: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand that people use different systems of communication to cater to different needs and purposes and that many people may use sign systems to communicate with others'}, 
+		ACELA1444: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand that language is used in combination with other means of communication, for example facial expressions and gestures to interact with others'}, 
+		ACELA1446: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand that there are different ways of asking for information, making offers and giving commands'}, 
+		ACELA1787: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Explore different ways of expressing emotions, including verbal, visual, body language and facial expressions'}, 
+		ACELA1447: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand that the purposes texts serve shape their structure in predictable ways'}, 
+		ACELA1448: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand patterns of repetition and contrast in simple texts'}, 
+		ACELA1449: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Recognise that different types of punctuation, including full stops, question marks and exclamation marks, signal sentences that make statements, ask questions, express emotion or give commands'}, 
+		ACELA1450: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand concepts about print and screen, including how different types of texts are organised using page numbering, tables of content, headings and titles, navigation buttons, bars and links'}, 
+		ACELA1451: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Identify the parts of a simple sentence that represent ‘What’s happening?’, ‘What state is being described?’, ‘Who or what is involved?’ and the surrounding circumstances'}, 
+		ACELA1452: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Explore differences in words that represent people, places and things (nouns, including pronouns), happenings and states (verbs), qualities (adjectives) and details such as when, where and how (adverbs)'}, 
+		ACELA1453: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Compare different kinds of images in narrative and informative texts and discuss how they contribute to meaning'}, 
+		ACELA1454: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand the use of vocabulary in everyday contexts as well as a growing number of school contexts, including appropriate use of formal and informal terms of address in different contexts'}, 
+		ACELA1457: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Manipulate phonemes in spoken words by addition, deletion and substitution of initial, medial and final phonemes to generate new words'}, 
+		ACELA1458: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Use short vowels, common long vowels, consonant digraphs and consonant blends when writing, and blend these to read single syllable words'}, 
+		ACELA1459: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand that a letter can represent more than one sound and that a syllable must contain a vowel sound'}, 
+		ACELA1778: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Understand how to spell one and two syllable words with common letter patterns'}, 
+		ACELA1455: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Recognise and know how to use simple grammatical morphemes to create word families'}, 
+		ACELA1821: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Use visual memory to read and write high-frequency words'}, 
+		ACELA1822: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Segment consonant blends or clusters into separate phonemes at the beginnings and ends of one syllable words'}, 
+		ACELT1581: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Discuss how authors create characters using language and images'}, 
+		ACELT1582: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Discuss characters and events in a range of literary texts and share personal responses to these texts, making connections with students\' own experiences'}, 
+		ACELT1583: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Express preferences for specific texts and authors and listen to the opinions of others'}, 
+		ACELT1584: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Discuss features of plot, character and setting in different types of literature and explore some features of characters in different texts'}, 
+		ACELT1585: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Listen to, recite and perform poems, chants, rhymes and songs, imitating and inventing sound patterns including alliteration and rhyme'}, 
+		ACELT1586: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Recreate texts imaginatively using drawing, writing, performance and digital forms of communication'}, 
+		ACELT1832: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Innovate on familiar texts by using similar characters, repetitive patterns or vocabulary'}, 
+		ACELY1655: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Respond to texts drawn from a range of cultures and experiences'}, 
+		ACELY1656: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Engage in conversations and discussions, using active listening behaviours, showing interest, and contributing ideas, information and questions'}, 
+		ACELY1788: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Use interaction skills including turn-taking, recognising the contributions of others, speaking clearly and using appropriate volume and pace'}, 
+		ACELY1657: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Make short presentations using some introduced text structures and language, for example opening statements'}, 
+		ACELY1658: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Describe some differences between imaginative informative and persuasive texts'}, 
+		ACELY1659: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Read decodable and predictable texts using developing phrasing, fluency, contextual, semantic, grammatical and phonic knowledge and emerging text processing strategies, for example prediction, monitoring meaning and re-reading'}, 
+		ACELY1660: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Use comprehension strategies to build literal and inferred meaning about key events, ideas and information in texts that they listen to, view and read by drawing on growing knowledge of context, text structures and language features'}, 
+		ACELY1661: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Create short imaginative and informative texts that show emerging use of appropriate text structure, sentence-level grammar, word choice, spelling, punctuation and appropriate multimodal elements, for example illustrations and diagrams'}, 
+		ACELY1662: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Re-read student’s own texts and discuss possible changes to improve meaning, spelling and punctuation'}, 
+		ACELY1663: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Write using unjoined lower case and upper case letters'}, 
+		ACELY1664: {isSet: false, curriculum: 'English', level: 'Year 1', linkDescription: 'Construct texts that incorporate supporting images using software including word processing programs'}, 
+		ACELA1460: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that spoken, visual and written forms of language are different modes of communication with different features and their use varies according to the audience, purpose, context and cultural background'}, 
+		ACELA1461: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that language varies when people take on different roles in social and classroom interactions and how the use of key interpersonal language resources varies depending on context'}, 
+		ACELA1462: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Identify language that can be used for appreciating texts and the qualities of people and things'}, 
+		ACELA1463: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that different types of texts have identifiable text structures and language features that help the text serve its purpose'}, 
+		ACELA1464: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand how texts are made cohesive through language features, including word associations, synonyms, and antonyms'}, 
+		ACELA1465: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Recognise that capital letters signal proper nouns and commas are used to separate items in lists'}, 
+		ACELA1466: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Know some features of text organisation including page and screen layouts, alphabetical order, and different types of diagrams, for example timelines'}, 
+		ACELA1467: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that simple connections can be made between ideas by using a compound sentence with two or more clauses usually linked by a coordinating conjunction'}, 
+		ACELA1468: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that verbs represent different processes, for example doing, thinking, saying, and relating and that these processes are anchored in time through tense'}, 
+		ACELA1469: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Identify visual representations of characters’ actions, reactions, speech and thought processes in narratives, and consider how these images add to or contradict or multiply the meaning of accompanying words'}, 
+		ACELA1470: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand the use of vocabulary about familiar and new topics and experiment with and begin to make conscious choices of vocabulary to suit audience and purpose'}, 
+		ACELA1474: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Orally manipulate more complex sounds in spoken words through knowledge of blending and segmenting sounds, phoneme deletion and substitution in combination with use of letters in reading and writing'}, 
+		ACELA1471: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand how to use knowledge of digraphs, long vowels, blends and silent letters to spell one and two syllable words including some compound words'}, 
+		ACELA1472: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Build morphemic word families using knowledge of prefixes and suffixes'}, 
+		ACELA1823: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Use knowledge of letter patterns and morphemes to read and write high-frequency words and words whose spelling is not predictable from their sounds'}, 
+		ACELA1824: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Use most letter-sound matches including vowel digraphs, less common long vowel patterns, letter clusters and silent letters when reading and writing words of one or more syllable'}, 
+		ACELA1825: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Understand that a sound can be represented by various letter combinations'}, 
+		ACELT1587: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Discuss how depictions of characters in print, sound and images reflect the contexts in which they were created'}, 
+		ACELT1589: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Compare opinions about characters, events and settings in and between texts'}, 
+		ACELT1590: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Identify aspects of different types of literary texts that entertain, and give reasons for personal preferences'}, 
+		ACELT1591: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Discuss the characters and settings of different texts and explore how language is used to present these features in different ways'}, 
+		ACELT1592: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Identify, reproduce and experiment with rhythmic, sound and word patterns in poems, chants, rhymes and songs'}, 
+		ACELT1593: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Create events and characters using different media that develop key events and characters from literary texts'}, 
+		ACELT1833: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Innovate on familiar texts by experimenting with character, setting or plot'}, 
+		ACELY1665: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Discuss different texts on a similar topic, identifying similarities and differences between the texts'}, 
+		ACELY1666: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Listen for specific purposes and information, including instructions, and extend students’ own and others’ ideas in discussions'}, 
+		ACELY1789: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Use interaction skills including initiating topics, making positive statements and voicing disagreement in an appropriate manner, speaking clearly and varying tone, volume and pace appropriately'}, 
+		ACELY1667: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Rehearse and deliver short presentations on familiar and new topics'}, 
+		ACELY1668: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Identify the audience of imaginative, informative and persuasive texts'}, 
+		ACELY1669: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Read less predictable texts with phrasing and fluency by combining contextual, semantic, grammatical and phonic knowledge using text processing strategies, for example monitoring meaning, predicting, rereading and self-correcting'}, 
+		ACELY1670: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Use comprehension strategies to build literal and inferred meaning and begin to analyse texts by drawing on growing knowledge of context, language and visual features and print and multimodal text structures'}, 
+		ACELY1671: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Create short imaginative, informative and persuasive texts using growing knowledge of text structures and language features for familiar and some less familiar audiences, selecting print and multimodal elements appropriate to the audience and purpose'}, 
+		ACELY1672: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Re-read and edit text for spelling, sentence-boundary punctuation and text structure'}, 
+		ACELY1673: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Write legibly and with growing fluency using unjoined upper case and lower case letters'}, 
+		ACELY1674: {isSet: false, curriculum: 'English', level: 'Year 2', linkDescription: 'Construct texts featuring print, visual and audio elements using software, including word processing programs'}, 
+		ACELA1475: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand that languages have different written and visual communication systems, different oral traditions and different ways of constructing meaning'}, 
+		ACELA1476: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand that successful cooperation with others depends on shared use of social conventions, including turn-taking patterns, and forms of address that vary according to the degree of formality in social situations'}, 
+		ACELA1477: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Examine how evaluative language can be varied to be more or less forceful'}, 
+		ACELA1478: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand how different types of texts vary in use of language choices, depending on their purpose and context (for example, tense and types of sentences)'}, 
+		ACELA1479: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand that paragraphs are a key organisational feature of written texts'}, 
+		ACELA1480: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Know that word contractions are a feature of informal language and that apostrophes of contraction are used to signal missing letters'}, 
+		ACELA1790: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Identify the features of online texts that enhance navigation'}, 
+		ACELA1481: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand that a clause is a unit of grammar usually containing a subject and a verb and that these need to be in agreement'}, 
+		ACELA1482: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand that verbs represent different processes, for example doing, thinking, saying, and relating and that these processes are anchored in time through tense'}, 
+		ACELA1483: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Identify the effect on audiences of techniques, for example shot size, vertical camera angle and layout in picture books, advertisements and film segments'}, 
+		ACELA1484: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Learn extended and technical vocabulary and ways of expressing opinion including modal verbs and adverbs'}, 
+		ACELA1485: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand how to use letter-sound relationships and less common letter patterns to spell words'}, 
+		ACELA1486: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Recognise and know how to write most high frequency words including some homophones'}, 
+		ACELA1826: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Understand how to apply knowledge of letter-sound relationships, syllables, and blending and segmenting to fluently read and write multisyllabic words with more complex letter patterns'}, 
+		ACELA1827: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Know how to use common prefixes and suffixes, and generalisations for adding a suffix to a base word'}, 
+		ACELT1594: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Discuss texts in which characters, events and settings are portrayed in different ways, and speculate on the authors’ reasons'}, 
+		ACELT1596: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Draw connections between personal experiences and the worlds of texts, and share responses with others'}, 
+		ACELT1598: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Develop criteria for establishing personal preferences for literature'}, 
+		ACELT1599: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Discuss how language is used to describe the settings in texts, and explore how the settings shape the events and influence the mood of the narrative'}, 
+		ACELT1600: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Discuss the nature and effects of some language devices used to enhance meaning and shape the reader’s reaction, including rhythm and onomatopoeia in poetry and prose'}, 
+		ACELT1601: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Create imaginative texts based on characters, settings and events from students’ own and other cultures using visual features, for example perspective, distance and angle'}, 
+		ACELT1791: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Create texts that adapt language features and patterns encountered in literary texts, for example characterisation, rhyme, rhythm, mood, music, sound effects and dialogue'}, 
+		ACELY1675: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Identify the point of view in a text and suggest alternative points of view'}, 
+		ACELY1676: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Listen to and contribute to conversations and discussions to share information and ideas and negotiate in collaborative situations'}, 
+		ACELY1792: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Use interaction skills, including active listening behaviours and communicate in a clear, coherent manner using a variety of everyday and learned vocabulary and appropriate tone, pace, pitch and volume'}, 
+		ACELY1677: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Plan and deliver short presentations, providing some key details in logical sequence'}, 
+		ACELY1678: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Identify the audience and purpose of imaginative, informative and persuasive texts'}, 
+		ACELY1679: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Read an increasing range of different types of texts by combining contextual, semantic, grammatical and phonic knowledge, using text processing strategies, for example monitoring, predicting, confirming, rereading, reading on and self-correcting'}, 
+		ACELY1680: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Use comprehension strategies to build literal and inferred meaning and begin to evaluate texts by drawing on a growing knowledge of context, text structures and language features'}, 
+		ACELY1682: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts demonstrating increasing control over text structures and language features and selecting print,and multimodal elements appropriate to the audience and purpose'}, 
+		ACELY1683: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Re-read and edit texts for meaning, appropriate structure, grammatical choices and punctuation'}, 
+		ACELY1684: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Write using joined letters that are clearly formed and consistent in size'}, 
+		ACELY1685: {isSet: false, curriculum: 'English', level: 'Year 3', linkDescription: 'Use software including word processing programs with growing speed and efficiency to construct and edit texts featuring visual, print and audio elements'}, 
+		ACELA1487: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand that Standard Australian English is one of many social dialects used in Australia, and that while it originated in England it has been influenced by many other languages'}, 
+		ACELA1488: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand that social interactions influence the way people engage with ideas and respond to others for example when exploring and clarifying the ideas of others, summarising their own views and reporting them to a larger group'}, 
+		ACELA1489: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand differences between the language of opinion and feeling and the language of factual reporting or recording'}, 
+		ACELA1490: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand how texts vary in complexity and technicality depending on the approach to the topic, the purpose and the intended audience'}, 
+		ACELA1491: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand how texts are made cohesive through the use of linking devices including pronoun reference and text connectives'}, 
+		ACELA1492: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Recognise how quotation marks are used in texts to signal dialogue, titles and quoted (direct) speech'}, 
+		ACELA1793: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Identify features of online texts that enhance readability including text, navigation, links, graphics and layout'}, 
+		ACELA1493: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand that the meaning of sentences can be enriched through the use of noun groups/phrases and verb groups/phrases and prepositional phrases'}, 
+		ACELA1494: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Investigate how quoted (direct) and reported (indirect) speech work in different types of text'}, 
+		ACELA1495: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand how adverb groups/phrases and prepositional phrases work in different ways to provide circumstantial details about an activity'}, 
+		ACELA1496: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Explore the effect of choices when framing an image, placement of elements in the image, and salience on composition of still and moving images in a range of types of texts'}, 
+		ACELA1498: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Incorporate new vocabulary from a range of sources into students’ own texts including vocabulary encountered in research'}, 
+		ACELA1779: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand how to use knowledge of letter patterns including double letters, spelling generalisations, morphemic word families, common prefixes and suffixes and word origins to spell more complex words'}, 
+		ACELA1780: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Read and write a large core of high frequency words including homophones and know how to use context to identify correct spelling'}, 
+		ACELA1828: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand how to use phonic knowledge to read and write multisyllabic words with more complex letter combinations, including a variety of vowel sounds and known prefixes and suffixes'}, 
+		ACELT1602: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Make connections between the ways different authors may represent similar storylines, ideas and relationships'}, 
+		ACELT1603: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Discuss literary experiences with others, sharing responses and expressing a point of view'}, 
+		ACELT1604: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Use metalanguage to describe the effects of ideas, text structures and language features of literary texts'}, 
+		ACELT1605: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Discuss how authors and illustrators make stories exciting, moving and absorbing and hold readers’ interest by using various techniques, for example character development and plot tension'}, 
+		ACELT1606: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Understand, interpret and experiment with a range of devices and deliberate word play in poetry and other literary texts, for example nonsense words, spoonerisms, neologisms and puns'}, 
+		ACELT1607: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Create literary texts that explore students’ own experiences and imagining'}, 
+		ACELT1794: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Create literary texts by developing storylines, characters and settings'}, 
+		ACELY1686: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Identify and explain language features of texts from earlier times and compare with the vocabulary, images, layout and content of contemporary texts'}, 
+		ACELY1687: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Interpret ideas and information in spoken texts and listen for key points in order to carry out tasks and use information to share and extend ideas and information'}, 
+		ACELY1688: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Use interaction skills such as acknowledging another’s point of view and linking students’ response to the topic, using familiar and new vocabulary and a range of vocal effects such as tone, pace, pitch and volume to speak clearly and coherently'}, 
+		ACELY1689: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Plan, rehearse and deliver presentations incorporating learned content and taking into account the particular purposes and audiences'}, 
+		ACELY1690: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Identify characteristic features used in imaginative, informative and persuasive texts to meet the purpose of the text'}, 
+		ACELY1691: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Read different types of texts by combining contextual , semantic, grammatical and phonic knowledge using text processing strategies for example monitoring meaning, cross checking and reviewing'}, 
+		ACELY1692: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Use comprehension strategies to build literal and inferred meaning to expand content knowledge, integrating and linking ideas and analysing and evaluating texts'}, 
+		ACELY1694: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts containing key information and supporting details for a widening range of audiences, demonstrating increasing control over text structures and language features'}, 
+		ACELY1695: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Re-read and edit for meaning by adding, deleting or moving words or word groups to improve content and structure'}, 
+		ACELY1696: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Write using clearly-formed joined letters, and develop increased fluency and automaticity'}, 
+		ACELY1697: {isSet: false, curriculum: 'English', level: 'Year 4', linkDescription: 'Use a range of software including word processing programs to construct, edit and publish written text, and select, edit and place visual, print and audio elements'}, 
+		ACELA1500: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand that the pronunciation, spelling and meanings of words have histories and change over time'}, 
+		ACELA1501: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand that patterns of language interaction vary across social contexts and types of texts and that they help to signal social roles and relationships'}, 
+		ACELA1502: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how to move beyond making bare assertions and take account of differing perspectives and points of view'}, 
+		ACELA1504: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how texts vary in purpose, structure and topic as well as the degree of formality'}, 
+		ACELA1505: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand that the starting point of a sentence gives prominence to the message in the text and allows for prediction of how the text will unfold'}, 
+		ACELA1506: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how the grammatical category of possessives is signalled through apostrophes and how to use apostrophes with common and proper nouns'}, 
+		ACELA1797: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Investigate how the organisation of texts into chapters, headings, subheadings, home pages and sub pages for online texts and according to chronology or topic can be used to predict content and assist navigation'}, 
+		ACELA1507: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand the difference between main and subordinate clauses and that a complex sentence involves at least one subordinate clause'}, 
+		ACELA1508: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how noun groups/phrases and adjective groups/phrases can be expanded in a variety of ways to provide a fuller description of the person, place, thing or idea'}, 
+		ACELA1511: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Explain sequences of images in print texts and compare these to the ways hyperlinked digital texts are organised, explaining their effect on viewers’ interpretations'}, 
+		ACELA1512: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand the use of vocabulary to express greater precision of meaning, and know that words can have different meanings in different contexts'}, 
+		ACELA1513: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how to use knowledge of known words, base words, prefixes and suffixes, word origins, letter patterns and spelling generalisations to spell new words'}, 
+		ACELA1514: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Explore less common plurals, and understand how a suffix changes the meaning or grammatical form of a word'}, 
+		ACELA1829: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand how to use phonic knowledge to read and write less familiar words that share common letter patterns but have different pronunciations'}, 
+		ACELT1608: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Identify aspects of literary texts that convey details or information about particular social, cultural and historical contexts'}, 
+		ACELT1609: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Present a point of view about particular literary texts using appropriate metalanguage, and reflecting on the viewpoints of others'}, 
+		ACELT1795: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Use metalanguage to describe the effects of ideas, text structures and language features on particular audiences'}, 
+		ACELT1610: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Recognise that ideas in literary texts can be conveyed from different viewpoints, which can lead to different kinds of interpretations and responses'}, 
+		ACELT1611: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Understand, interpret and experiment with sound devices and imagery, including simile, metaphor and personification, in narratives, shape poetry, songs, anthems and odes'}, 
+		ACELT1612: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Create literary texts using realistic and fantasy settings and characters that draw on the worlds represented in texts students have experienced'}, 
+		ACELT1798: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Create literary texts that experiment with structures, ideas and stylistic features of selected authors'}, 
+		ACELY1698: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Show how ideas and points of view in texts are conveyed through the use of vocabulary, including idiomatic expressions, objective and subjective language, and that these can change according to context'}, 
+		ACELY1699: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Clarify understanding of content as it unfolds in formal and informal situations, connecting ideas to students’ own experiences and present and justify a point of view'}, 
+		ACELY1796: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Use interaction skills, for example paraphrasing, questioning and interpreting non-verbal cues and choose vocabulary and vocal effects appropriate for different audiences and purposes'}, 
+		ACELY1700: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Plan, rehearse and deliver presentations for defined audiences and purposes incorporating accurate and sequenced content and multimodal elements'}, 
+		ACELY1701: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Identify and explain characteristic text structures and language features used in imaginative, informative and persuasive texts to meet the purpose of the text'}, 
+		ACELY1702: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Navigate and read texts for specific purposes applying appropriate text processing strategies, for example predicting and confirming, monitoring meaning, skimming and scanning'}, 
+		ACELY1703: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Use comprehension strategies to analyse information, integrating and linking ideas from a variety of print and digital sources'}, 
+		ACELY1704: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Plan, draft and publish imaginative, informative and persuasive print and multimodal texts, choosing text structures, language features, images and sound appropriate to purpose and audience'}, 
+		ACELY1705: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Re-read and edit student’s own and others’ work using agreed criteria for text structures and language features'}, 
+		ACELY1706: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Develop a handwriting style that is becoming legible, fluent and automatic'}, 
+		ACELY1707: {isSet: false, curriculum: 'English', level: 'Year 5', linkDescription: 'Use a range of software including word processing programs with fluency to construct, edit and publish written text, and select, edit and place visual, print and audio elements'}, 
+		ACELA1515: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand that different social and geographical dialects or accents are used in Australia in addition to Standard Australian English'}, 
+		ACELA1516: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand that strategies for interaction become more complex and demanding as levels of formality and social distance increase'}, 
+		ACELA1517: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand the uses of objective and subjective language and bias'}, 
+		ACELA1518: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand how authors often innovate on text structures and play with language features to achieve particular aesthetic, humorous and persuasive purposes and effects'}, 
+		ACELA1520: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand that cohesive links can be made in texts by omitting or replacing words'}, 
+		ACELA1521: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand the uses of commas to separate clauses'}, 
+		ACELA1522: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Investigate how complex sentences can be used in a variety of ways to elaborate, extend and explain ideas'}, 
+		ACELA1523: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand how ideas can be expanded and sharpened through careful choice of verbs, elaborated tenses and a range of adverb groups/phrases'}, 
+		ACELA1524: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Identify and explain how analytical images like figures, tables, diagrams, maps and graphs contribute to our understanding of verbal information in factual and persuasive texts'}, 
+		ACELA1525: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Investigate how vocabulary choices, including evaluative language can express shades of meaning, feeling and opinion'}, 
+		ACELA1526: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand how to use knowledge of known words, word origins including some Latin and Greek roots, base words, prefixes, suffixes, letter patterns and spelling generalisations to spell new words including technical words'}, 
+		ACELA1830: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Understand how to use phonic knowledge and accumulated understandings about blending, letter-sound relationships, common and uncommon letter patterns and phonic generalisations to read and write increasingly complex words'}, 
+		ACELT1613: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Make connections between students’ own experiences and those of characters and events represented in texts drawn from different historical, social and cultural contexts'}, 
+		ACELT1614: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Analyse and evaluate similarities and differences in texts on similar topics, themes or plots'}, 
+		ACELT1615: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Identify and explain how choices in language, for example modality, emphasis, repetition and metaphor, influence personal response to different texts'}, 
+		ACELT1616: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Identify, describe, and discuss similarities and differences between texts, including those by the same author or illustrator, and evaluate characteristics that define an author’s individual style'}, 
+		ACELT1617: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Identify the relationship between words, sounds, imagery and language patterns in narratives and poetry such as ballads, limericks and free verse'}, 
+		ACELT1618: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Create literary texts that adapt or combine aspects of texts students have experienced in innovative ways'}, 
+		ACELT1800: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Experiment with text structures and language features and their effects in creating literary texts, for example, using imagery, sentence variation, metaphor and word choice'}, 
+		ACELY1708: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Compare texts including media texts that represent ideas and events in different ways, explaining the effects of the different approaches'}, 
+		ACELY1709: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Participate in and contribute to discussions, clarifying and interrogating ideas, developing and supporting arguments, sharing and evaluating information, experiences and opinions'}, 
+		ACELY1816: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Use interaction skills, varying conventions of spoken interactions such as voice volume, tone, pitch and pace, according to group size, formality of interaction and needs and expertise of the audience'}, 
+		ACELY1710: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements for defined audiences and purposes, making appropriate choices for modality and emphasis'}, 
+		ACELY1711: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Analyse how text structures and language features work together to meet the purpose of a text'}, 
+		ACELY1712: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Select, navigate and read texts for a range of purposes, applying appropriate text processing strategies and interpreting structural features, for example table of contents, glossary, chapters, headings and subheadings'}, 
+		ACELY1713: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Use comprehension strategies to interpret and analyse information and ideas, comparing content from a variety of textual sources including media and digital texts'}, 
+		ACELY1801: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Analyse strategies authors use to influence readers'}, 
+		ACELY1714: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts, choosing and experimenting with text structures, language features, images and digital resources appropriate to purpose and audience'}, 
+		ACELY1715: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Re-read and edit students’ own and others’ work using agreed criteria and explaining editing choices'}, 
+		ACELY1716: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Develop a handwriting style that is legible, fluent and automatic and varies according to audience and purpose'}, 
+		ACELY1717: {isSet: false, curriculum: 'English', level: 'Year 6', linkDescription: 'Use a range of software, including word processing programs, learning new functions as required to create texts'}, 
+		ACELA1528: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand the way language evolves to reflect a changing world, particularly in response to the use of new technology for presenting texts and communicating'}, 
+		ACELA1529: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand how accents, styles of speech and idioms express and create personal and social identities'}, 
+		ACELA1782: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand how language is used to evaluate texts and how evaluations about a text can be substantiated by reference to the text and other sources'}, 
+		ACELA1531: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand and explain how the text structures and language features of texts become more complex in informative and persuasive texts and identify underlying structures such as taxonomies, cause and effect, and extended metaphors'}, 
+		ACELA1763: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand that the coherence of more complex texts relies on devices that signal text structure and guide readers, for example overviews, initial and concluding paragraphs and topic sentences, indexes or site maps or breadcrumb trails for online texts'}, 
+		ACELA1532: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand the use of punctuation to support meaning in complex sentences with prepositional phrases and embedded clauses'}, 
+		ACELA1534: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Recognise and understand that subordinate clauses embedded within noun groups/phrases are a common feature of written sentence structures and increase the density of information'}, 
+		ACELA1536: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand how modality is achieved through discriminating choices in modal verbs, adverbs, adjectives and nouns'}, 
+		ACELA1764: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Analyse how point of view is generated in visual texts by means of choices, for example gaze, angle and social distance'}, 
+		ACELA1537: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Investigate vocabulary typical of extended and more academic texts and the role of abstract nouns, classification, description and generalisation in building specialised knowledge through language'}, 
+		ACELA1539: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand how to use spelling rules and word origins, for example Greek and Latin roots, base words, suffixes, prefixes, spelling patterns and generalisations to learn new words and how to spell them'}, 
+		ACELT1619: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Identify and explore ideas and viewpoints about events, issues and characters represented in texts drawn from different historical, social and cultural contexts'}, 
+		ACELT1620: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Reflect on ideas and opinions about characters, settings and events in literary texts, identifying areas of agreement and difference with others and justifying a point of view'}, 
+		ACELT1621: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Compare the ways that language and images are used to create character, and to influence emotions and opinions in different types of texts'}, 
+		ACELT1803: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Discuss aspects of texts, for example their aesthetic and social value, using relevant and appropriate metalanguage'}, 
+		ACELT1622: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Recognise and analyse the ways that characterisation, events and settings are combined in narratives, and discuss the purposes and appeal of different approaches'}, 
+		ACELT1623: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Understand, interpret and discuss how language is compressed to produce a dramatic effect in film or drama, and to create layers of meaning in poetry, for example haiku, tankas, couplets, free verse and verse novels'}, 
+		ACELT1625: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Create literary texts that adapt stylistic features encountered in other texts, for example, narrative viewpoint, structure of stanzas, contrast and juxtaposition'}, 
+		ACELT1805: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Experiment with text structures and language features and their effects in creating literary texts, for example, using rhythm, sound effects, monologue, layout, navigation and colour'}, 
+		ACELY1765: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Analyse and explain the effect of technological innovations on texts, particularly media texts'}, 
+		ACELY1719: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Identify and discuss main ideas, concepts and points of view in spoken texts to evaluate qualities, for example the strength of an argument or the lyrical power of a poetic rendition'}, 
+		ACELY1804: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Use interaction skills when discussing and presenting ideas and information, selecting body language, voice qualities and other elements, (for example music and sound) to add interest and meaning'}, 
+		ACELY1720: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements to promote a point of view or enable a new way of seeing'}, 
+		ACELY1721: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Analyse and explain the ways text structures and language features shape meaning and vary according to audience and purpose'}, 
+		ACELY1722: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Use prior knowledge and text processing strategies to interpret a range of types of texts'}, 
+		ACELY1723: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Use comprehension strategies to interpret, analyse and synthesise ideas and information, critiquing ideas and issues from a variety of textual sources'}, 
+		ACELY1724: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Compare the text structures and language features of multimodal texts, explaining how they combine to influence audiences'}, 
+		ACELY1725: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts, selecting aspects of subject matter and particular language, visual, and audio features to convey information and ideas'}, 
+		ACELY1726: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Edit for meaning by removing repetition, refining ideas, reordering sentences and adding or substituting words for impact'}, 
+		ACELY1727: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Consolidate a personal handwriting style that is legible, fluent and automatic and supports writing for extended periods'}, 
+		ACELY1728: {isSet: false, curriculum: 'English', level: 'Year 7', linkDescription: 'Use a range of software, including word processing programs, to confidently create, edit and publish written and multimodal texts'}, 
+		ACELA1540: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand the influence and impact that the English language has had on other languages or dialects and how English has been influenced in return'}, 
+		ACELA1541: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand how conventions of speech adopted by communities influence the identities of people in those communities'}, 
+		ACELA1542: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand how rhetorical devices are used to persuade and how different layers of meaning are developed through the use of metaphor, irony and parody'}, 
+		ACELA1543: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Analyse how the text structures and language features of persuasive texts, including media texts, vary according to the medium and mode of communication'}, 
+		ACELA1766: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand how cohesion in texts is improved by strengthening the internal structure of paragraphs through the use of examples, quotations and substantiation of claims'}, 
+		ACELA1809: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand how coherence is created in complex texts through devices like lexical cohesion, ellipsis, grammatical theme and text connectives'}, 
+		ACELA1544: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand the use of punctuation conventions, including colons, semicolons, dashes and brackets in formal and informal texts'}, 
+		ACELA1545: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Analyse and examine how effective authors control and use a variety of clause structures, including clauses embedded within the structure of a noun group/phrase or clause'}, 
+		ACELA1546: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand the effect of nominalisation in the writing of informative and persuasive texts'}, 
+		ACELA1548: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Investigate how visual and multimodal texts allude to or draw on other texts or images to enhance and layer meaning'}, 
+		ACELA1547: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Recognise that vocabulary choices contribute to the specificity, abstraction and style of texts'}, 
+		ACELA1549: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand how to apply learned knowledge consistently in order to spell accurately and to learn new words including nominalisations'}, 
+		ACELT1626: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Explore the ways that ideas and viewpoints in literary texts drawn from different historical, social and cultural contexts may reflect or challenge the values of individuals and groups'}, 
+		ACELT1806: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Explore the interconnectedness of Country/Place, People, Identity and Culture in texts including those by Aboriginal and Torres Strait Islander authors'}, 
+		ACELT1627: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Share, reflect on, clarify and evaluate opinions and arguments about aspects of literary texts'}, 
+		ACELT1628: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Understand and explain how combinations of words and images in texts are used to represent particular groups in society, and how texts position readers in relation to those groups'}, 
+		ACELT1807: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Recognise and explain differing viewpoints about the world, cultures, individual people and concerns represented in texts'}, 
+		ACELT1629: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Recognise, explain and analyse the ways literary texts draw on readers’ knowledge of other texts and enable new understanding and appreciation of aesthetic qualities'}, 
+		ACELT1630: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Identify and evaluate devices that create tone, for example humour, wordplay, innuendo and parody in poetry, humorous prose, drama or visual texts'}, 
+		ACELT1767: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Interpret and analyse language choices, including sentence patterns, dialogue, imagery and other language features, in short stories, literary essays and plays'}, 
+		ACELT1632: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Create literary texts that draw upon text structures and language features of other texts for particular purposes and effects'}, 
+		ACELT1768: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Experiment with particular language features drawn from different types of texts, including combinations of language and visual choices to create new texts'}, 
+		ACELY1729: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Analyse and explain how language has evolved over time and how technology and the media have influenced language use and forms of communication'}, 
+		ACELY1730: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Interpret the stated and implied meanings in spoken texts, and use evidence to support or challenge different perspectives'}, 
+		ACELY1808: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Use interaction skills for identified purposes, using voice and language conventions to suit different situations, selecting vocabulary, modulating voice and using elements such as music, images and sound for specific effects'}, 
+		ACELY1731: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content, including multimodal elements, to reflect a diversity of viewpoints'}, 
+		ACELY1732: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Analyse and evaluate the ways that text structures and language features vary according to the purpose of the text and the ways that referenced sources add authority to a text'}, 
+		ACELY1733: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Apply increasing knowledge of vocabulary, text structures and language features to understand the content of texts'}, 
+		ACELY1734: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Use comprehension strategies to interpret and evaluate texts by reflecting on the validity of content and the credibility of sources, including finding evidence in the text for the author’s point of view'}, 
+		ACELY1735: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Explore and explain the ways authors combine different modes and media in creating texts, and the impact of these choices on the viewer/listener'}, 
+		ACELY1736: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Create imaginative, informative and persuasive texts that raise issues, report events and advance opinions, using deliberate language and textual choices, and including digital elements as appropriate'}, 
+		ACELY1810: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Experiment with text structures and language features to refine and clarify ideas to improve the effectiveness of students’ own texts'}, 
+		ACELY1738: {isSet: false, curriculum: 'English', level: 'Year 8', linkDescription: 'Use a range of software, including word processing programs, to create, edit and publish texts imaginatively'}, 
+		ACELA1550: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing'}, 
+		ACELA1551: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand that roles and relationships are developed and challenged through language and interpersonal skills'}, 
+		ACELA1552: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Investigate how evaluation can be expressed directly and indirectly using devices, for example allusion, evocative vocabulary and metaphor'}, 
+		ACELA1553: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand that authors innovate with text structures and language for specific purposes and effects'}, 
+		ACELA1770: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Compare and contrast the use of cohesive devices in texts, focusing on how they serve to signpost ideas, to make connections and to build semantic associations between ideas'}, 
+		ACELA1556: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand how punctuation is used along with layout and font variations in constructing texts for different audiences and purposes'}, 
+		ACELA1557: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Explain how authors creatively use the structures of sentences and clauses for particular effects'}, 
+		ACELA1559: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand how certain abstract nouns can be used to summarise preceding or subsequent stretches of text'}, 
+		ACELA1560: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Analyse and explain the use of symbols, icons and myth in still and moving images and how these augment meaning'}, 
+		ACELA1561: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Identify how vocabulary choices contribute to specificity, abstraction and stylistic effectiveness'}, 
+		ACELA1562: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Understand how spelling is used creatively in texts for particular effects, for example characterisation and humour and to represent accents and styles of speech'}, 
+		ACELT1633: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Interpret and compare how representations of people and culture in literary texts are drawn from different historical, social and cultural contexts'}, 
+		ACELT1771: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Present an argument about a literary text based on initial impressions and subsequent analysis of the whole text'}, 
+		ACELT1634: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Reflect on, discuss and explore notions of literary value and how and why such notions vary according to context'}, 
+		ACELT1635: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Explore and reflect on personal understanding of the world and significant human experience gained from interpreting various representations of life matters in texts'}, 
+		ACELT1636: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Analyse texts from familiar and unfamiliar contexts, and discuss and evaluate their content and the appeal of an individual author’s literary style'}, 
+		ACELT1637: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Investigate and experiment with the use and effect of extended metaphor, metonymy, allegory, icons, myths and symbolism in texts, for example poetry, short films, graphic novels, and plays on similar themes'}, 
+		ACELT1772: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Analyse text structures and language features of literary texts, and make relevant comparisons with other texts'}, 
+		ACELT1773: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Create literary texts, including hybrid texts, that innovate on aspects of other texts, for example by using parody, allusion and appropriation'}, 
+		ACELT1638: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Experiment with the ways that language features, image and sound can be adapted in literary texts, for example the effects of stereotypical characters and settings, the playfulness of humour and pun and the use of hyperlink'}, 
+		ACELY1739: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Analyse how the construction and interpretation of texts, including media texts, can be influenced by cultural perspectives and other texts'}, 
+		ACELY1740: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Listen to spoken texts constructed for different purposes, for example to entertain and to persuade, and analyse how language features of these texts position listeners to respond in particular ways'}, 
+		ACELY1811: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Use interaction skills to present and discuss an idea and to influence and engage an audience by selecting persuasive language, varying voice tone, pitch, and pace, and using elements such as music and sound effects'}, 
+		ACELY1741: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements for aesthetic and playful purposes'}, 
+		ACELY1742: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Interpret, analyse and evaluate how different perspectives of issue, event, situation, individuals or groups are constructed to serve specific purposes in texts'}, 
+		ACELY1743: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Apply an expanding vocabulary to read increasingly complex texts with fluency and comprehension'}, 
+		ACELY1744: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Use comprehension strategies to interpret and analyse texts, comparing and evaluating representations of an event, issue, situation or character in different texts'}, 
+		ACELY1745: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Explore and explain the combinations of language and visual choices that authors make to present information, opinions and perspectives in different texts'}, 
+		ACELY1746: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Create imaginative, informative and persuasive texts that present a point of view and advance or illustrate arguments, including texts that integrate visual, print and/or audio features'}, 
+		ACELY1747: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Review and edit students’ own and others’ texts to improve clarity and control over content, organisation, paragraphing, sentence structure, vocabulary and audio/visual features'}, 
+		ACELY1748: {isSet: false, curriculum: 'English', level: 'Year 9', linkDescription: 'Use a range of software, including word processing programs, flexibly and imaginatively to publish texts'}, 
+		ACELA1563: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand that Standard Australian English in its spoken and written forms has a history of evolution and change and continues to evolve'}, 
+		ACELA1564: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand how language use can have inclusive and exclusive social effects, and can empower or disempower people'}, 
+		ACELA1565: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand that people’s evaluations of texts are influenced by their value systems, the context and the purpose and mode of communication'}, 
+		ACELA1566: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Compare the purposes, text structures and language features of traditional and contemporary texts in different media'}, 
+		ACELA1567: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand how paragraphs and images can be arranged for different purposes, audiences, perspectives and stylistic effects'}, 
+		ACELA1568: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand conventions for citing others, and how to reference these in different ways'}, 
+		ACELA1569: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Analyse and evaluate the effectiveness of a wide range of sentence and clause structures as authors design and craft texts'}, 
+		ACELA1570: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Analyse how higher order concepts are developed in complex texts through language features including nominalisation, clause combinations, technicality and abstraction'}, 
+		ACELA1572: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Evaluate the impact on audiences of different choices in the representation of still and moving images'}, 
+		ACELA1571: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Refine vocabulary choices to discriminate between shades of meaning, with deliberate attention to the effect on audiences'}, 
+		ACELA1573: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Understand how to use knowledge of the spelling system to spell unusual and technical words accurately, for example those based on uncommon Greek and Latin roots'}, 
+		ACELT1639: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Compare and evaluate a range of representations of individuals and groups in different historical, social and cultural contexts'}, 
+		ACELT1640: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Reflect on, extend, endorse or refute others’ interpretations of and responses to literature'}, 
+		ACELT1641: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Analyse and explain how text structures, language features and visual features of texts and the context in which texts are experienced may influence audience response'}, 
+		ACELT1812: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Evaluate the social, moral and ethical positions represented in texts'}, 
+		ACELT1642: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Identify, explain and discuss how narrative viewpoint, structure, characterisation and devices including analogy and satire shape different interpretations and responses to a text'}, 
+		ACELT1643: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Compare and evaluate how ‘voice’ as a literary device can be used in a range of different types of texts such as poetry to evoke particular emotional responses'}, 
+		ACELT1774: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Analyse and evaluate text structures and language features of literary texts and make relevant thematic and intertextual connections with other texts'}, 
+		ACELT1814: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Create literary texts that reflect an emerging sense of personal style and evaluate the effectiveness of these texts'}, 
+		ACELT1815: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Create literary texts with a sustained ‘voice’, selecting and adapting appropriate text structures, literary devices, language, auditory and visual structures and features for a specific purpose and intended audience'}, 
+		ACELT1644: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Create imaginative texts that make relevant thematic and intertextual connections with other texts'}, 
+		ACELY1749: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Analyse and evaluate how people, cultures, places, events, objects and concepts are represented in texts, including media texts, through language, structural and/or visual choices'}, 
+		ACELY1750: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Identify and explore the purposes and effects of different text structures and language features of spoken texts, and use this knowledge to create purposeful texts that inform, persuade and engage'}, 
+		ACELY1813: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Use organisation patterns, voice and language conventions to present a point of view on a subject, speaking clearly, coherently and with effect, using logic, imagery and rhetorical devices to engage audiences'}, 
+		ACELY1751: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements to influence a course of action'}, 
+		ACELY1752: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Identify and analyse implicit or explicit values, beliefs and assumptions in texts and how these are influenced by purposes and likely audiences'}, 
+		ACELY1753: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Choose a reading technique and reading path appropriate for the type of text, to retrieve and connect ideas within and between texts'}, 
+		ACELY1754: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Use comprehension strategies to compare and contrast information within and between texts, identifying and analysing embedded perspectives, and evaluating supporting evidence'}, 
+		ACELY1756: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Create sustained texts, including texts that combine specific digital or media content, for imaginative, informative, or persuasive purposes that reflect upon challenging and complex issues'}, 
+		ACELY1757: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Review, edit and refine students’ own and others’ texts for control of content, organisation, sentence structure, vocabulary, and/or visual features to achieve particular purposes and effects'}, 
+		ACELY1776: {isSet: false, curriculum: 'English', level: 'Year 10', linkDescription: 'Use a range of software, including word processing programs, confidently, flexibly and imaginatively to create, edit and publish texts, considering the identified purpose and the characteristics of the user'} 
+
+
 	};
 
 	return curriculumLinks;
@@ -4406,6 +4772,2376 @@ export const ScienceCurriculumArray = () => [
 							{
 								linkCode: 'ACSIS208',
 								linkDescription: 'Communicate scientific ideas and information for a particular purpose, including constructing evidence-based arguments and using appropriate scientific language, conventions and representations',
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]
+
+export const EnglishCurriculumArray = () => [
+	{
+		levelName: 'Foundation Year',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1426',
+								linkDescription: 'Understand that English is one of many languages spoken in Australia and that different languages may be spoken by family, classmates and community',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1428',
+								linkDescription: 'Explore how language is used differently at home and school depending on the relationships between people',
+							},
+							{
+								linkCode: 'ACELA1429',
+								linkDescription: 'Understand that language can be used to explore ways of expressing needs, likes and dislikes',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1430',
+								linkDescription: 'Understand that texts can take many forms, can be very short (for example an exit sign) or quite long (for example an information book or a film) and that stories and informative texts have different purposes',
+							},
+							{
+								linkCode: 'ACELA1431',
+								linkDescription: 'Understand that some language in written texts is unlike everyday spoken language',
+							},
+							{
+								linkCode: 'ACELA1432',
+								linkDescription: 'Understand that punctuation is a feature of written text different from letters; recognise how capital letters are used for names, and that capital letters and full stops signal the beginning and end of sentences',
+							},
+							{
+								linkCode: 'ACELA1433',
+								linkDescription: 'Understand concepts about print and screen, including how books, film and simple digital texts work, and know some features of print, for example directionality',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1435',
+								linkDescription: 'Recognise that sentences are key units for expressing ideas',
+							},
+							{
+								linkCode: 'ACELA1434',
+								linkDescription: 'Recognise that texts are made up of words and groups of words that make meaning',
+							},
+							{
+								linkCode: 'ACELA1786',
+								linkDescription: 'Explore the different contribution of words and images to meaning in stories and informative texts',
+							},
+							{
+								linkCode: 'ACELA1437',
+								linkDescription: 'Understand the use of vocabulary in familiar contexts related to everyday experiences, personal interests and topics taught at school',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1439',
+								linkDescription: 'Recognise and generate rhyming words, alliteration patterns, syllables and sounds (phonemes) in spoken words',
+							},
+							{
+								linkCode: 'ACELA1440',
+								linkDescription: 'Recognise and name all upper and lower case letters (graphemes) and know the most common sound that each letter represents',
+							},
+							{
+								linkCode: 'ACELA1438',
+								linkDescription: 'Understand how to use knowledge of letters and sounds including onset and rime to spell words',
+							},
+							{
+								linkCode: 'ACELA1817',
+								linkDescription: 'Know how to read and write some high-frequency words and other familiar words',
+							},
+							{
+								linkCode: 'ACELA1818',
+								linkDescription: 'Understand that words are units of meaning and can be made of more than one meaningful part',
+							},
+							{
+								linkCode: 'ACELA1819',
+								linkDescription: 'Segment sentences into individual words and orally blend and segment onset and rime in single syllable spoken words, and isolate, blend and manipulate phonemes in single syllable words',
+							},
+							{
+								linkCode: 'ACELA1820',
+								linkDescription: 'Write consonant-vowel-consonant (CVC) words by representing some sounds with the appropriate letters, and blend sounds associated with letters when reading CVC words',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1575',
+								linkDescription: 'Recognise that texts are created by authors who tell stories and share experiences that may be similar or different to students’ own experiences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1577',
+								linkDescription: 'Respond to texts, identifying favourite stories, authors and illustrators',
+							},
+							{
+								linkCode: 'ACELT1783',
+								linkDescription: 'Share feelings and thoughts about the events and characters in texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1578',
+								linkDescription: 'Identify some features of texts including events and characters and retell events from a text',
+							},
+							{
+								linkCode: 'ACELT1785',
+								linkDescription: 'Recognise some different types of literary texts and identify some characteristic features of literary texts, for example beginnings and endings of traditional texts and rhyme in poetry',
+							},
+							{
+								linkCode: 'ACELT1579',
+								linkDescription: 'Replicate the rhythms and sound patterns in stories, rhymes, songs and poems from a range of cultures',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1580',
+								linkDescription: 'Retell familiar literary texts through performance, use of illustrations and images',
+							},
+							{
+								linkCode: 'ACELT1831',
+								linkDescription: 'Innovate on familiar texts through play',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1645',
+								linkDescription: 'Identify some familiar texts and the contexts in which they are used',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1646',
+								linkDescription: 'Listen to and respond orally to texts and to the communication of others in informal and structured classroom situations',
+							},
+							{
+								linkCode: 'ACELY1784',
+								linkDescription: 'Use interaction skills including listening while others speak, using appropriate voice levels, articulation and body language, gestures and eye contact',
+							},
+							{
+								linkCode: 'ACELY1647',
+								linkDescription: 'Deliver short oral presentations to peers',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1648',
+								linkDescription: 'Identify some differences between imaginative and informative texts',
+							},
+							{
+								linkCode: 'ACELY1649',
+								linkDescription: 'fluency, and monitor meaning using concepts about print and emerging contextual, semantic, grammatical and phonic knowledge',
+							},
+							{
+								linkCode: 'ACELY1650',
+								linkDescription: 'Use comprehension strategies to understand and discuss texts listened to, viewed or read independently',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1651',
+								linkDescription: 'Create short texts to explore, record and report ideas and events using familiar words and beginning writing knowledge',
+							},
+							{
+								linkCode: 'ACELY1652',
+								linkDescription: 'Participate in shared editing of students’ own texts for meaning, spelling, capital letters and full stops',
+							},
+							{
+								linkCode: 'ACELY1654',
+								linkDescription: 'Construct texts using software including word processing programs',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 1',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1443',
+								linkDescription: 'Understand that people use different systems of communication to cater to different needs and purposes and that many people may use sign systems to communicate with others',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1444',
+								linkDescription: 'Understand that language is used in combination with other means of communication, for example facial expressions and gestures to interact with others',
+							},
+							{
+								linkCode: 'ACELA1446',
+								linkDescription: 'Understand that there are different ways of asking for information, making offers and giving commands',
+							},
+							{
+								linkCode: 'ACELA1787',
+								linkDescription: 'Explore different ways of expressing emotions, including verbal, visual, body language and facial expressions',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1447',
+								linkDescription: 'Understand that the purposes texts serve shape their structure in predictable ways',
+							},
+							{
+								linkCode: 'ACELA1448',
+								linkDescription: 'Understand patterns of repetition and contrast in simple texts',
+							},
+							{
+								linkCode: 'ACELA1449',
+								linkDescription: 'Recognise that different types of punctuation, including full stops, question marks and exclamation marks, signal sentences that make statements, ask questions, express emotion or give commands',
+							},
+							{
+								linkCode: 'ACELA1450',
+								linkDescription: 'Understand concepts about print and screen, including how different types of texts are organised using page numbering, tables of content, headings and titles, navigation buttons, bars and links',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1451',
+								linkDescription: 'Identify the parts of a simple sentence that represent ‘What’s happening?’, ‘What state is being described?’, ‘Who or what is involved?’ and the surrounding circumstances',
+							},
+							{
+								linkCode: 'ACELA1452',
+								linkDescription: 'Explore differences in words that represent people, places and things (nouns, including pronouns), happenings and states (verbs), qualities (adjectives) and details such as when, where and how (adverbs)',
+							},
+							{
+								linkCode: 'ACELA1453',
+								linkDescription: 'Compare different kinds of images in narrative and informative texts and discuss how they contribute to meaning',
+							},
+							{
+								linkCode: 'ACELA1454',
+								linkDescription: 'Understand the use of vocabulary in everyday contexts as well as a growing number of school contexts, including appropriate use of formal and informal terms of address in different contexts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1457',
+								linkDescription: 'Manipulate phonemes in spoken words by addition, deletion and substitution of initial, medial and final phonemes to generate new words',
+							},
+							{
+								linkCode: 'ACELA1458',
+								linkDescription: 'Use short vowels, common long vowels, consonant digraphs and consonant blends when writing, and blend these to read single syllable words',
+							},
+							{
+								linkCode: 'ACELA1459',
+								linkDescription: 'Understand that a letter can represent more than one sound and that a syllable must contain a vowel sound',
+							},
+							{
+								linkCode: 'ACELA1778',
+								linkDescription: 'Understand how to spell one and two syllable words with common letter patterns',
+							},
+							{
+								linkCode: 'ACELA1455',
+								linkDescription: 'Recognise and know how to use simple grammatical morphemes to create word families',
+							},
+							{
+								linkCode: 'ACELA1821',
+								linkDescription: 'Use visual memory to read and write high-frequency words',
+							},
+							{
+								linkCode: 'ACELA1822',
+								linkDescription: 'Segment consonant blends or clusters into separate phonemes at the beginnings and ends of one syllable words',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1581',
+								linkDescription: 'Discuss how authors create characters using language and images',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1582',
+								linkDescription: 'Discuss characters and events in a range of literary texts and share personal responses to these texts, making connections with students\' own experiences',
+							},
+							{
+								linkCode: 'ACELT1583',
+								linkDescription: 'Express preferences for specific texts and authors and listen to the opinions of others',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1584',
+								linkDescription: 'Discuss features of plot, character and setting in different types of literature and explore some features of characters in different texts',
+							},
+							{
+								linkCode: 'ACELT1585',
+								linkDescription: 'Listen to, recite and perform poems, chants, rhymes and songs, imitating and inventing sound patterns including alliteration and rhyme',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1586',
+								linkDescription: 'Recreate texts imaginatively using drawing, writing, performance and digital forms of communication',
+							},
+							{
+								linkCode: 'ACELT1832',
+								linkDescription: 'Innovate on familiar texts by using similar characters, repetitive patterns or vocabulary',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1655',
+								linkDescription: 'Respond to texts drawn from a range of cultures and experiences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1656',
+								linkDescription: 'Engage in conversations and discussions, using active listening behaviours, showing interest, and contributing ideas, information and questions',
+							},
+							{
+								linkCode: 'ACELY1788',
+								linkDescription: 'Use interaction skills including turn-taking, recognising the contributions of others, speaking clearly and using appropriate volume and pace',
+							},
+							{
+								linkCode: 'ACELY1657',
+								linkDescription: 'Make short presentations using some introduced text structures and language, for example opening statements',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1658',
+								linkDescription: 'Describe some differences between imaginative informative and persuasive texts',
+							},
+							{
+								linkCode: 'ACELY1659',
+								linkDescription: 'Read decodable and predictable texts using developing phrasing, fluency, contextual, semantic, grammatical and phonic knowledge and emerging text processing strategies, for example prediction, monitoring meaning and re-reading',
+							},
+							{
+								linkCode: 'ACELY1660',
+								linkDescription: 'Use comprehension strategies to build literal and inferred meaning about key events, ideas and information in texts that they listen to, view and read by drawing on growing knowledge of context, text structures and language features',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1661',
+								linkDescription: 'Create short imaginative and informative texts that show emerging use of appropriate text structure, sentence-level grammar, word choice, spelling, punctuation and appropriate multimodal elements, for example illustrations and diagrams',
+							},
+							{
+								linkCode: 'ACELY1662',
+								linkDescription: 'Re-read student’s own texts and discuss possible changes to improve meaning, spelling and punctuation',
+							},
+							{
+								linkCode: 'ACELY1663',
+								linkDescription: 'Write using unjoined lower case and upper case letters',
+							},
+							{
+								linkCode: 'ACELY1664',
+								linkDescription: 'Construct texts that incorporate supporting images using software including word processing programs',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 2',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1460',
+								linkDescription: 'Understand that spoken, visual and written forms of language are different modes of communication with different features and their use varies according to the audience, purpose, context and cultural background',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1461',
+								linkDescription: 'Understand that language varies when people take on different roles in social and classroom interactions and how the use of key interpersonal language resources varies depending on context',
+							},
+							{
+								linkCode: 'ACELA1462',
+								linkDescription: 'Identify language that can be used for appreciating texts and the qualities of people and things',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1463',
+								linkDescription: 'Understand that different types of texts have identifiable text structures and language features that help the text serve its purpose',
+							},
+							{
+								linkCode: 'ACELA1464',
+								linkDescription: 'Understand how texts are made cohesive through language features, including word associations, synonyms, and antonyms',
+							},
+							{
+								linkCode: 'ACELA1465',
+								linkDescription: 'Recognise that capital letters signal proper nouns and commas are used to separate items in lists',
+							},
+							{
+								linkCode: 'ACELA1466',
+								linkDescription: 'Know some features of text organisation including page and screen layouts, alphabetical order, and different types of diagrams, for example timelines',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1467',
+								linkDescription: 'Understand that simple connections can be made between ideas by using a compound sentence with two or more clauses usually linked by a coordinating conjunction',
+							},
+							{
+								linkCode: 'ACELA1468',
+								linkDescription: 'Understand that verbs represent different processes, for example doing, thinking, saying, and relating and that these processes are anchored in time through tense',
+							},
+							{
+								linkCode: 'ACELA1469',
+								linkDescription: 'Identify visual representations of characters’ actions, reactions, speech and thought processes in narratives, and consider how these images add to or contradict or multiply the meaning of accompanying words',
+							},
+							{
+								linkCode: 'ACELA1470',
+								linkDescription: 'Understand the use of vocabulary about familiar and new topics and experiment with and begin to make conscious choices of vocabulary to suit audience and purpose',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1474',
+								linkDescription: 'Orally manipulate more complex sounds in spoken words through knowledge of blending and segmenting sounds, phoneme deletion and substitution in combination with use of letters in reading and writing',
+							},
+							{
+								linkCode: 'ACELA1471',
+								linkDescription: 'Understand how to use knowledge of digraphs, long vowels, blends and silent letters to spell one and two syllable words including some compound words',
+							},
+							{
+								linkCode: 'ACELA1472',
+								linkDescription: 'Build morphemic word families using knowledge of prefixes and suffixes',
+							},
+							{
+								linkCode: 'ACELA1823',
+								linkDescription: 'Use knowledge of letter patterns and morphemes to read and write high-frequency words and words whose spelling is not predictable from their sounds',
+							},
+							{
+								linkCode: 'ACELA1824',
+								linkDescription: 'Use most letter-sound matches including vowel digraphs, less common long vowel patterns, letter clusters and silent letters when reading and writing words of one or more syllable',
+							},
+							{
+								linkCode: 'ACELA1825',
+								linkDescription: 'Understand that a sound can be represented by various letter combinations',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1587',
+								linkDescription: 'Discuss how depictions of characters in print, sound and images reflect the contexts in which they were created',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1589',
+								linkDescription: 'Compare opinions about characters, events and settings in and between texts',
+							},
+							{
+								linkCode: 'ACELT1590',
+								linkDescription: 'Identify aspects of different types of literary texts that entertain, and give reasons for personal preferences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1591',
+								linkDescription: 'Discuss the characters and settings of different texts and explore how language is used to present these features in different ways',
+							},
+							{
+								linkCode: 'ACELT1592',
+								linkDescription: 'Identify, reproduce and experiment with rhythmic, sound and word patterns in poems, chants, rhymes and songs',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1593',
+								linkDescription: 'Create events and characters using different media that develop key events and characters from literary texts',
+							},
+							{
+								linkCode: 'ACELT1833',
+								linkDescription: 'Innovate on familiar texts by experimenting with character, setting or plot',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1665',
+								linkDescription: 'Discuss different texts on a similar topic, identifying similarities and differences between the texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1666',
+								linkDescription: 'Listen for specific purposes and information, including instructions, and extend students’ own and others’ ideas in discussions',
+							},
+							{
+								linkCode: 'ACELY1789',
+								linkDescription: 'Use interaction skills including initiating topics, making positive statements and voicing disagreement in an appropriate manner, speaking clearly and varying tone, volume and pace appropriately',
+							},
+							{
+								linkCode: 'ACELY1667',
+								linkDescription: 'Rehearse and deliver short presentations on familiar and new topics',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1668',
+								linkDescription: 'Identify the audience of imaginative, informative and persuasive texts',
+							},
+							{
+								linkCode: 'ACELY1669',
+								linkDescription: 'Read less predictable texts with phrasing and fluency by combining contextual, semantic, grammatical and phonic knowledge using text processing strategies, for example monitoring meaning, predicting, rereading and self-correcting',
+							},
+							{
+								linkCode: 'ACELY1670',
+								linkDescription: 'Use comprehension strategies to build literal and inferred meaning and begin to analyse texts by drawing on growing knowledge of context, language and visual features and print and multimodal text structures',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1671',
+								linkDescription: 'Create short imaginative, informative and persuasive texts using growing knowledge of text structures and language features for familiar and some less familiar audiences, selecting print and multimodal elements appropriate to the audience and purpose',
+							},
+							{
+								linkCode: 'ACELY1672',
+								linkDescription: 'Re-read and edit text for spelling, sentence-boundary punctuation and text structure',
+							},
+							{
+								linkCode: 'ACELY1673',
+								linkDescription: 'Write legibly and with growing fluency using unjoined upper case and lower case letters',
+							},
+							{
+								linkCode: 'ACELY1674',
+								linkDescription: 'Construct texts featuring print, visual and audio elements using software, including word processing programs',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 3',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1475',
+								linkDescription: 'Understand that languages have different written and visual communication systems, different oral traditions and different ways of constructing meaning',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1476',
+								linkDescription: 'Understand that successful cooperation with others depends on shared use of social conventions, including turn-taking patterns, and forms of address that vary according to the degree of formality in social situations',
+							},
+							{
+								linkCode: 'ACELA1477',
+								linkDescription: 'Examine how evaluative language can be varied to be more or less forceful',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1478',
+								linkDescription: 'Understand how different types of texts vary in use of language choices, depending on their purpose and context (for example, tense and types of sentences)',
+							},
+							{
+								linkCode: 'ACELA1479',
+								linkDescription: 'Understand that paragraphs are a key organisational feature of written texts',
+							},
+							{
+								linkCode: 'ACELA1480',
+								linkDescription: 'Know that word contractions are a feature of informal language and that apostrophes of contraction are used to signal missing letters',
+							},
+							{
+								linkCode: 'ACELA1790',
+								linkDescription: 'Identify the features of online texts that enhance navigation',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1481',
+								linkDescription: 'Understand that a clause is a unit of grammar usually containing a subject and a verb and that these need to be in agreement',
+							},
+							{
+								linkCode: 'ACELA1482',
+								linkDescription: 'Understand that verbs represent different processes, for example doing, thinking, saying, and relating and that these processes are anchored in time through tense',
+							},
+							{
+								linkCode: 'ACELA1483',
+								linkDescription: 'Identify the effect on audiences of techniques, for example shot size, vertical camera angle and layout in picture books, advertisements and film segments',
+							},
+							{
+								linkCode: 'ACELA1484',
+								linkDescription: 'Learn extended and technical vocabulary and ways of expressing opinion including modal verbs and adverbs',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1485',
+								linkDescription: 'Understand how to use letter-sound relationships and less common letter patterns to spell words',
+							},
+							{
+								linkCode: 'ACELA1486',
+								linkDescription: 'Recognise and know how to write most high frequency words including some homophones',
+							},
+							{
+								linkCode: 'ACELA1826',
+								linkDescription: 'Understand how to apply knowledge of letter-sound relationships, syllables, and blending and segmenting to fluently read and write multisyllabic words with more complex letter patterns',
+							},
+							{
+								linkCode: 'ACELA1827',
+								linkDescription: 'Know how to use common prefixes and suffixes, and generalisations for adding a suffix to a base word',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1594',
+								linkDescription: 'Discuss texts in which characters, events and settings are portrayed in different ways, and speculate on the authors’ reasons',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1596',
+								linkDescription: 'Draw connections between personal experiences and the worlds of texts, and share responses with others',
+							},
+							{
+								linkCode: 'ACELT1598',
+								linkDescription: 'Develop criteria for establishing personal preferences for literature',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1599',
+								linkDescription: 'Discuss how language is used to describe the settings in texts, and explore how the settings shape the events and influence the mood of the narrative',
+							},
+							{
+								linkCode: 'ACELT1600',
+								linkDescription: 'Discuss the nature and effects of some language devices used to enhance meaning and shape the reader’s reaction, including rhythm and onomatopoeia in poetry and prose',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1601',
+								linkDescription: 'Create imaginative texts based on characters, settings and events from students’ own and other cultures using visual features, for example perspective, distance and angle',
+							},
+							{
+								linkCode: 'ACELT1791',
+								linkDescription: 'Create texts that adapt language features and patterns encountered in literary texts, for example characterisation, rhyme, rhythm, mood, music, sound effects and dialogue',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1675',
+								linkDescription: 'Identify the point of view in a text and suggest alternative points of view',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1676',
+								linkDescription: 'Listen to and contribute to conversations and discussions to share information and ideas and negotiate in collaborative situations',
+							},
+							{
+								linkCode: 'ACELY1792',
+								linkDescription: 'Use interaction skills, including active listening behaviours and communicate in a clear, coherent manner using a variety of everyday and learned vocabulary and appropriate tone, pace, pitch and volume',
+							},
+							{
+								linkCode: 'ACELY1677',
+								linkDescription: 'Plan and deliver short presentations, providing some key details in logical sequence',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1678',
+								linkDescription: 'Identify the audience and purpose of imaginative, informative and persuasive texts',
+							},
+							{
+								linkCode: 'ACELY1679',
+								linkDescription: 'Read an increasing range of different types of texts by combining contextual, semantic, grammatical and phonic knowledge, using text processing strategies, for example monitoring, predicting, confirming, rereading, reading on and self-correcting',
+							},
+							{
+								linkCode: 'ACELY1680',
+								linkDescription: 'Use comprehension strategies to build literal and inferred meaning and begin to evaluate texts by drawing on a growing knowledge of context, text structures and language features',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1682',
+								linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts demonstrating increasing control over text structures and language features and selecting print,and multimodal elements appropriate to the audience and purpose',
+							},
+							{
+								linkCode: 'ACELY1683',
+								linkDescription: 'Re-read and edit texts for meaning, appropriate structure, grammatical choices and punctuation',
+							},
+							{
+								linkCode: 'ACELY1684',
+								linkDescription: 'Write using joined letters that are clearly formed and consistent in size',
+							},
+							{
+								linkCode: 'ACELY1685',
+								linkDescription: 'Use software including word processing programs with growing speed and efficiency to construct and edit texts featuring visual, print and audio elements',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 4',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1487',
+								linkDescription: 'Understand that Standard Australian English is one of many social dialects used in Australia, and that while it originated in England it has been influenced by many other languages',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1488',
+								linkDescription: 'Understand that social interactions influence the way people engage with ideas and respond to others for example when exploring and clarifying the ideas of others, summarising their own views and reporting them to a larger group',
+							},
+							{
+								linkCode: 'ACELA1489',
+								linkDescription: 'Understand differences between the language of opinion and feeling and the language of factual reporting or recording',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1490',
+								linkDescription: 'Understand how texts vary in complexity and technicality depending on the approach to the topic, the purpose and the intended audience',
+							},
+							{
+								linkCode: 'ACELA1491',
+								linkDescription: 'Understand how texts are made cohesive through the use of linking devices including pronoun reference and text connectives',
+							},
+							{
+								linkCode: 'ACELA1492',
+								linkDescription: 'Recognise how quotation marks are used in texts to signal dialogue, titles and quoted (direct) speech',
+							},
+							{
+								linkCode: 'ACELA1793',
+								linkDescription: 'Identify features of online texts that enhance readability including text, navigation, links, graphics and layout',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1493',
+								linkDescription: 'Understand that the meaning of sentences can be enriched through the use of noun groups/phrases and verb groups/phrases and prepositional phrases',
+							},
+							{
+								linkCode: 'ACELA1494',
+								linkDescription: 'Investigate how quoted (direct) and reported (indirect) speech work in different types of text',
+							},
+							{
+								linkCode: 'ACELA1495',
+								linkDescription: 'Understand how adverb groups/phrases and prepositional phrases work in different ways to provide circumstantial details about an activity',
+							},
+							{
+								linkCode: 'ACELA1496',
+								linkDescription: 'Explore the effect of choices when framing an image, placement of elements in the image, and salience on composition of still and moving images in a range of types of texts',
+							},
+							{
+								linkCode: 'ACELA1498',
+								linkDescription: 'Incorporate new vocabulary from a range of sources into students’ own texts including vocabulary encountered in research',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1779',
+								linkDescription: 'Understand how to use knowledge of letter patterns including double letters, spelling generalisations, morphemic word families, common prefixes and suffixes and word origins to spell more complex words',
+							},
+							{
+								linkCode: 'ACELA1780',
+								linkDescription: 'Read and write a large core of high frequency words including homophones and know how to use context to identify correct spelling',
+							},
+							{
+								linkCode: 'ACELA1828',
+								linkDescription: 'Understand how to use phonic knowledge to read and write multisyllabic words with more complex letter combinations, including a variety of vowel sounds and known prefixes and suffixes',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1602',
+								linkDescription: 'Make connections between the ways different authors may represent similar storylines, ideas and relationships',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1603',
+								linkDescription: 'Discuss literary experiences with others, sharing responses and expressing a point of view',
+							},
+							{
+								linkCode: 'ACELT1604',
+								linkDescription: 'Use metalanguage to describe the effects of ideas, text structures and language features of literary texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1605',
+								linkDescription: 'Discuss how authors and illustrators make stories exciting, moving and absorbing and hold readers’ interest by using various techniques, for example character development and plot tension',
+							},
+							{
+								linkCode: 'ACELT1606',
+								linkDescription: 'Understand, interpret and experiment with a range of devices and deliberate word play in poetry and other literary texts, for example nonsense words, spoonerisms, neologisms and puns',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1607',
+								linkDescription: 'Create literary texts that explore students’ own experiences and imagining',
+							},
+							{
+								linkCode: 'ACELT1794',
+								linkDescription: 'Create literary texts by developing storylines, characters and settings',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1686',
+								linkDescription: 'Identify and explain language features of texts from earlier times and compare with the vocabulary, images, layout and content of contemporary texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1687',
+								linkDescription: 'Interpret ideas and information in spoken texts and listen for key points in order to carry out tasks and use information to share and extend ideas and information',
+							},
+							{
+								linkCode: 'ACELY1688',
+								linkDescription: 'Use interaction skills such as acknowledging another’s point of view and linking students’ response to the topic, using familiar and new vocabulary and a range of vocal effects such as tone, pace, pitch and volume to speak clearly and coherently',
+							},
+							{
+								linkCode: 'ACELY1689',
+								linkDescription: 'Plan, rehearse and deliver presentations incorporating learned content and taking into account the particular purposes and audiences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1690',
+								linkDescription: 'Identify characteristic features used in imaginative, informative and persuasive texts to meet the purpose of the text',
+							},
+							{
+								linkCode: 'ACELY1691',
+								linkDescription: 'Read different types of texts by combining contextual , semantic, grammatical and phonic knowledge using text processing strategies for example monitoring meaning, cross checking and reviewing',
+							},
+							{
+								linkCode: 'ACELY1692',
+								linkDescription: 'Use comprehension strategies to build literal and inferred meaning to expand content knowledge, integrating and linking ideas and analysing and evaluating texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1694',
+								linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts containing key information and supporting details for a widening range of audiences, demonstrating increasing control over text structures and language features',
+							},
+							{
+								linkCode: 'ACELY1695',
+								linkDescription: 'Re-read and edit for meaning by adding, deleting or moving words or word groups to improve content and structure',
+							},
+							{
+								linkCode: 'ACELY1696',
+								linkDescription: 'Write using clearly-formed joined letters, and develop increased fluency and automaticity',
+							},
+							{
+								linkCode: 'ACELY1697',
+								linkDescription: 'Use a range of software including word processing programs to construct, edit and publish written text, and select, edit and place visual, print and audio elements',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 5',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1500',
+								linkDescription: 'Understand that the pronunciation, spelling and meanings of words have histories and change over time',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1501',
+								linkDescription: 'Understand that patterns of language interaction vary across social contexts and types of texts and that they help to signal social roles and relationships',
+							},
+							{
+								linkCode: 'ACELA1502',
+								linkDescription: 'Understand how to move beyond making bare assertions and take account of differing perspectives and points of view',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1504',
+								linkDescription: 'Understand how texts vary in purpose, structure and topic as well as the degree of formality',
+							},
+							{
+								linkCode: 'ACELA1505',
+								linkDescription: 'Understand that the starting point of a sentence gives prominence to the message in the text and allows for prediction of how the text will unfold',
+							},
+							{
+								linkCode: 'ACELA1506',
+								linkDescription: 'Understand how the grammatical category of possessives is signalled through apostrophes and how to use apostrophes with common and proper nouns',
+							},
+							{
+								linkCode: 'ACELA1797',
+								linkDescription: 'Investigate how the organisation of texts into chapters, headings, subheadings, home pages and sub pages for online texts and according to chronology or topic can be used to predict content and assist navigation',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1507',
+								linkDescription: 'Understand the difference between main and subordinate clauses and that a complex sentence involves at least one subordinate clause',
+							},
+							{
+								linkCode: 'ACELA1508',
+								linkDescription: 'Understand how noun groups/phrases and adjective groups/phrases can be expanded in a variety of ways to provide a fuller description of the person, place, thing or idea',
+							},
+							{
+								linkCode: 'ACELA1511',
+								linkDescription: 'Explain sequences of images in print texts and compare these to the ways hyperlinked digital texts are organised, explaining their effect on viewers’ interpretations',
+							},
+							{
+								linkCode: 'ACELA1512',
+								linkDescription: 'Understand the use of vocabulary to express greater precision of meaning, and know that words can have different meanings in different contexts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1513',
+								linkDescription: 'Understand how to use knowledge of known words, base words, prefixes and suffixes, word origins, letter patterns and spelling generalisations to spell new words',
+							},
+							{
+								linkCode: 'ACELA1514',
+								linkDescription: 'Explore less common plurals, and understand how a suffix changes the meaning or grammatical form of a word',
+							},
+							{
+								linkCode: 'ACELA1829',
+								linkDescription: 'Understand how to use phonic knowledge to read and write less familiar words that share common letter patterns but have different pronunciations',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1608',
+								linkDescription: 'Identify aspects of literary texts that convey details or information about particular social, cultural and historical contexts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1609',
+								linkDescription: 'Present a point of view about particular literary texts using appropriate metalanguage, and reflecting on the viewpoints of others',
+							},
+							{
+								linkCode: 'ACELT1795',
+								linkDescription: 'Use metalanguage to describe the effects of ideas, text structures and language features on particular audiences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1610',
+								linkDescription: 'Recognise that ideas in literary texts can be conveyed from different viewpoints, which can lead to different kinds of interpretations and responses',
+							},
+							{
+								linkCode: 'ACELT1611',
+								linkDescription: 'Understand, interpret and experiment with sound devices and imagery, including simile, metaphor and personification, in narratives, shape poetry, songs, anthems and odes',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1612',
+								linkDescription: 'Create literary texts using realistic and fantasy settings and characters that draw on the worlds represented in texts students have experienced',
+							},
+							{
+								linkCode: 'ACELT1798',
+								linkDescription: 'Create literary texts that experiment with structures, ideas and stylistic features of selected authors',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1698',
+								linkDescription: 'Show how ideas and points of view in texts are conveyed through the use of vocabulary, including idiomatic expressions, objective and subjective language, and that these can change according to context',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1699',
+								linkDescription: 'Clarify understanding of content as it unfolds in formal and informal situations, connecting ideas to students’ own experiences and present and justify a point of view',
+							},
+							{
+								linkCode: 'ACELY1796',
+								linkDescription: 'Use interaction skills, for example paraphrasing, questioning and interpreting non-verbal cues and choose vocabulary and vocal effects appropriate for different audiences and purposes',
+							},
+							{
+								linkCode: 'ACELY1700',
+								linkDescription: 'Plan, rehearse and deliver presentations for defined audiences and purposes incorporating accurate and sequenced content and multimodal elements',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1701',
+								linkDescription: 'Identify and explain characteristic text structures and language features used in imaginative, informative and persuasive texts to meet the purpose of the text',
+							},
+							{
+								linkCode: 'ACELY1702',
+								linkDescription: 'Navigate and read texts for specific purposes applying appropriate text processing strategies, for example predicting and confirming, monitoring meaning, skimming and scanning',
+							},
+							{
+								linkCode: 'ACELY1703',
+								linkDescription: 'Use comprehension strategies to analyse information, integrating and linking ideas from a variety of print and digital sources',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1704',
+								linkDescription: 'Plan, draft and publish imaginative, informative and persuasive print and multimodal texts, choosing text structures, language features, images and sound appropriate to purpose and audience',
+							},
+							{
+								linkCode: 'ACELY1705',
+								linkDescription: 'Re-read and edit student’s own and others’ work using agreed criteria for text structures and language features',
+							},
+							{
+								linkCode: 'ACELY1706',
+								linkDescription: 'Develop a handwriting style that is becoming legible, fluent and automatic',
+							},
+							{
+								linkCode: 'ACELY1707',
+								linkDescription: 'Use a range of software including word processing programs with fluency to construct, edit and publish written text, and select, edit and place visual, print and audio elements',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 6',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1515',
+								linkDescription: 'Understand that different social and geographical dialects or accents are used in Australia in addition to Standard Australian English',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1516',
+								linkDescription: 'Understand that strategies for interaction become more complex and demanding as levels of formality and social distance increase',
+							},
+							{
+								linkCode: 'ACELA1517',
+								linkDescription: 'Understand the uses of objective and subjective language and bias',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1518',
+								linkDescription: 'Understand how authors often innovate on text structures and play with language features to achieve particular aesthetic, humorous and persuasive purposes and effects',
+							},
+							{
+								linkCode: 'ACELA1520',
+								linkDescription: 'Understand that cohesive links can be made in texts by omitting or replacing words',
+							},
+							{
+								linkCode: 'ACELA1521',
+								linkDescription: 'Understand the uses of commas to separate clauses',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1522',
+								linkDescription: 'Investigate how complex sentences can be used in a variety of ways to elaborate, extend and explain ideas',
+							},
+							{
+								linkCode: 'ACELA1523',
+								linkDescription: 'Understand how ideas can be expanded and sharpened through careful choice of verbs, elaborated tenses and a range of adverb groups/phrases',
+							},
+							{
+								linkCode: 'ACELA1524',
+								linkDescription: 'Identify and explain how analytical images like figures, tables, diagrams, maps and graphs contribute to our understanding of verbal information in factual and persuasive texts',
+							},
+							{
+								linkCode: 'ACELA1525',
+								linkDescription: 'Investigate how vocabulary choices, including evaluative language can express shades of meaning, feeling and opinion',
+							}
+						]
+					},
+					{
+						secondaryName: 'Phonics and word knowledge',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1526',
+								linkDescription: 'Understand how to use knowledge of known words, word origins including some Latin and Greek roots, base words, prefixes, suffixes, letter patterns and spelling generalisations to spell new words including technical words',
+							},
+							{
+								linkCode: 'ACELA1830',
+								linkDescription: 'Understand how to use phonic knowledge and accumulated understandings about blending, letter-sound relationships, common and uncommon letter patterns and phonic generalisations to read and write increasingly complex words',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1613',
+								linkDescription: 'Make connections between students’ own experiences and those of characters and events represented in texts drawn from different historical, social and cultural contexts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1614',
+								linkDescription: 'Analyse and evaluate similarities and differences in texts on similar topics, themes or plots',
+							},
+							{
+								linkCode: 'ACELT1615',
+								linkDescription: 'Identify and explain how choices in language, for example modality, emphasis, repetition and metaphor, influence personal response to different texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1616',
+								linkDescription: 'Identify, describe, and discuss similarities and differences between texts, including those by the same author or illustrator, and evaluate characteristics that define an author’s individual style',
+							},
+							{
+								linkCode: 'ACELT1617',
+								linkDescription: 'Identify the relationship between words, sounds, imagery and language patterns in narratives and poetry such as ballads, limericks and free verse',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1618',
+								linkDescription: 'Create literary texts that adapt or combine aspects of texts students have experienced in innovative ways',
+							},
+							{
+								linkCode: 'ACELT1800',
+								linkDescription: 'Experiment with text structures and language features and their effects in creating literary texts, for example, using imagery, sentence variation, metaphor and word choice',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1708',
+								linkDescription: 'Compare texts including media texts that represent ideas and events in different ways, explaining the effects of the different approaches',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1709',
+								linkDescription: 'Participate in and contribute to discussions, clarifying and interrogating ideas, developing and supporting arguments, sharing and evaluating information, experiences and opinions',
+							},
+							{
+								linkCode: 'ACELY1816',
+								linkDescription: 'Use interaction skills, varying conventions of spoken interactions such as voice volume, tone, pitch and pace, according to group size, formality of interaction and needs and expertise of the audience',
+							},
+							{
+								linkCode: 'ACELY1710',
+								linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements for defined audiences and purposes, making appropriate choices for modality and emphasis',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1711',
+								linkDescription: 'Analyse how text structures and language features work together to meet the purpose of a text',
+							},
+							{
+								linkCode: 'ACELY1712',
+								linkDescription: 'Select, navigate and read texts for a range of purposes, applying appropriate text processing strategies and interpreting structural features, for example table of contents, glossary, chapters, headings and subheadings',
+							},
+							{
+								linkCode: 'ACELY1713',
+								linkDescription: 'Use comprehension strategies to interpret and analyse information and ideas, comparing content from a variety of textual sources including media and digital texts',
+							},
+							{
+								linkCode: 'ACELY1801',
+								linkDescription: 'Analyse strategies authors use to influence readers',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1714',
+								linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts, choosing and experimenting with text structures, language features, images and digital resources appropriate to purpose and audience',
+							},
+							{
+								linkCode: 'ACELY1715',
+								linkDescription: 'Re-read and edit students’ own and others’ work using agreed criteria and explaining editing choices',
+							},
+							{
+								linkCode: 'ACELY1716',
+								linkDescription: 'Develop a handwriting style that is legible, fluent and automatic and varies according to audience and purpose',
+							},
+							{
+								linkCode: 'ACELY1717',
+								linkDescription: 'Use a range of software, including word processing programs, learning new functions as required to create texts',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 7',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1528',
+								linkDescription: 'Understand the way language evolves to reflect a changing world, particularly in response to the use of new technology for presenting texts and communicating',
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1529',
+								linkDescription: 'Understand how accents, styles of speech and idioms express and create personal and social identities',
+							},
+							{
+								linkCode: 'ACELA1782',
+								linkDescription: 'Understand how language is used to evaluate texts and how evaluations about a text can be substantiated by reference to the text and other sources',
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1531',
+								linkDescription: 'Understand and explain how the text structures and language features of texts become more complex in informative and persuasive texts and identify underlying structures such as taxonomies, cause and effect, and extended metaphors',
+							},
+							{
+								linkCode: 'ACELA1763',
+								linkDescription: 'Understand that the coherence of more complex texts relies on devices that signal text structure and guide readers, for example overviews, initial and concluding paragraphs and topic sentences, indexes or site maps or breadcrumb trails for online texts',
+							},
+							{
+								linkCode: 'ACELA1532',
+								linkDescription: 'Understand the use of punctuation to support meaning in complex sentences with prepositional phrases and embedded clauses',
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1534',
+								linkDescription: 'Recognise and understand that subordinate clauses embedded within noun groups/phrases are a common feature of written sentence structures and increase the density of information',
+							},
+							{
+								linkCode: 'ACELA1536',
+								linkDescription: 'Understand how modality is achieved through discriminating choices in modal verbs, adverbs, adjectives and nouns',
+							},
+							{
+								linkCode: 'ACELA1764',
+								linkDescription: 'Analyse how point of view is generated in visual texts by means of choices, for example gaze, angle and social distance',
+							},
+							{
+								linkCode: 'ACELA1537',
+								linkDescription: 'Investigate vocabulary typical of extended and more academic texts and the role of abstract nouns, classification, description and generalisation in building specialised knowledge through language',
+							},
+							{
+								linkCode: 'ACELA1539',
+								linkDescription: 'Understand how to use spelling rules and word origins, for example Greek and Latin roots, base words, suffixes, prefixes, spelling patterns and generalisations to learn new words and how to spell them',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1619',
+								linkDescription: 'Identify and explore ideas and viewpoints about events, issues and characters represented in texts drawn from different historical, social and cultural contexts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1620',
+								linkDescription: 'Reflect on ideas and opinions about characters, settings and events in literary texts, identifying areas of agreement and difference with others and justifying a point of view',
+							},
+							{
+								linkCode: 'ACELT1621',
+								linkDescription: 'Compare the ways that language and images are used to create character, and to influence emotions and opinions in different types of texts',
+							},
+							{
+								linkCode: 'ACELT1803',
+								linkDescription: 'Discuss aspects of texts, for example their aesthetic and social value, using relevant and appropriate metalanguage',
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1622',
+								linkDescription: 'Recognise and analyse the ways that characterisation, events and settings are combined in narratives, and discuss the purposes and appeal of different approaches',
+							},
+							{
+								linkCode: 'ACELT1623',
+								linkDescription: 'Understand, interpret and discuss how language is compressed to produce a dramatic effect in film or drama, and to create layers of meaning in poetry, for example haiku, tankas, couplets, free verse and verse novels',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1625',
+								linkDescription: 'Create literary texts that adapt stylistic features encountered in other texts, for example, narrative viewpoint, structure of stanzas, contrast and juxtaposition',
+							},
+							{
+								linkCode: 'ACELT1805',
+								linkDescription: 'Experiment with text structures and language features and their effects in creating literary texts, for example, using rhythm, sound effects, monologue, layout, navigation and colour',
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1765',
+								linkDescription: 'Analyse and explain the effect of technological innovations on texts, particularly media texts',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1719',
+								linkDescription: 'Identify and discuss main ideas, concepts and points of view in spoken texts to evaluate qualities, for example the strength of an argument or the lyrical power of a poetic rendition',
+							},
+							{
+								linkCode: 'ACELY1804',
+								linkDescription: 'Use interaction skills when discussing and presenting ideas and information, selecting body language, voice qualities and other elements, (for example music and sound) to add interest and meaning',
+							},
+							{
+								linkCode: 'ACELY1720',
+								linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements to promote a point of view or enable a new way of seeing',
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1721',
+								linkDescription: 'Analyse and explain the ways text structures and language features shape meaning and vary according to audience and purpose',
+							},
+							{
+								linkCode: 'ACELY1722',
+								linkDescription: 'Use prior knowledge and text processing strategies to interpret a range of types of texts',
+							},
+							{
+								linkCode: 'ACELY1723',
+								linkDescription: 'Use comprehension strategies to interpret, analyse and synthesise ideas and information, critiquing ideas and issues from a variety of textual sources',
+							},
+							{
+								linkCode: 'ACELY1724',
+								linkDescription: 'Compare the text structures and language features of multimodal texts, explaining how they combine to influence audiences',
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1725',
+								linkDescription: 'Plan, draft and publish imaginative, informative and persuasive texts, selecting aspects of subject matter and particular language, visual, and audio features to convey information and ideas',
+							},
+							{
+								linkCode: 'ACELY1726',
+								linkDescription: 'Edit for meaning by removing repetition, refining ideas, reordering sentences and adding or substituting words for impact',
+							},
+							{
+								linkCode: 'ACELY1727',
+								linkDescription: 'Consolidate a personal handwriting style that is legible, fluent and automatic and supports writing for extended periods',
+							},
+							{
+								linkCode: 'ACELY1728',
+								linkDescription: 'Use a range of software, including word processing programs, to confidently create, edit and publish written and multimodal texts',
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 8',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1540',
+								linkDescription: 'Understand the influence and impact that the English language has had on other languages or dialects and how English has been influenced in return'
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1541',
+								linkDescription: 'Understand how conventions of speech adopted by communities influence the identities of people in those communities'
+							},
+							{
+								linkCode: 'ACELA1542',
+								linkDescription: 'Understand how rhetorical devices are used to persuade and how different layers of meaning are developed through the use of metaphor, irony and parody'
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1543',
+								linkDescription: 'Analyse how the text structures and language features of persuasive texts, including media texts, vary according to the medium and mode of communication'
+							},
+							{
+								linkCode: 'ACELA1766',
+								linkDescription: 'Understand how cohesion in texts is improved by strengthening the internal structure of paragraphs through the use of examples, quotations and substantiation of claims'
+							},
+							{
+								linkCode: 'ACELA1809',
+								linkDescription: 'Understand how coherence is created in complex texts through devices like lexical cohesion, ellipsis, grammatical theme and text connectives'
+							},
+							{
+								linkCode: 'ACELA1544',
+								linkDescription: 'Understand the use of punctuation conventions, including colons, semicolons, dashes and brackets in formal and informal texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1545',
+								linkDescription: 'Analyse and examine how effective authors control and use a variety of clause structures, including clauses embedded within the structure of a noun group/phrase or clause'
+							},
+							{
+								linkCode: 'ACELA1546',
+								linkDescription: 'Understand the effect of nominalisation in the writing of informative and persuasive texts'
+							},
+							{
+								linkCode: 'ACELA1548',
+								linkDescription: 'Investigate how visual and multimodal texts allude to or draw on other texts or images to enhance and layer meaning'
+							},
+							{
+								linkCode: 'ACELA1547',
+								linkDescription: 'Recognise that vocabulary choices contribute to the specificity, abstraction and style of texts'
+							},
+							{
+								linkCode: 'ACELA1549',
+								linkDescription: 'Understand how to apply learned knowledge consistently in order to spell accurately and to learn new words including nominalisations'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1626',
+								linkDescription: 'Explore the ways that ideas and viewpoints in literary texts drawn from different historical, social and cultural contexts may reflect or challenge the values of individuals and groups'
+							},
+							{
+								linkCode: 'ACELT1806',
+								linkDescription: 'Explore the interconnectedness of Country/Place, People, Identity and Culture in texts including those by Aboriginal and Torres Strait Islander authors'
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1627',
+								linkDescription: 'Share, reflect on, clarify and evaluate opinions and arguments about aspects of literary texts'
+							},
+							{
+								linkCode: 'ACELT1628',
+								linkDescription: 'Understand and explain how combinations of words and images in texts are used to represent particular groups in society, and how texts position readers in relation to those groups'
+							},
+							{
+								linkCode: 'ACELT1807',
+								linkDescription: 'Recognise and explain differing viewpoints about the world, cultures, individual people and concerns represented in texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1629',
+								linkDescription: 'Recognise, explain and analyse the ways literary texts draw on readers’ knowledge of other texts and enable new understanding and appreciation of aesthetic qualities'
+							},
+							{
+								linkCode: 'ACELT1630',
+								linkDescription: 'Identify and evaluate devices that create tone, for example humour, wordplay, innuendo and parody in poetry, humorous prose, drama or visual texts'
+							},
+							{
+								linkCode: 'ACELT1767',
+								linkDescription: 'Interpret and analyse language choices, including sentence patterns, dialogue, imagery and other language features, in short stories, literary essays and plays'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1632',
+								linkDescription: 'Create literary texts that draw upon text structures and language features of other texts for particular purposes and effects'
+							},
+							{
+								linkCode: 'ACELT1768',
+								linkDescription: 'Experiment with particular language features drawn from different types of texts, including combinations of language and visual choices to create new texts'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1729',
+								linkDescription: 'Analyse and explain how language has evolved over time and how technology and the media have influenced language use and forms of communication'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1730',
+								linkDescription: 'Interpret the stated and implied meanings in spoken texts, and use evidence to support or challenge different perspectives'
+							},
+							{
+								linkCode: 'ACELY1808',
+								linkDescription: 'Use interaction skills for identified purposes, using voice and language conventions to suit different situations, selecting vocabulary, modulating voice and using elements such as music, images and sound for specific effects'
+							},
+							{
+								linkCode: 'ACELY1731',
+								linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content, including multimodal elements, to reflect a diversity of viewpoints'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1732',
+								linkDescription: 'Analyse and evaluate the ways that text structures and language features vary according to the purpose of the text and the ways that referenced sources add authority to a text'
+							},
+							{
+								linkCode: 'ACELY1733',
+								linkDescription: 'Apply increasing knowledge of vocabulary, text structures and language features to understand the content of texts'
+							},
+							{
+								linkCode: 'ACELY1734',
+								linkDescription: 'Use comprehension strategies to interpret and evaluate texts by reflecting on the validity of content and the credibility of sources, including finding evidence in the text for the author’s point of view'
+							},
+							{
+								linkCode: 'ACELY1735',
+								linkDescription: 'Explore and explain the ways authors combine different modes and media in creating texts, and the impact of these choices on the viewer/listener'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1736',
+								linkDescription: 'Create imaginative, informative and persuasive texts that raise issues, report events and advance opinions, using deliberate language and textual choices, and including digital elements as appropriate'
+							},
+							{
+								linkCode: 'ACELY1810',
+								linkDescription: 'Experiment with text structures and language features to refine and clarify ideas to improve the effectiveness of students’ own texts'
+							},
+							{
+								linkCode: 'ACELY1738',
+								linkDescription: 'Use a range of software, including word processing programs, to create, edit and publish texts imaginatively'
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 9',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1550',
+								linkDescription: 'Understand that Standard Australian English is a living language within which the creation and loss of words and the evolution of usage is ongoing'
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1551',
+								linkDescription: 'Understand that roles and relationships are developed and challenged through language and interpersonal skills'
+							},
+							{
+								linkCode: 'ACELA1552',
+								linkDescription: 'Investigate how evaluation can be expressed directly and indirectly using devices, for example allusion, evocative vocabulary and metaphor'
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1553',
+								linkDescription: 'Understand that authors innovate with text structures and language for specific purposes and effects'
+							},
+							{
+								linkCode: 'ACELA1770',
+								linkDescription: 'Compare and contrast the use of cohesive devices in texts, focusing on how they serve to signpost ideas, to make connections and to build semantic associations between ideas'
+							},
+							{
+								linkCode: 'ACELA1556',
+								linkDescription: 'Understand how punctuation is used along with layout and font variations in constructing texts for different audiences and purposes'
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1557',
+								linkDescription: 'Explain how authors creatively use the structures of sentences and clauses for particular effects'
+							},
+							{
+								linkCode: 'ACELA1559',
+								linkDescription: 'Understand how certain abstract nouns can be used to summarise preceding or subsequent stretches of text'
+							},
+							{
+								linkCode: 'ACELA1560',
+								linkDescription: 'Analyse and explain the use of symbols, icons and myth in still and moving images and how these augment meaning'
+							},
+							{
+								linkCode: 'ACELA1561',
+								linkDescription: 'Identify how vocabulary choices contribute to specificity, abstraction and stylistic effectiveness'
+							},
+							{
+								linkCode: 'ACELA1562',
+								linkDescription: 'Understand how spelling is used creatively in texts for particular effects, for example characterisation and humour and to represent accents and styles of speech'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1633',
+								linkDescription: 'Interpret and compare how representations of people and culture in literary texts are drawn from different historical, social and cultural contexts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1771',
+								linkDescription: 'Present an argument about a literary text based on initial impressions and subsequent analysis of the whole text'
+							},
+							{
+								linkCode: 'ACELT1634',
+								linkDescription: 'Reflect on, discuss and explore notions of literary value and how and why such notions vary according to context'
+							},
+							{
+								linkCode: 'ACELT1635',
+								linkDescription: 'Explore and reflect on personal understanding of the world and significant human experience gained from interpreting various representations of life matters in texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1636',
+								linkDescription: 'Analyse texts from familiar and unfamiliar contexts, and discuss and evaluate their content and the appeal of an individual author’s literary style'
+							},
+							{
+								linkCode: 'ACELT1637',
+								linkDescription: 'Investigate and experiment with the use and effect of extended metaphor, metonymy, allegory, icons, myths and symbolism in texts, for example poetry, short films, graphic novels, and plays on similar themes'
+							},
+							{
+								linkCode: 'ACELT1772',
+								linkDescription: 'Analyse text structures and language features of literary texts, and make relevant comparisons with other texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1773',
+								linkDescription: 'Create literary texts, including hybrid texts, that innovate on aspects of other texts, for example by using parody, allusion and appropriation'
+							},
+							{
+								linkCode: 'ACELT1638',
+								linkDescription: 'Experiment with the ways that language features, image and sound can be adapted in literary texts, for example the effects of stereotypical characters and settings, the playfulness of humour and pun and the use of hyperlink'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1739',
+								linkDescription: 'Analyse how the construction and interpretation of texts, including media texts, can be influenced by cultural perspectives and other texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1740',
+								linkDescription: 'Listen to spoken texts constructed for different purposes, for example to entertain and to persuade, and analyse how language features of these texts position listeners to respond in particular ways'
+							},
+							{
+								linkCode: 'ACELY1811',
+								linkDescription: 'Use interaction skills to present and discuss an idea and to influence and engage an audience by selecting persuasive language, varying voice tone, pitch, and pace, and using elements such as music and sound effects'
+							},
+							{
+								linkCode: 'ACELY1741',
+								linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements for aesthetic and playful purposes'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1742',
+								linkDescription: 'Interpret, analyse and evaluate how different perspectives of issue, event, situation, individuals or groups are constructed to serve specific purposes in texts'
+							},
+							{
+								linkCode: 'ACELY1743',
+								linkDescription: 'Apply an expanding vocabulary to read increasingly complex texts with fluency and comprehension'
+							},
+							{
+								linkCode: 'ACELY1744',
+								linkDescription: 'Use comprehension strategies to interpret and analyse texts, comparing and evaluating representations of an event, issue, situation or character in different texts'
+							},
+							{
+								linkCode: 'ACELY1745',
+								linkDescription: 'Explore and explain the combinations of language and visual choices that authors make to present information, opinions and perspectives in different texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1746',
+								linkDescription: 'Create imaginative, informative and persuasive texts that present a point of view and advance or illustrate arguments, including texts that integrate visual, print and/or audio features'
+							},
+							{
+								linkCode: 'ACELY1747',
+								linkDescription: 'Review and edit students’ own and others’ texts to improve clarity and control over content, organisation, paragraphing, sentence structure, vocabulary and audio/visual features'
+							},
+							{
+								linkCode: 'ACELY1748',
+								linkDescription: 'Use a range of software, including word processing programs, flexibly and imaginatively to publish texts'
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		levelName: 'Year 10',
+		primaryTitles: [
+			{
+				primaryName: 'Language',
+				secondaryTitles: [
+					{
+						secondaryName: 'Language variation and change',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1563',
+								linkDescription: 'Understand that Standard Australian English in its spoken and written forms has a history of evolution and change and continues to evolve'
+							}
+						]
+					},
+					{
+						secondaryName: 'Language for interaction',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1564',
+								linkDescription: 'Understand how language use can have inclusive and exclusive social effects, and can empower or disempower people'
+							},
+							{
+								linkCode: 'ACELA1565',
+								linkDescription: 'Understand that people’s evaluations of texts are influenced by their value systems, the context and the purpose and mode of communication'
+							}
+						]
+					},
+					{
+						secondaryName: 'Text structure and organisation',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1566',
+								linkDescription: 'Compare the purposes, text structures and language features of traditional and contemporary texts in different media'
+							},
+							{
+								linkCode: 'ACELA1567',
+								linkDescription: 'Understand how paragraphs and images can be arranged for different purposes, audiences, perspectives and stylistic effects'
+							},
+							{
+								linkCode: 'ACELA1568',
+								linkDescription: 'Understand conventions for citing others, and how to reference these in different ways'
+							}
+						]
+					},
+					{
+						secondaryName: 'Expressing and developing ideas',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELA1569',
+								linkDescription: 'Analyse and evaluate the effectiveness of a wide range of sentence and clause structures as authors design and craft texts'
+							},
+							{
+								linkCode: 'ACELA1570',
+								linkDescription: 'Analyse how higher order concepts are developed in complex texts through language features including nominalisation, clause combinations, technicality and abstraction'
+							},
+							{
+								linkCode: 'ACELA1572',
+								linkDescription: 'Evaluate the impact on audiences of different choices in the representation of still and moving images'
+							},
+							{
+								linkCode: 'ACELA1571',
+								linkDescription: 'Refine vocabulary choices to discriminate between shades of meaning, with deliberate attention to the effect on audiences'
+							},
+							{
+								linkCode: 'ACELA1573',
+								linkDescription: 'Understand how to use knowledge of the spelling system to spell unusual and technical words accurately, for example those based on uncommon Greek and Latin roots'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literature',
+				secondaryTitles: [
+					{
+						secondaryName: 'Literature and context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1639',
+								linkDescription: 'Compare and evaluate a range of representations of individuals and groups in different historical, social and cultural contexts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Responding to literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1640',
+								linkDescription: 'Reflect on, extend, endorse or refute others’ interpretations of and responses to literature'
+							},
+							{
+								linkCode: 'ACELT1641',
+								linkDescription: 'Analyse and explain how text structures, language features and visual features of texts and the context in which texts are experienced may influence audience response'
+							},
+							{
+								linkCode: 'ACELT1812',
+								linkDescription: 'Evaluate the social, moral and ethical positions represented in texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Examining literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1642',
+								linkDescription: 'Identify, explain and discuss how narrative viewpoint, structure, characterisation and devices including analogy and satire shape different interpretations and responses to a text'
+							},
+							{
+								linkCode: 'ACELT1643',
+								linkDescription: 'Compare and evaluate how ‘voice’ as a literary device can be used in a range of different types of texts such as poetry to evoke particular emotional responses'
+							},
+							{
+								linkCode: 'ACELT1774',
+								linkDescription: 'Analyse and evaluate text structures and language features of literary texts and make relevant thematic and intertextual connections with other texts'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating literature',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELT1814',
+								linkDescription: 'Create literary texts that reflect an emerging sense of personal style and evaluate the effectiveness of these texts'
+							},
+							{
+								linkCode: 'ACELT1815',
+								linkDescription: 'Create literary texts with a sustained ‘voice’, selecting and adapting appropriate text structures, literary devices, language, auditory and visual structures and features for a specific purpose and intended audience'
+							},
+							{
+								linkCode: 'ACELT1644',
+								linkDescription: 'Create imaginative texts that make relevant thematic and intertextual connections with other texts'
+							}
+						]
+					}
+				]
+			},
+			{
+				primaryName: 'Literacy',
+				secondaryTitles: [
+					{
+						secondaryName: 'Texts in context',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1749',
+								linkDescription: 'Analyse and evaluate how people, cultures, places, events, objects and concepts are represented in texts, including media texts, through language, structural and/or visual choices'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interacting with others',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1750',
+								linkDescription: 'Identify and explore the purposes and effects of different text structures and language features of spoken texts, and use this knowledge to create purposeful texts that inform, persuade and engage'
+							},
+							{
+								linkCode: 'ACELY1813',
+								linkDescription: 'Use organisation patterns, voice and language conventions to present a point of view on a subject, speaking clearly, coherently and with effect, using logic, imagery and rhetorical devices to engage audiences'
+							},
+							{
+								linkCode: 'ACELY1751',
+								linkDescription: 'Plan, rehearse and deliver presentations, selecting and sequencing appropriate content and multimodal elements to influence a course of action'
+							}
+						]
+					},
+					{
+						secondaryName: 'Interpreting, analysing, evaluating',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1752',
+								linkDescription: 'Identify and analyse implicit or explicit values, beliefs and assumptions in texts and how these are influenced by purposes and likely audiences'
+							},
+							{
+								linkCode: 'ACELY1753',
+								linkDescription: 'Choose a reading technique and reading path appropriate for the type of text, to retrieve and connect ideas within and between texts'
+							},
+							{
+								linkCode: 'ACELY1754',
+								linkDescription: 'Use comprehension strategies to compare and contrast information within and between texts, identifying and analysing embedded perspectives, and evaluating supporting evidence'
+							}
+						]
+					},
+					{
+						secondaryName: 'Creating texts',
+						linksToSecondary: [
+							{
+								linkCode: 'ACELY1756',
+								linkDescription: 'Create sustained texts, including texts that combine specific digital or media content, for imaginative, informative, or persuasive purposes that reflect upon challenging and complex issues'
+							},
+							{
+								linkCode: 'ACELY1757',
+								linkDescription: 'Review, edit and refine students’ own and others’ texts for control of content, organisation, sentence structure, vocabulary, and/or visual features to achieve particular purposes and effects'
+							},
+							{
+								linkCode: 'ACELY1776',
+								linkDescription: 'Use a range of software, including word processing programs, confidently, flexibly and imaginatively to create, edit and publish texts, considering the identified purpose and the characteristics of the user'
 							}
 						]
 					}

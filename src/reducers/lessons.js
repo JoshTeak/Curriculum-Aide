@@ -20,7 +20,15 @@ export default (state = lessonsReducerDefaultState, action) => {
 				}
 			});
 		case 'REMOVE_LESSON':
-			return state.filter(({id}) => id !== action.id);
+			let i;
+			let lessons = state;
+			for(i = 0; i < state.length; i++)
+			{
+				if(state[i].id === action.id.id) {
+					lessons.splice(i, 1)
+				}
+			}
+			return [...lessons];
 		case 'SET_LESSONS':
 			return action.lessons;
 		default:

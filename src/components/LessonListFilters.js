@@ -11,7 +11,6 @@ class LessonListFilters extends React.Component {
 		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true, sidebarExpanded: false};
 		this.checkForNoFiltering();
 	}
-
 	checkForNoFiltering = () => {
 		const links = this.state.curriculumLinks
 		let viewAllLatch = true;
@@ -103,16 +102,13 @@ class LessonListFilters extends React.Component {
 		this.setState(() => ({
 			isFavouritesChecked: false
 		}));
-		this.props.setTextFilter('');
-		this.props.sortByFavourite({});
-		this.props.setCurriculumLinksFilter(defaultLinks());
 		this.props.resetFilter();
 	}
 	render() {
 		return (
 			<div className="collapsibleSidebar" id="sidebar">
 				<div className="collapsibleSidebar__header-options">
-					<div className="button-group">
+					<div className="button-group button-group-filter">
 						<button className="button button--close selectable" onClick={this.collapsibleSidebar}>
 							<div className="button-close-icon">
 								<div className="button-close-x">x</div>

@@ -83,12 +83,12 @@ export const startAddLesson = (lessonData = {}) => {
 	};
 };
 
-export const removeLesson = ({ id } = {}) => ({
+export const removeLesson = (id) => ({
 	type: 'REMOVE_LESSON',
 	id
 });
 
-export const startRemoveLesson = ({ id } = {}) => {
+export const startRemoveLesson = (id) => {
 	return (dispatch) => {
 		return database.ref(`lessons/${id}`).remove().then(() => {
 			dispatch(removeLesson({id}));

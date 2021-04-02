@@ -1,5 +1,19 @@
-
-
 .page-body { 
+	pointer-events: all;
+	min-height: calc(100vh - 87px - 180px);
+}
+
+.page-navigation {
 	display: flex;
+	align-items: center;
+	width: 33rem;
+	justify-content: space-between;
+	margin: 1.7rem;
+}
+
+.page-navigation-numbers {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

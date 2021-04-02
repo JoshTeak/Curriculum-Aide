@@ -1,6 +1,8 @@
 .filter {
 	background-color: $almost-white;
 	padding: $m-size;
+	overflow-y: scroll;
+	max-height: 70vh;
 }
 
 .filter-title {
@@ -8,15 +10,23 @@
 }
 
 .filter-request {
-	padding: $xl-size;
-	@media (max-width: $desktop-second-breakpoint) {
-	    padding: $xs-size;
-	}
+	display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filter-instruction {
-	padding: $font-size-xxlarge;
+	padding: $s-size 0;
     text-align: center;
-    font-size: $l-size;
+    font-size: $font-size-xlarge;
     color: gray;
+}
+
+.filter-image-box {
+	padding-top: $s-size;
+	width: 40rem;
+	@media (max-width: $desktop-second-breakpoint) {
+	    width: auto;
+	}
 }

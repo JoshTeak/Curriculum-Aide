@@ -2,28 +2,32 @@ import React from 'react';
 import { connect } from 'react-redux';
 import LessonForm from './LessonForm';
 import { startEditLesson, startRemoveLesson } from '../actions/lessons';
+import Footer from '../components/Footer';
 
 const EditLessonPage = (props) => {
   return (
     <div className="main">
+      <div className="header-veil">
+      </div>
       <div className="page-header">
         <div className="content-container">
           <h1 className="page-header__title">Edit Lesson</h1>
         </div>
       </div>
-      <div className="content-container">
+      <div className="page-body">
         <LessonForm
           lesson={props.lesson}
           onSubmit={(lesson) => {
             props.dispatch(startEditLesson(props.lesson.id, lesson));
             props.history.push('/');
           }}
+          onDelete={() => {
+            props.dispatch(startRemoveLesson(props.lesson.id));
+            props.history.push('/');
+          }}
         />
-        <button className="button button--secondary" onClick={() => {
-          props.dispatch(startRemoveLesson({ id: props.lesson.id }));
-          props.history.push('/');
-        }}>Remove Lesson</button>
       </div>
+      <Footer />
     </div>
   );
 };

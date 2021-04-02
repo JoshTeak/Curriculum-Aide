@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   >* {
-    margin-bottom: $m-size;
+    margin-bottom: 197px;
   }
 }
 
@@ -15,7 +15,13 @@
 }
 
 .form__error {
-  	margin: 0 0 $m-size 0;
- 	font-style: italic;
-  	color: $error-red;
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+  color: $error-red;
+}
+
+.form__warning {
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+  color: $grey;
 }

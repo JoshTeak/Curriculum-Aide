@@ -4,6 +4,12 @@
   padding: 0 $m-size;
 }
 
+.lesson-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .lesson-header {
   padding: $s-size $m-size;
   margin: 0;
@@ -17,8 +23,8 @@
   transition: all 0.5s ease;
   filter: drop-shadow(2px 2px 3px $grey);
   background-color: #fdfdfd;
-  width: 30rem;
-  height: 30rem;
+  width: 27rem;
+  height: 27rem;
   overflow-wrap: anywhere;
   max-width: 90rem;
   display: flex;
@@ -31,7 +37,4 @@
 }
 
 .lesson-body {
-  max-width: 100rem;
-  width: 92vw;
-  overflow-wrap: anywhere;
 }
