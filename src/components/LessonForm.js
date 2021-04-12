@@ -41,6 +41,7 @@ class LessonForm extends React.Component {
 	componentDidMount() {
 		this.clearFilter();
 	}
+
 	onTitleChange = (e) => {
 		const title = e.target.value;
 		const titleRemainingChar = this.maxTitleChar - title.length;

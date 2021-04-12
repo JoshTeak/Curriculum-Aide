@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import LessonForm from './LessonForm';
 import { startEditLesson, startRemoveLesson } from '../actions/lessons';
 import Footer from '../components/Footer';
+import LoginPage from './LoginPage';
 
 const EditLessonPage = (props) => {
   return (
@@ -15,17 +16,27 @@ const EditLessonPage = (props) => {
         </div>
       </div>
       <div className="page-body">
-        <LessonForm
-          lesson={props.lesson}
-          onSubmit={(lesson) => {
-            props.dispatch(startEditLesson(props.lesson.id, lesson));
-            props.history.push('/');
-          }}
-          onDelete={() => {
-            props.dispatch(startRemoveLesson(props.lesson.id));
-            props.history.push('/');
-          }}
-        />
+        {
+          props.isAuthenticated ? 
+          <LessonForm
+            lesson={props.lesson}
+            onSubmit={(lesson) => {
+              props.dispatch(startEditLesson(props.lesson.id, lesson));
+              props.history.push({
+                pathname: "/dashboard",
+                state: { previousPath: props.history.location}
+              });
+            }}
+            onDelete={() => {
+              props.dispatch(startRemoveLesson(props.lesson.id));
+              props.history.push({
+                pathname: "/dashboard",
+                state: { previousPath: props.history.location}
+              });
+            }}
+          />  :
+          <LoginPage />
+        }
       </div>
       <Footer />
     </div>
@@ -34,7 +45,8 @@ const EditLessonPage = (props) => {
 
 const mapStateToProps = (state, props) => {
   return {
-    lesson: state.lessons.find((lesson) => ":" + lesson.id === props.match.params.id)
+    lesson: state.lessons.find((lesson) => ":" + lesson.id === props.match.params.id),
+    isAuthenticated: !!state.auth.uid
   };
 };
 

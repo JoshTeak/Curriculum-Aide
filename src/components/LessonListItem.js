@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import LessonPopup from './LessonPopup';
+import LoginPopup from './LoginPopup';
 import { defaultLinks } from './CurriculumAddresses';
 import { startEditUser } from '../actions/user';
 import LoadingPage from './LoadingPage';
@@ -11,19 +12,18 @@ export class LessonListItem extends React.Component {
 		super(props);
 
 		this.isDisplayed = "none";
-		this.state = {boxChecked: false};	
+		this.boxChecked = false;	
 	}
 
-	componentDidMount() {
-		this.initializePage();
-	}
-
-	initializePage = () => {
-		if(!!this.props.user.favoritesList[this.props.lesson.id])
+	initializeBoxes = () => {
+		if(this.props.isAuthenticated)
 		{
-			this.setState(() => ({
-				boxChecked: true
-			}));
+			if(!!this.props.user.favoritesList && !!this.props.user.favoritesList[this.props.lesson.id])
+			{
+				this.boxChecked = true;
+			}
+		} else {
+			this.boxChecked = false;
 		}
 	}
 
@@ -43,27 +43,32 @@ export class LessonListItem extends React.Component {
 		  	this.forceUpdate();
 		}
 	}
+	
 	favorateClicked = (e) => {
+		if(this.props.isAuthenticated)
+		{
+			let myFavorites = {};
+			this.props.user.favoritesList ? myFavorites = this.props.user.favoritesList : myFavorites = {};
+			if(!this.boxChecked)
+			{	
+				myFavorites[this.props.lesson.id] = {favorated: true}
+			} else {
+				delete myFavorites[this.props.lesson.id];
+			}
 
-		let myFavorites = {};
-		this.props.user.favoritesList ? myFavorites = this.props.user.favoritesList : myFavorites = {};
-		if(!this.state.boxChecked)
-		{	
-			myFavorites[this.props.lesson.id] = {favorated: true}
+			const newUser = {favoritesList: myFavorites}
+			this.props.startEditUser(this.props.user.id, newUser);
+
+			this.boxChecked = !this.boxChecked;
 		} else {
-			delete myFavorites[this.props.lesson.id];
+			this.isDisplayed = "block";
+			this.forceUpdate();
 		}
-
-		const newUser = {favoritesList: myFavorites}
-		this.props.startEditUser(this.props.user.id, newUser);
-
-		this.setState(() => ({
-			boxChecked: !this.state.boxChecked
-		}));
 	}
 	render() {
 		return (
 			<div className="lesson">
+				{this.initializeBoxes()}
 				<div className="lesson-selector">
 					<div className="list-body" onClick={this.lessonClicked}>
 						<div className="list-item list-item--multiple">
@@ -89,10 +94,10 @@ export class LessonListItem extends React.Component {
 									<div class="round-checkbox" onClick={this.favorateClicked}>
 									    <input
 											type="checkbox" 
-											checked={this.state.boxChecked}
+											checked={this.boxChecked}
 										/>
 										{
-											this.state.boxChecked ? 
+											this.boxChecked ? 
 									    	<img className="icon" src="/images/Checkmark Circle.png" alt="Checkmark Circle" /> :
 									    	<img className="icon" src="/images/Circle.png" alt="Circle" />
 									    }
@@ -103,14 +108,19 @@ export class LessonListItem extends React.Component {
 					</div>					
 				</div>
 				{
-					this.isDisplayed === "none" ? "" : (
-						<LessonPopup 
-							lesson={this.props.lesson} 
-							backgroundClick={this.lessonClicked}
-							favorated={this.favorateClicked}
-							isChecked={this.state.boxChecked}
-						/>
-					)
+					this.isDisplayed === "block" && this.props.isAuthenticated ? 
+					<LessonPopup 
+						lesson={this.props.lesson} 
+						backgroundClick={this.lessonClicked}
+						favorated={this.favorateClicked}
+						isChecked={this.boxChecked}
+					/> : ''
+				}
+				{
+					this.isDisplayed === "block" && !this.props.isAuthenticated ? 
+					<LoginPopup 
+						backgroundClick={this.lessonClicked}
+					/> : ''
 				}
 			</div>
 		);
@@ -119,7 +129,8 @@ export class LessonListItem extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		user: state.user
+		user: state.user,
+		isAuthenticated: !!state.auth.uid
 	};
 }
 

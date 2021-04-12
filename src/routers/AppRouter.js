@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Switch, Link, NavLink, useLocation } from 'react-router-dom';
+import { Router, Route, Switch, useLocation } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import AboutUsPage from '../components/AboutUsPage'; 
 import AddLessonPage from '../components/AddLessonPage';
@@ -7,7 +7,6 @@ import ContactUsPage from '../components/ContactUsPage';
 import EditLessonPage from '../components/EditLessonPage';
 import DashboardPage from '../components/DashboardPage';
 import NotFoundPage from '../components/NotFoundPage';
-import LoginPage from '../components/LoginPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import Header from '../components/Header';
@@ -19,7 +18,7 @@ export const history = createBrowserHistory();
 const AppRouter = () => (
   <Router history={history}>
     <Switch>
-      <PublicRoute path="/" component={LoginPage} exact={true} />
+      <PublicRoute path="/" exact={true} />
       <Route path="*">
         <Header />
         <Page />
@@ -66,7 +65,8 @@ export const Page = () => {
 
 export const Direction = (dir) => {
   const newPathValue = LocationValue(history.location.pathname);
-  const oldPathValue = LocationValue(history.location.state.previousPath.pathname);
+  const oldPathValue = LocationValue(history.location.state.previousPath.pathname);;
+
   if((newPathValue > oldPathValue && dir === 'ENTER') || (newPathValue < oldPathValue && dir === 'EXIT')) {
     return 100;
   } else {

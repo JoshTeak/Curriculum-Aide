@@ -2,48 +2,51 @@ import React from 'react';
 import LessonList from './LessonList';
 import LessonListFilters from './LessonListFilters';
 import LoadingPage from './LoadingPage';
-import { startSetUser } from '../actions/user';
 import { startSetLessons } from '../actions/lessons';
 import { resetFilter } from '../actions/filters'
 import { connect } from 'react-redux';
 import Footer from '../components/Footer';
+import { startSetUser } from '../actions/user';
 
 class DashboardPage extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {initialization: false};
+		this.initialization = false;
 		document.documentElement.style.overflow = "auto";
 	};
+
 	componentDidMount() {
-		this.initializePage();
-	}
-	clearFilter = () => {
-		this.setState(() => ({
-			isFavouritesChecked: false
-		}));
 		this.props.resetFilter();
 	}
 
 	initializePage = () => {
-		if(this.props.user.length === 0 || this.props.lessons === 0)
+		if(!!this.props.auth.uid)
 		{
-			this.props.startSetLessons().then(() => {
-				this.props.startSetUser(this.props.auth.uid).then(() => {
-					this.setState(() => ({
-						initialization: true
-					}));
-				});
-	        });
+    		this.props.startSetUser(this.props.auth.uid).then(() => {
+    			if(this.props.lessons.length === 0)
+				{
+					this.props.startSetLessons().then(() => {
+						this.initialization = true;
+			        });
+				} else {
+					this.initialization = true;
+				}
+    		});
 		} else {
-			this.setState(() => ({
-				initialization: true
-			}));
+			if(this.props.user.length === 0 || this.props.lessons.length === 0)
+			{
+				this.props.startSetLessons().then(() => {
+					this.initialization = true;
+		        });
+			} else {
+				this.initialization = true;
+			}
 		}
-		this.clearFilter();
 	}
 	render() {
 		return (
 			<div className="main">
+				{this.initializePage()}
 				<div className="header-veil">
 				</div>
 				<div className="page-header">
@@ -52,7 +55,7 @@ class DashboardPage extends React.Component {
 					</div>
 				</div>
 				{
-			    	this.state.initialization ?
+			    	this.initialization ?
 					<div className="page-body">
 						<LessonListFilters />
 						<LessonList />
@@ -74,7 +77,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-	startSetUser: (id) => dispatch(startSetUser(id)),
+	startSetUser: (uid) => dispatch(startSetUser(uid)),
 	startSetLessons: () => dispatch(startSetLessons()),
 	resetFilter: () => dispatch(resetFilter())
 });

@@ -12,8 +12,9 @@
 	z-index: 2;
 	filter: drop-shadow(2px 2px 3px $grey);
 	margin-top: 20rem;
-    min-width: 84rem;
+    min-width: 28rem;
 	max-width: 100rem;
+	width: 84rem;
 }
 
 .popup-container {
@@ -36,6 +37,7 @@
 	overflow-y: scroll;
 	max-height: 94vh;
 	margin-top: 3rem;
+  	width: auto;
 }
 
 .add-resource-popup {

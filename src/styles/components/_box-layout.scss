@@ -1,22 +1,15 @@
-.Login-layout {
-  background-color: white;
-  width: 100vw; 
-  height: 100vh;
-}
-
 .Login-layout-box {
-  position: absolute;
   z-index: 1;
   padding: $m-l-size;
   margin: $s-size;
 }
 
+.Login-page-layout {
+	padding-top: $m-size;	
+}
+
 .Login-layout-box p {
-  width: 25vw;
-  background-color: white;
-  margin-bottom: $m-size;
-  min-width: 27rem;
-  border-radius: $s-corner;
+  margin-bottom: $m-l-size;
 }
 
 .Login-layout-box button {
@@ -24,11 +17,4 @@
   font-weight: bold;
   padding: $m-l-size;
   color: #5f5f5f;
-}
-
-
-.Login-layout-image-box img{
-  width: inherit;
-  height: 100vh;
-  margin: auto;
 }
