@@ -17,7 +17,7 @@ export const Header = ({ startLogout }) => (
               state: { previousPath: history.location}
             });
           }
-        }}>Curriculum Aide</h1>
+        }}>Curriculum Us</h1>
         <button className="button button--link-header" onClick={startLogout}>Logout</button>
       </div>
       <div className="header__links">
@@ -29,7 +29,7 @@ export const Header = ({ startLogout }) => (
               state: { previousPath: history.location}
             });
           }
-        }}>Dashboard</button>
+        }}>Lesson Plans</button>
         <button className="button button--link-header" onClick={() => {
           if(history.location.pathname !== "/create")
           {

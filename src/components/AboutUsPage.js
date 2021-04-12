@@ -24,7 +24,7 @@ class AboutUsPage extends React.Component {
 							<div className="content-box odd-content-box">
 								<div className="content-box-info">
 									<h2>What we are trying to do</h2>
-									<p>At Curriculum Aide we are trying to create a community focused on helping each other. The website follows the Australian Curriculum from K to 10. Using our search functionality, you can easily find lessons pertaining to the curriculum links you’re looking for, by selecting the filter on the dashboard page.</p>
+									<p>At Curriculum Us we are trying to create a community focused on helping each other. The website follows the Australian Curriculum from K to 10. Using our search functionality, you can easily find lessons pertaining to the curriculum links you’re looking for, by selecting the filter on the dashboard page.</p>
 								</div>
 								<div className="content-image-box">
 									<img src="/images/school-supplies-P4DZBAL.jpg" alt="school-supplies-P4DZBAL" />
@@ -36,7 +36,7 @@ class AboutUsPage extends React.Component {
 								</div>
 								<div className="content-box-info content-box-info-right">
 									<h2>Who we are supporting</h2>
-									<p>Teachers can often be overwhelmed by the workload and creating new and exciting lesson plans may sometimes fall by the wayside. Curriculum Aide provides an opportunity for teachers to share their lesson plans with others around Australia. This can provide a lot of benefit to the teaching community whether you are a graduate struggling to find new resources, someone trying to refine their pedagogy, or an experienced teacher just looking to try something new.</p>
+									<p>Teachers can often be overwhelmed by the workload and creating new and exciting lesson plans may sometimes fall by the wayside. Curriculum Us provides an opportunity for teachers to share their lesson plans with others around Australia. This can provide a lot of benefit to the teaching community whether you are a graduate struggling to find new resources, someone trying to refine their pedagogy, or an experienced teacher just looking to try something new.</p>
 								</div>
 							</div>
 							<div className="content-box odd-content-box">
