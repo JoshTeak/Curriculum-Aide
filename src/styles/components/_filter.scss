@@ -5,6 +5,13 @@
 	max-height: 70vh;
 }
 
+.mobile--filter {
+    width: 100vw;
+	background-color: $almost-white;
+	padding: $m-size;
+	overflow-y: scroll;
+}
+
 .filter-title {
 	margin: 0 auto $m-size 0;
 }
