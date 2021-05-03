@@ -7,6 +7,7 @@ import { resetFilter } from '../actions/filters'
 import { connect } from 'react-redux';
 import Footer from '../components/Footer';
 import { startSetUser } from '../actions/user';
+import { popupFilter } from '../actions/popups';
 
 class DashboardPage extends React.Component {
 	constructor(props) {
@@ -57,7 +58,12 @@ class DashboardPage extends React.Component {
 				{
 			    	this.initialization ?
 					<div className="page-body">
-						<LessonListFilters />
+						{ 
+							this.props.popups.popupFilter ? '' :
+							<div className="mobile--collapsibleSidebar__button selectable">
+								<button className="collapsibleSidebar__button-icon" onClick={this.props.popupFilter}>Filter</button>
+							</div>
+						}
 						<LessonList />
 					</div>
 					: <LoadingPage />
@@ -72,14 +78,16 @@ const mapStateToProps = (state) => {
 	return {
 		lessons: state.lessons,
 		user: state.user,
-		auth: state.auth
+		auth: state.auth,
+		popups: state.popups
 	};
 };
 
 const mapDispatchToProps = (dispatch) => ({
 	startSetUser: (uid) => dispatch(startSetUser(uid)),
 	startSetLessons: () => dispatch(startSetLessons()),
-	resetFilter: () => dispatch(resetFilter())
+	resetFilter: () => dispatch(resetFilter()),
+	popupFilter: (display) => dispatch(popupFilter(display))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DashboardPage);

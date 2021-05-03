@@ -10,6 +10,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 import Header from '../components/Header';
+import PopupManager from '../components/PopupManager';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -22,6 +23,7 @@ const AppRouter = () => (
       <Route path="*">
         <Header />
         <Page />
+        <PopupManager />
       </Route>
     </Switch>
   </Router>

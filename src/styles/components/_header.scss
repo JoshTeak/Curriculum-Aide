@@ -19,6 +19,9 @@
   h1 {
     margin: 0;
   }
+  @media (max-width: $desktop-third-breakpoint) {
+    font-size: $font-size-xlarge;
+  }
 }
 
 .header__links {

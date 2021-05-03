@@ -3,12 +3,16 @@ import {connect} from 'react-redux';
 import {setTextFilter, setCurriculumLinksFilter, sortByRating, sortByTitle, sortByLevel ,sortByDuration, sortByFavourite, sortAll, resetFilter} from '../actions/filters';
 import CheckboxList from './CheckboxList';
 import { defaultLinks } from '../components/CurriculumAddresses';
+import { popupFilter } from '../actions/popups'
 
 class LessonListFilters extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true, sidebarExpanded: false, isDesktop: false};
+		this.state = {curriculumLinks: defaultLinks(), isFavouritesChecked: false, viewAll: true, isDesktop: false};
+
+		this.filterExpanded = false;
+
 		this.checkForNoFiltering();
 
 	    this.updatePredicate = this.updatePredicate.bind(this);
@@ -110,42 +114,11 @@ class LessonListFilters extends React.Component {
 		}
 	}
 
-	collapsibleSidebar = () => {
-		const sidebar = document.getElementById("sidebar");
-		sidebar.style.transition = "all 1s ease";
-
-		if(sidebar.style.transform === "translateX(100%)")
-		{
-			sidebar.style.transform = "translateX(0px)";
-			this.setState({sidebarExpanded: false})
-		} else {
-			sidebar.style.transform = "translateX(100%)";
-			this.setState({sidebarExpanded: true})
-		}
-	}
-
-	mobileCollapsibleSidebar = () => {
-		const sidebar = document.getElementById("sidebar");
-		sidebar.style.transition = "all 1s ease";
-
-		if(sidebar.style.transform === "translateY(calc(-100vh + 267px))")
-		{
-			sidebar.style.transform = "translateY(0px)";
-			this.setState({sidebarExpanded: false})
-			document.documentElement.style.overflow = "auto"
-		} else {
-			sidebar.style.transform = "translateY(calc(-100vh + 267px))";
-			this.setState({sidebarExpanded: true})
-			document.documentElement.scrollTop = 0;
-			document.documentElement.style.overflow = "hidden"
-		}
-	}
-
 	checkSidebarStatus = () => {
 		const sidebar = document.getElementById("sidebar");
 		sidebar.style.transition = "all 0s ease";
 
-		if(this.state.sidebarExpanded)
+		if(this.props.popups.popupFilter)
 		{
 			if(this.state.isDesktop)
 			{
@@ -161,6 +134,40 @@ class LessonListFilters extends React.Component {
 		}
 	}
 
+	testCollapsibleSidebar = () => {
+		if(this.state.isDesktop)
+		{
+			if(this.props.popups.popupFilter && !this.filterExpanded)
+			{
+				const sidebar = document.getElementById("sidebar");
+				sidebar.style.transition = "all 1s ease";
+				sidebar.style.transform = "translateX(100%)";
+				this.filterExpanded = true;
+			} else if(!this.props.popups.popupFilter && this.filterExpanded) {
+				const sidebar = document.getElementById("sidebar");
+				sidebar.style.transition = "all 1s ease";
+				sidebar.style.transform = "translateX(0px)";
+				this.filterExpanded = false;
+			} 
+		} else {
+			if(this.props.popups.popupFilter && !this.filterExpanded)
+			{
+				const sidebar = document.getElementById("sidebar");
+				sidebar.style.transition = "all 1s ease";
+				sidebar.style.transform = "translateY(calc(-100vh + 267px))";
+				document.documentElement.scrollTop = 0;
+				document.documentElement.style.overflow = "hidden"
+				this.filterExpanded = true;
+			} else if(!this.props.popups.popupFilter && this.filterExpanded) {
+				const sidebar = document.getElementById("sidebar");
+				sidebar.style.transition = "all 1s ease";
+				sidebar.style.transform = "translateY(0px)";
+				document.documentElement.style.overflow = "auto"
+				this.filterExpanded = false;
+			}
+		}
+	}
+
 	clearFilter = () => {
 		this.setState(() => ({
 			isFavouritesChecked: false
@@ -169,6 +176,7 @@ class LessonListFilters extends React.Component {
 	}
 
 	render() {
+		this.testCollapsibleSidebar()
 		return (
 			<div>
 				{this.state.isDesktop ? 
@@ -176,7 +184,7 @@ class LessonListFilters extends React.Component {
 						<div className="collapsibleSidebar" id="sidebar">
 							<div className="collapsibleSidebar__header-options">
 								<div className="button-group button-group-filter">
-									<button className="button button--close selectable" onClick={this.collapsibleSidebar}>
+									<button className="button button--close selectable" onClick={this.props.popupFilter}>
 										<div className="button-close-icon">
 											<div className="button-close-x">x</div>
 										</div>
@@ -231,13 +239,6 @@ class LessonListFilters extends React.Component {
 									</div>	
 								</div>
 							</div>
-							<div className="collapsibleSidebar__button selectable">
-								{ 
-									this.state.sidebarExpanded ?
-									'' :
-									<button className="collapsibleSidebar__button-icon" onClick={this.collapsibleSidebar}>Filter</button>
-								}
-							</div>
 						</div> 
 					</div>
 
@@ -247,7 +248,7 @@ class LessonListFilters extends React.Component {
 						<div className="mobile--collapsibleSidebar" id="sidebar">
 							<div className="collapsibleSidebar__header-options">
 								<div className="button-group button-group-filter">
-									<button className="button button--close selectable" onClick={this.mobileCollapsibleSidebar}>
+									<button className="button button--close selectable" onClick={this.props.popupFilter}>
 										<div className="button-close-icon">
 											<div className="button-close-x">x</div>
 										</div>
@@ -303,13 +304,6 @@ class LessonListFilters extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div className="mobile--collapsibleSidebar__button selectable">
-							{ 
-								this.state.sidebarExpanded ?
-								'' :
-								<button className="collapsibleSidebar__button-icon" onClick={this.mobileCollapsibleSidebar}>Filter</button>
-							}
-						</div>
 					</div>
 				}
 			</div>
@@ -320,7 +314,8 @@ class LessonListFilters extends React.Component {
 const mapStateToProps = (state) => {
 	return {
 		filters: state.filters,
-		user: state.user
+		user: state.user,
+		popups: state.popups
 	};
 };
 
@@ -333,8 +328,8 @@ const mapDispatchToProps = (dispatch) => ({
 	sortByDuration: () => dispatch(sortByDuration()),
 	sortByFavourite: (favourites) => dispatch(sortByFavourite(favourites)),
 	sortAll: () => dispatch(sortAll()),
-	resetFilter: () => dispatch(resetFilter())
+	resetFilter: () => dispatch(resetFilter()),
+	popupFilter: (display) => dispatch(popupFilter(display))
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(LessonListFilters);
